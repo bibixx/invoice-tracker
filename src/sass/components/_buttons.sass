@@ -1,0 +1,60 @@
+button
+  font-family: "Roboto", sans-serif
+
+
+.btn
+  cursor: pointer
+
+  &.raised
+    height: 32px
+    margin-top: 10px
+    padding: 0 16px
+    border: 0
+    border-radius: 2px
+    background: $main-color
+    color: $button-raised-text
+    font-size: 14px
+    font-weight: 500
+    line-height: 32px
+    text-transform: uppercase
+    box-shadow: $button-raised-box-shadow
+    cursor: pointer
+
+  &.flat
+    min-width: 88px
+    height: 32px
+    padding: 0 8px
+    transition: background .1s ease-in-out
+    border: 0
+    border-radius: 2px
+    outline: 0
+    background: none
+    color: $main-color
+    font-size: 14px
+    font-weight: 500
+    line-height: 32px
+    text-transform: uppercase
+    cursor: pointer
+    appearance: none
+
+    &:active
+      background: $button-flat-active
+
+    &:focus
+      background: $button-flat-focus
+
+  &.submit
+    margin-top: 16px
+
+header nav
+  button
+    width: 48px
+    height: 100%
+    margin: 0
+    padding: 0
+    float: left
+    border: 0
+    background: none
+    color: $header-button-text
+    cursor: pointer
+    -webkit-tap-highlight-color: transparent

@@ -1,0 +1,43 @@
+header.app-bar
+  display: flex
+  position: fixed
+  top: 0
+  left: 0
+  width: 100vw
+  height: 56px
+  padding: 0
+  background: $main-color
+  color: $header-text
+  box-shadow: $header-box-shadow
+  z-index: 1
+  box-sizing: border-box
+  user-select: none
+
+  i
+    color: $header-text
+
+  button
+    margin: 0
+    padding: 0
+    border: 0
+    background: none
+    appearance: none
+
+    &#menu, &#back
+      i
+        margin: 16px
+        float: left
+        cursor: pointer
+
+    &#filter, &#edit
+      i
+        margin: 16px 28px 16px 12px
+        float: right
+        cursor: pointer
+
+  .title
+    flex: 1
+    line-height: 56px
+    text-overflow: ellipsis
+    white-space: nowrap
+    overflow: hidden

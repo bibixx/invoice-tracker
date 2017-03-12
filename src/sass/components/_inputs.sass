@@ -14,7 +14,7 @@
     font-weight: 700
     cursor: pointer
 
-  textarea, input, select
+  textarea, input
     width: 100%
     padding: 8px 0 4px
     border: 0
@@ -42,25 +42,6 @@
     &:focus ~ .border
       &::after
         transform: scaleX(1)
-
-  .select
-    position: relative
-
-    select
-      position: relative
-      cursor: pointer
-      z-index: 1
-
-    label
-      display: flex
-      position: absolute
-      top: 0
-      right: 0
-      align-items: center
-      order: 0
-      height: 100%
-      cursor: pointer
-      z-index: 0
 
   textarea
     min-width: 100%
@@ -120,7 +101,9 @@
 
   .form-checkbox
     input[type="checkbox"]
-      display: none
+      width: 0
+      height: 0
+      opacity: 0
 
       &:checked
         & ~ .checkbox-check
@@ -128,6 +111,12 @@
 
           &::after
             opacity: 1
+
+      &:focus
+        & ~ .checkbox-check
+          &::before
+            transform: translate(-50%, -50%) scale(1)
+            opacity: 0.2
 
     .checkbox-check
       display: inline-block
@@ -141,10 +130,21 @@
 
       &::before
         position: absolute
-        content: "check_box_outline_blank"
+        top: 50%
+        left: 50%
+        width: 150%
+        height: 150%
+        transform: translate(-50%, -50%) scale(0)
+        transition: transform .2s ease-in-out, opacity .2s ease-in-out
+        border-radius: 50%
+        background: $main-color
+        content: ""
+        opacity: 0
+        // content: "check_box_outline_blank"
 
       &::after
         position: absolute
+        left: 0
         transition: opacity .1s ease-in-out
         content: "check_box"
         opacity: 0

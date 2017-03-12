@@ -734,7 +734,11 @@ main.card {
   color: #fff;
   box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 10px rgba(0, 0, 0, 0.23);
   cursor: pointer;
-  animation: in-btn .4s ease-in-out; }
+  animation: in-btn .4s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
   .fab-main.fab-snackbar {
     margin-bottom: 48px; }
     @media (min-width: 600px) {
@@ -922,7 +926,7 @@ header.app-bar {
     font-size: 12px;
     font-weight: 700;
     cursor: pointer; }
-  .form-group textarea, .form-group input, .form-group select {
+  .form-group textarea, .form-group input {
     width: 100%;
     padding: 8px 0 4px;
     border: 0;
@@ -934,30 +938,14 @@ header.app-bar {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none; }
-    .form-group textarea[required] ~ label::after, .form-group input[required] ~ label::after, .form-group select[required] ~ label::after {
+    .form-group textarea[required] ~ label::after, .form-group input[required] ~ label::after {
       content: " *"; }
-    .form-group textarea.touched.invalid ~ label, .form-group input.touched.invalid ~ label, .form-group select.touched.invalid ~ label {
+    .form-group textarea.touched.invalid ~ label, .form-group input.touched.invalid ~ label {
       color: #e53935; }
-    .form-group textarea.touched.invalid ~ .border::before, .form-group input.touched.invalid ~ .border::before, .form-group select.touched.invalid ~ .border::before {
+    .form-group textarea.touched.invalid ~ .border::before, .form-group input.touched.invalid ~ .border::before {
       opacity: 1; }
-    .form-group textarea:focus ~ .border::after, .form-group input:focus ~ .border::after, .form-group select:focus ~ .border::after {
+    .form-group textarea:focus ~ .border::after, .form-group input:focus ~ .border::after {
       transform: scaleX(1); }
-  .form-group .select {
-    position: relative; }
-    .form-group .select select {
-      position: relative;
-      cursor: pointer;
-      z-index: 1; }
-    .form-group .select label {
-      display: flex;
-      position: absolute;
-      top: 0;
-      right: 0;
-      align-items: center;
-      order: 0;
-      height: 100%;
-      cursor: pointer;
-      z-index: 0; }
   .form-group textarea {
     min-width: 100%;
     max-width: 100%; }
@@ -1006,11 +994,16 @@ header.app-bar {
         font-size: 16px;
         line-height: 32px; }
   .form-group .form-checkbox input[type="checkbox"] {
-    display: none; }
+    width: 0;
+    height: 0;
+    opacity: 0; }
     .form-group .form-checkbox input[type="checkbox"]:checked ~ .checkbox-check {
       color: #9c27b0; }
       .form-group .form-checkbox input[type="checkbox"]:checked ~ .checkbox-check::after {
         opacity: 1; }
+    .form-group .form-checkbox input[type="checkbox"]:focus ~ .checkbox-check::before {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 0.2; }
   .form-group .form-checkbox .checkbox-check {
     display: inline-block;
     position: relative;
@@ -1022,9 +1015,19 @@ header.app-bar {
     font-size: 18px; }
     .form-group .form-checkbox .checkbox-check::before {
       position: absolute;
-      content: "check_box_outline_blank"; }
+      top: 50%;
+      left: 50%;
+      width: 150%;
+      height: 150%;
+      transform: translate(-50%, -50%) scale(0);
+      transition: transform .2s ease-in-out, opacity .2s ease-in-out;
+      border-radius: 50%;
+      background: #9c27b0;
+      content: "";
+      opacity: 0; }
     .form-group .form-checkbox .checkbox-check::after {
       position: absolute;
+      left: 0;
       transition: opacity .1s ease-in-out;
       content: "check_box";
       opacity: 0; }
@@ -1085,6 +1088,70 @@ header.app-bar {
       display: inline-flex; }
       #root-view section a .date div:first-child {
         margin-right: 8px; }
+
+.select-group {
+  position: relative; }
+  .select-group .options-container {
+    position: absolute;
+    top: 8px;
+    right: 0;
+    left: 0;
+    max-height: 200px;
+    transform: scale(1) translateY(-50%);
+    transform-origin: 0 0;
+    transition: transform .2s ease-in-out, opacity .2s ease-in-out, visibility 0s .2s;
+    border-radius: 2px;
+    background: #fff;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+    opacity: 0;
+    overflow: auto;
+    visibility: hidden;
+    z-index: 3; }
+    .select-group .options-container.focus {
+      transform: scale(1) translateY(0%);
+      transition: transform .2s ease-in-out, opacity .2s ease-in-out, visibility .2s 0s;
+      opacity: 1;
+      visibility: visible; }
+    .select-group .options-container .option {
+      width: 100%;
+      padding: 0 1em;
+      border: 0;
+      outline: 0;
+      background: none;
+      font-size: 1rem;
+      line-height: 50px;
+      text-align: left;
+      cursor: pointer;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+         -moz-appearance: none;
+              appearance: none; }
+      .select-group .options-container .option.checked {
+        background: rgba(0, 0, 0, 0.25); }
+      .select-group .options-container .option:hover {
+        background: rgba(0, 0, 0, 0.25); }
+  .select-group .select-input ~ .border::after {
+    display: none; }
+  .select-group .search-input {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 1em;
+    box-sizing: border-box; }
+    .select-group .search-input input {
+      padding: 4px 0; }
+  .select-group label {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 0;
+    align-items: center;
+    justify-content: flex-end;
+    order: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    z-index: 1; }
 
 .settings-pane {
   position: fixed;

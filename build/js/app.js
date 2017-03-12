@@ -28455,6 +28455,10 @@ var _SellersActions = require("../../actions/SellersActions");
 
 var SellersActions = _interopRequireWildcard(_SellersActions);
 
+var _Select = require("./Select");
+
+var _Select2 = _interopRequireDefault(_Select);
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -28531,10 +28535,10 @@ var AddProduct = function (_React$Component) {
       var oData = new FormData();
 
       oData.append("Product", this.inputs.product.value);
-      oData.append("Place", this.inputs.place.selectedOptions[0].id);
-      oData.append("Seller", this.inputs.seller.selectedOptions[0].id);
+      oData.append("Place", this.inputs.place.id());
+      oData.append("Seller", this.inputs.seller.id());
       oData.append("Date", this.inputs.date.value);
-      oData.append("Warranty-length", this.inputs.warranty.value);
+      oData.append("Warranty-length", this.inputs.warranty.value());
       oData.append("Notes", this.inputs.notes.value);
 
       var filesLength = this.inputs.files.files.length;
@@ -28566,9 +28570,8 @@ var AddProduct = function (_React$Component) {
       }
 
       if (isClick) {
+        console.log(this.inputs);
         this.inputs.product.classList.add("touched");
-        this.inputs.place.classList.add("touched");
-        this.inputs.seller.classList.add("touched");
         this.inputs.date.classList.add("touched");
       }
 
@@ -28582,26 +28585,6 @@ var AddProduct = function (_React$Component) {
         valid = false;
       } else {
         this.inputs.date.classList.remove("invalid");
-      }
-
-      if (this.inputs.seller.value === "") {
-        this.inputs.seller.classList.add("invalid");
-        if (isClick) {
-          this.inputs.seller.focus();
-        }
-        valid = false;
-      } else {
-        this.inputs.seller.classList.remove("invalid");
-      }
-
-      if (this.inputs.place.value === "") {
-        this.inputs.place.classList.add("invalid");
-        if (isClick) {
-          this.inputs.place.focus();
-        }
-        valid = false;
-      } else {
-        this.inputs.place.classList.remove("invalid");
       }
 
       if (this.inputs.product.value === "") {
@@ -28624,22 +28607,28 @@ var AddProduct = function (_React$Component) {
       var places = [];
 
       this.state.places.forEach(function (v) {
-        places.push(_react2.default.createElement(
-          "option",
-          { id: v.id, key: v.id },
-          v.name
-        ));
+        places.push({ text: v.name, id: v.id, nip: v.nip });
+      });
+
+      places.sort(function (a, b) {
+        return a.text.toLowerCase().localeCompare(b.text.toLowerCase());
       });
 
       var sellers = [];
 
       this.state.sellers.forEach(function (v) {
-        sellers.push(_react2.default.createElement(
-          "option",
-          { id: v.id, key: v.id },
-          v.name
-        ));
+        sellers.push({ text: v.name, id: v.id, nip: v.nip });
       });
+
+      sellers.sort(function (a, b) {
+        return a.text.toLowerCase().localeCompare(b.text.toLowerCase());
+      });
+
+      var warrantyLengthsOptions = [{ text: "1 rok" }, { text: "2 lata" }, { text: "3 lata" }, { text: "4 lata" }, { text: "5 lat" }, { text: "6 lat" }, { text: "7 lat" }, { text: "8 lat" }, { text: "9 lat" }, { text: "10 lat" }];
+
+      var searchFunction = function searchFunction(targetValue, searchValue) {
+        return searchValue === "" || targetValue.text.toLowerCase().indexOf(searchValue.toLowerCase()) >= 0 || targetValue.nip.indexOf(searchValue) >= 0;
+      };
 
       return _react2.default.createElement(
         "main",
@@ -28663,27 +28652,9 @@ var AddProduct = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement(
-              "div",
-              { className: "select" },
-              _react2.default.createElement(
-                "select",
-                { onChange: this.checkValidity, ref: function ref(input) {
-                    _this2.inputs.place = input;
-                  }, id: "place" },
-                places
-              ),
-              _react2.default.createElement(
-                "label",
-                { htmlFor: "place" },
-                _react2.default.createElement(
-                  "i",
-                  { className: "material-icons" },
-                  "arrow_drop_down"
-                )
-              ),
-              _react2.default.createElement("div", { className: "border" })
-            ),
+            _react2.default.createElement(_Select2.default, { id: "seller", link: { url: "/add-seller", text: "+ Dodaj sprzedawcę" }, search: true, options: sellers, ref: function ref(input) {
+                _this2.inputs.seller = input;
+              }, searchFunction: searchFunction }),
             _react2.default.createElement(
               "label",
               { htmlFor: "seller" },
@@ -28693,27 +28664,9 @@ var AddProduct = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement(
-              "div",
-              { className: "select" },
-              _react2.default.createElement(
-                "select",
-                { onChange: this.checkValidity, ref: function ref(input) {
-                    _this2.inputs.seller = input;
-                  }, id: "seller" },
-                sellers
-              ),
-              _react2.default.createElement(
-                "label",
-                { htmlFor: "seller" },
-                _react2.default.createElement(
-                  "i",
-                  { className: "material-icons" },
-                  "arrow_drop_down"
-                )
-              ),
-              _react2.default.createElement("div", { className: "border" })
-            ),
+            _react2.default.createElement(_Select2.default, { id: "place", link: { url: "/add-seller", text: "+ Dodaj sprzedawcę" }, search: true, options: places, ref: function ref(input) {
+                _this2.inputs.place = input;
+              }, searchFunction: searchFunction }),
             _react2.default.createElement(
               "label",
               { htmlFor: "seller" },
@@ -28736,76 +28689,9 @@ var AddProduct = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement(
-              "div",
-              { className: "select" },
-              _react2.default.createElement(
-                "select",
-                { defaultValue: "2 lata", onChange: this.checkValidity, ref: function ref(input) {
-                    _this2.inputs.warranty = input;
-                  }, id: "warranty-length" },
-                _react2.default.createElement(
-                  "option",
-                  null,
-                  "1 rok"
-                ),
-                _react2.default.createElement(
-                  "option",
-                  null,
-                  "2 lata"
-                ),
-                _react2.default.createElement(
-                  "option",
-                  null,
-                  "3 lata"
-                ),
-                _react2.default.createElement(
-                  "option",
-                  null,
-                  "4 lata"
-                ),
-                _react2.default.createElement(
-                  "option",
-                  null,
-                  "5 lat"
-                ),
-                _react2.default.createElement(
-                  "option",
-                  null,
-                  "6 lat"
-                ),
-                _react2.default.createElement(
-                  "option",
-                  null,
-                  "7 lat"
-                ),
-                _react2.default.createElement(
-                  "option",
-                  null,
-                  "8 lat"
-                ),
-                _react2.default.createElement(
-                  "option",
-                  null,
-                  "9 lat"
-                ),
-                _react2.default.createElement(
-                  "option",
-                  null,
-                  "10 lat"
-                )
-              ),
-              _react2.default.createElement(
-                "label",
-                { htmlFor: "warranty-length" },
-                _react2.default.createElement(
-                  "i",
-                  { className: "material-icons" },
-                  "arrow_drop_down"
-                )
-              ),
-              _react2.default.createElement("div", { className: "border" })
-            ),
+            _react2.default.createElement(_Select2.default, { id: "warranty-length", options: warrantyLengthsOptions, defaultValue: "2 lata", ref: function ref(input) {
+                _this2.inputs.warranty = input;
+              } }),
             _react2.default.createElement(
               "label",
               { htmlFor: "warranty-length" },
@@ -28858,7 +28744,7 @@ var AddProduct = function (_React$Component) {
 
 exports.default = AddProduct;
 
-},{"../../actions/RecordsActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/RecordsActions.js","../../actions/SellersActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/SellersActions.js","../../stores/SellersStore":"/Users/bartekosx/Projects/invoice-tracker/src/js/stores/SellersStore.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/AddSeller.js":[function(require,module,exports){
+},{"../../actions/RecordsActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/RecordsActions.js","../../actions/SellersActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/SellersActions.js","../../stores/SellersStore":"/Users/bartekosx/Projects/invoice-tracker/src/js/stores/SellersStore.js","./Select":"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/Select.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/AddSeller.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28926,7 +28812,7 @@ var AddSeller = function (_React$Component) {
             console.error(oReq.response);
           }
 
-          _reactRouter.browserHistory.push("/");
+          _reactRouter.browserHistory.goBack();
         });
       }
     }
@@ -29087,7 +28973,11 @@ var AddSeller = function (_React$Component) {
               _react2.default.createElement("input", { ref: function ref(input) {
                   _this2.inputs.isSeller = input;
                 }, type: "checkbox", id: "seller" }),
-              _react2.default.createElement("label", { htmlFor: "seller", className: "checkbox-check material-icons" }),
+              _react2.default.createElement(
+                "label",
+                { htmlFor: "seller", className: "checkbox-check material-icons" },
+                "check_box_outline_blank"
+              ),
               _react2.default.createElement(
                 "label",
                 { htmlFor: "seller", className: "checkbox-label" },
@@ -29100,7 +28990,11 @@ var AddSeller = function (_React$Component) {
               _react2.default.createElement("input", { ref: function ref(input) {
                   _this2.inputs.isPlace = input;
                 }, type: "checkbox", id: "place" }),
-              _react2.default.createElement("label", { htmlFor: "place", className: "checkbox-check material-icons" }),
+              _react2.default.createElement(
+                "label",
+                { htmlFor: "place", className: "checkbox-check material-icons" },
+                "check_box_outline_blank"
+              ),
               _react2.default.createElement(
                 "label",
                 { htmlFor: "place", className: "checkbox-label" },
@@ -29163,7 +29057,7 @@ var Header = function (_React$Component) {
   _createClass(Header, [{
     key: "click",
     value: function click() {
-      _reactRouter.browserHistory.push("/");
+      _reactRouter.browserHistory.goBack();
     }
   }, {
     key: "render",
@@ -29446,7 +29340,249 @@ Product.propTypes = {
   record: _react2.default.PropTypes.object
 };
 
-},{"../../actions/SellersActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/SellersActions.js","../../stores/SellersStore":"/Users/bartekosx/Projects/invoice-tracker/src/js/stores/SellersStore.js","../../utils/dateUtils":"/Users/bartekosx/Projects/invoice-tracker/src/js/utils/dateUtils.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/FloatingAB.js":[function(require,module,exports){
+},{"../../actions/SellersActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/SellersActions.js","../../stores/SellersStore":"/Users/bartekosx/Projects/invoice-tracker/src/js/stores/SellersStore.js","../../utils/dateUtils":"/Users/bartekosx/Projects/invoice-tracker/src/js/utils/dateUtils.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/Select.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouter = require("react-router");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Select = function (_React$Component) {
+  _inherits(Select, _React$Component);
+
+  function Select(props) {
+    _classCallCheck(this, Select);
+
+    var _this = _possibleConstructorReturn(this, (Select.__proto__ || Object.getPrototypeOf(Select)).call(this, props));
+
+    _this.handleMouseDown = _this.handleMouseDown.bind(_this);
+    _this.selectFocus = _this.selectFocus.bind(_this);
+    _this.handleBlur = _this.handleBlur.bind(_this);
+    _this.btnClick = _this.btnClick.bind(_this);
+    _this.search = _this.search.bind(_this);
+    _this.value = _this.value.bind(_this);
+    _this.state = {
+      focused: false,
+      checked: 0,
+      options: _this.props.options
+    };
+
+    _this.searchInput = {
+      blur: function blur() {}
+    };
+
+    _this.searchFunction = function (targetValue, searchValue) {
+      return searchValue === "" || targetValue.text.toLowerCase().indexOf(searchValue.toLowerCase()) >= 0;
+    };
+
+    if (_this.props.searchFunction) {
+      _this.searchFunction = _this.props.searchFunction;
+    }
+    return _this;
+  }
+
+  _createClass(Select, [{
+    key: "oneOfParnetsHaveClass",
+    value: function oneOfParnetsHaveClass(target, className) {
+      var i = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
+
+      i++; // eslint-disable-line no-param-reassign
+      var html = document.documentElement;
+
+      if (target.className.indexOf(className) >= 0) {
+        return true;
+      } else if (target !== html && i < 1000) {
+        return this.oneOfParnetsHaveClass(target.parentNode, className, i);
+      }
+
+      return false;
+    }
+  }, {
+    key: "handleMouseDown",
+    value: function handleMouseDown(e) {
+      if (e.code === "ArrowDown") {
+        this.setState(Object.assign(this.state, {
+          checked: Math.min(this.state.checked + 1, this.state.options.length - 1)
+        }));
+      } else if (e.code === "ArrowUp") {
+        this.setState(Object.assign(this.state, {
+          checked: Math.max(this.state.checked - 1, 0)
+        }));
+      } else if (e.code === "Escape") {
+        this.handleBlur(e);
+      } else if (e.code === "Enter" || e.code === "Space" && e.target !== this.searchInput) {
+        this.select.value = this.state.options[this.state.checked].text;
+        this.select.setAttribute("option-id", this.state.options[this.state.checked].id);
+        this.select.blur();
+        this.searchInput.blur();
+        this.setState(Object.assign(this.state, {
+          focused: false
+        }));
+      }
+    }
+  }, {
+    key: "selectFocus",
+    value: function selectFocus() {
+      this.setState(Object.assign(this.state, {
+        checked: 0,
+        focused: true,
+        options: this.props.options
+      }));
+
+      this.searchInput.value = "";
+
+      document.addEventListener("keydown", this.handleMouseDown);
+    }
+  }, {
+    key: "handleBlur",
+    value: function handleBlur(e) {
+      if (!(e.relatedTarget && this.oneOfParnetsHaveClass(e.relatedTarget, "options-container"))) {
+        this.select.blur();
+        document.removeEventListener("keydown", this.handleMouseDown);
+        this.setState(Object.assign(this.state, {
+          focused: false
+        }));
+      }
+    }
+  }, {
+    key: "btnClick",
+    value: function btnClick(e) {
+      this.select.value = e.target.innerHTML;
+      this.select.setAttribute("option-id", e.target.id);
+      e.target.blur();
+      this.searchInput.blur();
+      this.setState(Object.assign(this.state, {
+        focused: false
+      }));
+    }
+  }, {
+    key: "value",
+    value: function value() {
+      return this.select.value;
+    }
+  }, {
+    key: "id",
+    value: function id() {
+      return this.select.getAttribute("option-id");
+    }
+  }, {
+    key: "search",
+    value: function search(e) {
+      var _this2 = this;
+
+      var options = [];
+      this.props.options.forEach(function (v) {
+        if (_this2.searchFunction(v, e.target.value)) {
+          options.push(v);
+        }
+      });
+
+      this.setState(Object.assign(this.state, {
+        options: options,
+        checked: 0
+      }));
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this3 = this;
+
+      var options = [];
+      var serachInput = null;
+
+      this.state.options.forEach(function (v, i) {
+        var id = v.id || null;
+        options.push(_react2.default.createElement(
+          "button",
+          { id: id, tabIndex: "-1", ref: function ref(input) {
+              if (_this3.state.focused && i === _this3.state.checked && document.activeElement !== _this3.searchInput) {
+                return input && input.focus();
+              }return false;
+            }, onBlur: _this3.handleBlur, onClick: _this3.btnClick, type: "button", key: i, className: "option" + (i === _this3.state.checked ? " checked" : "") },
+          v.text
+        ));
+      });
+
+      if (this.props.link) {
+        options.unshift(_react2.default.createElement(
+          _reactRouter.Link,
+          { key: "add", to: this.props.link.url },
+          _react2.default.createElement(
+            "button",
+            { tabIndex: "-1", onBlur: this.handleBlur, onClick: this.btnClick, type: "button", className: "option" },
+            this.props.link.text
+          )
+        ));
+      }
+
+      if (this.props.search) {
+        serachInput = _react2.default.createElement(
+          "div",
+          { className: "search-input" },
+          _react2.default.createElement("input", { onBlur: this.handleBlur, onChange: this.search, ref: function ref(input) {
+              _this3.searchInput = input;
+            }, className: "search", type: "text", placeholder: "Wyszukaj..." })
+        );
+      }
+
+      return _react2.default.createElement(
+        "div",
+        { className: "select-group" },
+        _react2.default.createElement("input", { type: "text", className: "select-input", defaultValue: this.props.defaultValue, ref: function ref(select) {
+            _this3.select = select;
+          }, onFocus: this.selectFocus, onBlur: this.handleBlur, id: this.props.id }),
+        _react2.default.createElement(
+          "div",
+          { className: "options-container" + (this.state.focused ? " focus" : "") },
+          serachInput,
+          options
+        ),
+        _react2.default.createElement(
+          "label",
+          { htmlFor: this.props.id },
+          _react2.default.createElement(
+            "div",
+            { className: "material-icons" },
+            "arrow_drop_down"
+          )
+        ),
+        _react2.default.createElement("div", { className: "border" })
+      );
+    }
+  }]);
+
+  return Select;
+}(_react2.default.Component);
+
+exports.default = Select;
+
+
+Select.propTypes = {
+  options: _react2.default.PropTypes.array.isRequired,
+  id: _react2.default.PropTypes.string.isRequired,
+  searchFunction: _react2.default.PropTypes.func,
+  defaultValue: _react2.default.PropTypes.string,
+  search: _react2.default.PropTypes.bool,
+  link: _react2.default.PropTypes.object
+};
+
+},{"react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/FloatingAB.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {

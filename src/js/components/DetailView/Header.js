@@ -4,7 +4,7 @@ import { Link, browserHistory } from "react-router";
 
 export default class Header extends React.Component {
   click() {
-    browserHistory.push( "/" );
+    browserHistory.goBack();
   }
 
   render() {

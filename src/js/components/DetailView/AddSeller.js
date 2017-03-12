@@ -35,7 +35,7 @@ export default class AddSeller extends React.Component {
           console.error( oReq.response );
         }
 
-        browserHistory.push( "/" );
+        browserHistory.goBack();
       } );
     }
   }
@@ -140,12 +140,12 @@ export default class AddSeller extends React.Component {
           <div className="form-group">
             <div className="form-checkbox">
               <input ref={( input ) => { this.inputs.isSeller = input; }} type="checkbox" id="seller" />
-              <label htmlFor="seller" className="checkbox-check material-icons" />
+              <label htmlFor="seller" className="checkbox-check material-icons">check_box_outline_blank</label>
               <label htmlFor="seller" className="checkbox-label">Sprzedawca</label>
             </div>
             <div className="form-checkbox">
               <input ref={( input ) => { this.inputs.isPlace = input; }} type="checkbox" id="place" />
-              <label htmlFor="place" className="checkbox-check material-icons" />
+              <label htmlFor="place" className="checkbox-check material-icons">check_box_outline_blank</label>
               <label htmlFor="place" className="checkbox-label">Miejsce sprzedaży</label>
             </div>
           </div>

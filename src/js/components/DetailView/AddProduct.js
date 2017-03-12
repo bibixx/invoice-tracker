@@ -7,6 +7,8 @@ import * as RecordsActions from "../../actions/RecordsActions";
 import SellersStore from "../../stores/SellersStore";
 import * as SellersActions from "../../actions/SellersActions";
 
+import Select from "./Select";
+
 export default class AddProduct extends React.Component {
   constructor() {
     super();
@@ -61,10 +63,10 @@ export default class AddProduct extends React.Component {
     const oData = new FormData();
 
     oData.append( "Product", this.inputs.product.value );
-    oData.append( "Place", this.inputs.place.selectedOptions[0].id );
-    oData.append( "Seller", this.inputs.seller.selectedOptions[0].id );
+    oData.append( "Place", this.inputs.place.id() );
+    oData.append( "Seller", this.inputs.seller.id() );
     oData.append( "Date", this.inputs.date.value );
-    oData.append( "Warranty-length", this.inputs.warranty.value );
+    oData.append( "Warranty-length", this.inputs.warranty.value() );
     oData.append( "Notes", this.inputs.notes.value );
 
     const filesLength = this.inputs.files.files.length;
@@ -92,9 +94,8 @@ export default class AddProduct extends React.Component {
     }
 
     if ( isClick ) {
+      console.log( this.inputs );
       this.inputs.product.classList.add( "touched" );
-      this.inputs.place.classList.add( "touched" );
-      this.inputs.seller.classList.add( "touched" );
       this.inputs.date.classList.add( "touched" );
     }
 
@@ -108,26 +109,6 @@ export default class AddProduct extends React.Component {
       valid = false;
     } else {
       this.inputs.date.classList.remove( "invalid" );
-    }
-
-    if ( this.inputs.seller.value === "" ) {
-      this.inputs.seller.classList.add( "invalid" );
-      if ( isClick ) {
-        this.inputs.seller.focus();
-      }
-      valid = false;
-    } else {
-      this.inputs.seller.classList.remove( "invalid" );
-    }
-
-    if ( this.inputs.place.value === "" ) {
-      this.inputs.place.classList.add( "invalid" );
-      if ( isClick ) {
-        this.inputs.place.focus();
-      }
-      valid = false;
-    } else {
-      this.inputs.place.classList.remove( "invalid" );
     }
 
     if ( this.inputs.product.value === "" ) {
@@ -147,14 +128,39 @@ export default class AddProduct extends React.Component {
     const places = [];
 
     this.state.places.forEach( ( v ) => {
-      places.push( <option id={v.id} key={v.id}>{v.name}</option> );
+      places.push( { text: v.name, id: v.id, nip: v.nip } );
+    } );
+
+    places.sort( ( a, b ) => {
+      return a.text.toLowerCase().localeCompare( b.text.toLowerCase() );
     } );
 
     const sellers = [];
 
     this.state.sellers.forEach( ( v ) => {
-      sellers.push( <option id={v.id} key={v.id}>{v.name}</option> );
+      sellers.push( { text: v.name, id: v.id, nip: v.nip } );
     } );
+
+    sellers.sort( ( a, b ) => {
+      return a.text.toLowerCase().localeCompare( b.text.toLowerCase() );
+    } );
+
+    const warrantyLengthsOptions = [
+      { text: "1 rok" },
+      { text: "2 lata" },
+      { text: "3 lata" },
+      { text: "4 lata" },
+      { text: "5 lat" },
+      { text: "6 lat" },
+      { text: "7 lat" },
+      { text: "8 lat" },
+      { text: "9 lat" },
+      { text: "10 lat" },
+    ];
+
+    const searchFunction = ( targetValue, searchValue ) => {
+      return ( searchValue === "" ) || ( targetValue.text.toLowerCase().indexOf( searchValue.toLowerCase() ) >= 0 ) || ( targetValue.nip.indexOf( searchValue ) >= 0 );
+    };
 
     return (
       <main className="card">
@@ -165,23 +171,11 @@ export default class AddProduct extends React.Component {
             <div className="border" />
           </div>
           <div className="form-group">
-            <div className="select">
-              <select onChange={this.checkValidity} ref={( input ) => { this.inputs.place = input; }} id="place">
-                { places }
-              </select>
-              <label htmlFor="place"><i className="material-icons">arrow_drop_down</i></label>
-              <div className="border" />
-            </div>
+            <Select id="seller" link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} search options={sellers} ref={( input ) => { this.inputs.seller = input; }} searchFunction={searchFunction} />
             <label htmlFor="seller">Miejsce zakupu</label>
           </div>
           <div className="form-group">
-            <div className="select">
-              <select onChange={this.checkValidity} ref={( input ) => { this.inputs.seller = input; }} id="seller">
-                { sellers }
-              </select>
-              <label htmlFor="seller"><i className="material-icons">arrow_drop_down</i></label>
-              <div className="border" />
-            </div>
+            <Select id="place" link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} search options={places} ref={( input ) => { this.inputs.place = input; }} searchFunction={searchFunction} />
             <label htmlFor="seller">Dane sprzedawcy</label>
           </div>
           <div className="form-group">
@@ -190,22 +184,7 @@ export default class AddProduct extends React.Component {
             <div className="border" />
           </div>
           <div className="form-group">
-            <div className="select">
-              <select defaultValue="2 lata" onChange={this.checkValidity} ref={( input ) => { this.inputs.warranty = input; }} id="warranty-length">
-                <option>1 rok</option>
-                <option>2 lata</option>
-                <option>3 lata</option>
-                <option>4 lata</option>
-                <option>5 lat</option>
-                <option>6 lat</option>
-                <option>7 lat</option>
-                <option>8 lat</option>
-                <option>9 lat</option>
-                <option>10 lat</option>
-              </select>
-              <label htmlFor="warranty-length"><i className="material-icons">arrow_drop_down</i></label>
-              <div className="border" />
-            </div>
+            <Select id="warranty-length" options={warrantyLengthsOptions} defaultValue="2 lata" ref={( input ) => { this.inputs.warranty = input; }} />
             <label htmlFor="warranty-length">Okres gwarancji</label>
           </div>
           <div className="form-group">

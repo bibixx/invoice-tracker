@@ -23,7 +23,7 @@ export default class FloatingAB extends React.Component {
         <i className="material-icons">add</i>
         <i className="material-icons">close</i>
         <div className="submenu">
-          <Link className="fab-mini"><span><i className="material-icons">person</i></span></Link>
+          <Link to="/add-seller" className="fab-mini"><span><i className="material-icons">person</i></span></Link>
           <Link to="/add-product" className="fab-mini"><span><i className="material-icons">receipt</i></span></Link>
         </div>
       </div>

@@ -9,13 +9,23 @@ export default class Header extends React.Component {
 
   render() {
     const lBtn = () => {
-      if ( !this.props.button ) {
+      if ( !this.props.button.text ) {
         return null;
       }
 
+      if ( this.props.button.link ) {
+        return (
+          <button id={this.props.button.text}>
+            <Link to={this.props.button.link}>
+              <i className="material-icons">{this.props.button.text}</i>
+            </Link>
+          </button>
+        );
+      }
+
       return (
-        <button id={this.props.button}>
-          <i className="material-icons">{this.props.button}</i>
+        <button id={this.props.button.text}>
+          <i className="material-icons">{this.props.button.text}</i>
         </button>
       );
     };
@@ -35,7 +45,7 @@ export default class Header extends React.Component {
 Header.propTypes = {
   title: React.PropTypes.string,
   button: React.PropTypes.oneOfType( [
-    React.PropTypes.string,
+    React.PropTypes.object,
     React.PropTypes.bool,
   ] ),
 };

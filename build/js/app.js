@@ -1,4 +1,4 @@
-(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\events\\events.js":[function(require,module,exports){
+(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({"/Users/bartekosx/Projects/invoice-tracker/node_modules/events/events.js":[function(require,module,exports){
 // Copyright Joyent, Inc. and other Node contributors.
 //
 // Permission is hereby granted, free of charge, to any person obtaining a
@@ -302,7 +302,7 @@ function isUndefined(arg) {
   return arg === void 0;
 }
 
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\CSSCore.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/CSSCore.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -427,7 +427,7 @@ var CSSCore = {
 module.exports = CSSCore;
 }).call(this,require('_process'))
 
-},{"./invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\EventListener.js":[function(require,module,exports){
+},{"./invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/EventListener.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -514,7 +514,7 @@ var EventListener = {
 module.exports = EventListener;
 }).call(this,require('_process'))
 
-},{"./emptyFunction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyFunction.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js":[function(require,module,exports){
+},{"./emptyFunction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyFunction.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js":[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -550,7 +550,7 @@ var ExecutionEnvironment = {
 };
 
 module.exports = ExecutionEnvironment;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\camelize.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/camelize.js":[function(require,module,exports){
 "use strict";
 
 /**
@@ -582,7 +582,7 @@ function camelize(string) {
 }
 
 module.exports = camelize;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\camelizeStyleName.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/camelizeStyleName.js":[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -622,7 +622,7 @@ function camelizeStyleName(string) {
 }
 
 module.exports = camelizeStyleName;
-},{"./camelize":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\camelize.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\containsNode.js":[function(require,module,exports){
+},{"./camelize":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/camelize.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/containsNode.js":[function(require,module,exports){
 'use strict';
 
 /**
@@ -662,7 +662,7 @@ function containsNode(outerNode, innerNode) {
 }
 
 module.exports = containsNode;
-},{"./isTextNode":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\isTextNode.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\createArrayFromMixed.js":[function(require,module,exports){
+},{"./isTextNode":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/isTextNode.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/createArrayFromMixed.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -792,7 +792,7 @@ function createArrayFromMixed(obj) {
 module.exports = createArrayFromMixed;
 }).call(this,require('_process'))
 
-},{"./invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\createNodesFromMarkup.js":[function(require,module,exports){
+},{"./invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/createNodesFromMarkup.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -879,7 +879,7 @@ function createNodesFromMarkup(markup, handleScript) {
 module.exports = createNodesFromMarkup;
 }).call(this,require('_process'))
 
-},{"./ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js","./createArrayFromMixed":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\createArrayFromMixed.js","./getMarkupWrap":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\getMarkupWrap.js","./invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyFunction.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js","./createArrayFromMixed":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/createArrayFromMixed.js","./getMarkupWrap":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/getMarkupWrap.js","./invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyFunction.js":[function(require,module,exports){
 "use strict";
 
 /**
@@ -918,7 +918,7 @@ emptyFunction.thatReturnsArgument = function (arg) {
 };
 
 module.exports = emptyFunction;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyObject.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyObject.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -941,7 +941,7 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = emptyObject;
 }).call(this,require('_process'))
 
-},{"_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\focusNode.js":[function(require,module,exports){
+},{"_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/focusNode.js":[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -968,7 +968,7 @@ function focusNode(node) {
 }
 
 module.exports = focusNode;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\getActiveElement.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/getActiveElement.js":[function(require,module,exports){
 'use strict';
 
 /**
@@ -1003,7 +1003,7 @@ function getActiveElement() /*?DOMElement*/{
 }
 
 module.exports = getActiveElement;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\getMarkupWrap.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/getMarkupWrap.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -1101,7 +1101,7 @@ function getMarkupWrap(nodeName) {
 module.exports = getMarkupWrap;
 }).call(this,require('_process'))
 
-},{"./ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js","./invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\getUnboundedScrollPosition.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js","./invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/getUnboundedScrollPosition.js":[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -1140,7 +1140,7 @@ function getUnboundedScrollPosition(scrollable) {
 }
 
 module.exports = getUnboundedScrollPosition;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\hyphenate.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/hyphenate.js":[function(require,module,exports){
 'use strict';
 
 /**
@@ -1173,7 +1173,7 @@ function hyphenate(string) {
 }
 
 module.exports = hyphenate;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\hyphenateStyleName.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/hyphenateStyleName.js":[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -1212,7 +1212,7 @@ function hyphenateStyleName(string) {
 }
 
 module.exports = hyphenateStyleName;
-},{"./hyphenate":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\hyphenate.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js":[function(require,module,exports){
+},{"./hyphenate":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/hyphenate.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
@@ -1271,7 +1271,7 @@ function invariant(condition, format, a, b, c, d, e, f) {
 module.exports = invariant;
 }).call(this,require('_process'))
 
-},{"_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\isNode.js":[function(require,module,exports){
+},{"_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/isNode.js":[function(require,module,exports){
 'use strict';
 
 /**
@@ -1294,7 +1294,7 @@ function isNode(object) {
 }
 
 module.exports = isNode;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\isTextNode.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/isTextNode.js":[function(require,module,exports){
 'use strict';
 
 /**
@@ -1319,7 +1319,7 @@ function isTextNode(object) {
 }
 
 module.exports = isTextNode;
-},{"./isNode":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\isNode.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\memoizeStringOnly.js":[function(require,module,exports){
+},{"./isNode":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/isNode.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/memoizeStringOnly.js":[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -1349,7 +1349,7 @@ function memoizeStringOnly(callback) {
 }
 
 module.exports = memoizeStringOnly;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\performance.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/performance.js":[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -1372,7 +1372,7 @@ if (ExecutionEnvironment.canUseDOM) {
 }
 
 module.exports = performance || {};
-},{"./ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\performanceNow.js":[function(require,module,exports){
+},{"./ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/performanceNow.js":[function(require,module,exports){
 'use strict';
 
 /**
@@ -1406,7 +1406,7 @@ if (performance.now) {
 }
 
 module.exports = performanceNow;
-},{"./performance":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\performance.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\shallowEqual.js":[function(require,module,exports){
+},{"./performance":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/performance.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/shallowEqual.js":[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -1474,7 +1474,7 @@ function shallowEqual(objA, objB) {
 }
 
 module.exports = shallowEqual;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -1544,7 +1544,7 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = warning;
 }).call(this,require('_process'))
 
-},{"./emptyFunction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyFunction.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\flux\\index.js":[function(require,module,exports){
+},{"./emptyFunction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyFunction.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/flux/index.js":[function(require,module,exports){
 /**
  * Copyright (c) 2014-2015, Facebook, Inc.
  * All rights reserved.
@@ -1556,7 +1556,7 @@ module.exports = warning;
 
 module.exports.Dispatcher = require('./lib/Dispatcher');
 
-},{"./lib/Dispatcher":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\flux\\lib\\Dispatcher.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\flux\\lib\\Dispatcher.js":[function(require,module,exports){
+},{"./lib/Dispatcher":"/Users/bartekosx/Projects/invoice-tracker/node_modules/flux/lib/Dispatcher.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/flux/lib/Dispatcher.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright (c) 2014-2015, Facebook, Inc.
@@ -1791,7 +1791,7 @@ var Dispatcher = (function () {
 module.exports = Dispatcher;
 }).call(this,require('_process'))
 
-},{"_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\Actions.js":[function(require,module,exports){
+},{"_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/Actions.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -1814,7 +1814,7 @@ var REPLACE = exports.REPLACE = 'REPLACE';
  * for more information.
  */
 var POP = exports.POP = 'POP';
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\AsyncUtils.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/AsyncUtils.js":[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -1871,7 +1871,7 @@ var loopAsync = exports.loopAsync = function loopAsync(turns, work, callback) {
 
   next();
 };
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\BrowserProtocol.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/BrowserProtocol.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -1971,7 +1971,7 @@ var replaceLocation = exports.replaceLocation = function replaceLocation(locatio
 var go = exports.go = function go(n) {
   if (n) window.history.go(n);
 };
-},{"./DOMStateStorage":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\DOMStateStorage.js","./DOMUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\DOMUtils.js","./ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\ExecutionEnvironment.js","./LocationUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\LocationUtils.js","./PathUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\PathUtils.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\DOMStateStorage.js":[function(require,module,exports){
+},{"./DOMStateStorage":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/DOMStateStorage.js","./DOMUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/DOMUtils.js","./ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/ExecutionEnvironment.js","./LocationUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/LocationUtils.js","./PathUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/PathUtils.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/DOMStateStorage.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -2060,7 +2060,7 @@ var readState = exports.readState = function readState(key) {
 };
 }).call(this,require('_process'))
 
-},{"_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\warning\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\DOMUtils.js":[function(require,module,exports){
+},{"_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/warning/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/DOMUtils.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -2110,12 +2110,12 @@ var supportsPopstateOnHashchange = exports.supportsPopstateOnHashchange = functi
 var isExtraneousPopstateEvent = exports.isExtraneousPopstateEvent = function isExtraneousPopstateEvent(event) {
   return event.state === undefined && navigator.userAgent.indexOf('CriOS') === -1;
 };
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\ExecutionEnvironment.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/ExecutionEnvironment.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
 var canUseDOM = exports.canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\HashProtocol.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/HashProtocol.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -2255,7 +2255,7 @@ var replaceLocation = exports.replaceLocation = function replaceLocation(locatio
 };
 }).call(this,require('_process'))
 
-},{"./BrowserProtocol":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\BrowserProtocol.js","./DOMStateStorage":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\DOMStateStorage.js","./DOMUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\DOMUtils.js","./LocationUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\LocationUtils.js","./PathUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\PathUtils.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\warning\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\LocationUtils.js":[function(require,module,exports){
+},{"./BrowserProtocol":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/BrowserProtocol.js","./DOMStateStorage":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/DOMStateStorage.js","./DOMUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/DOMUtils.js","./LocationUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/LocationUtils.js","./PathUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/PathUtils.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/warning/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/LocationUtils.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -2351,7 +2351,7 @@ var locationsAreEqual = exports.locationsAreEqual = function locationsAreEqual(a
 };
 }).call(this,require('_process'))
 
-},{"./Actions":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\Actions.js","./PathUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\PathUtils.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\invariant\\browser.js","warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\warning\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\PathUtils.js":[function(require,module,exports){
+},{"./Actions":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/Actions.js","./PathUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/PathUtils.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/invariant/browser.js","warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/warning/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/PathUtils.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -2451,7 +2451,7 @@ var createPath = exports.createPath = function createPath(location) {
 };
 }).call(this,require('_process'))
 
-},{"_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\warning\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\RefreshProtocol.js":[function(require,module,exports){
+},{"_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/warning/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/RefreshProtocol.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -2489,7 +2489,7 @@ var replaceLocation = exports.replaceLocation = function replaceLocation(locatio
   window.location.replace((0, _PathUtils.createPath)(location));
   return false; // Don't update location
 };
-},{"./BrowserProtocol":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\BrowserProtocol.js","./LocationUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\LocationUtils.js","./PathUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\PathUtils.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\createBrowserHistory.js":[function(require,module,exports){
+},{"./BrowserProtocol":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/BrowserProtocol.js","./LocationUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/LocationUtils.js","./PathUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/PathUtils.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/createBrowserHistory.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -2586,7 +2586,7 @@ var createBrowserHistory = function createBrowserHistory() {
 exports.default = createBrowserHistory;
 }).call(this,require('_process'))
 
-},{"./BrowserProtocol":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\BrowserProtocol.js","./DOMUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\DOMUtils.js","./ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\ExecutionEnvironment.js","./RefreshProtocol":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\RefreshProtocol.js","./createHistory":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\createHistory.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\invariant\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\createHashHistory.js":[function(require,module,exports){
+},{"./BrowserProtocol":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/BrowserProtocol.js","./DOMUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/DOMUtils.js","./ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/ExecutionEnvironment.js","./RefreshProtocol":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/RefreshProtocol.js","./createHistory":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/createHistory.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/invariant/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/createHashHistory.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -2737,7 +2737,7 @@ var createHashHistory = function createHashHistory() {
 exports.default = createHashHistory;
 }).call(this,require('_process'))
 
-},{"./DOMUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\DOMUtils.js","./ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\ExecutionEnvironment.js","./HashProtocol":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\HashProtocol.js","./createHistory":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\createHistory.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\invariant\\browser.js","warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\warning\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\createHistory.js":[function(require,module,exports){
+},{"./DOMUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/DOMUtils.js","./ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/ExecutionEnvironment.js","./HashProtocol":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/HashProtocol.js","./createHistory":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/createHistory.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/invariant/browser.js","warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/warning/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/createHistory.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -2914,7 +2914,7 @@ var createHistory = function createHistory() {
 };
 
 exports.default = createHistory;
-},{"./Actions":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\Actions.js","./AsyncUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\AsyncUtils.js","./LocationUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\LocationUtils.js","./PathUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\PathUtils.js","./runTransitionHook":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\runTransitionHook.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\createMemoryHistory.js":[function(require,module,exports){
+},{"./Actions":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/Actions.js","./AsyncUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/AsyncUtils.js","./LocationUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/LocationUtils.js","./PathUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/PathUtils.js","./runTransitionHook":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/runTransitionHook.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/createMemoryHistory.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -3058,7 +3058,7 @@ var createMemoryHistory = function createMemoryHistory() {
 exports.default = createMemoryHistory;
 }).call(this,require('_process'))
 
-},{"./Actions":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\Actions.js","./LocationUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\LocationUtils.js","./PathUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\PathUtils.js","./createHistory":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\createHistory.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\invariant\\browser.js","warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\warning\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\runTransitionHook.js":[function(require,module,exports){
+},{"./Actions":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/Actions.js","./LocationUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/LocationUtils.js","./PathUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/PathUtils.js","./createHistory":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/createHistory.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/invariant/browser.js","warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/warning/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/runTransitionHook.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -3085,7 +3085,7 @@ var runTransitionHook = function runTransitionHook(hook, location, callback) {
 exports.default = runTransitionHook;
 }).call(this,require('_process'))
 
-},{"_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\warning\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\useBasename.js":[function(require,module,exports){
+},{"_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/warning/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/useBasename.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -3195,7 +3195,7 @@ var useBasename = function useBasename(createHistory) {
 };
 
 exports.default = useBasename;
-},{"./PathUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\PathUtils.js","./runTransitionHook":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\runTransitionHook.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\useQueries.js":[function(require,module,exports){
+},{"./PathUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/PathUtils.js","./runTransitionHook":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/runTransitionHook.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/useQueries.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -3317,7 +3317,7 @@ var useQueries = function useQueries(createHistory) {
 };
 
 exports.default = useQueries;
-},{"./LocationUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\LocationUtils.js","./PathUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\PathUtils.js","./runTransitionHook":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\runTransitionHook.js","query-string":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\query-string\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\hoist-non-react-statics\\index.js":[function(require,module,exports){
+},{"./LocationUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/LocationUtils.js","./PathUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/PathUtils.js","./runTransitionHook":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/runTransitionHook.js","query-string":"/Users/bartekosx/Projects/invoice-tracker/node_modules/query-string/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/hoist-non-react-statics/index.js":[function(require,module,exports){
 /**
  * Copyright 2015, Yahoo! Inc.
  * Copyrights licensed under the New BSD License. See the accompanying LICENSE file for terms.
@@ -3369,7 +3369,7 @@ module.exports = function hoistNonReactStatics(targetComponent, sourceComponent,
     return targetComponent;
 };
 
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\invariant\\browser.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/invariant/browser.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-2015, Facebook, Inc.
@@ -3425,7 +3425,7 @@ module.exports = invariant;
 
 }).call(this,require('_process'))
 
-},{"_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js":[function(require,module,exports){
+},{"_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js":[function(require,module,exports){
 /*
 object-assign
 (c) Sindre Sorhus
@@ -3517,7 +3517,7 @@ module.exports = shouldUseNative() ? Object.assign : function (target, source) {
 	return to;
 };
 
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js":[function(require,module,exports){
 // shim for using process in browser
 var process = module.exports = {};
 
@@ -3699,7 +3699,7 @@ process.chdir = function (dir) {
 };
 process.umask = function() { return 0; };
 
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\query-string\\index.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/query-string/index.js":[function(require,module,exports){
 'use strict';
 var strictUriEncode = require('strict-uri-encode');
 var objectAssign = require('object-assign');
@@ -3904,14 +3904,14 @@ exports.stringify = function (obj, opts) {
 	}).join('&') : '';
 };
 
-},{"object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js","strict-uri-encode":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\strict-uri-encode\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-addons-css-transition-group\\index.js":[function(require,module,exports){
+},{"object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js","strict-uri-encode":"/Users/bartekosx/Projects/invoice-tracker/node_modules/strict-uri-encode/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-addons-css-transition-group/index.js":[function(require,module,exports){
 module.exports = require('react/lib/ReactCSSTransitionGroup');
-},{"react/lib/ReactCSSTransitionGroup":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactCSSTransitionGroup.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\index.js":[function(require,module,exports){
+},{"react/lib/ReactCSSTransitionGroup":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactCSSTransitionGroup.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/index.js":[function(require,module,exports){
 'use strict';
 
 module.exports = require('./lib/ReactDOM');
 
-},{"./lib/ReactDOM":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOM.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ARIADOMPropertyConfig.js":[function(require,module,exports){
+},{"./lib/ReactDOM":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOM.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ARIADOMPropertyConfig.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -3985,7 +3985,7 @@ var ARIADOMPropertyConfig = {
 };
 
 module.exports = ARIADOMPropertyConfig;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\AutoFocusUtils.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/AutoFocusUtils.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -4009,7 +4009,7 @@ var AutoFocusUtils = {
 };
 
 module.exports = AutoFocusUtils;
-},{"./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","fbjs/lib/focusNode":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\focusNode.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\BeforeInputEventPlugin.js":[function(require,module,exports){
+},{"./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","fbjs/lib/focusNode":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/focusNode.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/BeforeInputEventPlugin.js":[function(require,module,exports){
 /**
  * Copyright 2013-present Facebook, Inc.
  * All rights reserved.
@@ -4394,7 +4394,7 @@ var BeforeInputEventPlugin = {
 };
 
 module.exports = BeforeInputEventPlugin;
-},{"./EventPropagators":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPropagators.js","./FallbackCompositionState":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\FallbackCompositionState.js","./SyntheticCompositionEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticCompositionEvent.js","./SyntheticInputEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticInputEvent.js","fbjs/lib/ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\CSSProperty.js":[function(require,module,exports){
+},{"./EventPropagators":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPropagators.js","./FallbackCompositionState":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/FallbackCompositionState.js","./SyntheticCompositionEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticCompositionEvent.js","./SyntheticInputEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticInputEvent.js","fbjs/lib/ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/CSSProperty.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -4542,7 +4542,7 @@ var CSSProperty = {
 };
 
 module.exports = CSSProperty;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\CSSPropertyOperations.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/CSSPropertyOperations.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -4754,7 +4754,7 @@ var CSSPropertyOperations = {
 module.exports = CSSPropertyOperations;
 }).call(this,require('_process'))
 
-},{"./CSSProperty":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\CSSProperty.js","./ReactInstrumentation":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstrumentation.js","./dangerousStyleValue":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\dangerousStyleValue.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js","fbjs/lib/camelizeStyleName":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\camelizeStyleName.js","fbjs/lib/hyphenateStyleName":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\hyphenateStyleName.js","fbjs/lib/memoizeStringOnly":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\memoizeStringOnly.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\CallbackQueue.js":[function(require,module,exports){
+},{"./CSSProperty":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/CSSProperty.js","./ReactInstrumentation":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstrumentation.js","./dangerousStyleValue":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/dangerousStyleValue.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js","fbjs/lib/camelizeStyleName":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/camelizeStyleName.js","fbjs/lib/hyphenateStyleName":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/hyphenateStyleName.js","fbjs/lib/memoizeStringOnly":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/memoizeStringOnly.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/CallbackQueue.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -4876,7 +4876,7 @@ var CallbackQueue = function () {
 module.exports = PooledClass.addPoolingTo(CallbackQueue);
 }).call(this,require('_process'))
 
-},{"./PooledClass":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\PooledClass.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ChangeEventPlugin.js":[function(require,module,exports){
+},{"./PooledClass":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/PooledClass.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ChangeEventPlugin.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -5197,7 +5197,7 @@ var ChangeEventPlugin = {
 };
 
 module.exports = ChangeEventPlugin;
-},{"./EventPluginHub":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPluginHub.js","./EventPropagators":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPropagators.js","./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","./ReactUpdates":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactUpdates.js","./SyntheticEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticEvent.js","./getEventTarget":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getEventTarget.js","./isEventSupported":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\isEventSupported.js","./isTextInputElement":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\isTextInputElement.js","fbjs/lib/ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMChildrenOperations.js":[function(require,module,exports){
+},{"./EventPluginHub":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPluginHub.js","./EventPropagators":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPropagators.js","./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","./ReactUpdates":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactUpdates.js","./SyntheticEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticEvent.js","./getEventTarget":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getEventTarget.js","./isEventSupported":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/isEventSupported.js","./isTextInputElement":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/isTextInputElement.js","fbjs/lib/ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMChildrenOperations.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -5425,7 +5425,7 @@ var DOMChildrenOperations = {
 module.exports = DOMChildrenOperations;
 }).call(this,require('_process'))
 
-},{"./DOMLazyTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMLazyTree.js","./Danger":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\Danger.js","./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","./ReactInstrumentation":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstrumentation.js","./createMicrosoftUnsafeLocalFunction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\createMicrosoftUnsafeLocalFunction.js","./setInnerHTML":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\setInnerHTML.js","./setTextContent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\setTextContent.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMLazyTree.js":[function(require,module,exports){
+},{"./DOMLazyTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMLazyTree.js","./Danger":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/Danger.js","./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","./ReactInstrumentation":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstrumentation.js","./createMicrosoftUnsafeLocalFunction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/createMicrosoftUnsafeLocalFunction.js","./setInnerHTML":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/setInnerHTML.js","./setTextContent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/setTextContent.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMLazyTree.js":[function(require,module,exports){
 /**
  * Copyright 2015-present, Facebook, Inc.
  * All rights reserved.
@@ -5543,7 +5543,7 @@ DOMLazyTree.queueHTML = queueHTML;
 DOMLazyTree.queueText = queueText;
 
 module.exports = DOMLazyTree;
-},{"./DOMNamespaces":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMNamespaces.js","./createMicrosoftUnsafeLocalFunction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\createMicrosoftUnsafeLocalFunction.js","./setInnerHTML":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\setInnerHTML.js","./setTextContent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\setTextContent.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMNamespaces.js":[function(require,module,exports){
+},{"./DOMNamespaces":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMNamespaces.js","./createMicrosoftUnsafeLocalFunction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/createMicrosoftUnsafeLocalFunction.js","./setInnerHTML":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/setInnerHTML.js","./setTextContent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/setTextContent.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMNamespaces.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -5563,7 +5563,7 @@ var DOMNamespaces = {
 };
 
 module.exports = DOMNamespaces;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMProperty.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMProperty.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -5776,7 +5776,7 @@ var DOMProperty = {
 module.exports = DOMProperty;
 }).call(this,require('_process'))
 
-},{"./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMPropertyOperations.js":[function(require,module,exports){
+},{"./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMPropertyOperations.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -6016,7 +6016,7 @@ var DOMPropertyOperations = {
 module.exports = DOMPropertyOperations;
 }).call(this,require('_process'))
 
-},{"./DOMProperty":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMProperty.js","./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","./ReactInstrumentation":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstrumentation.js","./quoteAttributeValueForBrowser":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\quoteAttributeValueForBrowser.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\Danger.js":[function(require,module,exports){
+},{"./DOMProperty":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMProperty.js","./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","./ReactInstrumentation":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstrumentation.js","./quoteAttributeValueForBrowser":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/quoteAttributeValueForBrowser.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/Danger.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -6067,7 +6067,7 @@ var Danger = {
 module.exports = Danger;
 }).call(this,require('_process'))
 
-},{"./DOMLazyTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMLazyTree.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js","fbjs/lib/createNodesFromMarkup":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\createNodesFromMarkup.js","fbjs/lib/emptyFunction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyFunction.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DefaultEventPluginOrder.js":[function(require,module,exports){
+},{"./DOMLazyTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMLazyTree.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js","fbjs/lib/createNodesFromMarkup":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/createNodesFromMarkup.js","fbjs/lib/emptyFunction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyFunction.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DefaultEventPluginOrder.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -6093,7 +6093,7 @@ module.exports = Danger;
 var DefaultEventPluginOrder = ['ResponderEventPlugin', 'SimpleEventPlugin', 'TapEventPlugin', 'EnterLeaveEventPlugin', 'ChangeEventPlugin', 'SelectEventPlugin', 'BeforeInputEventPlugin'];
 
 module.exports = DefaultEventPluginOrder;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EnterLeaveEventPlugin.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EnterLeaveEventPlugin.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -6193,7 +6193,7 @@ var EnterLeaveEventPlugin = {
 };
 
 module.exports = EnterLeaveEventPlugin;
-},{"./EventPropagators":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPropagators.js","./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","./SyntheticMouseEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticMouseEvent.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventConstants.js":[function(require,module,exports){
+},{"./EventPropagators":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPropagators.js","./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","./SyntheticMouseEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticMouseEvent.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventConstants.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -6285,7 +6285,7 @@ var EventConstants = {
 };
 
 module.exports = EventConstants;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPluginHub.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPluginHub.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -6566,7 +6566,7 @@ var EventPluginHub = {
 module.exports = EventPluginHub;
 }).call(this,require('_process'))
 
-},{"./EventPluginRegistry":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPluginRegistry.js","./EventPluginUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPluginUtils.js","./ReactErrorUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactErrorUtils.js","./accumulateInto":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\accumulateInto.js","./forEachAccumulated":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\forEachAccumulated.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPluginRegistry.js":[function(require,module,exports){
+},{"./EventPluginRegistry":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPluginRegistry.js","./EventPluginUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPluginUtils.js","./ReactErrorUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactErrorUtils.js","./accumulateInto":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/accumulateInto.js","./forEachAccumulated":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/forEachAccumulated.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPluginRegistry.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -6824,7 +6824,7 @@ var EventPluginRegistry = {
 module.exports = EventPluginRegistry;
 }).call(this,require('_process'))
 
-},{"./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPluginUtils.js":[function(require,module,exports){
+},{"./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPluginUtils.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -7053,7 +7053,7 @@ var EventPluginUtils = {
 module.exports = EventPluginUtils;
 }).call(this,require('_process'))
 
-},{"./ReactErrorUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactErrorUtils.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPropagators.js":[function(require,module,exports){
+},{"./ReactErrorUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactErrorUtils.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPropagators.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -7190,7 +7190,7 @@ var EventPropagators = {
 module.exports = EventPropagators;
 }).call(this,require('_process'))
 
-},{"./EventPluginHub":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPluginHub.js","./EventPluginUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPluginUtils.js","./accumulateInto":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\accumulateInto.js","./forEachAccumulated":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\forEachAccumulated.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\FallbackCompositionState.js":[function(require,module,exports){
+},{"./EventPluginHub":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPluginHub.js","./EventPluginUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPluginUtils.js","./accumulateInto":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/accumulateInto.js","./forEachAccumulated":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/forEachAccumulated.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/FallbackCompositionState.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -7285,7 +7285,7 @@ _assign(FallbackCompositionState.prototype, {
 PooledClass.addPoolingTo(FallbackCompositionState);
 
 module.exports = FallbackCompositionState;
-},{"./PooledClass":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\PooledClass.js","./getTextContentAccessor":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getTextContentAccessor.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\HTMLDOMPropertyConfig.js":[function(require,module,exports){
+},{"./PooledClass":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/PooledClass.js","./getTextContentAccessor":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getTextContentAccessor.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/HTMLDOMPropertyConfig.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -7497,7 +7497,7 @@ var HTMLDOMPropertyConfig = {
 };
 
 module.exports = HTMLDOMPropertyConfig;
-},{"./DOMProperty":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMProperty.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\KeyEscapeUtils.js":[function(require,module,exports){
+},{"./DOMProperty":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMProperty.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/KeyEscapeUtils.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -7556,7 +7556,7 @@ var KeyEscapeUtils = {
 };
 
 module.exports = KeyEscapeUtils;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\LinkedValueUtils.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/LinkedValueUtils.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -7694,7 +7694,7 @@ var LinkedValueUtils = {
 module.exports = LinkedValueUtils;
 }).call(this,require('_process'))
 
-},{"./ReactPropTypesSecret":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactPropTypesSecret.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","react/lib/React":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\React.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\PooledClass.js":[function(require,module,exports){
+},{"./ReactPropTypesSecret":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactPropTypesSecret.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","react/lib/React":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/React.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/PooledClass.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -7809,7 +7809,7 @@ var PooledClass = {
 module.exports = PooledClass;
 }).call(this,require('_process'))
 
-},{"./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactBrowserEventEmitter.js":[function(require,module,exports){
+},{"./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactBrowserEventEmitter.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -8137,7 +8137,7 @@ var ReactBrowserEventEmitter = _assign({}, ReactEventEmitterMixin, {
 });
 
 module.exports = ReactBrowserEventEmitter;
-},{"./EventPluginRegistry":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPluginRegistry.js","./ReactEventEmitterMixin":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactEventEmitterMixin.js","./ViewportMetrics":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ViewportMetrics.js","./getVendorPrefixedEventName":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getVendorPrefixedEventName.js","./isEventSupported":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\isEventSupported.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactChildReconciler.js":[function(require,module,exports){
+},{"./EventPluginRegistry":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPluginRegistry.js","./ReactEventEmitterMixin":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactEventEmitterMixin.js","./ViewportMetrics":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ViewportMetrics.js","./getVendorPrefixedEventName":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getVendorPrefixedEventName.js","./isEventSupported":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/isEventSupported.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactChildReconciler.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-present, Facebook, Inc.
@@ -8294,7 +8294,7 @@ var ReactChildReconciler = {
 module.exports = ReactChildReconciler;
 }).call(this,require('_process'))
 
-},{"./KeyEscapeUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\KeyEscapeUtils.js","./ReactReconciler":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactReconciler.js","./instantiateReactComponent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\instantiateReactComponent.js","./shouldUpdateReactComponent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\shouldUpdateReactComponent.js","./traverseAllChildren":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\traverseAllChildren.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","react/lib/ReactComponentTreeHook":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactComponentTreeHook.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactComponentBrowserEnvironment.js":[function(require,module,exports){
+},{"./KeyEscapeUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/KeyEscapeUtils.js","./ReactReconciler":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactReconciler.js","./instantiateReactComponent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/instantiateReactComponent.js","./shouldUpdateReactComponent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/shouldUpdateReactComponent.js","./traverseAllChildren":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/traverseAllChildren.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","react/lib/ReactComponentTreeHook":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactComponentTreeHook.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactComponentBrowserEnvironment.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -8324,7 +8324,7 @@ var ReactComponentBrowserEnvironment = {
 };
 
 module.exports = ReactComponentBrowserEnvironment;
-},{"./DOMChildrenOperations":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMChildrenOperations.js","./ReactDOMIDOperations":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMIDOperations.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactComponentEnvironment.js":[function(require,module,exports){
+},{"./DOMChildrenOperations":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMChildrenOperations.js","./ReactDOMIDOperations":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMIDOperations.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactComponentEnvironment.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-present, Facebook, Inc.
@@ -8373,7 +8373,7 @@ var ReactComponentEnvironment = {
 module.exports = ReactComponentEnvironment;
 }).call(this,require('_process'))
 
-},{"./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactCompositeComponent.js":[function(require,module,exports){
+},{"./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactCompositeComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -9278,7 +9278,7 @@ var ReactCompositeComponent = {
 module.exports = ReactCompositeComponent;
 }).call(this,require('_process'))
 
-},{"./ReactComponentEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactComponentEnvironment.js","./ReactErrorUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactErrorUtils.js","./ReactInstanceMap":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstanceMap.js","./ReactInstrumentation":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstrumentation.js","./ReactNodeTypes":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactNodeTypes.js","./ReactReconciler":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactReconciler.js","./checkReactTypeSpec":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\checkReactTypeSpec.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","./shouldUpdateReactComponent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\shouldUpdateReactComponent.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/emptyObject":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyObject.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","fbjs/lib/shallowEqual":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\shallowEqual.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js","react/lib/React":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\React.js","react/lib/ReactCurrentOwner":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactCurrentOwner.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOM.js":[function(require,module,exports){
+},{"./ReactComponentEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactComponentEnvironment.js","./ReactErrorUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactErrorUtils.js","./ReactInstanceMap":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstanceMap.js","./ReactInstrumentation":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstrumentation.js","./ReactNodeTypes":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactNodeTypes.js","./ReactReconciler":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactReconciler.js","./checkReactTypeSpec":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/checkReactTypeSpec.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","./shouldUpdateReactComponent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/shouldUpdateReactComponent.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/emptyObject":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyObject.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","fbjs/lib/shallowEqual":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/shallowEqual.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js","react/lib/React":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/React.js","react/lib/ReactCurrentOwner":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactCurrentOwner.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOM.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -9392,7 +9392,7 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = ReactDOM;
 }).call(this,require('_process'))
 
-},{"./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","./ReactDOMInvalidARIAHook":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMInvalidARIAHook.js","./ReactDOMNullInputValuePropHook":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMNullInputValuePropHook.js","./ReactDOMUnknownPropertyHook":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMUnknownPropertyHook.js","./ReactDefaultInjection":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDefaultInjection.js","./ReactInstrumentation":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstrumentation.js","./ReactMount":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactMount.js","./ReactReconciler":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactReconciler.js","./ReactUpdates":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactUpdates.js","./ReactVersion":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactVersion.js","./findDOMNode":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\findDOMNode.js","./getHostComponentFromComposite":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getHostComponentFromComposite.js","./renderSubtreeIntoContainer":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\renderSubtreeIntoContainer.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponent.js":[function(require,module,exports){
+},{"./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","./ReactDOMInvalidARIAHook":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMInvalidARIAHook.js","./ReactDOMNullInputValuePropHook":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMNullInputValuePropHook.js","./ReactDOMUnknownPropertyHook":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMUnknownPropertyHook.js","./ReactDefaultInjection":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDefaultInjection.js","./ReactInstrumentation":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstrumentation.js","./ReactMount":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactMount.js","./ReactReconciler":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactReconciler.js","./ReactUpdates":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactUpdates.js","./ReactVersion":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactVersion.js","./findDOMNode":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/findDOMNode.js","./getHostComponentFromComposite":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getHostComponentFromComposite.js","./renderSubtreeIntoContainer":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/renderSubtreeIntoContainer.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -10396,7 +10396,7 @@ _assign(ReactDOMComponent.prototype, ReactDOMComponent.Mixin, ReactMultiChild.Mi
 module.exports = ReactDOMComponent;
 }).call(this,require('_process'))
 
-},{"./AutoFocusUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\AutoFocusUtils.js","./CSSPropertyOperations":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\CSSPropertyOperations.js","./DOMLazyTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMLazyTree.js","./DOMNamespaces":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMNamespaces.js","./DOMProperty":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMProperty.js","./DOMPropertyOperations":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMPropertyOperations.js","./EventPluginHub":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPluginHub.js","./EventPluginRegistry":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPluginRegistry.js","./ReactBrowserEventEmitter":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactBrowserEventEmitter.js","./ReactDOMComponentFlags":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentFlags.js","./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","./ReactDOMInput":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMInput.js","./ReactDOMOption":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMOption.js","./ReactDOMSelect":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMSelect.js","./ReactDOMTextarea":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMTextarea.js","./ReactInstrumentation":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstrumentation.js","./ReactMultiChild":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactMultiChild.js","./ReactServerRenderingTransaction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactServerRenderingTransaction.js","./escapeTextContentForBrowser":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\escapeTextContentForBrowser.js","./isEventSupported":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\isEventSupported.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","./validateDOMNesting":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\validateDOMNesting.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/emptyFunction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyFunction.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","fbjs/lib/shallowEqual":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\shallowEqual.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentFlags.js":[function(require,module,exports){
+},{"./AutoFocusUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/AutoFocusUtils.js","./CSSPropertyOperations":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/CSSPropertyOperations.js","./DOMLazyTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMLazyTree.js","./DOMNamespaces":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMNamespaces.js","./DOMProperty":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMProperty.js","./DOMPropertyOperations":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMPropertyOperations.js","./EventPluginHub":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPluginHub.js","./EventPluginRegistry":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPluginRegistry.js","./ReactBrowserEventEmitter":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactBrowserEventEmitter.js","./ReactDOMComponentFlags":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentFlags.js","./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","./ReactDOMInput":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMInput.js","./ReactDOMOption":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMOption.js","./ReactDOMSelect":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMSelect.js","./ReactDOMTextarea":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMTextarea.js","./ReactInstrumentation":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstrumentation.js","./ReactMultiChild":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactMultiChild.js","./ReactServerRenderingTransaction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactServerRenderingTransaction.js","./escapeTextContentForBrowser":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/escapeTextContentForBrowser.js","./isEventSupported":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/isEventSupported.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","./validateDOMNesting":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/validateDOMNesting.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/emptyFunction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyFunction.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","fbjs/lib/shallowEqual":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/shallowEqual.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentFlags.js":[function(require,module,exports){
 /**
  * Copyright 2015-present, Facebook, Inc.
  * All rights reserved.
@@ -10414,7 +10414,7 @@ var ReactDOMComponentFlags = {
 };
 
 module.exports = ReactDOMComponentFlags;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -10612,7 +10612,7 @@ var ReactDOMComponentTree = {
 module.exports = ReactDOMComponentTree;
 }).call(this,require('_process'))
 
-},{"./DOMProperty":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMProperty.js","./ReactDOMComponentFlags":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentFlags.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMContainerInfo.js":[function(require,module,exports){
+},{"./DOMProperty":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMProperty.js","./ReactDOMComponentFlags":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentFlags.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMContainerInfo.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -10648,7 +10648,7 @@ function ReactDOMContainerInfo(topLevelWrapper, node) {
 module.exports = ReactDOMContainerInfo;
 }).call(this,require('_process'))
 
-},{"./validateDOMNesting":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\validateDOMNesting.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMEmptyComponent.js":[function(require,module,exports){
+},{"./validateDOMNesting":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/validateDOMNesting.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMEmptyComponent.js":[function(require,module,exports){
 /**
  * Copyright 2014-present, Facebook, Inc.
  * All rights reserved.
@@ -10708,7 +10708,7 @@ _assign(ReactDOMEmptyComponent.prototype, {
 });
 
 module.exports = ReactDOMEmptyComponent;
-},{"./DOMLazyTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMLazyTree.js","./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMFeatureFlags.js":[function(require,module,exports){
+},{"./DOMLazyTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMLazyTree.js","./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMFeatureFlags.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -10727,7 +10727,7 @@ var ReactDOMFeatureFlags = {
 };
 
 module.exports = ReactDOMFeatureFlags;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMIDOperations.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMIDOperations.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -10761,7 +10761,7 @@ var ReactDOMIDOperations = {
 };
 
 module.exports = ReactDOMIDOperations;
-},{"./DOMChildrenOperations":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMChildrenOperations.js","./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMInput.js":[function(require,module,exports){
+},{"./DOMChildrenOperations":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMChildrenOperations.js","./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMInput.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -11042,7 +11042,7 @@ function _handleChange(event) {
 module.exports = ReactDOMInput;
 }).call(this,require('_process'))
 
-},{"./DOMPropertyOperations":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMPropertyOperations.js","./LinkedValueUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\LinkedValueUtils.js","./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","./ReactUpdates":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactUpdates.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMInvalidARIAHook.js":[function(require,module,exports){
+},{"./DOMPropertyOperations":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMPropertyOperations.js","./LinkedValueUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/LinkedValueUtils.js","./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","./ReactUpdates":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactUpdates.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMInvalidARIAHook.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -11138,7 +11138,7 @@ var ReactDOMInvalidARIAHook = {
 module.exports = ReactDOMInvalidARIAHook;
 }).call(this,require('_process'))
 
-},{"./DOMProperty":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMProperty.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","react/lib/ReactComponentTreeHook":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactComponentTreeHook.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMNullInputValuePropHook.js":[function(require,module,exports){
+},{"./DOMProperty":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMProperty.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","react/lib/ReactComponentTreeHook":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactComponentTreeHook.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMNullInputValuePropHook.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -11184,7 +11184,7 @@ var ReactDOMNullInputValuePropHook = {
 module.exports = ReactDOMNullInputValuePropHook;
 }).call(this,require('_process'))
 
-},{"_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","react/lib/ReactComponentTreeHook":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactComponentTreeHook.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMOption.js":[function(require,module,exports){
+},{"_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","react/lib/ReactComponentTreeHook":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactComponentTreeHook.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMOption.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -11310,7 +11310,7 @@ var ReactDOMOption = {
 module.exports = ReactDOMOption;
 }).call(this,require('_process'))
 
-},{"./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","./ReactDOMSelect":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMSelect.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js","react/lib/React":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\React.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMSelect.js":[function(require,module,exports){
+},{"./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","./ReactDOMSelect":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMSelect.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js","react/lib/React":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/React.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMSelect.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -11513,7 +11513,7 @@ function _handleChange(event) {
 module.exports = ReactDOMSelect;
 }).call(this,require('_process'))
 
-},{"./LinkedValueUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\LinkedValueUtils.js","./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","./ReactUpdates":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactUpdates.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMSelection.js":[function(require,module,exports){
+},{"./LinkedValueUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/LinkedValueUtils.js","./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","./ReactUpdates":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactUpdates.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMSelection.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -11725,7 +11725,7 @@ var ReactDOMSelection = {
 };
 
 module.exports = ReactDOMSelection;
-},{"./getNodeForCharacterOffset":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getNodeForCharacterOffset.js","./getTextContentAccessor":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getTextContentAccessor.js","fbjs/lib/ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMTextComponent.js":[function(require,module,exports){
+},{"./getNodeForCharacterOffset":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getNodeForCharacterOffset.js","./getTextContentAccessor":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getTextContentAccessor.js","fbjs/lib/ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMTextComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -11892,7 +11892,7 @@ _assign(ReactDOMTextComponent.prototype, {
 module.exports = ReactDOMTextComponent;
 }).call(this,require('_process'))
 
-},{"./DOMChildrenOperations":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMChildrenOperations.js","./DOMLazyTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMLazyTree.js","./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","./escapeTextContentForBrowser":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\escapeTextContentForBrowser.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","./validateDOMNesting":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\validateDOMNesting.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMTextarea.js":[function(require,module,exports){
+},{"./DOMChildrenOperations":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMChildrenOperations.js","./DOMLazyTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMLazyTree.js","./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","./escapeTextContentForBrowser":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/escapeTextContentForBrowser.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","./validateDOMNesting":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/validateDOMNesting.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMTextarea.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -12055,7 +12055,7 @@ function _handleChange(event) {
 module.exports = ReactDOMTextarea;
 }).call(this,require('_process'))
 
-},{"./LinkedValueUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\LinkedValueUtils.js","./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","./ReactUpdates":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactUpdates.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMTreeTraversal.js":[function(require,module,exports){
+},{"./LinkedValueUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/LinkedValueUtils.js","./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","./ReactUpdates":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactUpdates.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMTreeTraversal.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015-present, Facebook, Inc.
@@ -12194,7 +12194,7 @@ module.exports = {
 };
 }).call(this,require('_process'))
 
-},{"./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMUnknownPropertyHook.js":[function(require,module,exports){
+},{"./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMUnknownPropertyHook.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -12309,7 +12309,7 @@ var ReactDOMUnknownPropertyHook = {
 module.exports = ReactDOMUnknownPropertyHook;
 }).call(this,require('_process'))
 
-},{"./DOMProperty":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMProperty.js","./EventPluginRegistry":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPluginRegistry.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","react/lib/ReactComponentTreeHook":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactComponentTreeHook.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDebugTool.js":[function(require,module,exports){
+},{"./DOMProperty":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMProperty.js","./EventPluginRegistry":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPluginRegistry.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","react/lib/ReactComponentTreeHook":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactComponentTreeHook.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDebugTool.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2016-present, Facebook, Inc.
@@ -12673,7 +12673,7 @@ if (/[?&]react_perf\b/.test(url)) {
 module.exports = ReactDebugTool;
 }).call(this,require('_process'))
 
-},{"./ReactHostOperationHistoryHook":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactHostOperationHistoryHook.js","./ReactInvalidSetStateWarningHook":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInvalidSetStateWarningHook.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js","fbjs/lib/performanceNow":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\performanceNow.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","react/lib/ReactComponentTreeHook":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactComponentTreeHook.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDefaultBatchingStrategy.js":[function(require,module,exports){
+},{"./ReactHostOperationHistoryHook":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactHostOperationHistoryHook.js","./ReactInvalidSetStateWarningHook":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInvalidSetStateWarningHook.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js","fbjs/lib/performanceNow":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/performanceNow.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","react/lib/ReactComponentTreeHook":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactComponentTreeHook.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDefaultBatchingStrategy.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -12741,7 +12741,7 @@ var ReactDefaultBatchingStrategy = {
 };
 
 module.exports = ReactDefaultBatchingStrategy;
-},{"./ReactUpdates":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactUpdates.js","./Transaction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\Transaction.js","fbjs/lib/emptyFunction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyFunction.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDefaultInjection.js":[function(require,module,exports){
+},{"./ReactUpdates":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactUpdates.js","./Transaction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/Transaction.js","fbjs/lib/emptyFunction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyFunction.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDefaultInjection.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -12827,7 +12827,7 @@ function inject() {
 module.exports = {
   inject: inject
 };
-},{"./ARIADOMPropertyConfig":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ARIADOMPropertyConfig.js","./BeforeInputEventPlugin":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\BeforeInputEventPlugin.js","./ChangeEventPlugin":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ChangeEventPlugin.js","./DefaultEventPluginOrder":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DefaultEventPluginOrder.js","./EnterLeaveEventPlugin":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EnterLeaveEventPlugin.js","./HTMLDOMPropertyConfig":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\HTMLDOMPropertyConfig.js","./ReactComponentBrowserEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactComponentBrowserEnvironment.js","./ReactDOMComponent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponent.js","./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","./ReactDOMEmptyComponent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMEmptyComponent.js","./ReactDOMTextComponent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMTextComponent.js","./ReactDOMTreeTraversal":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMTreeTraversal.js","./ReactDefaultBatchingStrategy":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDefaultBatchingStrategy.js","./ReactEventListener":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactEventListener.js","./ReactInjection":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInjection.js","./ReactReconcileTransaction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactReconcileTransaction.js","./SVGDOMPropertyConfig":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SVGDOMPropertyConfig.js","./SelectEventPlugin":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SelectEventPlugin.js","./SimpleEventPlugin":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SimpleEventPlugin.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactElementSymbol.js":[function(require,module,exports){
+},{"./ARIADOMPropertyConfig":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ARIADOMPropertyConfig.js","./BeforeInputEventPlugin":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/BeforeInputEventPlugin.js","./ChangeEventPlugin":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ChangeEventPlugin.js","./DefaultEventPluginOrder":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DefaultEventPluginOrder.js","./EnterLeaveEventPlugin":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EnterLeaveEventPlugin.js","./HTMLDOMPropertyConfig":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/HTMLDOMPropertyConfig.js","./ReactComponentBrowserEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactComponentBrowserEnvironment.js","./ReactDOMComponent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponent.js","./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","./ReactDOMEmptyComponent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMEmptyComponent.js","./ReactDOMTextComponent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMTextComponent.js","./ReactDOMTreeTraversal":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMTreeTraversal.js","./ReactDefaultBatchingStrategy":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDefaultBatchingStrategy.js","./ReactEventListener":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactEventListener.js","./ReactInjection":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInjection.js","./ReactReconcileTransaction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactReconcileTransaction.js","./SVGDOMPropertyConfig":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SVGDOMPropertyConfig.js","./SelectEventPlugin":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SelectEventPlugin.js","./SimpleEventPlugin":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SimpleEventPlugin.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactElementSymbol.js":[function(require,module,exports){
 /**
  * Copyright 2014-present, Facebook, Inc.
  * All rights reserved.
@@ -12847,7 +12847,7 @@ module.exports = {
 var REACT_ELEMENT_TYPE = typeof Symbol === 'function' && Symbol['for'] && Symbol['for']('react.element') || 0xeac7;
 
 module.exports = REACT_ELEMENT_TYPE;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactEmptyComponent.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactEmptyComponent.js":[function(require,module,exports){
 /**
  * Copyright 2014-present, Facebook, Inc.
  * All rights reserved.
@@ -12877,7 +12877,7 @@ var ReactEmptyComponent = {
 ReactEmptyComponent.injection = ReactEmptyComponentInjection;
 
 module.exports = ReactEmptyComponent;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactErrorUtils.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactErrorUtils.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -12957,7 +12957,7 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = ReactErrorUtils;
 }).call(this,require('_process'))
 
-},{"_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactEventEmitterMixin.js":[function(require,module,exports){
+},{"_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactEventEmitterMixin.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -12990,7 +12990,7 @@ var ReactEventEmitterMixin = {
 };
 
 module.exports = ReactEventEmitterMixin;
-},{"./EventPluginHub":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPluginHub.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactEventListener.js":[function(require,module,exports){
+},{"./EventPluginHub":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPluginHub.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactEventListener.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -13145,7 +13145,7 @@ var ReactEventListener = {
 };
 
 module.exports = ReactEventListener;
-},{"./PooledClass":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\PooledClass.js","./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","./ReactUpdates":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactUpdates.js","./getEventTarget":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getEventTarget.js","fbjs/lib/EventListener":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\EventListener.js","fbjs/lib/ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js","fbjs/lib/getUnboundedScrollPosition":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\getUnboundedScrollPosition.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactFeatureFlags.js":[function(require,module,exports){
+},{"./PooledClass":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/PooledClass.js","./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","./ReactUpdates":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactUpdates.js","./getEventTarget":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getEventTarget.js","fbjs/lib/EventListener":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/EventListener.js","fbjs/lib/ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js","fbjs/lib/getUnboundedScrollPosition":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/getUnboundedScrollPosition.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactFeatureFlags.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -13167,7 +13167,7 @@ var ReactFeatureFlags = {
 };
 
 module.exports = ReactFeatureFlags;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactHostComponent.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactHostComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-present, Facebook, Inc.
@@ -13238,7 +13238,7 @@ var ReactHostComponent = {
 module.exports = ReactHostComponent;
 }).call(this,require('_process'))
 
-},{"./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactHostOperationHistoryHook.js":[function(require,module,exports){
+},{"./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactHostOperationHistoryHook.js":[function(require,module,exports){
 /**
  * Copyright 2016-present, Facebook, Inc.
  * All rights reserved.
@@ -13272,7 +13272,7 @@ var ReactHostOperationHistoryHook = {
 };
 
 module.exports = ReactHostOperationHistoryHook;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInjection.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInjection.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -13306,7 +13306,7 @@ var ReactInjection = {
 };
 
 module.exports = ReactInjection;
-},{"./DOMProperty":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMProperty.js","./EventPluginHub":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPluginHub.js","./EventPluginUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPluginUtils.js","./ReactBrowserEventEmitter":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactBrowserEventEmitter.js","./ReactComponentEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactComponentEnvironment.js","./ReactEmptyComponent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactEmptyComponent.js","./ReactHostComponent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactHostComponent.js","./ReactUpdates":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactUpdates.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInputSelection.js":[function(require,module,exports){
+},{"./DOMProperty":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMProperty.js","./EventPluginHub":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPluginHub.js","./EventPluginUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPluginUtils.js","./ReactBrowserEventEmitter":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactBrowserEventEmitter.js","./ReactComponentEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactComponentEnvironment.js","./ReactEmptyComponent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactEmptyComponent.js","./ReactHostComponent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactHostComponent.js","./ReactUpdates":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactUpdates.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInputSelection.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -13430,7 +13430,7 @@ var ReactInputSelection = {
 };
 
 module.exports = ReactInputSelection;
-},{"./ReactDOMSelection":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMSelection.js","fbjs/lib/containsNode":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\containsNode.js","fbjs/lib/focusNode":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\focusNode.js","fbjs/lib/getActiveElement":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\getActiveElement.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstanceMap.js":[function(require,module,exports){
+},{"./ReactDOMSelection":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMSelection.js","fbjs/lib/containsNode":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/containsNode.js","fbjs/lib/focusNode":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/focusNode.js","fbjs/lib/getActiveElement":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/getActiveElement.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstanceMap.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -13478,7 +13478,7 @@ var ReactInstanceMap = {
 };
 
 module.exports = ReactInstanceMap;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstrumentation.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstrumentation.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2016-present, Facebook, Inc.
@@ -13505,7 +13505,7 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = { debugTool: debugTool };
 }).call(this,require('_process'))
 
-},{"./ReactDebugTool":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDebugTool.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInvalidSetStateWarningHook.js":[function(require,module,exports){
+},{"./ReactDebugTool":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDebugTool.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInvalidSetStateWarningHook.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2016-present, Facebook, Inc.
@@ -13545,7 +13545,7 @@ var ReactInvalidSetStateWarningHook = {
 module.exports = ReactInvalidSetStateWarningHook;
 }).call(this,require('_process'))
 
-},{"_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactMarkupChecksum.js":[function(require,module,exports){
+},{"_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactMarkupChecksum.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -13595,7 +13595,7 @@ var ReactMarkupChecksum = {
 };
 
 module.exports = ReactMarkupChecksum;
-},{"./adler32":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\adler32.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactMount.js":[function(require,module,exports){
+},{"./adler32":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/adler32.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactMount.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -14136,7 +14136,7 @@ var ReactMount = {
 module.exports = ReactMount;
 }).call(this,require('_process'))
 
-},{"./DOMLazyTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMLazyTree.js","./DOMProperty":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMProperty.js","./ReactBrowserEventEmitter":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactBrowserEventEmitter.js","./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","./ReactDOMContainerInfo":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMContainerInfo.js","./ReactDOMFeatureFlags":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMFeatureFlags.js","./ReactFeatureFlags":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactFeatureFlags.js","./ReactInstanceMap":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstanceMap.js","./ReactInstrumentation":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstrumentation.js","./ReactMarkupChecksum":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactMarkupChecksum.js","./ReactReconciler":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactReconciler.js","./ReactUpdateQueue":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactUpdateQueue.js","./ReactUpdates":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactUpdates.js","./instantiateReactComponent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\instantiateReactComponent.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","./setInnerHTML":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\setInnerHTML.js","./shouldUpdateReactComponent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\shouldUpdateReactComponent.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/emptyObject":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyObject.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","react/lib/React":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\React.js","react/lib/ReactCurrentOwner":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactCurrentOwner.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactMultiChild.js":[function(require,module,exports){
+},{"./DOMLazyTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMLazyTree.js","./DOMProperty":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMProperty.js","./ReactBrowserEventEmitter":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactBrowserEventEmitter.js","./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","./ReactDOMContainerInfo":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMContainerInfo.js","./ReactDOMFeatureFlags":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMFeatureFlags.js","./ReactFeatureFlags":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactFeatureFlags.js","./ReactInstanceMap":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstanceMap.js","./ReactInstrumentation":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstrumentation.js","./ReactMarkupChecksum":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactMarkupChecksum.js","./ReactReconciler":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactReconciler.js","./ReactUpdateQueue":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactUpdateQueue.js","./ReactUpdates":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactUpdates.js","./instantiateReactComponent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/instantiateReactComponent.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","./setInnerHTML":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/setInnerHTML.js","./shouldUpdateReactComponent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/shouldUpdateReactComponent.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/emptyObject":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyObject.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","react/lib/React":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/React.js","react/lib/ReactCurrentOwner":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactCurrentOwner.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactMultiChild.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -14589,7 +14589,7 @@ var ReactMultiChild = {
 module.exports = ReactMultiChild;
 }).call(this,require('_process'))
 
-},{"./ReactChildReconciler":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactChildReconciler.js","./ReactComponentEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactComponentEnvironment.js","./ReactInstanceMap":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstanceMap.js","./ReactInstrumentation":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstrumentation.js","./ReactReconciler":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactReconciler.js","./flattenChildren":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\flattenChildren.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/emptyFunction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyFunction.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","react/lib/ReactCurrentOwner":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactCurrentOwner.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactNodeTypes.js":[function(require,module,exports){
+},{"./ReactChildReconciler":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactChildReconciler.js","./ReactComponentEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactComponentEnvironment.js","./ReactInstanceMap":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstanceMap.js","./ReactInstrumentation":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstrumentation.js","./ReactReconciler":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactReconciler.js","./flattenChildren":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/flattenChildren.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/emptyFunction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyFunction.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","react/lib/ReactCurrentOwner":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactCurrentOwner.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactNodeTypes.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -14632,7 +14632,7 @@ var ReactNodeTypes = {
 module.exports = ReactNodeTypes;
 }).call(this,require('_process'))
 
-},{"./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","react/lib/React":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\React.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactOwner.js":[function(require,module,exports){
+},{"./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","react/lib/React":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/React.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactOwner.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -14729,7 +14729,7 @@ var ReactOwner = {
 module.exports = ReactOwner;
 }).call(this,require('_process'))
 
-},{"./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactPerf.js":[function(require,module,exports){
+},{"./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactPerf.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2016-present, Facebook, Inc.
@@ -15233,7 +15233,7 @@ var ReactPerfAnalysis = {
 module.exports = ReactPerfAnalysis;
 }).call(this,require('_process'))
 
-},{"./ReactDebugTool":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDebugTool.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactPropTypeLocationNames.js":[function(require,module,exports){
+},{"./ReactDebugTool":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDebugTool.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactPropTypeLocationNames.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -15261,7 +15261,7 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = ReactPropTypeLocationNames;
 }).call(this,require('_process'))
 
-},{"_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactPropTypesSecret.js":[function(require,module,exports){
+},{"_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactPropTypesSecret.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -15278,7 +15278,7 @@ module.exports = ReactPropTypeLocationNames;
 var ReactPropTypesSecret = 'SECRET_DO_NOT_PASS_THIS_OR_YOU_WILL_BE_FIRED';
 
 module.exports = ReactPropTypesSecret;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactReconcileTransaction.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactReconcileTransaction.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -15459,7 +15459,7 @@ PooledClass.addPoolingTo(ReactReconcileTransaction);
 module.exports = ReactReconcileTransaction;
 }).call(this,require('_process'))
 
-},{"./CallbackQueue":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\CallbackQueue.js","./PooledClass":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\PooledClass.js","./ReactBrowserEventEmitter":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactBrowserEventEmitter.js","./ReactInputSelection":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInputSelection.js","./ReactInstrumentation":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstrumentation.js","./ReactUpdateQueue":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactUpdateQueue.js","./Transaction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\Transaction.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactReconciler.js":[function(require,module,exports){
+},{"./CallbackQueue":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/CallbackQueue.js","./PooledClass":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/PooledClass.js","./ReactBrowserEventEmitter":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactBrowserEventEmitter.js","./ReactInputSelection":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInputSelection.js","./ReactInstrumentation":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstrumentation.js","./ReactUpdateQueue":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactUpdateQueue.js","./Transaction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/Transaction.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactReconciler.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -15630,7 +15630,7 @@ var ReactReconciler = {
 module.exports = ReactReconciler;
 }).call(this,require('_process'))
 
-},{"./ReactInstrumentation":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstrumentation.js","./ReactRef":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactRef.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactRef.js":[function(require,module,exports){
+},{"./ReactInstrumentation":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstrumentation.js","./ReactRef":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactRef.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactRef.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -15719,7 +15719,7 @@ ReactRef.detachRefs = function (instance, element) {
 };
 
 module.exports = ReactRef;
-},{"./ReactOwner":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactOwner.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactServerRenderingTransaction.js":[function(require,module,exports){
+},{"./ReactOwner":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactOwner.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactServerRenderingTransaction.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-present, Facebook, Inc.
@@ -15812,7 +15812,7 @@ PooledClass.addPoolingTo(ReactServerRenderingTransaction);
 module.exports = ReactServerRenderingTransaction;
 }).call(this,require('_process'))
 
-},{"./PooledClass":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\PooledClass.js","./ReactInstrumentation":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstrumentation.js","./ReactServerUpdateQueue":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactServerUpdateQueue.js","./Transaction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\Transaction.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactServerUpdateQueue.js":[function(require,module,exports){
+},{"./PooledClass":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/PooledClass.js","./ReactInstrumentation":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstrumentation.js","./ReactServerUpdateQueue":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactServerUpdateQueue.js","./Transaction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/Transaction.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactServerUpdateQueue.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015-present, Facebook, Inc.
@@ -15954,7 +15954,7 @@ var ReactServerUpdateQueue = function () {
 module.exports = ReactServerUpdateQueue;
 }).call(this,require('_process'))
 
-},{"./ReactUpdateQueue":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactUpdateQueue.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactShallowRenderer.js":[function(require,module,exports){
+},{"./ReactUpdateQueue":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactUpdateQueue.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactShallowRenderer.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -16092,7 +16092,7 @@ var ReactShallowRenderer = function () {
 module.exports = ReactShallowRenderer;
 }).call(this,require('_process'))
 
-},{"./ReactCompositeComponent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactCompositeComponent.js","./ReactDefaultInjection":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDefaultInjection.js","./ReactReconciler":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactReconciler.js","./ReactUpdates":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactUpdates.js","./getNextDebugID":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getNextDebugID.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/emptyObject":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyObject.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js","react/lib/React":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\React.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactTestUtils.js":[function(require,module,exports){
+},{"./ReactCompositeComponent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactCompositeComponent.js","./ReactDefaultInjection":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDefaultInjection.js","./ReactReconciler":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactReconciler.js","./ReactUpdates":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactUpdates.js","./getNextDebugID":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getNextDebugID.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/emptyObject":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyObject.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js","react/lib/React":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/React.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactTestUtils.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -16507,7 +16507,7 @@ Object.keys(topLevelTypes).forEach(function (eventType) {
 module.exports = ReactTestUtils;
 }).call(this,require('_process'))
 
-},{"./EventConstants":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventConstants.js","./EventPluginHub":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPluginHub.js","./EventPluginRegistry":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPluginRegistry.js","./EventPropagators":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPropagators.js","./ReactBrowserEventEmitter":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactBrowserEventEmitter.js","./ReactDOM":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOM.js","./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","./ReactInstanceMap":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstanceMap.js","./ReactShallowRenderer":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactShallowRenderer.js","./ReactUpdates":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactUpdates.js","./SyntheticEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticEvent.js","./findDOMNode":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\findDOMNode.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js","react/lib/React":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\React.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactUpdateQueue.js":[function(require,module,exports){
+},{"./EventConstants":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventConstants.js","./EventPluginHub":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPluginHub.js","./EventPluginRegistry":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPluginRegistry.js","./EventPropagators":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPropagators.js","./ReactBrowserEventEmitter":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactBrowserEventEmitter.js","./ReactDOM":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOM.js","./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","./ReactInstanceMap":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstanceMap.js","./ReactShallowRenderer":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactShallowRenderer.js","./ReactUpdates":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactUpdates.js","./SyntheticEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticEvent.js","./findDOMNode":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/findDOMNode.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js","react/lib/React":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/React.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactUpdateQueue.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015-present, Facebook, Inc.
@@ -16736,7 +16736,7 @@ var ReactUpdateQueue = {
 module.exports = ReactUpdateQueue;
 }).call(this,require('_process'))
 
-},{"./ReactInstanceMap":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstanceMap.js","./ReactInstrumentation":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstrumentation.js","./ReactUpdates":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactUpdates.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","react/lib/ReactCurrentOwner":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactCurrentOwner.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactUpdates.js":[function(require,module,exports){
+},{"./ReactInstanceMap":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstanceMap.js","./ReactInstrumentation":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstrumentation.js","./ReactUpdates":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactUpdates.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","react/lib/ReactCurrentOwner":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactCurrentOwner.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactUpdates.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -16990,7 +16990,7 @@ var ReactUpdates = {
 module.exports = ReactUpdates;
 }).call(this,require('_process'))
 
-},{"./CallbackQueue":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\CallbackQueue.js","./PooledClass":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\PooledClass.js","./ReactFeatureFlags":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactFeatureFlags.js","./ReactReconciler":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactReconciler.js","./Transaction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\Transaction.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactVersion.js":[function(require,module,exports){
+},{"./CallbackQueue":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/CallbackQueue.js","./PooledClass":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/PooledClass.js","./ReactFeatureFlags":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactFeatureFlags.js","./ReactReconciler":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactReconciler.js","./Transaction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/Transaction.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactVersion.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -17004,7 +17004,7 @@ module.exports = ReactUpdates;
 'use strict';
 
 module.exports = '15.4.2';
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SVGDOMPropertyConfig.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SVGDOMPropertyConfig.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -17306,7 +17306,7 @@ Object.keys(ATTRS).forEach(function (key) {
 });
 
 module.exports = SVGDOMPropertyConfig;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SelectEventPlugin.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SelectEventPlugin.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -17497,7 +17497,7 @@ var SelectEventPlugin = {
 };
 
 module.exports = SelectEventPlugin;
-},{"./EventPropagators":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPropagators.js","./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","./ReactInputSelection":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInputSelection.js","./SyntheticEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticEvent.js","./isTextInputElement":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\isTextInputElement.js","fbjs/lib/ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js","fbjs/lib/getActiveElement":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\getActiveElement.js","fbjs/lib/shallowEqual":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\shallowEqual.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SimpleEventPlugin.js":[function(require,module,exports){
+},{"./EventPropagators":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPropagators.js","./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","./ReactInputSelection":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInputSelection.js","./SyntheticEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticEvent.js","./isTextInputElement":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/isTextInputElement.js","fbjs/lib/ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js","fbjs/lib/getActiveElement":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/getActiveElement.js","fbjs/lib/shallowEqual":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/shallowEqual.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SimpleEventPlugin.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -17728,7 +17728,7 @@ var SimpleEventPlugin = {
 module.exports = SimpleEventPlugin;
 }).call(this,require('_process'))
 
-},{"./EventPropagators":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\EventPropagators.js","./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","./SyntheticAnimationEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticAnimationEvent.js","./SyntheticClipboardEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticClipboardEvent.js","./SyntheticDragEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticDragEvent.js","./SyntheticEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticEvent.js","./SyntheticFocusEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticFocusEvent.js","./SyntheticKeyboardEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticKeyboardEvent.js","./SyntheticMouseEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticMouseEvent.js","./SyntheticTouchEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticTouchEvent.js","./SyntheticTransitionEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticTransitionEvent.js","./SyntheticUIEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticUIEvent.js","./SyntheticWheelEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticWheelEvent.js","./getEventCharCode":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getEventCharCode.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/EventListener":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\EventListener.js","fbjs/lib/emptyFunction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyFunction.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticAnimationEvent.js":[function(require,module,exports){
+},{"./EventPropagators":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/EventPropagators.js","./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","./SyntheticAnimationEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticAnimationEvent.js","./SyntheticClipboardEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticClipboardEvent.js","./SyntheticDragEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticDragEvent.js","./SyntheticEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticEvent.js","./SyntheticFocusEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticFocusEvent.js","./SyntheticKeyboardEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticKeyboardEvent.js","./SyntheticMouseEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticMouseEvent.js","./SyntheticTouchEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticTouchEvent.js","./SyntheticTransitionEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticTransitionEvent.js","./SyntheticUIEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticUIEvent.js","./SyntheticWheelEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticWheelEvent.js","./getEventCharCode":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getEventCharCode.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/EventListener":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/EventListener.js","fbjs/lib/emptyFunction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyFunction.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticAnimationEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -17767,7 +17767,7 @@ function SyntheticAnimationEvent(dispatchConfig, dispatchMarker, nativeEvent, na
 SyntheticEvent.augmentClass(SyntheticAnimationEvent, AnimationEventInterface);
 
 module.exports = SyntheticAnimationEvent;
-},{"./SyntheticEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticEvent.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticClipboardEvent.js":[function(require,module,exports){
+},{"./SyntheticEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticEvent.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticClipboardEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -17805,7 +17805,7 @@ function SyntheticClipboardEvent(dispatchConfig, dispatchMarker, nativeEvent, na
 SyntheticEvent.augmentClass(SyntheticClipboardEvent, ClipboardEventInterface);
 
 module.exports = SyntheticClipboardEvent;
-},{"./SyntheticEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticEvent.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticCompositionEvent.js":[function(require,module,exports){
+},{"./SyntheticEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticEvent.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticCompositionEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -17841,7 +17841,7 @@ function SyntheticCompositionEvent(dispatchConfig, dispatchMarker, nativeEvent, 
 SyntheticEvent.augmentClass(SyntheticCompositionEvent, CompositionEventInterface);
 
 module.exports = SyntheticCompositionEvent;
-},{"./SyntheticEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticEvent.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticDragEvent.js":[function(require,module,exports){
+},{"./SyntheticEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticEvent.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticDragEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -17877,7 +17877,7 @@ function SyntheticDragEvent(dispatchConfig, dispatchMarker, nativeEvent, nativeE
 SyntheticMouseEvent.augmentClass(SyntheticDragEvent, DragEventInterface);
 
 module.exports = SyntheticDragEvent;
-},{"./SyntheticMouseEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticMouseEvent.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticEvent.js":[function(require,module,exports){
+},{"./SyntheticMouseEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticMouseEvent.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticEvent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -18148,7 +18148,7 @@ function getPooledWarningPropertyDefinition(propName, getVal) {
 }
 }).call(this,require('_process'))
 
-},{"./PooledClass":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\PooledClass.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/emptyFunction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyFunction.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticFocusEvent.js":[function(require,module,exports){
+},{"./PooledClass":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/PooledClass.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/emptyFunction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyFunction.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticFocusEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -18184,7 +18184,7 @@ function SyntheticFocusEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticUIEvent.augmentClass(SyntheticFocusEvent, FocusEventInterface);
 
 module.exports = SyntheticFocusEvent;
-},{"./SyntheticUIEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticUIEvent.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticInputEvent.js":[function(require,module,exports){
+},{"./SyntheticUIEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticUIEvent.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticInputEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -18221,7 +18221,7 @@ function SyntheticInputEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticEvent.augmentClass(SyntheticInputEvent, InputEventInterface);
 
 module.exports = SyntheticInputEvent;
-},{"./SyntheticEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticEvent.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticKeyboardEvent.js":[function(require,module,exports){
+},{"./SyntheticEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticEvent.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticKeyboardEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -18305,7 +18305,7 @@ function SyntheticKeyboardEvent(dispatchConfig, dispatchMarker, nativeEvent, nat
 SyntheticUIEvent.augmentClass(SyntheticKeyboardEvent, KeyboardEventInterface);
 
 module.exports = SyntheticKeyboardEvent;
-},{"./SyntheticUIEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticUIEvent.js","./getEventCharCode":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getEventCharCode.js","./getEventKey":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getEventKey.js","./getEventModifierState":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getEventModifierState.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticMouseEvent.js":[function(require,module,exports){
+},{"./SyntheticUIEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticUIEvent.js","./getEventCharCode":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getEventCharCode.js","./getEventKey":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getEventKey.js","./getEventModifierState":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getEventModifierState.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticMouseEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -18377,7 +18377,7 @@ function SyntheticMouseEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticUIEvent.augmentClass(SyntheticMouseEvent, MouseEventInterface);
 
 module.exports = SyntheticMouseEvent;
-},{"./SyntheticUIEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticUIEvent.js","./ViewportMetrics":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ViewportMetrics.js","./getEventModifierState":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getEventModifierState.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticTouchEvent.js":[function(require,module,exports){
+},{"./SyntheticUIEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticUIEvent.js","./ViewportMetrics":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ViewportMetrics.js","./getEventModifierState":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getEventModifierState.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticTouchEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -18422,7 +18422,7 @@ function SyntheticTouchEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticUIEvent.augmentClass(SyntheticTouchEvent, TouchEventInterface);
 
 module.exports = SyntheticTouchEvent;
-},{"./SyntheticUIEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticUIEvent.js","./getEventModifierState":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getEventModifierState.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticTransitionEvent.js":[function(require,module,exports){
+},{"./SyntheticUIEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticUIEvent.js","./getEventModifierState":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getEventModifierState.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticTransitionEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -18461,7 +18461,7 @@ function SyntheticTransitionEvent(dispatchConfig, dispatchMarker, nativeEvent, n
 SyntheticEvent.augmentClass(SyntheticTransitionEvent, TransitionEventInterface);
 
 module.exports = SyntheticTransitionEvent;
-},{"./SyntheticEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticEvent.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticUIEvent.js":[function(require,module,exports){
+},{"./SyntheticEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticEvent.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticUIEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -18520,7 +18520,7 @@ function SyntheticUIEvent(dispatchConfig, dispatchMarker, nativeEvent, nativeEve
 SyntheticEvent.augmentClass(SyntheticUIEvent, UIEventInterface);
 
 module.exports = SyntheticUIEvent;
-},{"./SyntheticEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticEvent.js","./getEventTarget":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getEventTarget.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticWheelEvent.js":[function(require,module,exports){
+},{"./SyntheticEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticEvent.js","./getEventTarget":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getEventTarget.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticWheelEvent.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -18574,7 +18574,7 @@ function SyntheticWheelEvent(dispatchConfig, dispatchMarker, nativeEvent, native
 SyntheticMouseEvent.augmentClass(SyntheticWheelEvent, WheelEventInterface);
 
 module.exports = SyntheticWheelEvent;
-},{"./SyntheticMouseEvent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\SyntheticMouseEvent.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\Transaction.js":[function(require,module,exports){
+},{"./SyntheticMouseEvent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/SyntheticMouseEvent.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/Transaction.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -18802,7 +18802,7 @@ var TransactionImpl = {
 module.exports = TransactionImpl;
 }).call(this,require('_process'))
 
-},{"./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ViewportMetrics.js":[function(require,module,exports){
+},{"./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ViewportMetrics.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -18829,7 +18829,7 @@ var ViewportMetrics = {
 };
 
 module.exports = ViewportMetrics;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\accumulateInto.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/accumulateInto.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-present, Facebook, Inc.
@@ -18890,7 +18890,7 @@ function accumulateInto(current, next) {
 module.exports = accumulateInto;
 }).call(this,require('_process'))
 
-},{"./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\adler32.js":[function(require,module,exports){
+},{"./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/adler32.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -18934,7 +18934,7 @@ function adler32(data) {
 }
 
 module.exports = adler32;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\checkReactTypeSpec.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/checkReactTypeSpec.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -19024,7 +19024,7 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 module.exports = checkReactTypeSpec;
 }).call(this,require('_process'))
 
-},{"./ReactPropTypeLocationNames":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactPropTypeLocationNames.js","./ReactPropTypesSecret":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactPropTypesSecret.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","react/lib/ReactComponentTreeHook":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactComponentTreeHook.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\createMicrosoftUnsafeLocalFunction.js":[function(require,module,exports){
+},{"./ReactPropTypeLocationNames":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactPropTypeLocationNames.js","./ReactPropTypesSecret":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactPropTypesSecret.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","react/lib/ReactComponentTreeHook":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactComponentTreeHook.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/createMicrosoftUnsafeLocalFunction.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -19056,7 +19056,7 @@ var createMicrosoftUnsafeLocalFunction = function (func) {
 };
 
 module.exports = createMicrosoftUnsafeLocalFunction;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\dangerousStyleValue.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/dangerousStyleValue.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -19138,7 +19138,7 @@ function dangerousStyleValue(name, value, component) {
 module.exports = dangerousStyleValue;
 }).call(this,require('_process'))
 
-},{"./CSSProperty":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\CSSProperty.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\escapeTextContentForBrowser.js":[function(require,module,exports){
+},{"./CSSProperty":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/CSSProperty.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/escapeTextContentForBrowser.js":[function(require,module,exports){
 /**
  * Copyright 2016-present, Facebook, Inc.
  * All rights reserved.
@@ -19261,7 +19261,7 @@ function escapeTextContentForBrowser(text) {
 }
 
 module.exports = escapeTextContentForBrowser;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\findDOMNode.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/findDOMNode.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -19324,7 +19324,7 @@ function findDOMNode(componentOrElement) {
 module.exports = findDOMNode;
 }).call(this,require('_process'))
 
-},{"./ReactDOMComponentTree":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOMComponentTree.js","./ReactInstanceMap":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactInstanceMap.js","./getHostComponentFromComposite":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getHostComponentFromComposite.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","react/lib/ReactCurrentOwner":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactCurrentOwner.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\flattenChildren.js":[function(require,module,exports){
+},{"./ReactDOMComponentTree":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOMComponentTree.js","./ReactInstanceMap":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactInstanceMap.js","./getHostComponentFromComposite":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getHostComponentFromComposite.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","react/lib/ReactCurrentOwner":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactCurrentOwner.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/flattenChildren.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -19403,7 +19403,7 @@ function flattenChildren(children, selfDebugID) {
 module.exports = flattenChildren;
 }).call(this,require('_process'))
 
-},{"./KeyEscapeUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\KeyEscapeUtils.js","./traverseAllChildren":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\traverseAllChildren.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","react/lib/ReactComponentTreeHook":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactComponentTreeHook.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\forEachAccumulated.js":[function(require,module,exports){
+},{"./KeyEscapeUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/KeyEscapeUtils.js","./traverseAllChildren":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/traverseAllChildren.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","react/lib/ReactComponentTreeHook":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactComponentTreeHook.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/forEachAccumulated.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -19434,7 +19434,7 @@ function forEachAccumulated(arr, cb, scope) {
 }
 
 module.exports = forEachAccumulated;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getEventCharCode.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getEventCharCode.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -19484,7 +19484,7 @@ function getEventCharCode(nativeEvent) {
 }
 
 module.exports = getEventCharCode;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getEventKey.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getEventKey.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -19586,7 +19586,7 @@ function getEventKey(nativeEvent) {
 }
 
 module.exports = getEventKey;
-},{"./getEventCharCode":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getEventCharCode.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getEventModifierState.js":[function(require,module,exports){
+},{"./getEventCharCode":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getEventCharCode.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getEventModifierState.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -19629,7 +19629,7 @@ function getEventModifierState(nativeEvent) {
 }
 
 module.exports = getEventModifierState;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getEventTarget.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getEventTarget.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -19664,7 +19664,7 @@ function getEventTarget(nativeEvent) {
 }
 
 module.exports = getEventTarget;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getHostComponentFromComposite.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getHostComponentFromComposite.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -19694,7 +19694,7 @@ function getHostComponentFromComposite(inst) {
 }
 
 module.exports = getHostComponentFromComposite;
-},{"./ReactNodeTypes":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactNodeTypes.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getIteratorFn.js":[function(require,module,exports){
+},{"./ReactNodeTypes":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactNodeTypes.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getIteratorFn.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -19735,7 +19735,7 @@ function getIteratorFn(maybeIterable) {
 }
 
 module.exports = getIteratorFn;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getNextDebugID.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getNextDebugID.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -19756,7 +19756,7 @@ function getNextDebugID() {
 }
 
 module.exports = getNextDebugID;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getNodeForCharacterOffset.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getNodeForCharacterOffset.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -19830,7 +19830,7 @@ function getNodeForCharacterOffset(root, offset) {
 }
 
 module.exports = getNodeForCharacterOffset;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getTextContentAccessor.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getTextContentAccessor.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -19863,7 +19863,7 @@ function getTextContentAccessor() {
 }
 
 module.exports = getTextContentAccessor;
-},{"fbjs/lib/ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getVendorPrefixedEventName.js":[function(require,module,exports){
+},{"fbjs/lib/ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getVendorPrefixedEventName.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -19964,7 +19964,7 @@ function getVendorPrefixedEventName(eventName) {
 }
 
 module.exports = getVendorPrefixedEventName;
-},{"fbjs/lib/ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\instantiateReactComponent.js":[function(require,module,exports){
+},{"fbjs/lib/ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/instantiateReactComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -20095,7 +20095,7 @@ function instantiateReactComponent(node, shouldHaveDebugID) {
 module.exports = instantiateReactComponent;
 }).call(this,require('_process'))
 
-},{"./ReactCompositeComponent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactCompositeComponent.js","./ReactEmptyComponent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactEmptyComponent.js","./ReactHostComponent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactHostComponent.js","./getNextDebugID":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getNextDebugID.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\isEventSupported.js":[function(require,module,exports){
+},{"./ReactCompositeComponent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactCompositeComponent.js","./ReactEmptyComponent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactEmptyComponent.js","./ReactHostComponent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactHostComponent.js","./getNextDebugID":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getNextDebugID.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/isEventSupported.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -20155,7 +20155,7 @@ function isEventSupported(eventNameSuffix, capture) {
 }
 
 module.exports = isEventSupported;
-},{"fbjs/lib/ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\isTextInputElement.js":[function(require,module,exports){
+},{"fbjs/lib/ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/isTextInputElement.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -20206,7 +20206,7 @@ function isTextInputElement(elem) {
 }
 
 module.exports = isTextInputElement;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\quoteAttributeValueForBrowser.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/quoteAttributeValueForBrowser.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -20232,7 +20232,7 @@ function quoteAttributeValueForBrowser(value) {
 }
 
 module.exports = quoteAttributeValueForBrowser;
-},{"./escapeTextContentForBrowser":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\escapeTextContentForBrowser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js":[function(require,module,exports){
+},{"./escapeTextContentForBrowser":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/escapeTextContentForBrowser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js":[function(require,module,exports){
 /**
  * Copyright (c) 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -20271,7 +20271,7 @@ function reactProdInvariant(code) {
 }
 
 module.exports = reactProdInvariant;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\renderSubtreeIntoContainer.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/renderSubtreeIntoContainer.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -20287,7 +20287,7 @@ module.exports = reactProdInvariant;
 var ReactMount = require('./ReactMount');
 
 module.exports = ReactMount.renderSubtreeIntoContainer;
-},{"./ReactMount":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactMount.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\setInnerHTML.js":[function(require,module,exports){
+},{"./ReactMount":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactMount.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/setInnerHTML.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -20385,7 +20385,7 @@ if (ExecutionEnvironment.canUseDOM) {
 }
 
 module.exports = setInnerHTML;
-},{"./DOMNamespaces":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\DOMNamespaces.js","./createMicrosoftUnsafeLocalFunction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\createMicrosoftUnsafeLocalFunction.js","fbjs/lib/ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\setTextContent.js":[function(require,module,exports){
+},{"./DOMNamespaces":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/DOMNamespaces.js","./createMicrosoftUnsafeLocalFunction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/createMicrosoftUnsafeLocalFunction.js","fbjs/lib/ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/setTextContent.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -20437,7 +20437,7 @@ if (ExecutionEnvironment.canUseDOM) {
 }
 
 module.exports = setTextContent;
-},{"./escapeTextContentForBrowser":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\escapeTextContentForBrowser.js","./setInnerHTML":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\setInnerHTML.js","fbjs/lib/ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\shouldUpdateReactComponent.js":[function(require,module,exports){
+},{"./escapeTextContentForBrowser":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/escapeTextContentForBrowser.js","./setInnerHTML":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/setInnerHTML.js","fbjs/lib/ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/shouldUpdateReactComponent.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -20479,7 +20479,7 @@ function shouldUpdateReactComponent(prevElement, nextElement) {
 }
 
 module.exports = shouldUpdateReactComponent;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\traverseAllChildren.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/traverseAllChildren.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -20658,7 +20658,7 @@ function traverseAllChildren(children, callback, traverseContext) {
 module.exports = traverseAllChildren;
 }).call(this,require('_process'))
 
-},{"./KeyEscapeUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\KeyEscapeUtils.js","./ReactElementSymbol":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactElementSymbol.js","./getIteratorFn":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getIteratorFn.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","react/lib/ReactCurrentOwner":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactCurrentOwner.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\validateDOMNesting.js":[function(require,module,exports){
+},{"./KeyEscapeUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/KeyEscapeUtils.js","./ReactElementSymbol":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactElementSymbol.js","./getIteratorFn":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getIteratorFn.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","react/lib/ReactCurrentOwner":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactCurrentOwner.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/validateDOMNesting.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015-present, Facebook, Inc.
@@ -21043,7 +21043,7 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = validateDOMNesting;
 }).call(this,require('_process'))
 
-},{"_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/emptyFunction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyFunction.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\AsyncUtils.js":[function(require,module,exports){
+},{"_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/emptyFunction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyFunction.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/AsyncUtils.js":[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -21132,7 +21132,7 @@ function mapAsync(array, work, callback) {
     });
   });
 }
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\ContextUtils.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/ContextUtils.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -21254,7 +21254,7 @@ function ContextSubscriber(name) {
     }
   }, _ref4;
 }
-},{"react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\IndexLink.js":[function(require,module,exports){
+},{"react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/IndexLink.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -21283,7 +21283,7 @@ var IndexLink = _react2.default.createClass({
 
 exports.default = IndexLink;
 module.exports = exports['default'];
-},{"./Link":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\Link.js","react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\IndexRedirect.js":[function(require,module,exports){
+},{"./Link":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/Link.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/IndexRedirect.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -21351,7 +21351,7 @@ exports.default = IndexRedirect;
 module.exports = exports['default'];
 }).call(this,require('_process'))
 
-},{"./InternalPropTypes":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\InternalPropTypes.js","./Redirect":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\Redirect.js","./routerWarning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\routerWarning.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\invariant\\browser.js","react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\IndexRoute.js":[function(require,module,exports){
+},{"./InternalPropTypes":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/InternalPropTypes.js","./Redirect":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/Redirect.js","./routerWarning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/routerWarning.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/invariant/browser.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/IndexRoute.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -21416,7 +21416,7 @@ exports.default = IndexRoute;
 module.exports = exports['default'];
 }).call(this,require('_process'))
 
-},{"./InternalPropTypes":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\InternalPropTypes.js","./RouteUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\RouteUtils.js","./routerWarning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\routerWarning.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\invariant\\browser.js","react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\InternalPropTypes.js":[function(require,module,exports){
+},{"./InternalPropTypes":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/InternalPropTypes.js","./RouteUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/RouteUtils.js","./routerWarning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/routerWarning.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/invariant/browser.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/InternalPropTypes.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -21449,7 +21449,7 @@ var component = exports.component = oneOfType([func, string]);
 var components = exports.components = oneOfType([component, object]);
 var route = exports.route = oneOfType([object, element]);
 var routes = exports.routes = oneOfType([route, arrayOf(route)]);
-},{"react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\Link.js":[function(require,module,exports){
+},{"react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/Link.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -21611,7 +21611,7 @@ exports.default = Link;
 module.exports = exports['default'];
 }).call(this,require('_process'))
 
-},{"./ContextUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\ContextUtils.js","./PropTypes":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\PropTypes.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\invariant\\browser.js","react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\PatternUtils.js":[function(require,module,exports){
+},{"./ContextUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/ContextUtils.js","./PropTypes":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/PropTypes.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/invariant/browser.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/PatternUtils.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -21859,7 +21859,7 @@ function formatPattern(pattern, params) {
 }
 }).call(this,require('_process'))
 
-},{"_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\invariant\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\PromiseUtils.js":[function(require,module,exports){
+},{"_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/invariant/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/PromiseUtils.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -21867,7 +21867,7 @@ exports.isPromise = isPromise;
 function isPromise(obj) {
   return obj && typeof obj.then === 'function';
 }
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\PropTypes.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/PropTypes.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -21896,7 +21896,7 @@ var locationShape = exports.locationShape = shape({
   action: string.isRequired,
   key: string
 });
-},{"react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\Redirect.js":[function(require,module,exports){
+},{"react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/Redirect.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -22003,7 +22003,7 @@ exports.default = Redirect;
 module.exports = exports['default'];
 }).call(this,require('_process'))
 
-},{"./InternalPropTypes":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\InternalPropTypes.js","./PatternUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\PatternUtils.js","./RouteUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\RouteUtils.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\invariant\\browser.js","react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\Route.js":[function(require,module,exports){
+},{"./InternalPropTypes":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/InternalPropTypes.js","./PatternUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/PatternUtils.js","./RouteUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/RouteUtils.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/invariant/browser.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/Route.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -22065,7 +22065,7 @@ exports.default = Route;
 module.exports = exports['default'];
 }).call(this,require('_process'))
 
-},{"./InternalPropTypes":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\InternalPropTypes.js","./RouteUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\RouteUtils.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\invariant\\browser.js","react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\RouteUtils.js":[function(require,module,exports){
+},{"./InternalPropTypes":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/InternalPropTypes.js","./RouteUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/RouteUtils.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/invariant/browser.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/RouteUtils.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -22159,7 +22159,7 @@ function createRoutes(routes) {
 
   return routes;
 }
-},{"react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\Router.js":[function(require,module,exports){
+},{"react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/Router.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -22338,7 +22338,7 @@ exports.default = Router;
 module.exports = exports['default'];
 }).call(this,require('_process'))
 
-},{"./InternalPropTypes":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\InternalPropTypes.js","./RouteUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\RouteUtils.js","./RouterContext":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\RouterContext.js","./RouterUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\RouterUtils.js","./createTransitionManager":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\createTransitionManager.js","./routerWarning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\routerWarning.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\invariant\\browser.js","react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\RouterContext.js":[function(require,module,exports){
+},{"./InternalPropTypes":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/InternalPropTypes.js","./RouteUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/RouteUtils.js","./RouterContext":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/RouterContext.js","./RouterUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/RouterUtils.js","./createTransitionManager":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/createTransitionManager.js","./routerWarning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/routerWarning.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/invariant/browser.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/RouterContext.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -22475,7 +22475,7 @@ exports.default = RouterContext;
 module.exports = exports['default'];
 }).call(this,require('_process'))
 
-},{"./ContextUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\ContextUtils.js","./RouteUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\RouteUtils.js","./getRouteParams":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\getRouteParams.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\invariant\\browser.js","react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\RouterUtils.js":[function(require,module,exports){
+},{"./ContextUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/ContextUtils.js","./RouteUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/RouteUtils.js","./getRouteParams":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/getRouteParams.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/invariant/browser.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/RouterUtils.js":[function(require,module,exports){
 "use strict";
 
 exports.__esModule = true;
@@ -22504,7 +22504,7 @@ function assignRouterState(router, _ref) {
 
   return router;
 }
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\TransitionUtils.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/TransitionUtils.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -22660,7 +22660,7 @@ function runLeaveHooks(routes, prevState) {
     if (routes[i].onLeave) routes[i].onLeave.call(routes[i], prevState);
   }
 }
-},{"./AsyncUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\AsyncUtils.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\applyRouterMiddleware.js":[function(require,module,exports){
+},{"./AsyncUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/AsyncUtils.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/applyRouterMiddleware.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -22721,7 +22721,7 @@ exports.default = function () {
 module.exports = exports['default'];
 }).call(this,require('_process'))
 
-},{"./RouterContext":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\RouterContext.js","./routerWarning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\routerWarning.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\browserHistory.js":[function(require,module,exports){
+},{"./RouterContext":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/RouterContext.js","./routerWarning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/routerWarning.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/browserHistory.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -22738,7 +22738,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = (0, _createRouterHistory2.default)(_createBrowserHistory2.default);
 module.exports = exports['default'];
-},{"./createRouterHistory":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\createRouterHistory.js","history/lib/createBrowserHistory":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\createBrowserHistory.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\computeChangedRoutes.js":[function(require,module,exports){
+},{"./createRouterHistory":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/createRouterHistory.js","history/lib/createBrowserHistory":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/createBrowserHistory.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/computeChangedRoutes.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -22816,7 +22816,7 @@ function computeChangedRoutes(prevState, nextState) {
 
 exports.default = computeChangedRoutes;
 module.exports = exports['default'];
-},{"./PatternUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\PatternUtils.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\createMemoryHistory.js":[function(require,module,exports){
+},{"./PatternUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/PatternUtils.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/createMemoryHistory.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -22848,7 +22848,7 @@ function createMemoryHistory(options) {
   return history;
 }
 module.exports = exports['default'];
-},{"history/lib/createMemoryHistory":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\createMemoryHistory.js","history/lib/useBasename":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\useBasename.js","history/lib/useQueries":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\useQueries.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\createRouterHistory.js":[function(require,module,exports){
+},{"history/lib/createMemoryHistory":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/createMemoryHistory.js","history/lib/useBasename":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/useBasename.js","history/lib/useQueries":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/useQueries.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/createRouterHistory.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -22868,7 +22868,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var canUseDOM = !!(typeof window !== 'undefined' && window.document && window.document.createElement);
 
 module.exports = exports['default'];
-},{"./useRouterHistory":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\useRouterHistory.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\createTransitionManager.js":[function(require,module,exports){
+},{"./useRouterHistory":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/useRouterHistory.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/createTransitionManager.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -23147,7 +23147,7 @@ function createTransitionManager(history, routes) {
 module.exports = exports['default'];
 }).call(this,require('_process'))
 
-},{"./TransitionUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\TransitionUtils.js","./computeChangedRoutes":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\computeChangedRoutes.js","./getComponents":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\getComponents.js","./isActive":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\isActive.js","./matchRoutes":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\matchRoutes.js","./routerWarning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\routerWarning.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\getComponents.js":[function(require,module,exports){
+},{"./TransitionUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/TransitionUtils.js","./computeChangedRoutes":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/computeChangedRoutes.js","./getComponents":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/getComponents.js","./isActive":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/isActive.js","./matchRoutes":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/matchRoutes.js","./routerWarning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/routerWarning.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/getComponents.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -23188,7 +23188,7 @@ function getComponents(nextState, callback) {
 
 exports.default = getComponents;
 module.exports = exports['default'];
-},{"./AsyncUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\AsyncUtils.js","./PromiseUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\PromiseUtils.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\getRouteParams.js":[function(require,module,exports){
+},{"./AsyncUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/AsyncUtils.js","./PromiseUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/PromiseUtils.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/getRouteParams.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -23215,7 +23215,7 @@ function getRouteParams(route, params) {
 
 exports.default = getRouteParams;
 module.exports = exports['default'];
-},{"./PatternUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\PatternUtils.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\hashHistory.js":[function(require,module,exports){
+},{"./PatternUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/PatternUtils.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/hashHistory.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -23232,7 +23232,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 exports.default = (0, _createRouterHistory2.default)(_createHashHistory2.default);
 module.exports = exports['default'];
-},{"./createRouterHistory":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\createRouterHistory.js","history/lib/createHashHistory":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\createHashHistory.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\index.js":[function(require,module,exports){
+},{"./createRouterHistory":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/createRouterHistory.js","history/lib/createHashHistory":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/createHashHistory.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -23358,7 +23358,7 @@ exports.applyRouterMiddleware = _applyRouterMiddleware3.default;
 exports.browserHistory = _browserHistory3.default;
 exports.hashHistory = _hashHistory3.default;
 exports.createMemoryHistory = _createMemoryHistory3.default;
-},{"./IndexLink":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\IndexLink.js","./IndexRedirect":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\IndexRedirect.js","./IndexRoute":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\IndexRoute.js","./Link":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\Link.js","./PatternUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\PatternUtils.js","./PropTypes":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\PropTypes.js","./Redirect":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\Redirect.js","./Route":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\Route.js","./RouteUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\RouteUtils.js","./Router":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\Router.js","./RouterContext":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\RouterContext.js","./applyRouterMiddleware":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\applyRouterMiddleware.js","./browserHistory":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\browserHistory.js","./createMemoryHistory":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\createMemoryHistory.js","./hashHistory":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\hashHistory.js","./match":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\match.js","./useRouterHistory":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\useRouterHistory.js","./withRouter":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\withRouter.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\isActive.js":[function(require,module,exports){
+},{"./IndexLink":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/IndexLink.js","./IndexRedirect":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/IndexRedirect.js","./IndexRoute":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/IndexRoute.js","./Link":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/Link.js","./PatternUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/PatternUtils.js","./PropTypes":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/PropTypes.js","./Redirect":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/Redirect.js","./Route":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/Route.js","./RouteUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/RouteUtils.js","./Router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/Router.js","./RouterContext":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/RouterContext.js","./applyRouterMiddleware":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/applyRouterMiddleware.js","./browserHistory":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/browserHistory.js","./createMemoryHistory":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/createMemoryHistory.js","./hashHistory":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/hashHistory.js","./match":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/match.js","./useRouterHistory":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/useRouterHistory.js","./withRouter":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/withRouter.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/isActive.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -23511,7 +23511,7 @@ function isActive(_ref, indexOnly, currentLocation, routes, params) {
   return queryIsActive(query, currentLocation.query);
 }
 module.exports = exports['default'];
-},{"./PatternUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\PatternUtils.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\match.js":[function(require,module,exports){
+},{"./PatternUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/PatternUtils.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/match.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -23587,7 +23587,7 @@ exports.default = match;
 module.exports = exports['default'];
 }).call(this,require('_process'))
 
-},{"./RouteUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\RouteUtils.js","./RouterUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\RouterUtils.js","./createMemoryHistory":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\createMemoryHistory.js","./createTransitionManager":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\createTransitionManager.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","history/lib/Actions":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\Actions.js","invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\invariant\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\matchRoutes.js":[function(require,module,exports){
+},{"./RouteUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/RouteUtils.js","./RouterUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/RouterUtils.js","./createMemoryHistory":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/createMemoryHistory.js","./createTransitionManager":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/createTransitionManager.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","history/lib/Actions":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/Actions.js","invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/invariant/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/matchRoutes.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -23854,7 +23854,7 @@ function matchRoutes(routes, location, callback, remainingPathname) {
 module.exports = exports['default'];
 }).call(this,require('_process'))
 
-},{"./AsyncUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\AsyncUtils.js","./PatternUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\PatternUtils.js","./PromiseUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\PromiseUtils.js","./RouteUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\RouteUtils.js","./routerWarning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\routerWarning.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\routerWarning.js":[function(require,module,exports){
+},{"./AsyncUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/AsyncUtils.js","./PatternUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/PatternUtils.js","./PromiseUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/PromiseUtils.js","./RouteUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/RouteUtils.js","./routerWarning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/routerWarning.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/routerWarning.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -23891,7 +23891,7 @@ function routerWarning(falseToWarn, message) {
 function _resetWarned() {
   warned = {};
 }
-},{"warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\warning\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\useRouterHistory.js":[function(require,module,exports){
+},{"warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/warning/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/useRouterHistory.js":[function(require,module,exports){
 'use strict';
 
 exports.__esModule = true;
@@ -23914,7 +23914,7 @@ function useRouterHistory(createHistory) {
   };
 }
 module.exports = exports['default'];
-},{"history/lib/useBasename":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\useBasename.js","history/lib/useQueries":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\history\\lib\\useQueries.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\withRouter.js":[function(require,module,exports){
+},{"history/lib/useBasename":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/useBasename.js","history/lib/useQueries":"/Users/bartekosx/Projects/invoice-tracker/node_modules/history/lib/useQueries.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/withRouter.js":[function(require,module,exports){
 (function (process){
 'use strict';
 
@@ -23994,9 +23994,9 @@ function withRouter(WrappedComponent, options) {
 module.exports = exports['default'];
 }).call(this,require('_process'))
 
-},{"./ContextUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\ContextUtils.js","./PropTypes":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\PropTypes.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","hoist-non-react-statics":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\hoist-non-react-statics\\index.js","invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\invariant\\browser.js","react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\KeyEscapeUtils.js":[function(require,module,exports){
-arguments[4]["C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\KeyEscapeUtils.js"][0].apply(exports,arguments)
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\PooledClass.js":[function(require,module,exports){
+},{"./ContextUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/ContextUtils.js","./PropTypes":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/PropTypes.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","hoist-non-react-statics":"/Users/bartekosx/Projects/invoice-tracker/node_modules/hoist-non-react-statics/index.js","invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/invariant/browser.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/KeyEscapeUtils.js":[function(require,module,exports){
+arguments[4]["/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/KeyEscapeUtils.js"][0].apply(exports,arguments)
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/PooledClass.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -24111,7 +24111,7 @@ var PooledClass = {
 module.exports = PooledClass;
 }).call(this,require('_process'))
 
-},{"./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\React.js":[function(require,module,exports){
+},{"./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/React.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -24203,7 +24203,7 @@ var React = {
 module.exports = React;
 }).call(this,require('_process'))
 
-},{"./ReactChildren":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactChildren.js","./ReactClass":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactClass.js","./ReactComponent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactComponent.js","./ReactDOMFactories":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactDOMFactories.js","./ReactElement":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactElement.js","./ReactElementValidator":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactElementValidator.js","./ReactPropTypes":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactPropTypes.js","./ReactPureComponent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactPureComponent.js","./ReactVersion":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactVersion.js","./onlyChild":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\onlyChild.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactAddonsDOMDependencies.js":[function(require,module,exports){
+},{"./ReactChildren":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactChildren.js","./ReactClass":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactClass.js","./ReactComponent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactComponent.js","./ReactDOMFactories":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactDOMFactories.js","./ReactElement":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactElement.js","./ReactElementValidator":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactElementValidator.js","./ReactPropTypes":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactPropTypes.js","./ReactPureComponent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactPureComponent.js","./ReactVersion":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactVersion.js","./onlyChild":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/onlyChild.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactAddonsDOMDependencies.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -24243,7 +24243,7 @@ if (process.env.NODE_ENV !== 'production') {
 }
 }).call(this,require('_process'))
 
-},{"_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","react-dom/lib/ReactDOM":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactDOM.js","react-dom/lib/ReactPerf":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactPerf.js","react-dom/lib/ReactTestUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactTestUtils.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactCSSTransitionGroup.js":[function(require,module,exports){
+},{"_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","react-dom/lib/ReactDOM":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactDOM.js","react-dom/lib/ReactPerf":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactPerf.js","react-dom/lib/ReactTestUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactTestUtils.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactCSSTransitionGroup.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -24348,7 +24348,7 @@ ReactCSSTransitionGroup.defaultProps = {
 
 
 module.exports = ReactCSSTransitionGroup;
-},{"./React":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\React.js","./ReactCSSTransitionGroupChild":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactCSSTransitionGroupChild.js","./ReactTransitionGroup":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactTransitionGroup.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactCSSTransitionGroupChild.js":[function(require,module,exports){
+},{"./React":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/React.js","./ReactCSSTransitionGroupChild":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactCSSTransitionGroupChild.js","./ReactTransitionGroup":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactTransitionGroup.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactCSSTransitionGroupChild.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -24515,7 +24515,7 @@ var ReactCSSTransitionGroupChild = React.createClass({
 });
 
 module.exports = ReactCSSTransitionGroupChild;
-},{"./React":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\React.js","./ReactAddonsDOMDependencies":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactAddonsDOMDependencies.js","./ReactTransitionEvents":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactTransitionEvents.js","./onlyChild":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\onlyChild.js","fbjs/lib/CSSCore":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\CSSCore.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactChildren.js":[function(require,module,exports){
+},{"./React":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/React.js","./ReactAddonsDOMDependencies":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactAddonsDOMDependencies.js","./ReactTransitionEvents":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactTransitionEvents.js","./onlyChild":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/onlyChild.js","fbjs/lib/CSSCore":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/CSSCore.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactChildren.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -24706,7 +24706,7 @@ var ReactChildren = {
 };
 
 module.exports = ReactChildren;
-},{"./PooledClass":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\PooledClass.js","./ReactElement":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactElement.js","./traverseAllChildren":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\traverseAllChildren.js","fbjs/lib/emptyFunction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyFunction.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactClass.js":[function(require,module,exports){
+},{"./PooledClass":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/PooledClass.js","./ReactElement":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactElement.js","./traverseAllChildren":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/traverseAllChildren.js","fbjs/lib/emptyFunction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyFunction.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactClass.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -25426,7 +25426,7 @@ var ReactClass = {
 module.exports = ReactClass;
 }).call(this,require('_process'))
 
-},{"./ReactComponent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactComponent.js","./ReactElement":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactElement.js","./ReactNoopUpdateQueue":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactNoopUpdateQueue.js","./ReactPropTypeLocationNames":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactPropTypeLocationNames.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/emptyObject":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyObject.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactComponent.js":[function(require,module,exports){
+},{"./ReactComponent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactComponent.js","./ReactElement":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactElement.js","./ReactNoopUpdateQueue":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactNoopUpdateQueue.js","./ReactPropTypeLocationNames":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactPropTypeLocationNames.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/emptyObject":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyObject.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactComponent.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -25547,7 +25547,7 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = ReactComponent;
 }).call(this,require('_process'))
 
-},{"./ReactNoopUpdateQueue":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactNoopUpdateQueue.js","./canDefineProperty":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\canDefineProperty.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/emptyObject":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyObject.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactComponentTreeHook.js":[function(require,module,exports){
+},{"./ReactNoopUpdateQueue":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactNoopUpdateQueue.js","./canDefineProperty":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/canDefineProperty.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/emptyObject":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyObject.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactComponentTreeHook.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2016-present, Facebook, Inc.
@@ -25884,7 +25884,7 @@ var ReactComponentTreeHook = {
 module.exports = ReactComponentTreeHook;
 }).call(this,require('_process'))
 
-},{"./ReactCurrentOwner":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactCurrentOwner.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactCurrentOwner.js":[function(require,module,exports){
+},{"./ReactCurrentOwner":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactCurrentOwner.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactCurrentOwner.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -25915,7 +25915,7 @@ var ReactCurrentOwner = {
 };
 
 module.exports = ReactCurrentOwner;
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactDOMFactories.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactDOMFactories.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -26088,7 +26088,7 @@ var ReactDOMFactories = {
 module.exports = ReactDOMFactories;
 }).call(this,require('_process'))
 
-},{"./ReactElement":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactElement.js","./ReactElementValidator":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactElementValidator.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactElement.js":[function(require,module,exports){
+},{"./ReactElement":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactElement.js","./ReactElementValidator":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactElementValidator.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactElement.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-present, Facebook, Inc.
@@ -26432,9 +26432,9 @@ ReactElement.isValidElement = function (object) {
 module.exports = ReactElement;
 }).call(this,require('_process'))
 
-},{"./ReactCurrentOwner":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactCurrentOwner.js","./ReactElementSymbol":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactElementSymbol.js","./canDefineProperty":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\canDefineProperty.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactElementSymbol.js":[function(require,module,exports){
-arguments[4]["C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactElementSymbol.js"][0].apply(exports,arguments)
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactElementValidator.js":[function(require,module,exports){
+},{"./ReactCurrentOwner":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactCurrentOwner.js","./ReactElementSymbol":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactElementSymbol.js","./canDefineProperty":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/canDefineProperty.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactElementSymbol.js":[function(require,module,exports){
+arguments[4]["/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactElementSymbol.js"][0].apply(exports,arguments)
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactElementValidator.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-present, Facebook, Inc.
@@ -26671,7 +26671,7 @@ var ReactElementValidator = {
 module.exports = ReactElementValidator;
 }).call(this,require('_process'))
 
-},{"./ReactComponentTreeHook":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactComponentTreeHook.js","./ReactCurrentOwner":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactCurrentOwner.js","./ReactElement":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactElement.js","./canDefineProperty":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\canDefineProperty.js","./checkReactTypeSpec":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\checkReactTypeSpec.js","./getIteratorFn":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\getIteratorFn.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactNoopUpdateQueue.js":[function(require,module,exports){
+},{"./ReactComponentTreeHook":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactComponentTreeHook.js","./ReactCurrentOwner":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactCurrentOwner.js","./ReactElement":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactElement.js","./canDefineProperty":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/canDefineProperty.js","./checkReactTypeSpec":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/checkReactTypeSpec.js","./getIteratorFn":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/getIteratorFn.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactNoopUpdateQueue.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2015-present, Facebook, Inc.
@@ -26770,7 +26770,7 @@ var ReactNoopUpdateQueue = {
 module.exports = ReactNoopUpdateQueue;
 }).call(this,require('_process'))
 
-},{"_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactPropTypeLocationNames.js":[function(require,module,exports){
+},{"_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactPropTypeLocationNames.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -26798,7 +26798,7 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = ReactPropTypeLocationNames;
 }).call(this,require('_process'))
 
-},{"_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactPropTypes.js":[function(require,module,exports){
+},{"_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactPropTypes.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -27235,9 +27235,9 @@ function getClassName(propValue) {
 module.exports = ReactPropTypes;
 }).call(this,require('_process'))
 
-},{"./ReactElement":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactElement.js","./ReactPropTypeLocationNames":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactPropTypeLocationNames.js","./ReactPropTypesSecret":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactPropTypesSecret.js","./getIteratorFn":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\getIteratorFn.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/emptyFunction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyFunction.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactPropTypesSecret.js":[function(require,module,exports){
-arguments[4]["C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactPropTypesSecret.js"][0].apply(exports,arguments)
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactPureComponent.js":[function(require,module,exports){
+},{"./ReactElement":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactElement.js","./ReactPropTypeLocationNames":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactPropTypeLocationNames.js","./ReactPropTypesSecret":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactPropTypesSecret.js","./getIteratorFn":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/getIteratorFn.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/emptyFunction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyFunction.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactPropTypesSecret.js":[function(require,module,exports){
+arguments[4]["/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactPropTypesSecret.js"][0].apply(exports,arguments)
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactPureComponent.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -27279,7 +27279,7 @@ _assign(ReactPureComponent.prototype, ReactComponent.prototype);
 ReactPureComponent.prototype.isPureReactComponent = true;
 
 module.exports = ReactPureComponent;
-},{"./ReactComponent":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactComponent.js","./ReactNoopUpdateQueue":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactNoopUpdateQueue.js","fbjs/lib/emptyObject":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyObject.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactTransitionChildMapping.js":[function(require,module,exports){
+},{"./ReactComponent":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactComponent.js","./ReactNoopUpdateQueue":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactNoopUpdateQueue.js","fbjs/lib/emptyObject":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyObject.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactTransitionChildMapping.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -27385,7 +27385,7 @@ var ReactTransitionChildMapping = {
 module.exports = ReactTransitionChildMapping;
 }).call(this,require('_process'))
 
-},{"./flattenChildren":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\flattenChildren.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactTransitionEvents.js":[function(require,module,exports){
+},{"./flattenChildren":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/flattenChildren.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactTransitionEvents.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -27458,7 +27458,7 @@ var ReactTransitionEvents = {
 };
 
 module.exports = ReactTransitionEvents;
-},{"fbjs/lib/ExecutionEnvironment":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\ExecutionEnvironment.js","react-dom/lib/getVendorPrefixedEventName":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getVendorPrefixedEventName.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactTransitionGroup.js":[function(require,module,exports){
+},{"fbjs/lib/ExecutionEnvironment":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/ExecutionEnvironment.js","react-dom/lib/getVendorPrefixedEventName":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getVendorPrefixedEventName.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactTransitionGroup.js":[function(require,module,exports){
 /**
  * Copyright 2013-present, Facebook, Inc.
  * All rights reserved.
@@ -27687,9 +27687,9 @@ ReactTransitionGroup.defaultProps = {
 
 
 module.exports = ReactTransitionGroup;
-},{"./React":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\React.js","./ReactTransitionChildMapping":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactTransitionChildMapping.js","fbjs/lib/emptyFunction":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\emptyFunction.js","object-assign":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\object-assign\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactVersion.js":[function(require,module,exports){
-arguments[4]["C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\ReactVersion.js"][0].apply(exports,arguments)
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\canDefineProperty.js":[function(require,module,exports){
+},{"./React":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/React.js","./ReactTransitionChildMapping":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactTransitionChildMapping.js","fbjs/lib/emptyFunction":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/emptyFunction.js","object-assign":"/Users/bartekosx/Projects/invoice-tracker/node_modules/object-assign/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactVersion.js":[function(require,module,exports){
+arguments[4]["/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/ReactVersion.js"][0].apply(exports,arguments)
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/canDefineProperty.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -27718,7 +27718,7 @@ if (process.env.NODE_ENV !== 'production') {
 module.exports = canDefineProperty;
 }).call(this,require('_process'))
 
-},{"_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\checkReactTypeSpec.js":[function(require,module,exports){
+},{"_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/checkReactTypeSpec.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -27808,7 +27808,7 @@ function checkReactTypeSpec(typeSpecs, values, location, componentName, element,
 module.exports = checkReactTypeSpec;
 }).call(this,require('_process'))
 
-},{"./ReactComponentTreeHook":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactComponentTreeHook.js","./ReactPropTypeLocationNames":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactPropTypeLocationNames.js","./ReactPropTypesSecret":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactPropTypesSecret.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\flattenChildren.js":[function(require,module,exports){
+},{"./ReactComponentTreeHook":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactComponentTreeHook.js","./ReactPropTypeLocationNames":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactPropTypeLocationNames.js","./ReactPropTypesSecret":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactPropTypesSecret.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/flattenChildren.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -27887,9 +27887,9 @@ function flattenChildren(children, selfDebugID) {
 module.exports = flattenChildren;
 }).call(this,require('_process'))
 
-},{"./KeyEscapeUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\KeyEscapeUtils.js","./ReactComponentTreeHook":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactComponentTreeHook.js","./traverseAllChildren":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\traverseAllChildren.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\getIteratorFn.js":[function(require,module,exports){
-arguments[4]["C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\getIteratorFn.js"][0].apply(exports,arguments)
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\onlyChild.js":[function(require,module,exports){
+},{"./KeyEscapeUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/KeyEscapeUtils.js","./ReactComponentTreeHook":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactComponentTreeHook.js","./traverseAllChildren":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/traverseAllChildren.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/getIteratorFn.js":[function(require,module,exports){
+arguments[4]["/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/getIteratorFn.js"][0].apply(exports,arguments)
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/onlyChild.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -27930,9 +27930,9 @@ function onlyChild(children) {
 module.exports = onlyChild;
 }).call(this,require('_process'))
 
-},{"./ReactElement":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactElement.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\reactProdInvariant.js":[function(require,module,exports){
-arguments[4]["C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\lib\\reactProdInvariant.js"][0].apply(exports,arguments)
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\traverseAllChildren.js":[function(require,module,exports){
+},{"./ReactElement":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactElement.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/reactProdInvariant.js":[function(require,module,exports){
+arguments[4]["/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/lib/reactProdInvariant.js"][0].apply(exports,arguments)
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/traverseAllChildren.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2013-present, Facebook, Inc.
@@ -28111,12 +28111,12 @@ function traverseAllChildren(children, callback, traverseContext) {
 module.exports = traverseAllChildren;
 }).call(this,require('_process'))
 
-},{"./KeyEscapeUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\KeyEscapeUtils.js","./ReactCurrentOwner":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactCurrentOwner.js","./ReactElementSymbol":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\ReactElementSymbol.js","./getIteratorFn":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\getIteratorFn.js","./reactProdInvariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\reactProdInvariant.js","_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js","fbjs/lib/invariant":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\invariant.js","fbjs/lib/warning":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\fbjs\\lib\\warning.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js":[function(require,module,exports){
+},{"./KeyEscapeUtils":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/KeyEscapeUtils.js","./ReactCurrentOwner":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactCurrentOwner.js","./ReactElementSymbol":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/ReactElementSymbol.js","./getIteratorFn":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/getIteratorFn.js","./reactProdInvariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/reactProdInvariant.js","_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js","fbjs/lib/invariant":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/invariant.js","fbjs/lib/warning":"/Users/bartekosx/Projects/invoice-tracker/node_modules/fbjs/lib/warning.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js":[function(require,module,exports){
 'use strict';
 
 module.exports = require('./lib/React');
 
-},{"./lib/React":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\lib\\React.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\strict-uri-encode\\index.js":[function(require,module,exports){
+},{"./lib/React":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/lib/React.js"}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/strict-uri-encode/index.js":[function(require,module,exports){
 'use strict';
 module.exports = function (str) {
 	return encodeURIComponent(str).replace(/[!'()*]/g, function (c) {
@@ -28124,7 +28124,7 @@ module.exports = function (str) {
 	});
 };
 
-},{}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\warning\\browser.js":[function(require,module,exports){
+},{}],"/Users/bartekosx/Projects/invoice-tracker/node_modules/warning/browser.js":[function(require,module,exports){
 (function (process){
 /**
  * Copyright 2014-2015, Facebook, Inc.
@@ -28189,7 +28189,65 @@ module.exports = warning;
 
 }).call(this,require('_process'))
 
-},{"_process":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\process\\browser.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\app.js":[function(require,module,exports){
+},{"_process":"/Users/bartekosx/Projects/invoice-tracker/node_modules/process/browser.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/RecordsActions.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.createRecord = createRecord;
+exports.syncRecords = syncRecords;
+
+var _dispatcher = require("../dispatcher");
+
+var _dispatcher2 = _interopRequireDefault(_dispatcher);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function createRecord(obj, callback) {
+  _dispatcher2.default.dispatch({
+    type: "CREATE_RECORD",
+    obj: obj,
+    callback: callback
+  });
+}
+
+function syncRecords() {
+  _dispatcher2.default.dispatch({
+    type: "SYNC_RECORD"
+  });
+}
+
+},{"../dispatcher":"/Users/bartekosx/Projects/invoice-tracker/src/js/dispatcher.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/SellersActions.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.createSeller = createSeller;
+exports.syncSellers = syncSellers;
+
+var _dispatcher = require("../dispatcher");
+
+var _dispatcher2 = _interopRequireDefault(_dispatcher);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function createSeller(obj, callback) {
+  _dispatcher2.default.dispatch({
+    type: "CREATE_SELLER",
+    obj: obj,
+    callback: callback
+  });
+}
+
+function syncSellers() {
+  _dispatcher2.default.dispatch({
+    type: "SYNC_SELLER"
+  });
+}
+
+},{"../dispatcher":"/Users/bartekosx/Projects/invoice-tracker/src/js/dispatcher.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/app.js":[function(require,module,exports){
 "use strict";
 
 var _react = require("react");
@@ -28221,7 +28279,8 @@ var routes = _react2.default.createElement(
   { path: "/", component: _Layout2.default },
   _react2.default.createElement(_reactRouter.IndexRoute, { component: _RootPlaceholder2.default }),
   _react2.default.createElement(_reactRouter.Route, { path: "product/:id", component: _DetailView2.default, type: "product" }),
-  _react2.default.createElement(_reactRouter.Route, { path: "add-product", component: _DetailView2.default, type: "addProduct" })
+  _react2.default.createElement(_reactRouter.Route, { path: "/add-product", component: _DetailView2.default, type: "addProduct" }),
+  _react2.default.createElement(_reactRouter.Route, { path: "/add-seller", component: _DetailView2.default, type: "addSeller" })
 );
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -28232,7 +28291,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ), document.getElementById("app"));
 });
 
-},{"./components/DetailView":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\DetailView.js","./components/Layout":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\Layout.js","./components/RootPlaceholder":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\RootPlaceholder.js","react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js","react-dom":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-dom\\index.js","react-router":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\DetailView.js":[function(require,module,exports){
+},{"./components/DetailView":"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView.js","./components/Layout":"/Users/bartekosx/Projects/invoice-tracker/src/js/components/Layout.js","./components/RootPlaceholder":"/Users/bartekosx/Projects/invoice-tracker/src/js/components/RootPlaceholder.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-dom":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-dom/index.js","react-router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28249,6 +28308,10 @@ var _RecordsStore = require("../stores/RecordsStore");
 
 var _RecordsStore2 = _interopRequireDefault(_RecordsStore);
 
+var _RecordsActions = require("../actions/RecordsActions");
+
+var RecordsActions = _interopRequireWildcard(_RecordsActions);
+
 var _Header = require("./DetailView/Header");
 
 var _Header2 = _interopRequireDefault(_Header);
@@ -28260,6 +28323,12 @@ var _Product2 = _interopRequireDefault(_Product);
 var _AddProduct = require("./DetailView/AddProduct");
 
 var _AddProduct2 = _interopRequireDefault(_AddProduct);
+
+var _AddSeller = require("./DetailView/AddSeller");
+
+var _AddSeller2 = _interopRequireDefault(_AddSeller);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28277,6 +28346,8 @@ var DetailView = function (_React$Component) {
 
     var _this = _possibleConstructorReturn(this, (DetailView.__proto__ || Object.getPrototypeOf(DetailView)).call(this, props));
 
+    _this.getRecord = _this.getRecord.bind(_this);
+
     _this.state = {
       record: _RecordsStore2.default.getById(_this.props.params.id)
     };
@@ -28287,6 +28358,7 @@ var DetailView = function (_React$Component) {
     key: "componentWillMount",
     value: function componentWillMount() {
       _RecordsStore2.default.on("change", this.getRecord);
+      RecordsActions.syncRecords();
     }
   }, {
     key: "componentWillUnmount",
@@ -28296,9 +28368,11 @@ var DetailView = function (_React$Component) {
   }, {
     key: "getRecord",
     value: function getRecord() {
-      this.setState({
-        record: _RecordsStore2.default.getById(this.props.params.id)
-      });
+      if (this.props) {
+        this.setState({
+          record: _RecordsStore2.default.getById(this.props.params.id)
+        });
+      }
     }
   }, {
     key: "render",
@@ -28309,14 +28383,29 @@ var DetailView = function (_React$Component) {
       switch (this.props.route.type) {
         case "product":
           content = _react2.default.createElement(_Product2.default, { record: this.state.record });
-          title = this.state.record.name;
-          btn = "edit";
+          if (this.state.record !== null) {
+            title = this.state.record.name;
+          } else {
+            title = "";
+          }
+          btn = {
+            text: "edit"
+          };
+
           break;
         case "addProduct":
           content = _react2.default.createElement(_AddProduct2.default, null);
           title = "Dodaj produkt";
           break;
+        case "addSeller":
+          content = _react2.default.createElement(_AddSeller2.default, null);
+          title = "Dodaj sprzedawcę";
+          break;
         // no default
+      }
+
+      if (this.state.record === null && this.props.route.type === "product") {
+        return null;
       }
 
       return _react2.default.createElement(
@@ -28339,7 +28428,7 @@ DetailView.propTypes = {
   route: _react2.default.PropTypes.object
 };
 
-},{"../stores/RecordsStore":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\stores\\RecordsStore.js","./DetailView/AddProduct":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\DetailView\\AddProduct.js","./DetailView/Header":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\DetailView\\Header.js","./DetailView/Product":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\DetailView\\Product.js","react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\DetailView\\AddProduct.js":[function(require,module,exports){
+},{"../actions/RecordsActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/RecordsActions.js","../stores/RecordsStore":"/Users/bartekosx/Projects/invoice-tracker/src/js/stores/RecordsStore.js","./DetailView/AddProduct":"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/AddProduct.js","./DetailView/AddSeller":"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/AddSeller.js","./DetailView/Header":"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/Header.js","./DetailView/Product":"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/Product.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/AddProduct.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28353,6 +28442,20 @@ var _react = require("react");
 var _react2 = _interopRequireDefault(_react);
 
 var _reactRouter = require("react-router");
+
+var _RecordsActions = require("../../actions/RecordsActions");
+
+var RecordsActions = _interopRequireWildcard(_RecordsActions);
+
+var _SellersStore = require("../../stores/SellersStore");
+
+var _SellersStore2 = _interopRequireDefault(_SellersStore);
+
+var _SellersActions = require("../../actions/SellersActions");
+
+var SellersActions = _interopRequireWildcard(_SellersActions);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28371,9 +28474,13 @@ var AddProduct = function (_React$Component) {
     var _this = _possibleConstructorReturn(this, (AddProduct.__proto__ || Object.getPrototypeOf(AddProduct)).call(this));
 
     _this.handleFileInput = _this.handleFileInput.bind(_this);
+    _this.checkValidity = _this.checkValidity.bind(_this);
     _this.submit = _this.submit.bind(_this);
+    _this.getSellers = _this.getSellers.bind(_this);
     _this.state = {
-      inputFileText: "<i class=\"material-icons\">file_upload</i> Wybierz pliki..."
+      inputFileText: "<i class=\"material-icons\">file_upload</i> Wybierz pliki...",
+      sellers: [],
+      places: []
     };
 
     _this.inputs = {};
@@ -28381,6 +28488,26 @@ var AddProduct = function (_React$Component) {
   }
 
   _createClass(AddProduct, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      _SellersStore2.default.on("change", this.getSellers);
+      SellersActions.syncSellers();
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      _SellersStore2.default.removeListener("change", this.getSellers);
+    }
+  }, {
+    key: "getSellers",
+    value: function getSellers() {
+      this.setState({
+        inputFileText: this.state.inputFileText,
+        sellers: _SellersStore2.default.getAllSellers(),
+        places: _SellersStore2.default.getAllPlaces()
+      });
+    }
+  }, {
     key: "handleFileInput",
     value: function handleFileInput(e) {
       var text = "Wybrano " + e.target.files.length + " ";
@@ -28401,12 +28528,11 @@ var AddProduct = function (_React$Component) {
   }, {
     key: "submit",
     value: function submit() {
-      var form = this.form;
-      var oData = new FormData(form);
+      var oData = new FormData();
 
       oData.append("Product", this.inputs.product.value);
-      oData.append("Place", this.inputs.place.value);
-      oData.append("Seller", this.inputs.seller.value);
+      oData.append("Place", this.inputs.place.selectedOptions[0].id);
+      oData.append("Seller", this.inputs.seller.selectedOptions[0].id);
       oData.append("Date", this.inputs.date.value);
       oData.append("Warranty-length", this.inputs.warranty.value);
       oData.append("Notes", this.inputs.notes.value);
@@ -28417,35 +28543,116 @@ var AddProduct = function (_React$Component) {
         oData.append("File" + i, this.inputs.files.files[i]);
       }
 
-      var oReq = new XMLHttpRequest();
-      oReq.open("POST", "http://localhost:80", true);
-      oReq.onload = function () {
-        console.log(JSON.parse(oReq.response));
-        // console.log( oReq.response );
-        _reactRouter.browserHistory.push("/");
-      };
+      if (this.checkValidity(false, true)) {
+        RecordsActions.createRecord(oData, function (oReq) {
+          try {
+            console.log(JSON.parse(oReq.response));
+          } catch (e) {
+            console.error(oReq.response);
+          }
 
-      oReq.send(oData);
+          _reactRouter.browserHistory.push("/");
+        });
+      }
+    }
+  }, {
+    key: "checkValidity",
+    value: function checkValidity() {
+      var e = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+      var isClick = arguments[1];
+
+      if (e !== false) {
+        e.target.classList.add("touched");
+      }
+
+      if (isClick) {
+        this.inputs.product.classList.add("touched");
+        this.inputs.place.classList.add("touched");
+        this.inputs.seller.classList.add("touched");
+        this.inputs.date.classList.add("touched");
+      }
+
+      var valid = true;
+
+      if (this.inputs.date.value === "" || !/^\d{4}-\d{2}-\d{2}$/.test(this.inputs.date.value)) {
+        this.inputs.date.classList.add("invalid");
+        if (isClick) {
+          this.inputs.date.focus();
+        }
+        valid = false;
+      } else {
+        this.inputs.date.classList.remove("invalid");
+      }
+
+      if (this.inputs.seller.value === "") {
+        this.inputs.seller.classList.add("invalid");
+        if (isClick) {
+          this.inputs.seller.focus();
+        }
+        valid = false;
+      } else {
+        this.inputs.seller.classList.remove("invalid");
+      }
+
+      if (this.inputs.place.value === "") {
+        this.inputs.place.classList.add("invalid");
+        if (isClick) {
+          this.inputs.place.focus();
+        }
+        valid = false;
+      } else {
+        this.inputs.place.classList.remove("invalid");
+      }
+
+      if (this.inputs.product.value === "") {
+        this.inputs.product.classList.add("invalid");
+        if (isClick) {
+          this.inputs.product.focus();
+        }
+        valid = false;
+      } else {
+        this.inputs.product.classList.remove("invalid");
+      }
+
+      return valid;
     }
   }, {
     key: "render",
     value: function render() {
       var _this2 = this;
 
+      var places = [];
+
+      this.state.places.forEach(function (v) {
+        places.push(_react2.default.createElement(
+          "option",
+          { id: v.id, key: v.id },
+          v.name
+        ));
+      });
+
+      var sellers = [];
+
+      this.state.sellers.forEach(function (v) {
+        sellers.push(_react2.default.createElement(
+          "option",
+          { id: v.id, key: v.id },
+          v.name
+        ));
+      });
+
       return _react2.default.createElement(
         "main",
         { className: "card" },
         _react2.default.createElement(
           "form",
-          { ref: function ref(form) {
-              _this2.form = form;
-            }, encType: "multipart/form-data", name: "test" },
+          { encType: "multipart/form-data", name: "test" },
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement("textarea", { ref: function ref(input) {
+            _react2.default.createElement("textarea", { onChange: this.checkValidity, ref: function ref(input) {
                 _this2.inputs.product = input;
-              }, rows: "1", type: "text", id: "product" }),
+              }, rows: "1", type: "text", id: "product", required: true }),
             _react2.default.createElement(
               "label",
               { htmlFor: "product" },
@@ -28456,35 +28663,69 @@ var AddProduct = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement("textarea", { ref: function ref(input) {
-                _this2.inputs.place = input;
-              }, rows: "1", type: "text", id: "place" }),
+            _react2.default.createElement(
+              "div",
+              { className: "select" },
+              _react2.default.createElement(
+                "select",
+                { onChange: this.checkValidity, ref: function ref(input) {
+                    _this2.inputs.place = input;
+                  }, id: "place" },
+                places
+              ),
+              _react2.default.createElement(
+                "label",
+                { htmlFor: "place" },
+                _react2.default.createElement(
+                  "i",
+                  { className: "material-icons" },
+                  "arrow_drop_down"
+                )
+              ),
+              _react2.default.createElement("div", { className: "border" })
+            ),
             _react2.default.createElement(
               "label",
-              { htmlFor: "place" },
+              { htmlFor: "seller" },
               "Miejsce zakupu"
-            ),
-            _react2.default.createElement("div", { className: "border" })
+            )
           ),
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement("textarea", { ref: function ref(input) {
-                _this2.inputs.seller = input;
-              }, rows: "1", type: "text", id: "seller" }),
+            _react2.default.createElement(
+              "div",
+              { className: "select" },
+              _react2.default.createElement(
+                "select",
+                { onChange: this.checkValidity, ref: function ref(input) {
+                    _this2.inputs.seller = input;
+                  }, id: "seller" },
+                sellers
+              ),
+              _react2.default.createElement(
+                "label",
+                { htmlFor: "seller" },
+                _react2.default.createElement(
+                  "i",
+                  { className: "material-icons" },
+                  "arrow_drop_down"
+                )
+              ),
+              _react2.default.createElement("div", { className: "border" })
+            ),
             _react2.default.createElement(
               "label",
               { htmlFor: "seller" },
               "Dane sprzedawcy"
-            ),
-            _react2.default.createElement("div", { className: "border" })
+            )
           ),
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement("input", { ref: function ref(input) {
+            _react2.default.createElement("input", { onChange: this.checkValidity, ref: function ref(input) {
                 _this2.inputs.date = input;
-              }, type: "date", id: "date" }),
+              }, type: "date", id: "date", required: true }),
             _react2.default.createElement(
               "label",
               { htmlFor: "date" },
@@ -28500,7 +28741,7 @@ var AddProduct = function (_React$Component) {
               { className: "select" },
               _react2.default.createElement(
                 "select",
-                { ref: function ref(input) {
+                { defaultValue: "2 lata", onChange: this.checkValidity, ref: function ref(input) {
                     _this2.inputs.warranty = input;
                   }, id: "warranty-length" },
                 _react2.default.createElement(
@@ -28510,7 +28751,7 @@ var AddProduct = function (_React$Component) {
                 ),
                 _react2.default.createElement(
                   "option",
-                  { defaultValue: true },
+                  null,
                   "2 lata"
                 ),
                 _react2.default.createElement(
@@ -28598,6 +28839,11 @@ var AddProduct = function (_React$Component) {
             _react2.default.createElement("label", { htmlFor: "files", className: "btn raised", dangerouslySetInnerHTML: { __html: this.state.inputFileText } })
           ),
           _react2.default.createElement(
+            "p",
+            null,
+            "* \u2013 pola wymagane"
+          ),
+          _react2.default.createElement(
             "button",
             { type: "button", onClick: this.submit, className: "btn raised submit" },
             "Zapisz"
@@ -28612,7 +28858,277 @@ var AddProduct = function (_React$Component) {
 
 exports.default = AddProduct;
 
-},{"react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js","react-router":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\DetailView\\Header.js":[function(require,module,exports){
+},{"../../actions/RecordsActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/RecordsActions.js","../../actions/SellersActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/SellersActions.js","../../stores/SellersStore":"/Users/bartekosx/Projects/invoice-tracker/src/js/stores/SellersStore.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/AddSeller.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+var _reactRouter = require("react-router");
+
+var _SellersActions = require("../../actions/SellersActions");
+
+var SellersActions = _interopRequireWildcard(_SellersActions);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var AddSeller = function (_React$Component) {
+  _inherits(AddSeller, _React$Component);
+
+  function AddSeller() {
+    _classCallCheck(this, AddSeller);
+
+    var _this = _possibleConstructorReturn(this, (AddSeller.__proto__ || Object.getPrototypeOf(AddSeller)).call(this));
+
+    _this.checkValidity = _this.checkValidity.bind(_this);
+    _this.submit = _this.submit.bind(_this);
+    _this.state = {
+      inputFileText: "<i class=\"material-icons\">file_upload</i> Wybierz pliki..."
+    };
+
+    _this.inputs = {};
+    return _this;
+  }
+
+  _createClass(AddSeller, [{
+    key: "submit",
+    value: function submit() {
+      var oData = new FormData();
+
+      oData.append("Name", this.inputs.name.value);
+      oData.append("City", this.inputs.city.value);
+      oData.append("Street", this.inputs.street.value);
+      oData.append("Zip", this.inputs.zip.value);
+      oData.append("NIP", this.inputs.nip.value);
+      oData.append("isSeller", this.inputs.isSeller.checked);
+      oData.append("isPlace", this.inputs.isPlace.checked);
+
+      if (this.checkValidity(false, true)) {
+        SellersActions.createSeller(oData, function (oReq) {
+          try {
+            console.log(JSON.parse(oReq.response));
+          } catch (e) {
+            console.error(oReq.response);
+          }
+
+          _reactRouter.browserHistory.push("/");
+        });
+      }
+    }
+  }, {
+    key: "checkValidity",
+    value: function checkValidity() {
+      var e = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
+      var isClick = arguments[1];
+
+      if (e !== false) {
+        e.target.classList.add("touched");
+      }
+
+      if (isClick) {
+        this.inputs.name.classList.add("touched");
+        this.inputs.city.classList.add("touched");
+        this.inputs.street.classList.add("touched");
+        this.inputs.zip.classList.add("touched");
+        this.inputs.nip.classList.add("touched");
+      }
+
+      var valid = true;
+
+      if (this.inputs.nip.value === "" || !/^\d{10}$/.test(this.inputs.nip.value)) {
+        this.inputs.nip.classList.add("invalid");
+        if (isClick) {
+          this.inputs.nip.focus();
+        }
+        valid = false;
+      } else {
+        this.inputs.nip.classList.remove("invalid");
+      }
+
+      if (this.inputs.zip.value === "" || !/^\d{2}-\d{3}$/.test(this.inputs.zip.value)) {
+        this.inputs.zip.classList.add("invalid");
+        if (isClick) {
+          this.inputs.zip.focus();
+        }
+        valid = false;
+      } else {
+        this.inputs.zip.classList.remove("invalid");
+      }
+
+      if (this.inputs.street.value === "") {
+        this.inputs.street.classList.add("invalid");
+        if (isClick) {
+          this.inputs.street.focus();
+        }
+        valid = false;
+      } else {
+        this.inputs.street.classList.remove("invalid");
+      }
+
+      if (this.inputs.city.value === "") {
+        this.inputs.city.classList.add("invalid");
+        if (isClick) {
+          this.inputs.city.focus();
+        }
+        valid = false;
+      } else {
+        this.inputs.city.classList.remove("invalid");
+      }
+
+      if (this.inputs.name.value === "") {
+        this.inputs.name.classList.add("invalid");
+        if (isClick) {
+          this.inputs.name.focus();
+        }
+        valid = false;
+      } else {
+        this.inputs.name.classList.remove("invalid");
+      }
+
+      return valid;
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        "main",
+        { className: "card" },
+        _react2.default.createElement(
+          "form",
+          { encType: "multipart/form-data", name: "test" },
+          _react2.default.createElement(
+            "div",
+            { className: "form-group" },
+            _react2.default.createElement("textarea", { onChange: this.checkValidity, ref: function ref(input) {
+                _this2.inputs.name = input;
+              }, rows: "1", type: "text", id: "name", required: true }),
+            _react2.default.createElement(
+              "label",
+              { htmlFor: "name" },
+              "Nazwa firmy"
+            ),
+            _react2.default.createElement("div", { className: "border" })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "form-group" },
+            _react2.default.createElement("textarea", { onChange: this.checkValidity, ref: function ref(input) {
+                _this2.inputs.city = input;
+              }, rows: "1", type: "text", id: "city", required: true }),
+            _react2.default.createElement(
+              "label",
+              { htmlFor: "city" },
+              "Miasto"
+            ),
+            _react2.default.createElement("div", { className: "border" })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "form-group" },
+            _react2.default.createElement("textarea", { onChange: this.checkValidity, ref: function ref(input) {
+                _this2.inputs.street = input;
+              }, rows: "1", type: "text", id: "street", required: true }),
+            _react2.default.createElement(
+              "label",
+              { htmlFor: "street" },
+              "Ulica"
+            ),
+            _react2.default.createElement("div", { className: "border" })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "form-group" },
+            _react2.default.createElement("textarea", { onChange: this.checkValidity, ref: function ref(input) {
+                _this2.inputs.zip = input;
+              }, rows: "1", type: "text", id: "zip", required: true }),
+            _react2.default.createElement(
+              "label",
+              { htmlFor: "zip" },
+              "Kod pocztowy"
+            ),
+            _react2.default.createElement("div", { className: "border" })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "form-group" },
+            _react2.default.createElement("textarea", { onChange: this.checkValidity, ref: function ref(input) {
+                _this2.inputs.nip = input;
+              }, rows: "1", type: "text", id: "nip", required: true }),
+            _react2.default.createElement(
+              "label",
+              { htmlFor: "nip" },
+              "NIP"
+            ),
+            _react2.default.createElement("div", { className: "border" })
+          ),
+          _react2.default.createElement(
+            "div",
+            { className: "form-group" },
+            _react2.default.createElement(
+              "div",
+              { className: "form-checkbox" },
+              _react2.default.createElement("input", { ref: function ref(input) {
+                  _this2.inputs.isSeller = input;
+                }, type: "checkbox", id: "seller" }),
+              _react2.default.createElement("label", { htmlFor: "seller", className: "checkbox-check material-icons" }),
+              _react2.default.createElement(
+                "label",
+                { htmlFor: "seller", className: "checkbox-label" },
+                "Sprzedawca"
+              )
+            ),
+            _react2.default.createElement(
+              "div",
+              { className: "form-checkbox" },
+              _react2.default.createElement("input", { ref: function ref(input) {
+                  _this2.inputs.isPlace = input;
+                }, type: "checkbox", id: "place" }),
+              _react2.default.createElement("label", { htmlFor: "place", className: "checkbox-check material-icons" }),
+              _react2.default.createElement(
+                "label",
+                { htmlFor: "place", className: "checkbox-label" },
+                "Miejsce sprzeda\u017Cy"
+              )
+            )
+          ),
+          _react2.default.createElement(
+            "p",
+            null,
+            "* \u2013 pola wymagane"
+          ),
+          _react2.default.createElement(
+            "button",
+            { type: "button", onClick: this.submit, className: "btn raised submit" },
+            "Zapisz"
+          )
+        )
+      );
+    }
+  }]);
+
+  return AddSeller;
+}(_react2.default.Component);
+
+exports.default = AddSeller;
+
+},{"../../actions/SellersActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/SellersActions.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/Header.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28655,17 +29171,33 @@ var Header = function (_React$Component) {
       var _this2 = this;
 
       var lBtn = function lBtn() {
-        if (!_this2.props.button) {
+        if (!_this2.props.button.text) {
           return null;
+        }
+
+        if (_this2.props.button.link) {
+          return _react2.default.createElement(
+            "button",
+            { id: _this2.props.button.text },
+            _react2.default.createElement(
+              _reactRouter.Link,
+              { to: _this2.props.button.link },
+              _react2.default.createElement(
+                "i",
+                { className: "material-icons" },
+                _this2.props.button.text
+              )
+            )
+          );
         }
 
         return _react2.default.createElement(
           "button",
-          { id: _this2.props.button },
+          { id: _this2.props.button.text },
           _react2.default.createElement(
             "i",
             { className: "material-icons" },
-            _this2.props.button
+            _this2.props.button.text
           )
         );
       };
@@ -28700,10 +29232,10 @@ exports.default = Header;
 
 Header.propTypes = {
   title: _react2.default.PropTypes.string,
-  button: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.string, _react2.default.PropTypes.bool])
+  button: _react2.default.PropTypes.oneOfType([_react2.default.PropTypes.object, _react2.default.PropTypes.bool])
 };
 
-},{"react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js","react-router":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\DetailView\\Product.js":[function(require,module,exports){
+},{"react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/Product.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28716,7 +29248,19 @@ var _react = require("react");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _reactRouter = require("react-router");
+
 var _dateUtils = require("../../utils/dateUtils");
+
+var _SellersStore = require("../../stores/SellersStore");
+
+var _SellersStore2 = _interopRequireDefault(_SellersStore);
+
+var _SellersActions = require("../../actions/SellersActions");
+
+var SellersActions = _interopRequireWildcard(_SellersActions);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -28732,10 +29276,36 @@ var Product = function (_React$Component) {
   function Product() {
     _classCallCheck(this, Product);
 
-    return _possibleConstructorReturn(this, (Product.__proto__ || Object.getPrototypeOf(Product)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (Product.__proto__ || Object.getPrototypeOf(Product)).call(this));
+
+    _this.getSellers = _this.getSellers.bind(_this);
+    _this.state = {
+      seller: {},
+      place: {}
+    };
+    return _this;
   }
 
   _createClass(Product, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      _SellersStore2.default.on("change", this.getSellers);
+      SellersActions.syncSellers();
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      _SellersStore2.default.removeListener("change", this.getSellers);
+    }
+  }, {
+    key: "getSellers",
+    value: function getSellers() {
+      this.setState({
+        seller: _SellersStore2.default.getById(this.props.record.seller),
+        place: _SellersStore2.default.getById(this.props.record.place)
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this2 = this;
@@ -28752,7 +29322,7 @@ var Product = function (_React$Component) {
           _react2.default.createElement(
             "small",
             { className: "label" },
-            "Uwagi"
+            "Notatki"
           ),
           _react2.default.createElement(
             "p",
@@ -28763,15 +29333,26 @@ var Product = function (_React$Component) {
       };
 
       var attachements = function attachements() {
-        if (_this2.props.record.attachements.length > 0) {
-          var attArray = [];
-          _this2.props.record.attachements.forEach(function (v, i) {
-            var style = {
-              backgroundImage: "url(" + v.url + ")"
-            };
+        if (!_this2.props.record.attachements) {
+          _this2.props.record.attachements = [];
+        }
 
-            attArray.push(_react2.default.createElement("div", { alt: "Za\u0142\u0105cznik", className: "attachement", key: i, style: style }));
-          });
+        if (_this2.props.record.attachements.length > 1) {
+          var attArray = [];
+          var attch = _this2.props.record.attachements;
+          for (var x = 1; x < attch.length; x++) {
+            var v = attch[0] + attch[x];
+            var i = x - 1;
+            attArray.push(_react2.default.createElement(
+              "a",
+              { href: v, alt: "Za\u0142\u0105cznik", rel: "noopener noreferrer", target: "_blank", className: "attachement", key: i },
+              _react2.default.createElement(
+                "i",
+                { className: "material-icons" },
+                "picture_as_pdf"
+              )
+            ));
+          }
 
           return _react2.default.createElement(
             "div",
@@ -28790,7 +29371,7 @@ var Product = function (_React$Component) {
 
       return _react2.default.createElement(
         "main",
-        { className: "card " + warrantyLeft.status },
+        { className: "card display-more " + warrantyLeft.status },
         _react2.default.createElement(
           "small",
           { className: "label" },
@@ -28810,9 +29391,9 @@ var Product = function (_React$Component) {
           "p",
           null,
           _react2.default.createElement(
-            "a",
-            { href: "#" },
-            this.props.record.place
+            _reactRouter.Link,
+            { to: "/seller/" + this.state.place.id },
+            this.state.place.name
           )
         ),
         _react2.default.createElement(
@@ -28824,9 +29405,9 @@ var Product = function (_React$Component) {
           "p",
           null,
           _react2.default.createElement(
-            "a",
-            { href: "#" },
-            this.props.record.place
+            _reactRouter.Link,
+            { to: "/seller/" + this.state.seller.id },
+            this.state.seller.name
           )
         ),
         _react2.default.createElement(
@@ -28865,7 +29446,7 @@ Product.propTypes = {
   record: _react2.default.PropTypes.object
 };
 
-},{"../../utils/dateUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\utils\\dateUtils.js","react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\FloatingAB.js":[function(require,module,exports){
+},{"../../actions/SellersActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/SellersActions.js","../../stores/SellersStore":"/Users/bartekosx/Projects/invoice-tracker/src/js/stores/SellersStore.js","../../utils/dateUtils":"/Users/bartekosx/Projects/invoice-tracker/src/js/utils/dateUtils.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/FloatingAB.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28931,7 +29512,7 @@ var FloatingAB = function (_React$Component) {
           { className: "submenu" },
           _react2.default.createElement(
             _reactRouter.Link,
-            { className: "fab-mini" },
+            { to: "/add-seller", className: "fab-mini" },
             _react2.default.createElement(
               "span",
               null,
@@ -28965,7 +29546,7 @@ var FloatingAB = function (_React$Component) {
 
 exports.default = FloatingAB;
 
-},{"react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js","react-router":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\HeaderRoot.js":[function(require,module,exports){
+},{"react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/HeaderRoot.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29033,7 +29614,7 @@ var HeaderRoot = function (_React$Component) {
 
 exports.default = HeaderRoot;
 
-},{"react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\Layout.js":[function(require,module,exports){
+},{"react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/Layout.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29144,7 +29725,7 @@ App.propTypes = {
   location: _react2.default.PropTypes.object
 };
 
-},{"./FloatingAB":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\FloatingAB.js","./HeaderRoot":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\HeaderRoot.js","./Root":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\Root.js","react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js","react-addons-css-transition-group":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-addons-css-transition-group\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\Root.js":[function(require,module,exports){
+},{"./FloatingAB":"/Users/bartekosx/Projects/invoice-tracker/src/js/components/FloatingAB.js","./HeaderRoot":"/Users/bartekosx/Projects/invoice-tracker/src/js/components/HeaderRoot.js","./Root":"/Users/bartekosx/Projects/invoice-tracker/src/js/components/Root.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-addons-css-transition-group":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-addons-css-transition-group/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/Root.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29161,9 +29742,15 @@ var _RecordsStore = require("../stores/RecordsStore");
 
 var _RecordsStore2 = _interopRequireDefault(_RecordsStore);
 
+var _RecordsActions = require("../actions/RecordsActions");
+
+var RecordsActions = _interopRequireWildcard(_RecordsActions);
+
 var _ListItem = require("./Root/ListItem");
 
 var _ListItem2 = _interopRequireDefault(_ListItem);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -29192,6 +29779,7 @@ var Root = function (_React$Component) {
     key: "componentWillMount",
     value: function componentWillMount() {
       _RecordsStore2.default.on("change", this.getRecords);
+      RecordsActions.syncRecords();
     }
   }, {
     key: "componentWillUnmount",
@@ -29209,37 +29797,51 @@ var Root = function (_React$Component) {
     key: "render",
     value: function render() {
       var records = [];
+      var mainClass = null;
+      var header = _react2.default.createElement(
+        "header",
+        null,
+        _react2.default.createElement(
+          "div",
+          { id: "category" },
+          "Produkty"
+        ),
+        _react2.default.createElement(
+          "div",
+          { id: "sort" },
+          _react2.default.createElement(
+            "i",
+            { className: "material-icons" },
+            "arrow_downward"
+          ),
+          _react2.default.createElement(
+            "span",
+            null,
+            "DATA ZAKUPU"
+          )
+        )
+      );
 
       this.state.records.forEach(function (v) {
         records.push(_react2.default.createElement(_ListItem2.default, { key: v.id, record: v }));
       });
 
+      if (records.length <= 0) {
+        records = _react2.default.createElement(
+          "h1",
+          null,
+          "Nie znaleziono produkt\xF3w",
+          _react2.default.createElement("br", null),
+          "Aby doda\u0107 produkt naci\u015Bnij +"
+        );
+        header = null;
+        mainClass = "not-found";
+      }
+
       return _react2.default.createElement(
         "main",
-        { id: "root-view" },
-        _react2.default.createElement(
-          "header",
-          null,
-          _react2.default.createElement(
-            "div",
-            { id: "category" },
-            "Produkty"
-          ),
-          _react2.default.createElement(
-            "div",
-            { id: "sort" },
-            _react2.default.createElement(
-              "i",
-              { className: "material-icons" },
-              "arrow_upward"
-            ),
-            _react2.default.createElement(
-              "span",
-              null,
-              "DATA ZAKUPU"
-            )
-          )
-        ),
+        { id: "root-view", className: mainClass },
+        header,
         records
       );
     }
@@ -29250,53 +29852,7 @@ var Root = function (_React$Component) {
 
 exports.default = Root;
 
-},{"../stores/RecordsStore":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\stores\\RecordsStore.js","./Root/ListItem":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\Root\\ListItem.js","react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\RootPlaceholder.js":[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = require("react");
-
-var _react2 = _interopRequireDefault(_react);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var RootPlaceholder = function (_React$Component) {
-  _inherits(RootPlaceholder, _React$Component);
-
-  function RootPlaceholder() {
-    _classCallCheck(this, RootPlaceholder);
-
-    return _possibleConstructorReturn(this, (RootPlaceholder.__proto__ || Object.getPrototypeOf(RootPlaceholder)).apply(this, arguments));
-  }
-
-  _createClass(RootPlaceholder, [{
-    key: "render",
-    value: function render() {
-      return _react2.default.createElement(
-        "div",
-        { className: "detail-view detail-view-root" },
-        "1"
-      );
-    }
-  }]);
-
-  return RootPlaceholder;
-}(_react2.default.Component);
-
-exports.default = RootPlaceholder;
-
-},{"react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\components\\Root\\ListItem.js":[function(require,module,exports){
+},{"../actions/RecordsActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/RecordsActions.js","../stores/RecordsStore":"/Users/bartekosx/Projects/invoice-tracker/src/js/stores/RecordsStore.js","./Root/ListItem":"/Users/bartekosx/Projects/invoice-tracker/src/js/components/Root/ListItem.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/Root/ListItem.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29313,6 +29869,16 @@ var _reactRouter = require("react-router");
 
 var _dateUtils = require("../../utils/dateUtils");
 
+var _SellersStore = require("../../stores/SellersStore");
+
+var _SellersStore2 = _interopRequireDefault(_SellersStore);
+
+var _SellersActions = require("../../actions/SellersActions");
+
+var SellersActions = _interopRequireWildcard(_SellersActions);
+
+function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -29327,10 +29893,35 @@ var ListItem = function (_React$Component) {
   function ListItem() {
     _classCallCheck(this, ListItem);
 
-    return _possibleConstructorReturn(this, (ListItem.__proto__ || Object.getPrototypeOf(ListItem)).apply(this, arguments));
+    var _this = _possibleConstructorReturn(this, (ListItem.__proto__ || Object.getPrototypeOf(ListItem)).call(this));
+
+    _this.getSellers = _this.getSellers.bind(_this);
+    _this.state = {
+      seller: {},
+      place: {}
+    };
+    return _this;
   }
 
   _createClass(ListItem, [{
+    key: "componentWillMount",
+    value: function componentWillMount() {
+      _SellersStore2.default.on("change", this.getSellers);
+      SellersActions.syncSellers();
+    }
+  }, {
+    key: "componentWillUnmount",
+    value: function componentWillUnmount() {
+      _SellersStore2.default.removeListener("change", this.getSellers);
+    }
+  }, {
+    key: "getSellers",
+    value: function getSellers() {
+      this.setState({
+        place: _SellersStore2.default.getById(this.props.record.place)
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var record = this.props.record;
@@ -29353,7 +29944,7 @@ var ListItem = function (_React$Component) {
             _react2.default.createElement(
               "span",
               { className: "place" },
-              record.place
+              this.state.place.name
             ),
             _react2.default.createElement(
               "div",
@@ -29403,7 +29994,53 @@ ListItem.propTypes = {
   record: _react2.default.PropTypes.object.isRequired
 };
 
-},{"../../utils/dateUtils":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\utils\\dateUtils.js","react":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react\\react.js","react-router":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\react-router\\lib\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\dispatcher.js":[function(require,module,exports){
+},{"../../actions/SellersActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/SellersActions.js","../../stores/SellersStore":"/Users/bartekosx/Projects/invoice-tracker/src/js/stores/SellersStore.js","../../utils/dateUtils":"/Users/bartekosx/Projects/invoice-tracker/src/js/utils/dateUtils.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/RootPlaceholder.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = require("react");
+
+var _react2 = _interopRequireDefault(_react);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var RootPlaceholder = function (_React$Component) {
+  _inherits(RootPlaceholder, _React$Component);
+
+  function RootPlaceholder() {
+    _classCallCheck(this, RootPlaceholder);
+
+    return _possibleConstructorReturn(this, (RootPlaceholder.__proto__ || Object.getPrototypeOf(RootPlaceholder)).apply(this, arguments));
+  }
+
+  _createClass(RootPlaceholder, [{
+    key: "render",
+    value: function render() {
+      return _react2.default.createElement(
+        "div",
+        { className: "detail-view detail-view-root" },
+        "1"
+      );
+    }
+  }]);
+
+  return RootPlaceholder;
+}(_react2.default.Component);
+
+exports.default = RootPlaceholder;
+
+},{"react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/dispatcher.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29414,7 +30051,7 @@ var _flux = require("flux");
 
 exports.default = new _flux.Dispatcher();
 
-},{"flux":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\flux\\index.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\stores\\RecordsStore.js":[function(require,module,exports){
+},{"flux":"/Users/bartekosx/Projects/invoice-tracker/node_modules/flux/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/stores/RecordsStore.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29424,6 +30061,8 @@ Object.defineProperty(exports, "__esModule", {
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _events = require("events");
+
+var _ajaxUtils = require("../utils/ajaxUtils");
 
 var _dispatcher = require("../dispatcher");
 
@@ -29445,48 +30084,138 @@ var RecordsStore = function (_EventEmitter) {
 
     var _this = _possibleConstructorReturn(this, (RecordsStore.__proto__ || Object.getPrototypeOf(RecordsStore)).call(this));
 
-    _this.records = [{
-      id: 1,
-      name: "Apple iPhone 6s 64GB Silver",
-      place: "Teletoruim Promenada",
-      date: "2017-03-03",
-      warrantyLength: 1,
-      notes: "",
-      attachements: [{
-        type: "image",
-        url: "https://unsplash.it/200/200?image=998"
-      }, {
-        type: "image",
-        url: "https://unsplash.it/200/200?image=974"
-      }]
-    }, {
-      id: 0,
-      name: "Lorem ipsum dolor sit amet",
-      place: "Media Markt Polska Sp. z o.o (Market Ostrobramska)",
-      date: "2014-03-26",
-      warrantyLength: 2,
-      notes: "Lipsum",
-      attachements: []
-    }];
+    _this.records = [];
+    _this.searchFunctionName = "date";
+    _this.searchFunctionMode = "ASC";
     return _this;
   }
 
   _createClass(RecordsStore, [{
     key: "getAll",
     value: function getAll() {
-      return this.records;
+      var _this2 = this;
+
+      switch (this.searchFunctionName) {
+        case "title":
+          this.searchFunction = function (a, b) {
+            return a.name.localeCompare(b.name);
+          };
+          break;
+        case "date":
+        default:
+          this.searchFunction = function (a, b) {
+            var dateA = new Date(a.date);
+            var dateB = new Date(b.date);
+            return dateB.getTime() - dateA.getTime();
+          };
+          break;
+      }
+
+      var records = this.records.slice(0);
+      records.sort(function (a, b) {
+        if (_this2.searchFunctionMode === "ASC") {
+          return _this2.searchFunction(a, b);
+        }
+
+        return _this2.searchFunction(b, a);
+      });
+
+      return records;
+    }
+  }, {
+    key: "changeSortMode",
+    value: function changeSortMode(a, b) {
+      this.searchFunctionName = a;
+      this.searchFunctionMode = b;
+      this.emit("change");
     }
   }, {
     key: "getById",
     value: function getById(id) {
       var obj = null;
       this.records.forEach(function (v) {
-        if (v.id === parseInt(id, 10)) {
+        if (v.id === id) {
           obj = v;
         }
       });
 
       return obj;
+    }
+  }, {
+    key: "syncRecords",
+    value: function syncRecords() {
+      var _this3 = this;
+
+      (0, _ajaxUtils.ajax)("http://192.168.92.205:80/getRecords.php", "POST", {}, function (oReq) {
+        try {
+          var response = JSON.parse(oReq.response);
+          if (typeof response.error === "undefined") {
+            var records = [];
+
+            response.forEach(function (record) {
+              var data = record.data;
+
+              records.unshift({
+                id: data.id,
+                name: data.Product,
+                place: data.Place,
+                seller: data.Seller,
+                date: data.Date,
+                warrantyLength: data["Warranty-length"],
+                notes: data.Notes,
+                attachements: record.files
+              });
+            });
+
+            _this3.records = records;
+            _this3.emit("change");
+          } else {
+            alert(response.error);
+            console.error(response);
+          }
+        } catch (e) {
+          console.error(oReq.response, e);
+        }
+      });
+    }
+  }, {
+    key: "createRecord",
+    value: function createRecord(obj) {
+      var _this4 = this;
+
+      var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function () {};
+
+      (0, _ajaxUtils.ajax)("http://192.168.92.205:80/addRecord.php", "POST", obj, function (oReq) {
+        try {
+          var response = JSON.parse(oReq.response);
+
+          if (typeof response.error !== "undefined") {
+            alert(JSON.parse(oReq.response).error);
+            console.error(response);
+            return;
+          }
+
+          console.log(response);
+
+          var data = response.data.data;
+
+          _this4.records.unshift({
+            id: data.id,
+            name: data.Product,
+            place: data.Place,
+            seller: data.Seller,
+            date: data.Date,
+            warrantyLength: data["Warranty-length"],
+            notes: data.Notes,
+            attachements: response.files
+          });
+
+          callback(oReq);
+          _this4.emit("change");
+        } catch (e) {
+          console.error(oReq.response, e);
+        }
+      });
     }
 
     /* eslint-disable default-case */
@@ -29495,8 +30224,11 @@ var RecordsStore = function (_EventEmitter) {
     key: "handleActions",
     value: function handleActions(action) {
       switch (action.type) {
-        case "CREATE_QUOTE":
-          this.createQuote(action.text, action.teacher, action.info, action.name);
+        case "CREATE_RECORD":
+          this.createRecord(action.obj, action.callback);
+          break;
+        case "SYNC_RECORD":
+          this.syncRecords();
           break;
       }
     }
@@ -29510,9 +30242,200 @@ var RecordsStore = function (_EventEmitter) {
 var recordsStore = new RecordsStore();
 _dispatcher2.default.register(recordsStore.handleActions.bind(recordsStore));
 
+window.RecordsStore = recordsStore;
+
 exports.default = recordsStore;
 
-},{"../dispatcher":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\dispatcher.js","events":"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\node_modules\\events\\events.js"}],"C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\utils\\dateUtils.js":[function(require,module,exports){
+},{"../dispatcher":"/Users/bartekosx/Projects/invoice-tracker/src/js/dispatcher.js","../utils/ajaxUtils":"/Users/bartekosx/Projects/invoice-tracker/src/js/utils/ajaxUtils.js","events":"/Users/bartekosx/Projects/invoice-tracker/node_modules/events/events.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/stores/SellersStore.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _events = require("events");
+
+var _ajaxUtils = require("../utils/ajaxUtils");
+
+var _dispatcher = require("../dispatcher");
+
+var _dispatcher2 = _interopRequireDefault(_dispatcher);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var SellersStore = function (_EventEmitter) {
+  _inherits(SellersStore, _EventEmitter);
+
+  function SellersStore() {
+    _classCallCheck(this, SellersStore);
+
+    var _this = _possibleConstructorReturn(this, (SellersStore.__proto__ || Object.getPrototypeOf(SellersStore)).call(this));
+
+    _this.sellers = [];
+    return _this;
+  }
+
+  _createClass(SellersStore, [{
+    key: "getAll",
+    value: function getAll() {
+      return this.sellers;
+    }
+  }, {
+    key: "getAllSellers",
+    value: function getAllSellers() {
+      var obj = [];
+      this.sellers.forEach(function (v) {
+        if (v.seller) {
+          obj.push(v);
+        }
+      });
+
+      return obj;
+    }
+  }, {
+    key: "getAllPlaces",
+    value: function getAllPlaces() {
+      var obj = [];
+      this.sellers.forEach(function (v) {
+        if (v.place) {
+          obj.push(v);
+        }
+      });
+
+      return obj;
+    }
+  }, {
+    key: "getById",
+    value: function getById(id) {
+      var obj = null;
+      this.sellers.forEach(function (v) {
+        if (v.id === id) {
+          obj = v;
+        }
+      });
+
+      return obj;
+    }
+  }, {
+    key: "syncSellers",
+    value: function syncSellers() {
+      var _this2 = this;
+
+      (0, _ajaxUtils.ajax)("http://192.168.92.205:80/getSellers.php", "POST", {}, function (oReq) {
+        try {
+          var response = JSON.parse(oReq.response);
+          if (typeof response.error === "undefined") {
+            var sellers = [];
+
+            response.forEach(function (record) {
+              var data = record.data;
+
+              sellers.unshift({
+                id: data.id,
+                name: data.Name,
+                city: data.City,
+                street: data.Street,
+                zip: data.Zip,
+                nip: data.NIP,
+                seller: data.isSeller === "1",
+                place: data.isPlace === "1"
+              });
+            });
+
+            _this2.sellers = sellers;
+            _this2.emit("change");
+          } else {
+            alert(response.error);
+            console.error(response);
+          }
+        } catch (e) {
+          console.error(oReq.response, e);
+        }
+      });
+    }
+  }, {
+    key: "createSeller",
+    value: function createSeller(obj) {
+      var _this3 = this;
+
+      var callback = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : function () {};
+
+      (0, _ajaxUtils.ajax)("http://192.168.92.205:80/addSeller.php", "POST", obj, function (oReq) {
+        try {
+          var response = JSON.parse(oReq.response);
+
+          if (typeof response.error !== "undefined") {
+            alert(JSON.parse(oReq.response).error);
+            console.error(response);
+            return;
+          }
+
+          console.log(response);
+
+          callback(oReq);
+          _this3.emit("change");
+        } catch (e) {
+          console.error(oReq.response, e);
+        }
+      });
+    }
+
+    /* eslint-disable default-case */
+
+  }, {
+    key: "handleActions",
+    value: function handleActions(action) {
+      switch (action.type) {
+        case "CREATE_SELLER":
+          this.createSeller(action.obj, action.callback);
+          break;
+        case "SYNC_SELLER":
+          this.syncSellers();
+          break;
+      }
+    }
+    /* eslint-enable default-case */
+
+  }]);
+
+  return SellersStore;
+}(_events.EventEmitter);
+
+var sellersStore = new SellersStore();
+_dispatcher2.default.register(sellersStore.handleActions.bind(sellersStore));
+
+exports.default = sellersStore;
+
+},{"../dispatcher":"/Users/bartekosx/Projects/invoice-tracker/src/js/dispatcher.js","../utils/ajaxUtils":"/Users/bartekosx/Projects/invoice-tracker/src/js/utils/ajaxUtils.js","events":"/Users/bartekosx/Projects/invoice-tracker/node_modules/events/events.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/utils/ajaxUtils.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ajax = ajax;
+function ajax(url, method, obj, onload) {
+  var onerror = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : function () {};
+
+  var oReq = new XMLHttpRequest();
+  oReq.open(method, url, true);
+  oReq.onload = function () {
+    var error = onload(oReq) || false;
+    if (!error) {
+      onerror(error);
+    }
+  };
+  oReq.send(obj);
+}
+
+},{}],"/Users/bartekosx/Projects/invoice-tracker/src/js/utils/dateUtils.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29590,9 +30513,9 @@ function formatDate(d) {
   };
 
   var date = new Date(d);
-  return to2Dig(date.getDate()) + "." + to2Dig(date.getMonth()) + "." + date.getFullYear();
+  return to2Dig(date.getDate()) + "." + to2Dig(date.getMonth() + 1) + "." + date.getFullYear();
 }
 
-},{}]},{},["C:\\Users\\Bartek\\Projekty\\invoice-tracker\\src\\js\\app.js"])
+},{}]},{},["/Users/bartekosx/Projects/invoice-tracker/src/js/app.js"])
 
 //# sourceMappingURL=app.js.map

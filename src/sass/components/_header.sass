@@ -17,11 +17,33 @@ header.app-bar
     color: $header-text
 
   button
+    position: relative
     margin: 0
     padding: 0
     border: 0
     background: none
     appearance: none
+
+    &:active
+      i.material-icons
+        &::before
+          opacity: 1
+
+    i.material-icons
+      &::before
+        display: block
+        position: absolute
+        top: 50%
+        left: 50%
+        width: 24px
+        height: 24px
+        padding: 8px
+        transform: translate(-50%, -50%)
+        transition: opacity .2s ease-in-out
+        border-radius: 50%
+        background: $blink-white
+        content: ""
+        opacity: 0
 
     &#menu, &#back
       i
@@ -34,6 +56,9 @@ header.app-bar
         margin: 16px 28px 16px 12px
         float: right
         cursor: pointer
+
+        &::before
+          margin-left: -8px
 
   .title
     flex: 1

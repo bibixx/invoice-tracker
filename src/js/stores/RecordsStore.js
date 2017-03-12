@@ -1,49 +1,56 @@
 import { EventEmitter } from "events";
 
+import { ajax } from "../utils/ajaxUtils";
+
 import dispatcher from "../dispatcher";
 
 class RecordsStore extends EventEmitter {
   constructor() {
     super();
-    this.records = [
-      {
-        id: 1,
-        name: "Apple iPhone 6s 64GB Silver",
-        place: "Teletoruim Promenada",
-        date: "2017-03-03",
-        warrantyLength: 1,
-        notes: "",
-        attachements: [
-          {
-            type: "image",
-            url: "https://unsplash.it/200/200?image=998",
-          },
-          {
-            type: "image",
-            url: "https://unsplash.it/200/200?image=974",
-          },
-        ],
-      },
-      {
-        id: 0,
-        name: "Lorem ipsum dolor sit amet",
-        place: "Media Markt Polska Sp. z o.o (Market Ostrobramska)",
-        date: "2014-03-26",
-        warrantyLength: 2,
-        notes: "Lipsum",
-        attachements: [],
-      },
-    ];
+    this.records = [];
+    this.searchFunctionName = "date";
+    this.searchFunctionMode = "ASC";
   }
 
   getAll() {
-    return this.records;
+    switch ( this.searchFunctionName ) {
+      case "title":
+        this.searchFunction = ( a, b ) => {
+          return a.name.localeCompare( b.name );
+        };
+        break;
+      case "date":
+      default:
+        this.searchFunction = ( a, b ) => {
+          const dateA = new Date( a.date );
+          const dateB = new Date( b.date );
+          return dateB.getTime() - dateA.getTime();
+        };
+        break;
+    }
+
+    const records = this.records.slice( 0 );
+    records.sort( ( a, b ) => {
+      if ( this.searchFunctionMode === "ASC" ) {
+        return this.searchFunction( a, b );
+      }
+
+      return this.searchFunction( b, a );
+    } );
+
+    return records;
+  }
+
+  changeSortMode( a, b ) {
+    this.searchFunctionName = a;
+    this.searchFunctionMode = b;
+    this.emit( "change" );
   }
 
   getById( id ) {
     let obj = null;
     this.records.forEach( ( v ) => {
-      if ( v.id === parseInt( id, 10 ) ) {
+      if ( v.id === id ) {
         obj = v;
       }
     } );
@@ -51,11 +58,82 @@ class RecordsStore extends EventEmitter {
     return obj;
   }
 
+  syncRecords() {
+    ajax( "http://192.168.92.205:80/getRecords.php", "POST", {}, ( oReq ) => {
+      try {
+        const response = JSON.parse( oReq.response );
+        if ( typeof response.error === "undefined" ) {
+          const records = [];
+
+          response.forEach( ( record ) => {
+            const data = record.data;
+
+            records.unshift( {
+              id: data.id,
+              name: data.Product,
+              place: data.Place,
+              seller: data.Seller,
+              date: data.Date,
+              warrantyLength: data["Warranty-length"],
+              notes: data.Notes,
+              attachements: record.files,
+            } );
+          } );
+
+          this.records = records;
+          this.emit( "change" );
+        } else {
+          alert( response.error );
+          console.error( response );
+        }
+      } catch ( e ) {
+        console.error( oReq.response, e );
+      }
+    } );
+  }
+
+  createRecord( obj, callback = () => {} ) {
+    ajax( "http://192.168.92.205:80/addRecord.php", "POST", obj, ( oReq ) => {
+      try {
+        const response = JSON.parse( oReq.response );
+
+        if ( typeof response.error !== "undefined" ) {
+          alert( JSON.parse( oReq.response ).error );
+          console.error( response );
+          return;
+        }
+
+        console.log( response );
+
+        const data = response.data.data;
+
+        this.records.unshift( {
+          id: data.id,
+          name: data.Product,
+          place: data.Place,
+          seller: data.Seller,
+          date: data.Date,
+          warrantyLength: data["Warranty-length"],
+          notes: data.Notes,
+          attachements: response.files,
+        } );
+
+        callback( oReq );
+        this.emit( "change" );
+      } catch ( e ) {
+        console.error( oReq.response, e );
+      }
+    } );
+  }
+
   /* eslint-disable default-case */
   handleActions( action ) {
     switch ( action.type ) {
-      case "CREATE_QUOTE":
-        this.createQuote( action.text, action.teacher, action.info, action.name );
+      case "CREATE_RECORD":
+        this.createRecord( action.obj, action.callback );
+        break;
+      case "SYNC_RECORD":
+        this.syncRecords();
         break;
     }
   }
@@ -65,5 +143,7 @@ class RecordsStore extends EventEmitter {
 
 const recordsStore = new RecordsStore();
 dispatcher.register( recordsStore.handleActions.bind( recordsStore ) );
+
+window.RecordsStore = recordsStore;
 
 export default recordsStore;

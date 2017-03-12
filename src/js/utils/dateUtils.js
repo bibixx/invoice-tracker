@@ -1,12 +1,12 @@
-export function calculateWarrantyLeft(date, warrantyLength, left) {
-  const warrantyStart = new Date(date);
+export function calculateWarrantyLeft( date, warrantyLength, left ) {
+  const warrantyStart = new Date( date );
   const now = new Date();
-  now.setHours(0);
-  now.setMinutes(0);
-  now.setSeconds(0);
+  now.setHours( 0 );
+  now.setMinutes( 0 );
+  now.setSeconds( 0 );
 
-  const timeDiff = (warrantyStart.getTime() + (( 1000 * 3600 * 24 * 365 ) * warrantyLength)) - now.getTime();
-  const dd = Math.ceil(timeDiff / (1000 * 3600 * 24));
+  const timeDiff = ( warrantyStart.getTime() + ( ( 1000 * 3600 * 24 * 365 ) * warrantyLength ) ) - now.getTime();
+  const dd = Math.ceil( timeDiff / ( 1000 * 3600 * 24 ) );
 
   const yearDeclination = ( year ) => {
     const y = String( year );
@@ -15,9 +15,9 @@ export function calculateWarrantyLeft(date, warrantyLength, left) {
       return "rok";
     }
 
-    const lastChar = parseInt(y[y.length - 1], 10);
+    const lastChar = parseInt( y[y.length - 1], 10 );
 
-    if ( (lastChar > 1 && lastChar < 5) && (parseInt(y, 10) < 10 || parseInt(y, 10) > 20) ) {
+    if ( ( lastChar > 1 && lastChar < 5 ) && ( parseInt( y, 10 ) < 10 || parseInt( y, 10 ) > 20 ) ) {
       return "lata";
     }
 
@@ -33,7 +33,7 @@ export function calculateWarrantyLeft(date, warrantyLength, left) {
   };
 
   const leftDeclination = ( day ) => {
-    const d = parseInt(day, 10);
+    const d = parseInt( day, 10 );
 
     if ( left && d >= 0 ) {
       if ( d === 1 ) {
@@ -57,16 +57,16 @@ export function calculateWarrantyLeft(date, warrantyLength, left) {
   }
 
   return {
-    text: `${warrantyLength} ${yearDeclination(warrantyLength)} (${leftDeclination(dd)}${dd} ${dayDeclination(dd)}${(status === "") ? " temu" : ""})`,
+    text: `${warrantyLength} ${yearDeclination( warrantyLength )} (${leftDeclination( dd )}${dd} ${dayDeclination( dd )}${( status === "" ) ? " temu" : ""})`,
     status,
   };
 }
 
-export function formatDate(d) {
-  const to2Dig = (a) => {
-    return (`00${a}`).slice(-2);
+export function formatDate( d ) {
+  const to2Dig = ( a ) => {
+    return ( `00${a}` ).slice( -2 );
   };
 
-  const date = new Date(d);
-  return `${to2Dig(date.getDate())}.${to2Dig(date.getMonth())}.${date.getFullYear()}`;
+  const date = new Date( d );
+  return `${to2Dig( date.getDate() )}.${to2Dig( date.getMonth() + 1 )}.${date.getFullYear()}`;
 }

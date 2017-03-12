@@ -9,9 +9,10 @@ main.card
   box-shadow: $card-box-shadow
   box-sizing: border-box
 
-  p
-    margin-top: 0
-    font-size: 20px
+  &.display-more
+    p
+      margin-top: 0
+      font-size: 20px
 
   & > p:last-child, div:last-child > p:last-child
     margin: 0
@@ -35,16 +36,22 @@ main.card
       display: block
 
     .attachement
-      display: inline-block
+      display: inline-flex
+      align-items: center
+      justify-content: center
       width: 88px
       height: 104px
       margin: 8px 8px 8px 0
       transition: opacity .2s ease-in-out
       border-radius: 2px
-      background-size: cover
+      color: $text-color
+      text-decoration: none
       box-shadow: $card-box-shadow
       cursor: pointer
-      opacity: 0.7
+      opacity: 0.4
+
+      .material-icons
+        font-size: 48px
 
       &:hover
         opacity: 1

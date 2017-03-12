@@ -9,6 +9,7 @@ button
     height: 32px
     margin-top: 10px
     padding: 0 16px
+    transition: background .2s ease-in-out
     border: 0
     border-radius: 2px
     background: $main-color
@@ -19,6 +20,9 @@ button
     text-transform: uppercase
     box-shadow: $button-raised-box-shadow
     cursor: pointer
+
+    &:focus
+      background: mix($button-raised-focus-accent, $main-color, 25%)
 
   &.flat
     min-width: 88px

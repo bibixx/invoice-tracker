@@ -13,8 +13,23 @@ button
   user-select: none
 
 main#root-view
+  height: 100vh
   margin: 0 auto
   padding-top: 56px
+  box-sizing: border-box
+  overflow-y: auto
+
+  &.not-found
+    display: flex
+    align-items: center
+
+    h1
+      width: 100%
+      margin: 0
+      color: $color-muted
+      font-weight: 300
+      line-height: 1.5
+      text-align: center
 
   header
     display: flex

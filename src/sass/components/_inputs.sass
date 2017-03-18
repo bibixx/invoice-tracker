@@ -30,15 +30,6 @@
         &::after
           content: " *"
 
-    &.touched
-      &.invalid
-        & ~ label
-          color: $error-color
-
-        & ~ .border
-          &::before
-            opacity: 1
-
     &:focus ~ .border
       &::after
         transform: scaleX(1)
@@ -153,3 +144,12 @@
       font-size: 1rem
       font-weight: 400
       line-height: 20px
+
+.touched
+  &.invalid
+    & ~ label
+      color: $error-color
+
+    & ~ .border
+      &::before
+        opacity: 1

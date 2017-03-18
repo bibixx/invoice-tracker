@@ -940,10 +940,6 @@ header.app-bar {
             appearance: none; }
     .form-group textarea[required] ~ label::after, .form-group input[required] ~ label::after {
       content: " *"; }
-    .form-group textarea.touched.invalid ~ label, .form-group input.touched.invalid ~ label {
-      color: #e53935; }
-    .form-group textarea.touched.invalid ~ .border::before, .form-group input.touched.invalid ~ .border::before {
-      opacity: 1; }
     .form-group textarea:focus ~ .border::after, .form-group input:focus ~ .border::after {
       transform: scaleX(1); }
   .form-group textarea {
@@ -1036,6 +1032,12 @@ header.app-bar {
     font-weight: 400;
     line-height: 20px; }
 
+.touched.invalid ~ label {
+  color: #e53935; }
+
+.touched.invalid ~ .border::before {
+  opacity: 1; }
+
 #root-view section {
   display: block;
   height: 88px;
@@ -1091,6 +1093,8 @@ header.app-bar {
 
 .select-group {
   position: relative; }
+  .select-group.touched.invalid .border::before {
+    opacity: 1; }
   .select-group .options-container {
     position: absolute;
     top: 8px;

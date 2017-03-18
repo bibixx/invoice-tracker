@@ -15,6 +15,8 @@ export default class Select extends React.Component {
       focused: false,
       checked: 0,
       options: this.props.options,
+      isValid: false,
+      isTouched: false,
     };
 
     this.searchInput = {
@@ -43,6 +45,24 @@ export default class Select extends React.Component {
     return false;
   }
 
+  hide() {
+    this.setState( Object.assign( this.state, {
+      focused: false,
+    } ) );
+  }
+
+  isValid( valid ) {
+    this.setState( Object.assign( this.state, {
+      isValid: valid,
+    } ) );
+  }
+
+  isTouched( touched ) {
+    this.setState( Object.assign( this.state, {
+      isTouched: touched,
+    } ) );
+  }
+
   handleMouseDown( e ) {
     if ( e.code === "ArrowDown" ) {
       this.setState( Object.assign( this.state, {
@@ -55,13 +75,12 @@ export default class Select extends React.Component {
     } else if ( e.code === "Escape" ) {
       this.handleBlur( e );
     } else if ( e.code === "Enter" || ( e.code === "Space" && e.target !== this.searchInput ) ) {
-      this.select.value = this.state.options[this.state.checked].text;
+      this.change( this.state.options[this.state.checked].text );
       this.select.setAttribute( "option-id", this.state.options[this.state.checked].id );
       this.select.blur();
       this.searchInput.blur();
-      this.setState( Object.assign( this.state, {
-        focused: false,
-      } ) );
+
+      this.hide();
     }
   }
 
@@ -81,20 +100,20 @@ export default class Select extends React.Component {
     if ( !( e.relatedTarget && this.oneOfParnetsHaveClass( e.relatedTarget, "options-container" ) ) ) {
       this.select.blur();
       document.removeEventListener( "keydown", this.handleMouseDown );
-      this.setState( Object.assign( this.state, {
-        focused: false,
-      } ) );
+      this.hide();
     }
   }
 
+  handleChange() {
+    this.change( null );
+  }
+
   btnClick( e ) {
-    this.select.value = e.target.innerHTML;
+    this.change( e.target.innerHTML );
     this.select.setAttribute( "option-id", e.target.id );
     e.target.blur();
     this.searchInput.blur();
-    this.setState( Object.assign( this.state, {
-      focused: false,
-    } ) );
+    this.hide();
   }
 
   value() {
@@ -119,6 +138,18 @@ export default class Select extends React.Component {
     } ) );
   }
 
+  change( val ) {
+    if ( val !== null ) {
+      this.select.value = val;
+    }
+
+    this.isTouched( true );
+    console.log( this.select );
+    this.props.onChange( {
+      target: this,
+    } );
+  }
+
   render() {
     const options = [];
     let serachInput = null;
@@ -129,7 +160,7 @@ export default class Select extends React.Component {
     } );
 
     if ( this.props.link ) {
-      options.unshift( <Link key="add" to={this.props.link.url}><button tabIndex="-1" onBlur={this.handleBlur} onClick={this.btnClick} type="button" className="option">{this.props.link.text}</button></Link> );
+      options.unshift( <Link onBlur={this.handleBlur} key="add" to={this.props.link.url}><button tabIndex="-1" onBlur={this.handleBlur} onClick={this.btnClick} type="button" className="option">{this.props.link.text}</button></Link> );
     }
 
     if ( this.props.search ) {
@@ -140,9 +171,19 @@ export default class Select extends React.Component {
       );
     }
 
+    const classNamesRoot = ["select-group"];
+
+    if ( !this.state.isValid ) {
+      classNamesRoot.push( "invalid" );
+    }
+
+    if ( this.state.isTouched ) {
+      classNamesRoot.push( "touched" );
+    }
+
     return (
-      <div className="select-group">
-        <input type="text" className="select-input" defaultValue={this.props.defaultValue} ref={( select ) => { this.select = select; }} onFocus={this.selectFocus} onBlur={this.handleBlur} id={this.props.id} />
+      <div className={classNamesRoot.join( " " )}>
+        <input type="text" className="select-input" defaultValue={this.props.defaultValue} ref={( select ) => { this.select = select; }} onFocus={this.selectFocus} onBlur={this.handleBlur} onChange={this.change} id={this.props.id} />
         <div className={`options-container${( this.state.focused ) ? " focus" : ""}`}>
           {serachInput}
           {options}
@@ -161,6 +202,7 @@ Select.propTypes = {
   id: React.PropTypes.string.isRequired,
   searchFunction: React.PropTypes.func,
   defaultValue: React.PropTypes.string,
+  onChange: React.PropTypes.func,
   search: React.PropTypes.bool,
   link: React.PropTypes.object,
 };

@@ -9,6 +9,8 @@ import * as SellersActions from "../../actions/SellersActions";
 
 import Select from "./Select";
 
+import Validator from "../../utils/formUtils";
+
 export default class AddProduct extends React.Component {
   constructor() {
     super();
@@ -75,53 +77,43 @@ export default class AddProduct extends React.Component {
       oData.append( `File${i}`, this.inputs.files.files[i] );
     }
 
-    if ( this.checkValidity( false, true ) ) {
+    if ( this.checkValidity( true ) ) {
       RecordsActions.createRecord( oData, ( oReq ) => {
-        try {
-          console.log( JSON.parse( oReq.response ) );
-        } catch ( e ) {
-          console.error( oReq.response );
-        }
+        console.log( JSON.parse( oReq.response ) );
 
         browserHistory.push( "/" );
       } );
     }
   }
 
-  checkValidity( e = false, isClick ) {
-    if ( e !== false ) {
-      e.target.classList.add( "touched" );
-    }
-
-    if ( isClick ) {
-      console.log( this.inputs );
-      this.inputs.product.classList.add( "touched" );
-      this.inputs.date.classList.add( "touched" );
-    }
-
-    let valid = true;
-
-    if ( this.inputs.date.value === "" || !( /^\d{4}-\d{2}-\d{2}$/ ).test( this.inputs.date.value ) ) {
-      this.inputs.date.classList.add( "invalid" );
-      if ( isClick ) {
-        this.inputs.date.focus();
+  checkValidity( isClicked ) {
+    if ( isClicked !== true ) {
+      if ( isClicked.target.classList ) {
+        isClicked.target.classList.add( "touched" );
       }
-      valid = false;
     } else {
-      this.inputs.date.classList.remove( "invalid" );
-    }
-
-    if ( this.inputs.product.value === "" ) {
-      this.inputs.product.classList.add( "invalid" );
-      if ( isClick ) {
-        this.inputs.product.focus();
+      for ( const key in this.inputs ) {
+        if ( this.inputs.hasOwnProperty( key ) ) {
+          const input = this.inputs[key];
+          if ( input.constructor.name === "Select" ) {
+            input.isTouched( true );
+          } else {
+            input.classList.add( "touched" );
+          }
+        }
       }
-      valid = false;
-    } else {
-      this.inputs.product.classList.remove( "invalid" );
     }
 
-    return valid;
+    const isValid = Validator.validate( this.inputs );
+    if ( isValid === true ) {
+      return true;
+    }
+
+    if ( isClicked === true ) {
+      isValid.focus();
+    }
+
+    return false;
   }
 
   render() {
@@ -166,25 +158,25 @@ export default class AddProduct extends React.Component {
       <main className="card">
         <form encType="multipart/form-data" name="test">
           <div className="form-group">
-            <textarea onChange={this.checkValidity} ref={( input ) => { this.inputs.product = input; }} rows="1" type="text" id="product" required />
+            <textarea required onFocus={this.touched} onChange={this.checkValidity} ref={( input ) => { this.inputs.product = input; }} rows="1" type="text" id="product" />
             <label htmlFor="product">Produkt</label>
             <div className="border" />
           </div>
           <div className="form-group">
-            <Select id="seller" link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} search options={sellers} ref={( input ) => { this.inputs.seller = input; }} searchFunction={searchFunction} />
+            <Select required id="seller" onChange={this.checkValidity} link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} search options={sellers} ref={( input ) => { this.inputs.seller = input; }} searchFunction={searchFunction} />
             <label htmlFor="seller">Miejsce zakupu</label>
           </div>
           <div className="form-group">
-            <Select id="place" link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} search options={places} ref={( input ) => { this.inputs.place = input; }} searchFunction={searchFunction} />
+            <Select required id="place" onChange={this.checkValidity} link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} search options={places} ref={( input ) => { this.inputs.place = input; }} searchFunction={searchFunction} />
             <label htmlFor="seller">Dane sprzedawcy</label>
           </div>
           <div className="form-group">
-            <input onChange={this.checkValidity} ref={( input ) => { this.inputs.date = input; }} type="date" id="date" required />
+            <input required onChange={this.checkValidity} ref={( input ) => { this.inputs.date = input; }} type="date" id="date" />
             <label htmlFor="date">Data zakupu</label>
             <div className="border" />
           </div>
           <div className="form-group">
-            <Select id="warranty-length" options={warrantyLengthsOptions} defaultValue="2 lata" ref={( input ) => { this.inputs.warranty = input; }} />
+            <Select required id="warranty-length" options={warrantyLengthsOptions} defaultValue="2 lata" ref={( input ) => { this.inputs.warranty = input; }} />
             <label htmlFor="warranty-length">Okres gwarancji</label>
           </div>
           <div className="form-group">

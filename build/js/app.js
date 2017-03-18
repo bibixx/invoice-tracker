@@ -28459,6 +28459,10 @@ var _Select = require("./Select");
 
 var _Select2 = _interopRequireDefault(_Select);
 
+var _formUtils = require("../../utils/formUtils");
+
+var _formUtils2 = _interopRequireDefault(_formUtils);
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -28547,13 +28551,9 @@ var AddProduct = function (_React$Component) {
         oData.append("File" + i, this.inputs.files.files[i]);
       }
 
-      if (this.checkValidity(false, true)) {
+      if (this.checkValidity(true)) {
         RecordsActions.createRecord(oData, function (oReq) {
-          try {
-            console.log(JSON.parse(oReq.response));
-          } catch (e) {
-            console.error(oReq.response);
-          }
+          console.log(JSON.parse(oReq.response));
 
           _reactRouter.browserHistory.push("/");
         });
@@ -28561,43 +28561,34 @@ var AddProduct = function (_React$Component) {
     }
   }, {
     key: "checkValidity",
-    value: function checkValidity() {
-      var e = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-      var isClick = arguments[1];
-
-      if (e !== false) {
-        e.target.classList.add("touched");
-      }
-
-      if (isClick) {
-        console.log(this.inputs);
-        this.inputs.product.classList.add("touched");
-        this.inputs.date.classList.add("touched");
-      }
-
-      var valid = true;
-
-      if (this.inputs.date.value === "" || !/^\d{4}-\d{2}-\d{2}$/.test(this.inputs.date.value)) {
-        this.inputs.date.classList.add("invalid");
-        if (isClick) {
-          this.inputs.date.focus();
+    value: function checkValidity(isClicked) {
+      if (isClicked !== true) {
+        if (isClicked.target.classList) {
+          isClicked.target.classList.add("touched");
         }
-        valid = false;
       } else {
-        this.inputs.date.classList.remove("invalid");
-      }
-
-      if (this.inputs.product.value === "") {
-        this.inputs.product.classList.add("invalid");
-        if (isClick) {
-          this.inputs.product.focus();
+        for (var key in this.inputs) {
+          if (this.inputs.hasOwnProperty(key)) {
+            var input = this.inputs[key];
+            if (input.constructor.name === "Select") {
+              input.isTouched(true);
+            } else {
+              input.classList.add("touched");
+            }
+          }
         }
-        valid = false;
-      } else {
-        this.inputs.product.classList.remove("invalid");
       }
 
-      return valid;
+      var isValid = _formUtils2.default.validate(this.inputs);
+      if (isValid === true) {
+        return true;
+      }
+
+      if (isClicked === true) {
+        isValid.focus();
+      }
+
+      return false;
     }
   }, {
     key: "render",
@@ -28639,9 +28630,9 @@ var AddProduct = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement("textarea", { onChange: this.checkValidity, ref: function ref(input) {
+            _react2.default.createElement("textarea", { required: true, onFocus: this.touched, onChange: this.checkValidity, ref: function ref(input) {
                 _this2.inputs.product = input;
-              }, rows: "1", type: "text", id: "product", required: true }),
+              }, rows: "1", type: "text", id: "product" }),
             _react2.default.createElement(
               "label",
               { htmlFor: "product" },
@@ -28652,7 +28643,7 @@ var AddProduct = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement(_Select2.default, { id: "seller", link: { url: "/add-seller", text: "+ Dodaj sprzedawcę" }, search: true, options: sellers, ref: function ref(input) {
+            _react2.default.createElement(_Select2.default, { required: true, id: "seller", onChange: this.checkValidity, link: { url: "/add-seller", text: "+ Dodaj sprzedawcę" }, search: true, options: sellers, ref: function ref(input) {
                 _this2.inputs.seller = input;
               }, searchFunction: searchFunction }),
             _react2.default.createElement(
@@ -28664,7 +28655,7 @@ var AddProduct = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement(_Select2.default, { id: "place", link: { url: "/add-seller", text: "+ Dodaj sprzedawcę" }, search: true, options: places, ref: function ref(input) {
+            _react2.default.createElement(_Select2.default, { required: true, id: "place", onChange: this.checkValidity, link: { url: "/add-seller", text: "+ Dodaj sprzedawcę" }, search: true, options: places, ref: function ref(input) {
                 _this2.inputs.place = input;
               }, searchFunction: searchFunction }),
             _react2.default.createElement(
@@ -28676,9 +28667,9 @@ var AddProduct = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement("input", { onChange: this.checkValidity, ref: function ref(input) {
+            _react2.default.createElement("input", { required: true, onChange: this.checkValidity, ref: function ref(input) {
                 _this2.inputs.date = input;
-              }, type: "date", id: "date", required: true }),
+              }, type: "date", id: "date" }),
             _react2.default.createElement(
               "label",
               { htmlFor: "date" },
@@ -28689,7 +28680,7 @@ var AddProduct = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement(_Select2.default, { id: "warranty-length", options: warrantyLengthsOptions, defaultValue: "2 lata", ref: function ref(input) {
+            _react2.default.createElement(_Select2.default, { required: true, id: "warranty-length", options: warrantyLengthsOptions, defaultValue: "2 lata", ref: function ref(input) {
                 _this2.inputs.warranty = input;
               } }),
             _react2.default.createElement(
@@ -28744,7 +28735,7 @@ var AddProduct = function (_React$Component) {
 
 exports.default = AddProduct;
 
-},{"../../actions/RecordsActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/RecordsActions.js","../../actions/SellersActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/SellersActions.js","../../stores/SellersStore":"/Users/bartekosx/Projects/invoice-tracker/src/js/stores/SellersStore.js","./Select":"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/Select.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/AddSeller.js":[function(require,module,exports){
+},{"../../actions/RecordsActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/RecordsActions.js","../../actions/SellersActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/SellersActions.js","../../stores/SellersStore":"/Users/bartekosx/Projects/invoice-tracker/src/js/stores/SellersStore.js","../../utils/formUtils":"/Users/bartekosx/Projects/invoice-tracker/src/js/utils/formUtils.js","./Select":"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/Select.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/AddSeller.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -28762,6 +28753,10 @@ var _reactRouter = require("react-router");
 var _SellersActions = require("../../actions/SellersActions");
 
 var SellersActions = _interopRequireWildcard(_SellersActions);
+
+var _formUtils = require("../../utils/formUtils");
+
+var _formUtils2 = _interopRequireDefault(_formUtils);
 
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
@@ -28804,13 +28799,9 @@ var AddSeller = function (_React$Component) {
       oData.append("isSeller", this.inputs.isSeller.checked);
       oData.append("isPlace", this.inputs.isPlace.checked);
 
-      if (this.checkValidity(false, true)) {
+      if (this.checkValidity(true)) {
         SellersActions.createSeller(oData, function (oReq) {
-          try {
-            console.log(JSON.parse(oReq.response));
-          } catch (e) {
-            console.error(oReq.response);
-          }
+          console.log(JSON.parse(oReq.response));
 
           _reactRouter.browserHistory.goBack();
         });
@@ -28818,75 +28809,34 @@ var AddSeller = function (_React$Component) {
     }
   }, {
     key: "checkValidity",
-    value: function checkValidity() {
-      var e = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : false;
-      var isClick = arguments[1];
-
-      if (e !== false) {
-        e.target.classList.add("touched");
-      }
-
-      if (isClick) {
-        this.inputs.name.classList.add("touched");
-        this.inputs.city.classList.add("touched");
-        this.inputs.street.classList.add("touched");
-        this.inputs.zip.classList.add("touched");
-        this.inputs.nip.classList.add("touched");
-      }
-
-      var valid = true;
-
-      if (this.inputs.nip.value === "" || !/^\d{10}$/.test(this.inputs.nip.value)) {
-        this.inputs.nip.classList.add("invalid");
-        if (isClick) {
-          this.inputs.nip.focus();
+    value: function checkValidity(isClicked) {
+      if (isClicked !== true) {
+        if (isClicked.target.classList) {
+          isClicked.target.classList.add("touched");
         }
-        valid = false;
       } else {
-        this.inputs.nip.classList.remove("invalid");
-      }
-
-      if (this.inputs.zip.value === "" || !/^\d{2}-\d{3}$/.test(this.inputs.zip.value)) {
-        this.inputs.zip.classList.add("invalid");
-        if (isClick) {
-          this.inputs.zip.focus();
+        for (var key in this.inputs) {
+          if (this.inputs.hasOwnProperty(key)) {
+            var input = this.inputs[key];
+            if (input.constructor.name === "Select") {
+              input.isTouched(true);
+            } else {
+              input.classList.add("touched");
+            }
+          }
         }
-        valid = false;
-      } else {
-        this.inputs.zip.classList.remove("invalid");
       }
 
-      if (this.inputs.street.value === "") {
-        this.inputs.street.classList.add("invalid");
-        if (isClick) {
-          this.inputs.street.focus();
-        }
-        valid = false;
-      } else {
-        this.inputs.street.classList.remove("invalid");
+      var isValid = _formUtils2.default.validate(this.inputs);
+      if (isValid === true) {
+        return true;
       }
 
-      if (this.inputs.city.value === "") {
-        this.inputs.city.classList.add("invalid");
-        if (isClick) {
-          this.inputs.city.focus();
-        }
-        valid = false;
-      } else {
-        this.inputs.city.classList.remove("invalid");
+      if (isClicked === true) {
+        isValid.focus();
       }
 
-      if (this.inputs.name.value === "") {
-        this.inputs.name.classList.add("invalid");
-        if (isClick) {
-          this.inputs.name.focus();
-        }
-        valid = false;
-      } else {
-        this.inputs.name.classList.remove("invalid");
-      }
-
-      return valid;
+      return false;
     }
   }, {
     key: "render",
@@ -28902,9 +28852,9 @@ var AddSeller = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement("textarea", { onChange: this.checkValidity, ref: function ref(input) {
+            _react2.default.createElement("textarea", { required: true, onChange: this.checkValidity, ref: function ref(input) {
                 _this2.inputs.name = input;
-              }, rows: "1", type: "text", id: "name", required: true }),
+              }, rows: "1", type: "text", id: "name" }),
             _react2.default.createElement(
               "label",
               { htmlFor: "name" },
@@ -28915,9 +28865,9 @@ var AddSeller = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement("textarea", { onChange: this.checkValidity, ref: function ref(input) {
+            _react2.default.createElement("textarea", { required: true, onChange: this.checkValidity, ref: function ref(input) {
                 _this2.inputs.city = input;
-              }, rows: "1", type: "text", id: "city", required: true }),
+              }, rows: "1", type: "text", id: "city" }),
             _react2.default.createElement(
               "label",
               { htmlFor: "city" },
@@ -28928,9 +28878,9 @@ var AddSeller = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement("textarea", { onChange: this.checkValidity, ref: function ref(input) {
+            _react2.default.createElement("textarea", { required: true, onChange: this.checkValidity, ref: function ref(input) {
                 _this2.inputs.street = input;
-              }, rows: "1", type: "text", id: "street", required: true }),
+              }, rows: "1", type: "text", id: "street" }),
             _react2.default.createElement(
               "label",
               { htmlFor: "street" },
@@ -28941,9 +28891,9 @@ var AddSeller = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement("textarea", { onChange: this.checkValidity, ref: function ref(input) {
+            _react2.default.createElement("textarea", { required: true, pattern: "\\d{2}-\\d{3}", onChange: this.checkValidity, ref: function ref(input) {
                 _this2.inputs.zip = input;
-              }, rows: "1", type: "text", id: "zip", required: true }),
+              }, rows: "1", type: "text", id: "zip" }),
             _react2.default.createElement(
               "label",
               { htmlFor: "zip" },
@@ -28954,9 +28904,9 @@ var AddSeller = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement("textarea", { onChange: this.checkValidity, ref: function ref(input) {
+            _react2.default.createElement("textarea", { "data-isNIP": true, required: true, pattern: "\\d{10}", onChange: this.checkValidity, ref: function ref(input) {
                 _this2.inputs.nip = input;
-              }, rows: "1", type: "text", id: "nip", required: true }),
+              }, rows: "1", type: "text", id: "nip" }),
             _react2.default.createElement(
               "label",
               { htmlFor: "nip" },
@@ -29022,7 +28972,7 @@ var AddSeller = function (_React$Component) {
 
 exports.default = AddSeller;
 
-},{"../../actions/SellersActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/SellersActions.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/Header.js":[function(require,module,exports){
+},{"../../actions/SellersActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/SellersActions.js","../../utils/formUtils":"/Users/bartekosx/Projects/invoice-tracker/src/js/utils/formUtils.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/Header.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29380,7 +29330,9 @@ var Select = function (_React$Component) {
     _this.state = {
       focused: false,
       checked: 0,
-      options: _this.props.options
+      options: _this.props.options,
+      isValid: false,
+      isTouched: false
     };
 
     _this.searchInput = {
@@ -29414,6 +29366,27 @@ var Select = function (_React$Component) {
       return false;
     }
   }, {
+    key: "hide",
+    value: function hide() {
+      this.setState(Object.assign(this.state, {
+        focused: false
+      }));
+    }
+  }, {
+    key: "isValid",
+    value: function isValid(valid) {
+      this.setState(Object.assign(this.state, {
+        isValid: valid
+      }));
+    }
+  }, {
+    key: "isTouched",
+    value: function isTouched(touched) {
+      this.setState(Object.assign(this.state, {
+        isTouched: touched
+      }));
+    }
+  }, {
     key: "handleMouseDown",
     value: function handleMouseDown(e) {
       if (e.code === "ArrowDown") {
@@ -29427,13 +29400,12 @@ var Select = function (_React$Component) {
       } else if (e.code === "Escape") {
         this.handleBlur(e);
       } else if (e.code === "Enter" || e.code === "Space" && e.target !== this.searchInput) {
-        this.select.value = this.state.options[this.state.checked].text;
+        this.change(this.state.options[this.state.checked].text);
         this.select.setAttribute("option-id", this.state.options[this.state.checked].id);
         this.select.blur();
         this.searchInput.blur();
-        this.setState(Object.assign(this.state, {
-          focused: false
-        }));
+
+        this.hide();
       }
     }
   }, {
@@ -29455,21 +29427,22 @@ var Select = function (_React$Component) {
       if (!(e.relatedTarget && this.oneOfParnetsHaveClass(e.relatedTarget, "options-container"))) {
         this.select.blur();
         document.removeEventListener("keydown", this.handleMouseDown);
-        this.setState(Object.assign(this.state, {
-          focused: false
-        }));
+        this.hide();
       }
+    }
+  }, {
+    key: "handleChange",
+    value: function handleChange() {
+      this.change(null);
     }
   }, {
     key: "btnClick",
     value: function btnClick(e) {
-      this.select.value = e.target.innerHTML;
+      this.change(e.target.innerHTML);
       this.select.setAttribute("option-id", e.target.id);
       e.target.blur();
       this.searchInput.blur();
-      this.setState(Object.assign(this.state, {
-        focused: false
-      }));
+      this.hide();
     }
   }, {
     key: "value",
@@ -29499,6 +29472,19 @@ var Select = function (_React$Component) {
       }));
     }
   }, {
+    key: "change",
+    value: function change(val) {
+      if (val !== null) {
+        this.select.value = val;
+      }
+
+      this.isTouched(true);
+      console.log(this.select);
+      this.props.onChange({
+        target: this
+      });
+    }
+  }, {
     key: "render",
     value: function render() {
       var _this3 = this;
@@ -29522,7 +29508,7 @@ var Select = function (_React$Component) {
       if (this.props.link) {
         options.unshift(_react2.default.createElement(
           _reactRouter.Link,
-          { key: "add", to: this.props.link.url },
+          { onBlur: this.handleBlur, key: "add", to: this.props.link.url },
           _react2.default.createElement(
             "button",
             { tabIndex: "-1", onBlur: this.handleBlur, onClick: this.btnClick, type: "button", className: "option" },
@@ -29541,12 +29527,22 @@ var Select = function (_React$Component) {
         );
       }
 
+      var classNamesRoot = ["select-group"];
+
+      if (!this.state.isValid) {
+        classNamesRoot.push("invalid");
+      }
+
+      if (this.state.isTouched) {
+        classNamesRoot.push("touched");
+      }
+
       return _react2.default.createElement(
         "div",
-        { className: "select-group" },
+        { className: classNamesRoot.join(" ") },
         _react2.default.createElement("input", { type: "text", className: "select-input", defaultValue: this.props.defaultValue, ref: function ref(select) {
             _this3.select = select;
-          }, onFocus: this.selectFocus, onBlur: this.handleBlur, id: this.props.id }),
+          }, onFocus: this.selectFocus, onBlur: this.handleBlur, onChange: this.change, id: this.props.id }),
         _react2.default.createElement(
           "div",
           { className: "options-container" + (this.state.focused ? " focus" : "") },
@@ -29578,6 +29574,7 @@ Select.propTypes = {
   id: _react2.default.PropTypes.string.isRequired,
   searchFunction: _react2.default.PropTypes.func,
   defaultValue: _react2.default.PropTypes.string,
+  onChange: _react2.default.PropTypes.func,
   search: _react2.default.PropTypes.bool,
   link: _react2.default.PropTypes.object
 };
@@ -30651,6 +30648,128 @@ function formatDate(d) {
   var date = new Date(d);
   return to2Dig(date.getDate()) + "." + to2Dig(date.getMonth() + 1) + "." + date.getFullYear();
 }
+
+},{}],"/Users/bartekosx/Projects/invoice-tracker/src/js/utils/formUtils.js":[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+var Validator = function () {
+  function Validator() {
+    _classCallCheck(this, Validator);
+  }
+
+  _createClass(Validator, null, [{
+    key: "validate",
+    value: function validate(obj) {
+      for (var key in obj) {
+        if (obj.hasOwnProperty(key)) {
+          var input = Validator.getInput(obj[key]);
+
+          input.invalidate();
+        }
+      }
+
+      var areAllValid = true;
+
+      for (var _key in obj) {
+        if (obj.hasOwnProperty(_key)) {
+          var _input = Validator.getInput(obj[_key]);
+          var locallyValid = true;
+          _input.invalidate();
+          if (_input.required && _input.value === "") {
+            locallyValid = false;
+            if (areAllValid === true) {
+              areAllValid = _input.this;
+            }
+          }
+
+          if (_input.pattern) {
+            var patt = new RegExp(_input.pattern);
+            if (_input.value !== "" && !patt.test(_input.value)) {
+              locallyValid = false;
+              if (areAllValid === true) {
+                areAllValid = _input.this;
+              }
+            }
+          }
+
+          if (_input.isNIP) {
+            if (!Validator.isNIP(_input.value)) {
+              locallyValid = false;
+              if (areAllValid === true) {
+                areAllValid = _input.this;
+              }
+            }
+          }
+
+          if (locallyValid === true) {
+            _input.validate();
+          }
+        }
+      }
+
+      return areAllValid;
+    }
+  }, {
+    key: "getInput",
+    value: function getInput(input) {
+      var name = input.constructor.name;
+
+      if (name === "Select") {
+        return {
+          required: input.props.required || false,
+          value: input.value(),
+          pattern: false,
+          isNIP: input.props.isNIP || false,
+          validate: function validate() {
+            input.isValid(true);
+          },
+          invalidate: function invalidate() {
+            input.isValid(false);
+          },
+          this: input.select
+        };
+      }
+
+      return {
+        required: input.required || false,
+        value: input.value,
+        pattern: input.getAttribute("pattern") || false,
+        isNIP: input.getAttribute("data-isNIP") || false,
+        validate: function validate() {
+          input.classList.remove("invalid");
+        },
+        invalidate: function invalidate() {
+          input.classList.add("invalid");
+        },
+        this: input
+      };
+    }
+  }, {
+    key: "isNIP",
+    value: function isNIP(nipNo) {
+      var nip = nipNo.split("");
+      var wages = [6, 5, 7, 2, 3, 4, 5, 6, 7, 0];
+      var sum = 0;
+      nip.forEach(function (v, i) {
+        sum += v * wages[i];
+      });
+
+      return String(sum % 11) === nip[nip.length - 1];
+    }
+  }]);
+
+  return Validator;
+}();
+
+exports.default = Validator;
 
 },{}]},{},["/Users/bartekosx/Projects/invoice-tracker/src/js/app.js"])
 

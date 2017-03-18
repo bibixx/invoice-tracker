@@ -1,6 +1,12 @@
 .select-group
   position: relative
 
+  &.touched
+    &.invalid
+      .border
+        &::before
+          opacity: 1
+
   .options-container
     position: absolute
     top: 8px

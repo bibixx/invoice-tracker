@@ -4,6 +4,8 @@ import { browserHistory } from "react-router";
 
 import * as SellersActions from "../../actions/SellersActions";
 
+import Validator from "../../utils/formUtils";
+
 export default class AddSeller extends React.Component {
   constructor() {
     super();
@@ -27,85 +29,43 @@ export default class AddSeller extends React.Component {
     oData.append( "isSeller", this.inputs.isSeller.checked );
     oData.append( "isPlace", this.inputs.isPlace.checked );
 
-    if ( this.checkValidity( false, true ) ) {
+    if ( this.checkValidity( true ) ) {
       SellersActions.createSeller( oData, ( oReq ) => {
-        try {
-          console.log( JSON.parse( oReq.response ) );
-        } catch ( e ) {
-          console.error( oReq.response );
-        }
+        console.log( JSON.parse( oReq.response ) );
 
         browserHistory.goBack();
       } );
     }
   }
 
-  checkValidity( e = false, isClick ) {
-    if ( e !== false ) {
-      e.target.classList.add( "touched" );
-    }
-
-    if ( isClick ) {
-      this.inputs.name.classList.add( "touched" );
-      this.inputs.city.classList.add( "touched" );
-      this.inputs.street.classList.add( "touched" );
-      this.inputs.zip.classList.add( "touched" );
-      this.inputs.nip.classList.add( "touched" );
-    }
-
-    let valid = true;
-
-    if ( this.inputs.nip.value === "" || !( /^\d{10}$/ ).test( this.inputs.nip.value ) ) {
-      this.inputs.nip.classList.add( "invalid" );
-      if ( isClick ) {
-        this.inputs.nip.focus();
+  checkValidity( isClicked ) {
+    if ( isClicked !== true ) {
+      if ( isClicked.target.classList ) {
+        isClicked.target.classList.add( "touched" );
       }
-      valid = false;
     } else {
-      this.inputs.nip.classList.remove( "invalid" );
-    }
-
-    if ( this.inputs.zip.value === "" || !( /^\d{2}-\d{3}$/ ).test( this.inputs.zip.value ) ) {
-      this.inputs.zip.classList.add( "invalid" );
-      if ( isClick ) {
-        this.inputs.zip.focus();
+      for ( const key in this.inputs ) {
+        if ( this.inputs.hasOwnProperty( key ) ) {
+          const input = this.inputs[key];
+          if ( input.constructor.name === "Select" ) {
+            input.isTouched( true );
+          } else {
+            input.classList.add( "touched" );
+          }
+        }
       }
-      valid = false;
-    } else {
-      this.inputs.zip.classList.remove( "invalid" );
     }
 
-    if ( this.inputs.street.value === "" ) {
-      this.inputs.street.classList.add( "invalid" );
-      if ( isClick ) {
-        this.inputs.street.focus();
-      }
-      valid = false;
-    } else {
-      this.inputs.street.classList.remove( "invalid" );
+    const isValid = Validator.validate( this.inputs );
+    if ( isValid === true ) {
+      return true;
     }
 
-    if ( this.inputs.city.value === "" ) {
-      this.inputs.city.classList.add( "invalid" );
-      if ( isClick ) {
-        this.inputs.city.focus();
-      }
-      valid = false;
-    } else {
-      this.inputs.city.classList.remove( "invalid" );
+    if ( isClicked === true ) {
+      isValid.focus();
     }
 
-    if ( this.inputs.name.value === "" ) {
-      this.inputs.name.classList.add( "invalid" );
-      if ( isClick ) {
-        this.inputs.name.focus();
-      }
-      valid = false;
-    } else {
-      this.inputs.name.classList.remove( "invalid" );
-    }
-
-    return valid;
+    return false;
   }
 
   render() {
@@ -113,27 +73,27 @@ export default class AddSeller extends React.Component {
       <main className="card">
         <form encType="multipart/form-data" name="test">
           <div className="form-group">
-            <textarea onChange={this.checkValidity} ref={( input ) => { this.inputs.name = input; }} rows="1" type="text" id="name" required />
+            <textarea required onChange={this.checkValidity} ref={( input ) => { this.inputs.name = input; }} rows="1" type="text" id="name" />
             <label htmlFor="name">Nazwa firmy</label>
             <div className="border" />
           </div>
           <div className="form-group">
-            <textarea onChange={this.checkValidity} ref={( input ) => { this.inputs.city = input; }} rows="1" type="text" id="city" required />
+            <textarea required onChange={this.checkValidity} ref={( input ) => { this.inputs.city = input; }} rows="1" type="text" id="city" />
             <label htmlFor="city">Miasto</label>
             <div className="border" />
           </div>
           <div className="form-group">
-            <textarea onChange={this.checkValidity} ref={( input ) => { this.inputs.street = input; }} rows="1" type="text" id="street" required />
+            <textarea required onChange={this.checkValidity} ref={( input ) => { this.inputs.street = input; }} rows="1" type="text" id="street" />
             <label htmlFor="street">Ulica</label>
             <div className="border" />
           </div>
           <div className="form-group">
-            <textarea onChange={this.checkValidity} ref={( input ) => { this.inputs.zip = input; }} rows="1" type="text" id="zip" required />
+            <textarea required pattern="\d{2}-\d{3}" onChange={this.checkValidity} ref={( input ) => { this.inputs.zip = input; }} rows="1" type="text" id="zip" />
             <label htmlFor="zip">Kod pocztowy</label>
             <div className="border" />
           </div>
           <div className="form-group">
-            <textarea onChange={this.checkValidity} ref={( input ) => { this.inputs.nip = input; }} rows="1" type="text" id="nip" required />
+            <textarea data-isNIP required pattern="\d{10}" onChange={this.checkValidity} ref={( input ) => { this.inputs.nip = input; }} rows="1" type="text" id="nip" />
             <label htmlFor="nip">NIP</label>
             <div className="border" />
           </div>

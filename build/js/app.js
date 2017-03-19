@@ -28196,6 +28196,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.createRecord = createRecord;
+exports.editRecord = editRecord;
 exports.syncRecords = syncRecords;
 
 var _dispatcher = require("../dispatcher");
@@ -28207,6 +28208,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 function createRecord(obj, callback) {
   _dispatcher2.default.dispatch({
     type: "CREATE_RECORD",
+    obj: obj,
+    callback: callback
+  });
+}
+
+function editRecord(id, obj, callback) {
+  _dispatcher2.default.dispatch({
+    type: "EDIT_RECORD",
+    id: id,
     obj: obj,
     callback: callback
   });
@@ -28279,6 +28289,7 @@ var routes = _react2.default.createElement(
   { path: "/", component: _Layout2.default },
   _react2.default.createElement(_reactRouter.IndexRoute, { component: _RootPlaceholder2.default }),
   _react2.default.createElement(_reactRouter.Route, { path: "product/:id", component: _DetailView2.default, type: "product" }),
+  _react2.default.createElement(_reactRouter.Route, { path: "/edit/product/:id", edit: true, component: _DetailView2.default, type: "addProduct" }),
   _react2.default.createElement(_reactRouter.Route, { path: "/add-product", component: _DetailView2.default, type: "addProduct" }),
   _react2.default.createElement(_reactRouter.Route, { path: "/add-seller", component: _DetailView2.default, type: "addSeller" })
 );
@@ -28389,12 +28400,15 @@ var DetailView = function (_React$Component) {
             title = "";
           }
           btn = {
-            text: "edit"
+            text: "edit",
+            link: "/edit/product/" + this.props.params.id
           };
+
+          console.log();
 
           break;
         case "addProduct":
-          content = _react2.default.createElement(_AddProduct2.default, null);
+          content = _react2.default.createElement(_AddProduct2.default, { edit: this.props.route.edit, record: this.state.record });
           title = "Dodaj produkt";
           break;
         case "addSeller":
@@ -28463,6 +28477,8 @@ var _formUtils = require("../../utils/formUtils");
 
 var _formUtils2 = _interopRequireDefault(_formUtils);
 
+var _dateUtils = require("../../utils/dateUtils");
+
 function _interopRequireWildcard(obj) { if (obj && obj.__esModule) { return obj; } else { var newObj = {}; if (obj != null) { for (var key in obj) { if (Object.prototype.hasOwnProperty.call(obj, key)) newObj[key] = obj[key]; } } newObj.default = obj; return newObj; } }
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
@@ -28476,19 +28492,21 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var AddProduct = function (_React$Component) {
   _inherits(AddProduct, _React$Component);
 
-  function AddProduct() {
+  function AddProduct(props) {
     _classCallCheck(this, AddProduct);
 
-    var _this = _possibleConstructorReturn(this, (AddProduct.__proto__ || Object.getPrototypeOf(AddProduct)).call(this));
+    var _this = _possibleConstructorReturn(this, (AddProduct.__proto__ || Object.getPrototypeOf(AddProduct)).call(this, props));
 
     _this.handleFileInput = _this.handleFileInput.bind(_this);
     _this.checkValidity = _this.checkValidity.bind(_this);
     _this.submit = _this.submit.bind(_this);
+    _this.submitCreate = _this.submitCreate.bind(_this);
     _this.getSellers = _this.getSellers.bind(_this);
     _this.state = {
       inputFileText: "<i class=\"material-icons\">file_upload</i> Wybierz pliki...",
       sellers: [],
-      places: []
+      places: [],
+      record: _this.props.record || {}
     };
 
     _this.inputs = {};
@@ -28502,6 +28520,13 @@ var AddProduct = function (_React$Component) {
       SellersActions.syncSellers();
     }
   }, {
+    key: "componentWillReceiveProps",
+    value: function componentWillReceiveProps(nextProps) {
+      this.setState(Object.assign(this.state, {
+        record: nextProps.record || {}
+      }));
+    }
+  }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       _SellersStore2.default.removeListener("change", this.getSellers);
@@ -28512,7 +28537,8 @@ var AddProduct = function (_React$Component) {
       this.setState({
         inputFileText: this.state.inputFileText,
         sellers: _SellersStore2.default.getAllSellers(),
-        places: _SellersStore2.default.getAllPlaces()
+        places: _SellersStore2.default.getAllPlaces(),
+        record: this.props.record || {}
       });
     }
   }, {
@@ -28545,19 +28571,39 @@ var AddProduct = function (_React$Component) {
       oData.append("Warranty-length", this.inputs.warranty.value());
       oData.append("Notes", this.inputs.notes.value);
 
-      var filesLength = this.inputs.files.files.length;
+      if (!this.props.edit) {
+        var filesLength = this.inputs.files.files.length;
 
-      for (var i = 0; i < filesLength; i++) {
-        oData.append("File" + i, this.inputs.files.files[i]);
+        for (var i = 0; i < filesLength; i++) {
+          oData.append("File" + i, this.inputs.files.files[i]);
+        }
       }
 
       if (this.checkValidity(true)) {
-        RecordsActions.createRecord(oData, function (oReq) {
-          console.log(JSON.parse(oReq.response));
-
-          _reactRouter.browserHistory.push("/");
-        });
+        if (this.props.edit) {
+          this.submitEdit(oData);
+        } else {
+          this.submitCreate(oData);
+        }
       }
+    }
+  }, {
+    key: "submitCreate",
+    value: function submitCreate(oData) {
+      RecordsActions.createRecord(oData, function (oReq) {
+        console.log(JSON.parse(oReq.response));
+
+        _reactRouter.browserHistory.push("/");
+      });
+    }
+  }, {
+    key: "submitEdit",
+    value: function submitEdit(oData) {
+      RecordsActions.editRecord(this.props.record.id, oData, function (oReq) {
+        console.log(JSON.parse(oReq.response));
+
+        _reactRouter.browserHistory.push("/");
+      });
     }
   }, {
     key: "checkValidity",
@@ -28621,6 +28667,52 @@ var AddProduct = function (_React$Component) {
         return searchValue === "" || targetValue.text.toLowerCase().indexOf(searchValue.toLowerCase()) >= 0 || targetValue.nip.indexOf(searchValue) >= 0;
       };
 
+      var record = this.state.record;
+
+      if (Object.keys(record).length <= 0 && this.props.edit) {
+        return null;
+      }
+
+      var warrantySelectVal = { text: "2 lata" };
+
+      if (this.props.edit) {
+        warrantySelectVal = { text: record.warrantyLength + " " + (0, _dateUtils.yearDeclination)(record.warrantyLength) };
+      }
+
+      var sellerName = "";
+
+      this.state.sellers.forEach(function (v) {
+        if (v.id === record.seller) {
+          sellerName = v.name;
+        }
+      });
+
+      var placeName = "";
+
+      this.state.places.forEach(function (v) {
+        if (v.id === record.place) {
+          placeName = v.name;
+        }
+      });
+
+      var attachements = null;
+
+      if (!this.props.edit) {
+        attachements = _react2.default.createElement(
+          "div",
+          { className: "form-group" },
+          _react2.default.createElement(
+            "label",
+            { htmlFor: "files" },
+            "Za\u0142\u0105czniki"
+          ),
+          _react2.default.createElement("input", { ref: function ref(input) {
+              _this2.inputs.files = input;
+            }, onChange: this.handleFileInput, type: "file", name: "files", id: "files", multiple: true }),
+          _react2.default.createElement("label", { htmlFor: "files", className: "btn raised", dangerouslySetInnerHTML: { __html: this.state.inputFileText } })
+        );
+      }
+
       return _react2.default.createElement(
         "main",
         { className: "card" },
@@ -28630,7 +28722,7 @@ var AddProduct = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement("textarea", { required: true, onFocus: this.touched, onChange: this.checkValidity, ref: function ref(input) {
+            _react2.default.createElement("textarea", { defaultValue: record.name, required: true, onFocus: this.touched, onChange: this.checkValidity, ref: function ref(input) {
                 _this2.inputs.product = input;
               }, rows: "1", type: "text", id: "product" }),
             _react2.default.createElement(
@@ -28643,7 +28735,7 @@ var AddProduct = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement(_Select2.default, { required: true, id: "seller", onChange: this.checkValidity, link: { url: "/add-seller", text: "+ Dodaj sprzedawcę" }, search: true, options: sellers, ref: function ref(input) {
+            _react2.default.createElement(_Select2.default, { defaultValue: { id: record.seller, text: sellerName }, required: true, id: "seller", onChange: this.checkValidity, link: { url: "/add-seller", text: "+ Dodaj sprzedawcę" }, search: true, options: sellers, ref: function ref(input) {
                 _this2.inputs.seller = input;
               }, searchFunction: searchFunction }),
             _react2.default.createElement(
@@ -28655,19 +28747,19 @@ var AddProduct = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement(_Select2.default, { required: true, id: "place", onChange: this.checkValidity, link: { url: "/add-seller", text: "+ Dodaj sprzedawcę" }, search: true, options: places, ref: function ref(input) {
+            _react2.default.createElement(_Select2.default, { defaultValue: { id: record.place, text: placeName }, required: true, id: "place", onChange: this.checkValidity, link: { url: "/add-seller", text: "+ Dodaj sprzedawcę" }, search: true, options: places, ref: function ref(input) {
                 _this2.inputs.place = input;
               }, searchFunction: searchFunction }),
             _react2.default.createElement(
               "label",
-              { htmlFor: "seller" },
+              { htmlFor: "place" },
               "Dane sprzedawcy"
             )
           ),
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement("input", { required: true, onChange: this.checkValidity, ref: function ref(input) {
+            _react2.default.createElement("input", { defaultValue: record.date, required: true, onChange: this.checkValidity, ref: function ref(input) {
                 _this2.inputs.date = input;
               }, type: "date", id: "date" }),
             _react2.default.createElement(
@@ -28680,7 +28772,7 @@ var AddProduct = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement(_Select2.default, { required: true, id: "warranty-length", options: warrantyLengthsOptions, defaultValue: "2 lata", ref: function ref(input) {
+            _react2.default.createElement(_Select2.default, { defaultValue: warrantySelectVal, required: true, id: "warranty-length", options: warrantyLengthsOptions, ref: function ref(input) {
                 _this2.inputs.warranty = input;
               } }),
             _react2.default.createElement(
@@ -28692,7 +28784,7 @@ var AddProduct = function (_React$Component) {
           _react2.default.createElement(
             "div",
             { className: "form-group" },
-            _react2.default.createElement("textarea", { ref: function ref(input) {
+            _react2.default.createElement("textarea", { defaultValue: record.notes, ref: function ref(input) {
                 _this2.inputs.notes = input;
               }, type: "text", id: "notes" }),
             _react2.default.createElement(
@@ -28702,19 +28794,7 @@ var AddProduct = function (_React$Component) {
             ),
             _react2.default.createElement("div", { className: "border" })
           ),
-          _react2.default.createElement(
-            "div",
-            { className: "form-group" },
-            _react2.default.createElement(
-              "label",
-              { htmlFor: "files" },
-              "Za\u0142\u0105czniki"
-            ),
-            _react2.default.createElement("input", { ref: function ref(input) {
-                _this2.inputs.files = input;
-              }, onChange: this.handleFileInput, type: "file", name: "files", id: "files", multiple: true }),
-            _react2.default.createElement("label", { htmlFor: "files", className: "btn raised", dangerouslySetInnerHTML: { __html: this.state.inputFileText } })
-          ),
+          attachements,
           _react2.default.createElement(
             "p",
             null,
@@ -28735,7 +28815,13 @@ var AddProduct = function (_React$Component) {
 
 exports.default = AddProduct;
 
-},{"../../actions/RecordsActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/RecordsActions.js","../../actions/SellersActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/SellersActions.js","../../stores/SellersStore":"/Users/bartekosx/Projects/invoice-tracker/src/js/stores/SellersStore.js","../../utils/formUtils":"/Users/bartekosx/Projects/invoice-tracker/src/js/utils/formUtils.js","./Select":"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/Select.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/AddSeller.js":[function(require,module,exports){
+
+AddProduct.propTypes = {
+  record: _react2.default.PropTypes.object,
+  edit: _react2.default.PropTypes.bool
+};
+
+},{"../../actions/RecordsActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/RecordsActions.js","../../actions/SellersActions":"/Users/bartekosx/Projects/invoice-tracker/src/js/actions/SellersActions.js","../../stores/SellersStore":"/Users/bartekosx/Projects/invoice-tracker/src/js/stores/SellersStore.js","../../utils/dateUtils":"/Users/bartekosx/Projects/invoice-tracker/src/js/utils/dateUtils.js","../../utils/formUtils":"/Users/bartekosx/Projects/invoice-tracker/src/js/utils/formUtils.js","./Select":"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/Select.js","react":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react/react.js","react-router":"/Users/bartekosx/Projects/invoice-tracker/node_modules/react-router/lib/index.js"}],"/Users/bartekosx/Projects/invoice-tracker/src/js/components/DetailView/AddSeller.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29329,15 +29415,18 @@ var Select = function (_React$Component) {
     _this.value = _this.value.bind(_this);
     _this.state = {
       focused: false,
-      checked: 0,
+      checked: -1,
       options: _this.props.options,
-      isValid: false,
-      isTouched: false
+      isValid: true,
+      isTouched: false,
+      value: ""
     };
 
     _this.searchInput = {
       blur: function blur() {}
     };
+
+    _this.rootOnChange = _this.props.onChange || function () {};
 
     _this.searchFunction = function (targetValue, searchValue) {
       return searchValue === "" || targetValue.text.toLowerCase().indexOf(searchValue.toLowerCase()) >= 0;
@@ -29350,6 +29439,15 @@ var Select = function (_React$Component) {
   }
 
   _createClass(Select, [{
+    key: "componentWillReceiveProps",
+    value: function componentWillReceiveProps(nextProps) {
+      this.setState(Object.assign(this.state, {
+        value: nextProps.defaultValue.text
+      }));
+
+      this.select.setAttribute("option-id", nextProps.defaultValue.id);
+    }
+  }, {
     key: "oneOfParnetsHaveClass",
     value: function oneOfParnetsHaveClass(target, className) {
       var i = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : 0;
@@ -29364,6 +29462,67 @@ var Select = function (_React$Component) {
       }
 
       return false;
+    }
+  }, {
+    key: "getCheckedValue",
+    value: function getCheckedValue(target) {
+      var _this2 = this;
+
+      var checkedMatches = 0;
+      this.props.options.forEach(function (v, i) {
+        if (target.innerHTML || target.id) {
+          if (v.text === target.innerHTML || v.id === target.id && v.id) {
+            checkedMatches = i;
+
+            _this2.setState(Object.assign(_this2.state, {
+              value: v.text
+            }));
+          }
+        }
+      });
+
+      this.setState(Object.assign(this.state, {
+        checked: checkedMatches
+      }));
+
+      return checkedMatches;
+    }
+  }, {
+    key: "getDefaultCheckedValue",
+    value: function getDefaultCheckedValue() {
+      var _this3 = this;
+
+      if (this.state.checked >= 0) {
+        return this.state.checked;
+      }
+
+      var checkedMatches = 0;
+      this.props.options.forEach(function (v, i) {
+        if (_this3.props.defaultValue.text || _this3.props.defaultValue.id) {
+          if (v.text === _this3.props.defaultValue.text || v.id === _this3.props.defaultValue.id && v.id) {
+            checkedMatches = i;
+
+            _this3.setState(Object.assign(_this3.state, {
+              value: v.text
+            }));
+          }
+        }
+      });
+
+      this.setState(Object.assign(this.state, {
+        checked: checkedMatches
+      }));
+
+      return checkedMatches;
+    }
+  }, {
+    key: "show",
+    value: function show() {
+      this.setState(Object.assign(this.state, {
+        checked: this.getDefaultCheckedValue(),
+        focused: true,
+        options: this.props.options
+      }));
     }
   }, {
     key: "hide",
@@ -29411,11 +29570,7 @@ var Select = function (_React$Component) {
   }, {
     key: "selectFocus",
     value: function selectFocus() {
-      this.setState(Object.assign(this.state, {
-        checked: 0,
-        focused: true,
-        options: this.props.options
-      }));
+      this.show();
 
       this.searchInput.value = "";
 
@@ -29431,15 +29586,15 @@ var Select = function (_React$Component) {
       }
     }
   }, {
-    key: "handleChange",
-    value: function handleChange() {
-      this.change(null);
-    }
-  }, {
     key: "btnClick",
     value: function btnClick(e) {
       this.change(e.target.innerHTML);
       this.select.setAttribute("option-id", e.target.id);
+
+      this.setState(Object.assign(this.state, {
+        checked: this.getCheckedValue(e.target)
+      }));
+
       e.target.blur();
       this.searchInput.blur();
       this.hide();
@@ -29447,7 +29602,7 @@ var Select = function (_React$Component) {
   }, {
     key: "value",
     value: function value() {
-      return this.select.value;
+      return this.state.value;
     }
   }, {
     key: "id",
@@ -29457,11 +29612,11 @@ var Select = function (_React$Component) {
   }, {
     key: "search",
     value: function search(e) {
-      var _this2 = this;
+      var _this4 = this;
 
       var options = [];
       this.props.options.forEach(function (v) {
-        if (_this2.searchFunction(v, e.target.value)) {
+        if (_this4.searchFunction(v, e.target.value)) {
           options.push(v);
         }
       });
@@ -29475,19 +29630,20 @@ var Select = function (_React$Component) {
     key: "change",
     value: function change(val) {
       if (val !== null) {
-        this.select.value = val;
+        this.setState(Object.assign(this.state, {
+          value: val
+        }));
       }
 
       this.isTouched(true);
-      console.log(this.select);
-      this.props.onChange({
+      this.rootOnChange({
         target: this
       });
     }
   }, {
     key: "render",
     value: function render() {
-      var _this3 = this;
+      var _this5 = this;
 
       var options = [];
       var serachInput = null;
@@ -29496,11 +29652,20 @@ var Select = function (_React$Component) {
         var id = v.id || null;
         options.push(_react2.default.createElement(
           "button",
-          { id: id, tabIndex: "-1", ref: function ref(input) {
-              if (_this3.state.focused && i === _this3.state.checked && document.activeElement !== _this3.searchInput) {
+          {
+            id: id,
+            tabIndex: "-1",
+            ref: function ref(input) {
+              if (_this5.state.focused && i === _this5.state.checked && document.activeElement !== _this5.searchInput) {
                 return input && input.focus();
               }return false;
-            }, onBlur: _this3.handleBlur, onClick: _this3.btnClick, type: "button", key: i, className: "option" + (i === _this3.state.checked ? " checked" : "") },
+            },
+            onBlur: _this5.handleBlur,
+            onClick: _this5.btnClick,
+            type: "button",
+            key: i,
+            className: "option" + (i === _this5.state.checked ? " checked" : "")
+          },
           v.text
         ));
       });
@@ -29522,7 +29687,7 @@ var Select = function (_React$Component) {
           "div",
           { className: "search-input" },
           _react2.default.createElement("input", { onBlur: this.handleBlur, onChange: this.search, ref: function ref(input) {
-              _this3.searchInput = input;
+              _this5.searchInput = input;
             }, className: "search", type: "text", placeholder: "Wyszukaj..." })
         );
       }
@@ -29540,9 +29705,11 @@ var Select = function (_React$Component) {
       return _react2.default.createElement(
         "div",
         { className: classNamesRoot.join(" ") },
-        _react2.default.createElement("input", { type: "text", className: "select-input", defaultValue: this.props.defaultValue, ref: function ref(select) {
-            _this3.select = select;
-          }, onFocus: this.selectFocus, onBlur: this.handleBlur, onChange: this.change, id: this.props.id }),
+        _react2.default.createElement("input", { type: "text", className: "select-input", value: this.state.value, ref: function ref(select) {
+            _this5.select = select;
+          }, onFocus: this.selectFocus, onBlur: this.handleBlur, onChange: function onChange() {
+            _this5.change(null);
+          }, id: this.props.id }),
         _react2.default.createElement(
           "div",
           { className: "options-container" + (this.state.focused ? " focus" : "") },
@@ -29573,7 +29740,7 @@ Select.propTypes = {
   options: _react2.default.PropTypes.array.isRequired,
   id: _react2.default.PropTypes.string.isRequired,
   searchFunction: _react2.default.PropTypes.func,
-  defaultValue: _react2.default.PropTypes.string,
+  defaultValue: _react2.default.PropTypes.object,
   onChange: _react2.default.PropTypes.func,
   search: _react2.default.PropTypes.bool,
   link: _react2.default.PropTypes.object
@@ -30023,15 +30190,16 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var ListItem = function (_React$Component) {
   _inherits(ListItem, _React$Component);
 
-  function ListItem() {
+  function ListItem(props) {
     _classCallCheck(this, ListItem);
 
-    var _this = _possibleConstructorReturn(this, (ListItem.__proto__ || Object.getPrototypeOf(ListItem)).call(this));
+    var _this = _possibleConstructorReturn(this, (ListItem.__proto__ || Object.getPrototypeOf(ListItem)).call(this, props));
 
     _this.getSellers = _this.getSellers.bind(_this);
     _this.state = {
       seller: {},
-      place: {}
+      place: {},
+      record: _this.props.record
     };
     return _this;
   }
@@ -30043,6 +30211,15 @@ var ListItem = function (_React$Component) {
       SellersActions.syncSellers();
     }
   }, {
+    key: "componentWillReceiveProps",
+    value: function componentWillReceiveProps(nextProps) {
+      this.setState(Object.assign(this.state, {
+        record: nextProps.record
+      }));
+
+      this.getSellers();
+    }
+  }, {
     key: "componentWillUnmount",
     value: function componentWillUnmount() {
       _SellersStore2.default.removeListener("change", this.getSellers);
@@ -30051,14 +30228,18 @@ var ListItem = function (_React$Component) {
     key: "getSellers",
     value: function getSellers() {
       this.setState({
-        place: _SellersStore2.default.getById(this.props.record.place)
+        place: _SellersStore2.default.getById(this.state.record.place)
       });
     }
   }, {
     key: "render",
     value: function render() {
-      var record = this.props.record;
+      var record = this.state.record;
       var warrantyLeft = (0, _dateUtils.calculateWarrantyLeft)(record.date, record.warrantyLength);
+
+      if (!this.state.place) {
+        return null;
+      }
 
       return _react2.default.createElement(
         "section",
@@ -30328,8 +30509,6 @@ var RecordsStore = function (_EventEmitter) {
             return;
           }
 
-          console.log(response);
-
           var data = response.data.data;
 
           _this4.records.unshift({
@@ -30350,6 +30529,48 @@ var RecordsStore = function (_EventEmitter) {
         }
       });
     }
+  }, {
+    key: "editRecord",
+    value: function editRecord(id, obj) {
+      var _this5 = this;
+
+      var callback = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : function () {};
+
+      obj.append("id", id);
+      (0, _ajaxUtils.ajax)("http://192.168.92.205:80/editRecord.php", "POST", obj, function (oReq) {
+        try {
+          var response = JSON.parse(oReq.response);
+
+          if (typeof response.error !== "undefined") {
+            alert(JSON.parse(oReq.response).error);
+            console.error(response);
+            return;
+          }
+
+          var data = response.data.data;
+
+          _this5.records.forEach(function (v, key) {
+            if (v.id === id) {
+              _this5.records[key] = {
+                id: data.id,
+                name: data.Product,
+                place: data.Place,
+                seller: data.Seller,
+                date: data.Date,
+                warrantyLength: data["Warranty-length"],
+                notes: data.Notes,
+                attachements: response.files
+              };
+            }
+          });
+
+          callback(oReq);
+          _this5.emit("change");
+        } catch (e) {
+          console.error(oReq.response, e);
+        }
+      });
+    }
 
     /* eslint-disable default-case */
 
@@ -30359,6 +30580,9 @@ var RecordsStore = function (_EventEmitter) {
       switch (action.type) {
         case "CREATE_RECORD":
           this.createRecord(action.obj, action.callback);
+          break;
+        case "EDIT_RECORD":
+          this.editRecord(action.id, action.obj, action.callback);
           break;
         case "SYNC_RECORD":
           this.syncRecords();
@@ -30576,6 +30800,22 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.calculateWarrantyLeft = calculateWarrantyLeft;
 exports.formatDate = formatDate;
+var yearDeclination = exports.yearDeclination = function yearDeclination(year) {
+  var y = String(year);
+
+  if (y === "1") {
+    return "rok";
+  }
+
+  var lastChar = parseInt(y[y.length - 1], 10);
+
+  if (lastChar > 1 && lastChar < 5 && (parseInt(y, 10) < 10 || parseInt(y, 10) > 20)) {
+    return "lata";
+  }
+
+  return "lat";
+};
+
 function calculateWarrantyLeft(date, warrantyLength, left) {
   var warrantyStart = new Date(date);
   var now = new Date();
@@ -30585,22 +30825,6 @@ function calculateWarrantyLeft(date, warrantyLength, left) {
 
   var timeDiff = warrantyStart.getTime() + 1000 * 3600 * 24 * 365 * warrantyLength - now.getTime();
   var dd = Math.ceil(timeDiff / (1000 * 3600 * 24));
-
-  var yearDeclination = function yearDeclination(year) {
-    var y = String(year);
-
-    if (y === "1") {
-      return "rok";
-    }
-
-    var lastChar = parseInt(y[y.length - 1], 10);
-
-    if (lastChar > 1 && lastChar < 5 && (parseInt(y, 10) < 10 || parseInt(y, 10) > 20)) {
-      return "lata";
-    }
-
-    return "lat";
-  };
 
   var dayDeclination = function dayDeclination(day) {
     if (day === 1) {
@@ -30709,7 +30933,7 @@ var Validator = function () {
             }
           }
 
-          if (locallyValid === true) {
+          if (locallyValid === true || !_input.required) {
             _input.validate();
           }
         }

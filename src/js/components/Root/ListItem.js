@@ -8,12 +8,13 @@ import SellersStore from "../../stores/SellersStore";
 import * as SellersActions from "../../actions/SellersActions";
 
 export default class ListItem extends React.Component {
-  constructor() {
-    super();
+  constructor( props ) {
+    super( props );
     this.getSellers = this.getSellers.bind( this );
     this.state = {
       seller: {},
       place: {},
+      record: this.props.record,
     };
   }
 
@@ -22,19 +23,31 @@ export default class ListItem extends React.Component {
     SellersActions.syncSellers();
   }
 
+  componentWillReceiveProps( nextProps ) {
+    this.setState( Object.assign( this.state, {
+      record: nextProps.record,
+    } ) );
+
+    this.getSellers();
+  }
+
   componentWillUnmount() {
     SellersStore.removeListener( "change", this.getSellers );
   }
 
   getSellers() {
     this.setState( {
-      place: SellersStore.getById( this.props.record.place ),
+      place: SellersStore.getById( this.state.record.place ),
     } );
   }
 
   render() {
-    const record = this.props.record;
+    const record = this.state.record;
     const warrantyLeft = calculateWarrantyLeft( record.date, record.warrantyLength );
+
+    if ( !this.state.place ) {
+      return null;
+    }
 
     return (
       <section className="product">

@@ -13,15 +13,18 @@ export default class Select extends React.Component {
     this.value = this.value.bind( this );
     this.state = {
       focused: false,
-      checked: 0,
+      checked: -1,
       options: this.props.options,
-      isValid: false,
+      isValid: true,
       isTouched: false,
+      value: "",
     };
 
     this.searchInput = {
       blur: () => {},
     };
+
+    this.rootOnChange = this.props.onChange || function() {};
 
     this.searchFunction = ( targetValue, searchValue ) => {
       return ( searchValue === "" ) || ( targetValue.text.toLowerCase().indexOf( searchValue.toLowerCase() ) >= 0 );
@@ -30,6 +33,14 @@ export default class Select extends React.Component {
     if ( this.props.searchFunction ) {
       this.searchFunction = this.props.searchFunction;
     }
+  }
+
+  componentWillReceiveProps( nextProps ) {
+    this.setState( Object.assign( this.state, {
+      value: nextProps.defaultValue.text,
+    } ) );
+
+    this.select.setAttribute( "option-id", nextProps.defaultValue.id );
   }
 
   oneOfParnetsHaveClass( target, className, i = 0 ) {
@@ -43,6 +54,60 @@ export default class Select extends React.Component {
     }
 
     return false;
+  }
+
+  getCheckedValue( target ) {
+    let checkedMatches = 0;
+    this.props.options.forEach( ( v, i ) => {
+      if ( target.innerHTML || target.id ) {
+        if ( ( v.text === target.innerHTML ) || ( v.id === target.id && v.id ) ) {
+          checkedMatches = i;
+
+          this.setState( Object.assign( this.state, {
+            value: v.text,
+          } ) );
+        }
+      }
+    } );
+
+    this.setState( Object.assign( this.state, {
+      checked: checkedMatches,
+    } ) );
+
+    return checkedMatches;
+  }
+
+  getDefaultCheckedValue() {
+    if ( this.state.checked >= 0 ) {
+      return this.state.checked;
+    }
+
+    let checkedMatches = 0;
+    this.props.options.forEach( ( v, i ) => {
+      if ( this.props.defaultValue.text || this.props.defaultValue.id ) {
+        if ( ( v.text === this.props.defaultValue.text ) || ( v.id === this.props.defaultValue.id && v.id ) ) {
+          checkedMatches = i;
+
+          this.setState( Object.assign( this.state, {
+            value: v.text,
+          } ) );
+        }
+      }
+    } );
+
+    this.setState( Object.assign( this.state, {
+      checked: checkedMatches,
+    } ) );
+
+    return checkedMatches;
+  }
+
+  show() {
+    this.setState( Object.assign( this.state, {
+      checked: this.getDefaultCheckedValue(),
+      focused: true,
+      options: this.props.options,
+    } ) );
   }
 
   hide() {
@@ -85,11 +150,7 @@ export default class Select extends React.Component {
   }
 
   selectFocus() {
-    this.setState( Object.assign( this.state, {
-      checked: 0,
-      focused: true,
-      options: this.props.options,
-    } ) );
+    this.show();
 
     this.searchInput.value = "";
 
@@ -104,20 +165,21 @@ export default class Select extends React.Component {
     }
   }
 
-  handleChange() {
-    this.change( null );
-  }
-
   btnClick( e ) {
     this.change( e.target.innerHTML );
     this.select.setAttribute( "option-id", e.target.id );
+
+    this.setState( Object.assign( this.state, {
+      checked: this.getCheckedValue( e.target ),
+    } ) );
+
     e.target.blur();
     this.searchInput.blur();
     this.hide();
   }
 
   value() {
-    return this.select.value;
+    return this.state.value;
   }
 
   id() {
@@ -140,12 +202,13 @@ export default class Select extends React.Component {
 
   change( val ) {
     if ( val !== null ) {
-      this.select.value = val;
+      this.setState( Object.assign( this.state, {
+        value: val,
+      } ) );
     }
 
     this.isTouched( true );
-    console.log( this.select );
-    this.props.onChange( {
+    this.rootOnChange( {
       target: this,
     } );
   }
@@ -156,7 +219,17 @@ export default class Select extends React.Component {
 
     this.state.options.forEach( ( v, i ) => {
       const id = v.id || null;
-      options.push( <button id={id} tabIndex="-1" ref={( input ) => { if ( this.state.focused && ( i === this.state.checked ) && ( document.activeElement !== this.searchInput ) ) { return ( input && input.focus() ); } return false; }} onBlur={this.handleBlur} onClick={this.btnClick} type="button" key={i} className={`option${( i === this.state.checked ) ? " checked" : ""}`}>{v.text}</button> );
+      options.push(
+        <button
+          id={id}
+          tabIndex="-1"
+          ref={( input ) => { if ( this.state.focused && ( i === this.state.checked ) && ( document.activeElement !== this.searchInput ) ) { return ( input && input.focus() ); } return false; }}
+          onBlur={this.handleBlur}
+          onClick={this.btnClick}
+          type="button"
+          key={i}
+          className={`option${( i === this.state.checked ) ? " checked" : ""}`}
+        >{v.text}</button> );
     } );
 
     if ( this.props.link ) {
@@ -183,7 +256,7 @@ export default class Select extends React.Component {
 
     return (
       <div className={classNamesRoot.join( " " )}>
-        <input type="text" className="select-input" defaultValue={this.props.defaultValue} ref={( select ) => { this.select = select; }} onFocus={this.selectFocus} onBlur={this.handleBlur} onChange={this.change} id={this.props.id} />
+        <input type="text" className="select-input" value={this.state.value} ref={( select ) => { this.select = select; }} onFocus={this.selectFocus} onBlur={this.handleBlur} onChange={() => { this.change( null ); }} id={this.props.id} />
         <div className={`options-container${( this.state.focused ) ? " focus" : ""}`}>
           {serachInput}
           {options}
@@ -201,7 +274,7 @@ Select.propTypes = {
   options: React.PropTypes.array.isRequired,
   id: React.PropTypes.string.isRequired,
   searchFunction: React.PropTypes.func,
-  defaultValue: React.PropTypes.string,
+  defaultValue: React.PropTypes.object,
   onChange: React.PropTypes.func,
   search: React.PropTypes.bool,
   link: React.PropTypes.object,

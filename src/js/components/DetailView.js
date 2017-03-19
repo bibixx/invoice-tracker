@@ -49,12 +49,14 @@ export default class DetailView extends React.Component {
         }
         btn = {
           text: "edit",
-          // link: "/add-product",
+          link: `/edit/product/${this.props.params.id}`,
         };
+
+        console.log();
 
         break;
       case "addProduct":
-        content = ( <AddProduct /> );
+        content = ( <AddProduct edit={this.props.route.edit} record={this.state.record} /> );
         title = "Dodaj produkt";
         break;
       case "addSeller":

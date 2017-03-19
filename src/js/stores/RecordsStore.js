@@ -103,8 +103,6 @@ class RecordsStore extends EventEmitter {
           return;
         }
 
-        console.log( response );
-
         const data = response.data.data;
 
         this.records.unshift( {
@@ -126,11 +124,51 @@ class RecordsStore extends EventEmitter {
     } );
   }
 
+  editRecord( id, obj, callback = () => {} ) {
+    obj.append( "id", id );
+    ajax( "http://192.168.92.205:80/editRecord.php", "POST", obj, ( oReq ) => {
+      try {
+        const response = JSON.parse( oReq.response );
+
+        if ( typeof response.error !== "undefined" ) {
+          alert( JSON.parse( oReq.response ).error );
+          console.error( response );
+          return;
+        }
+
+        const data = response.data.data;
+
+        this.records.forEach( ( v, key ) => {
+          if ( v.id === id ) {
+            this.records[key] = {
+              id: data.id,
+              name: data.Product,
+              place: data.Place,
+              seller: data.Seller,
+              date: data.Date,
+              warrantyLength: data["Warranty-length"],
+              notes: data.Notes,
+              attachements: response.files,
+            };
+          }
+        } );
+
+        callback( oReq );
+        this.emit( "change" );
+      } catch ( e ) {
+        console.error( oReq.response, e );
+      }
+    } );
+  }
+
   /* eslint-disable default-case */
   handleActions( action ) {
     switch ( action.type ) {
       case "CREATE_RECORD":
         this.createRecord( action.obj, action.callback );
+        break;
+      case "EDIT_RECORD":
+        this.editRecord( action.id, action.obj, action.callback );
         break;
       case "SYNC_RECORD":
         this.syncRecords();

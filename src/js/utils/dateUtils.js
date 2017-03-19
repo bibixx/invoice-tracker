@@ -1,3 +1,19 @@
+export const yearDeclination = ( year ) => {
+  const y = String( year );
+
+  if ( y === "1" ) {
+    return "rok";
+  }
+
+  const lastChar = parseInt( y[y.length - 1], 10 );
+
+  if ( ( lastChar > 1 && lastChar < 5 ) && ( parseInt( y, 10 ) < 10 || parseInt( y, 10 ) > 20 ) ) {
+    return "lata";
+  }
+
+  return "lat";
+};
+
 export function calculateWarrantyLeft( date, warrantyLength, left ) {
   const warrantyStart = new Date( date );
   const now = new Date();
@@ -7,22 +23,6 @@ export function calculateWarrantyLeft( date, warrantyLength, left ) {
 
   const timeDiff = ( warrantyStart.getTime() + ( ( 1000 * 3600 * 24 * 365 ) * warrantyLength ) ) - now.getTime();
   const dd = Math.ceil( timeDiff / ( 1000 * 3600 * 24 ) );
-
-  const yearDeclination = ( year ) => {
-    const y = String( year );
-
-    if ( y === "1" ) {
-      return "rok";
-    }
-
-    const lastChar = parseInt( y[y.length - 1], 10 );
-
-    if ( ( lastChar > 1 && lastChar < 5 ) && ( parseInt( y, 10 ) < 10 || parseInt( y, 10 ) > 20 ) ) {
-      return "lata";
-    }
-
-    return "lat";
-  };
 
   const dayDeclination = ( day ) => {
     if ( day === 1 ) {

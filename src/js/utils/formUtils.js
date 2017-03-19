@@ -41,7 +41,7 @@ export default class Validator {
           }
         }
 
-        if ( locallyValid === true ) {
+        if ( locallyValid === true || !input.required ) {
           input.validate();
         }
       }

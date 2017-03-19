@@ -45,7 +45,6 @@
   ), "id");
 
   $data["data"]["id"] = $hashids->encode($returned);
-  $data["data"]["id"] = $returned;
 
   $arr = array(
     "data" => $data,

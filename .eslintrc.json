@@ -16,7 +16,7 @@
     },
     "rules": {
         "quotes": ["error", "double"],
-        "arrow-body-style": ["error", "always"],
+        "arrow-body-style": 0,
         "func-names": 0,
         "space-in-parens": ["error", "always"],
         "space-before-function-paren": ["error", {

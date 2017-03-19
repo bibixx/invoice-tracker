@@ -10,18 +10,21 @@ import * as SellersActions from "../../actions/SellersActions";
 import Select from "./Select";
 
 import Validator from "../../utils/formUtils";
+import { yearDeclination } from "../../utils/dateUtils";
 
 export default class AddProduct extends React.Component {
-  constructor() {
-    super();
+  constructor( props ) {
+    super( props );
     this.handleFileInput = this.handleFileInput.bind( this );
     this.checkValidity = this.checkValidity.bind( this );
     this.submit = this.submit.bind( this );
+    this.submitCreate = this.submitCreate.bind( this );
     this.getSellers = this.getSellers.bind( this );
     this.state = {
       inputFileText: "<i class=\"material-icons\">file_upload</i> Wybierz pliki...",
       sellers: [],
       places: [],
+      record: this.props.record || {},
     };
 
     this.inputs = {};
@@ -30,6 +33,12 @@ export default class AddProduct extends React.Component {
   componentWillMount() {
     SellersStore.on( "change", this.getSellers );
     SellersActions.syncSellers();
+  }
+
+  componentWillReceiveProps( nextProps ) {
+    this.setState( Object.assign( this.state, {
+      record: nextProps.record || {},
+    } ) );
   }
 
   componentWillUnmount() {
@@ -41,6 +50,7 @@ export default class AddProduct extends React.Component {
       inputFileText: this.state.inputFileText,
       sellers: SellersStore.getAllSellers(),
       places: SellersStore.getAllPlaces(),
+      record: this.props.record || {},
     } );
   }
 
@@ -71,19 +81,37 @@ export default class AddProduct extends React.Component {
     oData.append( "Warranty-length", this.inputs.warranty.value() );
     oData.append( "Notes", this.inputs.notes.value );
 
-    const filesLength = this.inputs.files.files.length;
+    if ( !this.props.edit ) {
+      const filesLength = this.inputs.files.files.length;
 
-    for ( let i = 0; i < filesLength; i++ ) {
-      oData.append( `File${i}`, this.inputs.files.files[i] );
+      for ( let i = 0; i < filesLength; i++ ) {
+        oData.append( `File${i}`, this.inputs.files.files[i] );
+      }
     }
 
     if ( this.checkValidity( true ) ) {
-      RecordsActions.createRecord( oData, ( oReq ) => {
-        console.log( JSON.parse( oReq.response ) );
-
-        browserHistory.push( "/" );
-      } );
+      if ( this.props.edit ) {
+        this.submitEdit( oData );
+      } else {
+        this.submitCreate( oData );
+      }
     }
+  }
+
+  submitCreate( oData ) {
+    RecordsActions.createRecord( oData, ( oReq ) => {
+      console.log( JSON.parse( oReq.response ) );
+
+      browserHistory.push( "/" );
+    } );
+  }
+
+  submitEdit( oData ) {
+    RecordsActions.editRecord( this.props.record.id, oData, ( oReq ) => {
+      console.log( JSON.parse( oReq.response ) );
+
+      browserHistory.push( "/" );
+    } );
   }
 
   checkValidity( isClicked ) {
@@ -154,41 +182,75 @@ export default class AddProduct extends React.Component {
       return ( searchValue === "" ) || ( targetValue.text.toLowerCase().indexOf( searchValue.toLowerCase() ) >= 0 ) || ( targetValue.nip.indexOf( searchValue ) >= 0 );
     };
 
+    const record = this.state.record;
+
+    if ( Object.keys( record ).length <= 0 && this.props.edit ) {
+      return null;
+    }
+
+    let warrantySelectVal = { text: "2 lata" };
+
+    if ( this.props.edit ) {
+      warrantySelectVal = { text: `${record.warrantyLength} ${yearDeclination( record.warrantyLength )}` };
+    }
+
+    let sellerName = "";
+
+    this.state.sellers.forEach( ( v ) => {
+      if ( v.id === record.seller ) {
+        sellerName = v.name;
+      }
+    } );
+
+    let placeName = "";
+
+    this.state.places.forEach( ( v ) => {
+      if ( v.id === record.place ) {
+        placeName = v.name;
+      }
+    } );
+
+    let attachements = null;
+
+    if ( !this.props.edit ) {
+      attachements = ( <div className="form-group">
+        <label htmlFor="files">Załączniki</label>
+        <input ref={( input ) => { this.inputs.files = input; }} onChange={this.handleFileInput} type="file" name="files" id="files" multiple />
+        <label htmlFor="files" className="btn raised" dangerouslySetInnerHTML={{ __html: this.state.inputFileText }} />
+      </div> );
+    }
+
     return (
       <main className="card">
         <form encType="multipart/form-data" name="test">
           <div className="form-group">
-            <textarea required onFocus={this.touched} onChange={this.checkValidity} ref={( input ) => { this.inputs.product = input; }} rows="1" type="text" id="product" />
+            <textarea defaultValue={record.name} required onFocus={this.touched} onChange={this.checkValidity} ref={( input ) => { this.inputs.product = input; }} rows="1" type="text" id="product" />
             <label htmlFor="product">Produkt</label>
             <div className="border" />
           </div>
           <div className="form-group">
-            <Select required id="seller" onChange={this.checkValidity} link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} search options={sellers} ref={( input ) => { this.inputs.seller = input; }} searchFunction={searchFunction} />
+            <Select defaultValue={{ id: record.seller, text: sellerName }} required id="seller" onChange={this.checkValidity} link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} search options={sellers} ref={( input ) => { this.inputs.seller = input; }} searchFunction={searchFunction} />
             <label htmlFor="seller">Miejsce zakupu</label>
           </div>
           <div className="form-group">
-            <Select required id="place" onChange={this.checkValidity} link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} search options={places} ref={( input ) => { this.inputs.place = input; }} searchFunction={searchFunction} />
-            <label htmlFor="seller">Dane sprzedawcy</label>
+            <Select defaultValue={{ id: record.place, text: placeName }} required id="place" onChange={this.checkValidity} link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} search options={places} ref={( input ) => { this.inputs.place = input; }} searchFunction={searchFunction} />
+            <label htmlFor="place">Dane sprzedawcy</label>
           </div>
           <div className="form-group">
-            <input required onChange={this.checkValidity} ref={( input ) => { this.inputs.date = input; }} type="date" id="date" />
+            <input defaultValue={record.date} required onChange={this.checkValidity} ref={( input ) => { this.inputs.date = input; }} type="date" id="date" />
             <label htmlFor="date">Data zakupu</label>
             <div className="border" />
           </div>
           <div className="form-group">
-            <Select required id="warranty-length" options={warrantyLengthsOptions} defaultValue="2 lata" ref={( input ) => { this.inputs.warranty = input; }} />
+            <Select defaultValue={warrantySelectVal} required id="warranty-length" options={warrantyLengthsOptions} ref={( input ) => { this.inputs.warranty = input; }} />
             <label htmlFor="warranty-length">Okres gwarancji</label>
           </div>
           <div className="form-group">
-            <textarea ref={( input ) => { this.inputs.notes = input; }} type="text" id="notes" />
+            <textarea defaultValue={record.notes} ref={( input ) => { this.inputs.notes = input; }} type="text" id="notes" />
             <label htmlFor="notes">Notatki</label>
             <div className="border" />
           </div>
-          <div className="form-group">
-            <label htmlFor="files">Załączniki</label>
-            <input ref={( input ) => { this.inputs.files = input; }} onChange={this.handleFileInput} type="file" name="files" id="files" multiple />
-            <label htmlFor="files" className="btn raised" dangerouslySetInnerHTML={{ __html: this.state.inputFileText }} />
-          </div>
+          { attachements }
           <p>* – pola wymagane</p>
           <button type="button" onClick={this.submit} className="btn raised submit">Zapisz</button>
         </form>
@@ -196,3 +258,8 @@ export default class AddProduct extends React.Component {
     );
   }
 }
+
+AddProduct.propTypes = {
+  record: React.PropTypes.object,
+  edit: React.PropTypes.bool,
+};

@@ -2,7 +2,7 @@
   header('Access-Control-Allow-Origin: *');
 
   include "utils.php";
-  require_once("../vendor/autoload.php");
+  require_once("vendor/autoload.php");
 
   $domain = (isset($_SERVER["HTTPS"]) ? "https" : "http") . "://$_SERVER[HTTP_HOST]:$_SERVER[SERVER_PORT]/";
   $hashids = new Hashids\Hashids("record", 8);

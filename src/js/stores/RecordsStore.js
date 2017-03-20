@@ -59,7 +59,7 @@ class RecordsStore extends EventEmitter {
   }
 
   syncRecords() {
-    ajax( "http://192.168.92.205:80/getRecords.php", "POST", {}, ( oReq ) => {
+    ajax( "/server/getRecords.php", "POST", {}, ( oReq ) => {
       try {
         const response = JSON.parse( oReq.response );
         if ( typeof response.error === "undefined" ) {
@@ -93,7 +93,7 @@ class RecordsStore extends EventEmitter {
   }
 
   createRecord( obj, callback = () => {} ) {
-    ajax( "http://192.168.92.205:80/addRecord.php", "POST", obj, ( oReq ) => {
+    ajax( "/server/addRecord.php", "POST", obj, ( oReq ) => {
       try {
         const response = JSON.parse( oReq.response );
 
@@ -126,7 +126,7 @@ class RecordsStore extends EventEmitter {
 
   editRecord( id, obj, callback = () => {} ) {
     obj.append( "id", id );
-    ajax( "http://192.168.92.205:80/editRecord.php", "POST", obj, ( oReq ) => {
+    ajax( "/server/editRecord.php", "POST", obj, ( oReq ) => {
       try {
         const response = JSON.parse( oReq.response );
 

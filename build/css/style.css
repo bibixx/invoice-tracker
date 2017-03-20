@@ -429,10 +429,15 @@ main#root-view {
     main#root-view.not-found h1 {
       width: 100%;
       margin: 0;
+      padding: 0 16px;
       color: #7d7d7d;
+      font-size: 1.5em;
       font-weight: 300;
       line-height: 1.5;
       text-align: center; }
+      @media (min-width: 600px) {
+        main#root-view.not-found h1 {
+          font-size: 2em; } }
   main#root-view header {
     display: flex;
     justify-content: space-between;
@@ -1282,5 +1287,3 @@ main.standalone-main {
   -webkit-overflow-scrolling: touch; }
   main.standalone-main::-webkit-scrollbar {
     display: none; }
-
-/*# sourceMappingURL=style.css.map */

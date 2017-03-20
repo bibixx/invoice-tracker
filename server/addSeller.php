@@ -2,7 +2,7 @@
   header('Access-Control-Allow-Origin: *');
 
   include "utils.php";
-  require_once("../vendor/autoload.php");
+  require_once("vendor/autoload.php");
 
   $hashids = new Hashids\Hashids("seller", 8);
 

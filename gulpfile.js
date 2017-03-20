@@ -40,7 +40,7 @@ const watchify = require("watchify");
 // Constants
 const SOURCE_PATH = "./src";
 const BUILD_PATH = "./build";
-const STATIC_FILES = []; // relative to /src/
+const STATIC_FILES = ["/browserconfig.xml", "/manifest.json", "/img", "/favicon.ico"]; // relative to /src/
 const SCRIPTS_TO_WATCH = [`${SOURCE_PATH}/js/app.js`];
 const KEEP_FILES = true;
 const OPEN_TAB = argv.open || argv.o;
@@ -72,11 +72,14 @@ function logBuildMode() {
  * Handles errors
  */
 function logError( err ) {
-  if ( err.fileName ) {
-    gutil.log( `${gutil.colors.red( err.name )}: ${gutil.colors.yellow( err.fileName.replace( `${__dirname}/src/js/`, "" ) )}: Line ${gutil.colors.magenta( err.lineNumber )} & Column ${gutil.colors.magenta( err.columnNumber || err.column )}: ${gutil.colors.blue( err.description )}` );
+  console.log( err );
+  if ( err.plugin === "gulp-sass" ) {
+    gutil.log( `${gutil.colors.yellow( "SASS error" )}: ${gutil.colors.red( err.messageOriginal.slice( 0, -1 ) )} in ${gutil.colors.cyan( err.relativePath )} on line ${err.line}, column ${err.column}` );
+  } else if ( err.fileName ) {
+    gutil.log( `${gutil.colors.yellow( err.name )}: ${gutil.colors.red( err.fileName.replace( `${__dirname}/src/js/`, "" ) )}: Line ${gutil.colors.magenta( err.lineNumber )} & Column ${gutil.colors.magenta( err.columnNumber || err.column )}: ${gutil.colors.blue( err.description )}` );
   } else {
     // Browserify error..
-    gutil.log( `${gutil.colors.red( err.name )}: ${gutil.colors.yellow( err.message )}` );
+    gutil.log( `${gutil.colors.yellow( err.name )}: ${gutil.colors.red( err.message )}` );
   }
 }
 
@@ -206,7 +209,7 @@ function buildSass() {
 
   return gulp.src( `${SOURCE_PATH}/sass/**/*.sass` )
     .pipe( sourcemaps.init() )
-    .pipe( sass( options ) )
+    .pipe( sass( options ).on( "error", logError ) )
     .pipe( autoprefixer( "last 1 version", "> 1%", "ie 8", "ie 7" ) )
     .pipe( gulpif( !isProduction(), sourcemaps.write( "./" ) ) )
     .pipe( gulp.dest( `${BUILD_PATH}/css` ) )

@@ -48,7 +48,7 @@ class SellersStore extends EventEmitter {
   }
 
   syncSellers() {
-    ajax( "http://192.168.92.205:80/getSellers.php", "POST", {}, ( oReq ) => {
+    ajax( "/server/getSellers.php", "POST", {}, ( oReq ) => {
       try {
         const response = JSON.parse( oReq.response );
         if ( typeof response.error === "undefined" ) {
@@ -82,7 +82,7 @@ class SellersStore extends EventEmitter {
   }
 
   createSeller( obj, callback = () => {} ) {
-    ajax( "http://192.168.92.205:80/addSeller.php", "POST", obj, ( oReq ) => {
+    ajax( "/server/addSeller.php", "POST", obj, ( oReq ) => {
       try {
         const response = JSON.parse( oReq.response );
 

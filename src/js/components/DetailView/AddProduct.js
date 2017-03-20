@@ -229,11 +229,11 @@ export default class AddProduct extends React.Component {
             <div className="border" />
           </div>
           <div className="form-group">
-            <Select defaultValue={{ id: record.seller, text: sellerName }} required id="seller" onChange={this.checkValidity} link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} search options={sellers} ref={( input ) => { this.inputs.seller = input; }} searchFunction={searchFunction} />
+            <Select defaultValue={{ id: record.place, text: placeName }} required id="place" onChange={this.checkValidity} link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} search options={places} ref={( input ) => { this.inputs.place = input; }} searchFunction={searchFunction} />
             <label htmlFor="seller">Miejsce zakupu</label>
           </div>
           <div className="form-group">
-            <Select defaultValue={{ id: record.place, text: placeName }} required id="place" onChange={this.checkValidity} link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} search options={places} ref={( input ) => { this.inputs.place = input; }} searchFunction={searchFunction} />
+            <Select defaultValue={{ id: record.seller, text: sellerName }} required id="seller" onChange={this.checkValidity} link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} search options={sellers} ref={( input ) => { this.inputs.seller = input; }} searchFunction={searchFunction} />
             <label htmlFor="place">Dane sprzedawcy</label>
           </div>
           <div className="form-group">

@@ -22,9 +22,9 @@ export default class AddSeller extends React.Component {
     const oData = new FormData();
 
     oData.append( "Name", this.inputs.name.value );
+    oData.append( "Zip", this.inputs.zip.value );
     oData.append( "City", this.inputs.city.value );
     oData.append( "Street", this.inputs.street.value );
-    oData.append( "Zip", this.inputs.zip.value );
     oData.append( "NIP", this.inputs.nip.value );
     oData.append( "isSeller", this.inputs.isSeller.checked );
     oData.append( "isPlace", this.inputs.isPlace.checked );
@@ -78,6 +78,11 @@ export default class AddSeller extends React.Component {
             <div className="border" />
           </div>
           <div className="form-group">
+            <textarea required pattern="\d{2}-\d{3}" onChange={this.checkValidity} ref={( input ) => { this.inputs.zip = input; }} rows="1" type="text" id="zip" />
+            <label htmlFor="zip">Kod pocztowy</label>
+            <div className="border" />
+          </div>
+          <div className="form-group">
             <textarea required onChange={this.checkValidity} ref={( input ) => { this.inputs.city = input; }} rows="1" type="text" id="city" />
             <label htmlFor="city">Miasto</label>
             <div className="border" />
@@ -85,11 +90,6 @@ export default class AddSeller extends React.Component {
           <div className="form-group">
             <textarea required onChange={this.checkValidity} ref={( input ) => { this.inputs.street = input; }} rows="1" type="text" id="street" />
             <label htmlFor="street">Ulica</label>
-            <div className="border" />
-          </div>
-          <div className="form-group">
-            <textarea required pattern="\d{2}-\d{3}" onChange={this.checkValidity} ref={( input ) => { this.inputs.zip = input; }} rows="1" type="text" id="zip" />
-            <label htmlFor="zip">Kod pocztowy</label>
             <div className="border" />
           </div>
           <div className="form-group">

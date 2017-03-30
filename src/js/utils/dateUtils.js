@@ -1,5 +1,11 @@
 export const yearDeclination = ( year ) => {
-  const y = String( year );
+  let y = parseInt( year, 10 );
+
+  if ( typeof year !== "string" && ( year !== Math.floor( year ) ) ) {
+    return "roku";
+  }
+
+  y = String( year );
 
   if ( y === "1" ) {
     return "rok";
@@ -32,6 +38,15 @@ export function calculateWarrantyLeft( date, warrantyLength, left ) {
     return "dni";
   };
 
+  const timeLeftDeclination = ( time ) => {
+    if ( time <= 365 ) {
+      return `${time} ${dayDeclination( time )}`;
+    }
+
+    const yTime = Math.round( ( time / 365 ) * 10 ) / 10;
+    return `${yTime} ${yearDeclination( yTime )}`;
+  };
+
   const leftDeclination = ( day ) => {
     const d = parseInt( day, 10 );
 
@@ -57,7 +72,7 @@ export function calculateWarrantyLeft( date, warrantyLength, left ) {
   }
 
   return {
-    text: `${warrantyLength} ${yearDeclination( warrantyLength )} (${leftDeclination( dd )}${dd} ${dayDeclination( dd )}${( status === "" ) ? " temu" : ""})`,
+    text: `${warrantyLength} ${yearDeclination( warrantyLength )} (${leftDeclination( dd )}${timeLeftDeclination( dd )}${( status === "" ) ? " temu" : ""})`,
     status,
   };
 }

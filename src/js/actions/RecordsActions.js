@@ -17,6 +17,14 @@ export function editRecord( id, obj, callback ) {
   } );
 }
 
+export function removeRecord( id, callback ) {
+  dispatcher.dispatch( {
+    type: "REMOVE_RECORD",
+    id,
+    callback,
+  } );
+}
+
 export function syncRecords() {
   dispatcher.dispatch( {
     type: "SYNC_RECORD",

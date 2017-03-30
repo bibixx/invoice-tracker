@@ -7,7 +7,7 @@ button
 
   &.raised
     height: 32px
-    margin-top: 10px
+    margin: 10px 16px 0 0
     padding: 0 16px
     transition: background .2s ease-in-out
     border: 0
@@ -48,7 +48,13 @@ button
       background: $button-flat-focus
 
   &.submit
-    margin-top: 16px
+    margin-top: 0
+
+    &.remove
+      background: $error-color
+
+      &:focus
+        background: $button-error-focus
 
 header nav
   button

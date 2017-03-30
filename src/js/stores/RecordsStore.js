@@ -164,6 +164,26 @@ class RecordsStore extends EventEmitter {
     } );
   }
 
+  removeRecord( id, callback = () => {} ) {
+    const obj = `id=${id}`;
+    ajax( "/server/removeRecord.php", "POST", obj, ( oReq ) => {
+      try {
+        this.records = this.records.filter( ( v ) => {
+          if ( v.id === id ) {
+            return false;
+          }
+          return true;
+        } );
+
+        callback( oReq );
+        this.emit( "change" );
+      } catch ( e ) {
+        console.error( oReq.response, e );
+        console.error( e );
+      }
+    } );
+  }
+
   /* eslint-disable default-case */
   handleActions( action ) {
     switch ( action.type ) {
@@ -172,6 +192,9 @@ class RecordsStore extends EventEmitter {
         break;
       case "EDIT_RECORD":
         this.editRecord( action.id, action.obj, action.callback );
+        break;
+      case "REMOVE_RECORD":
+        this.removeRecord( action.id, action.callback );
         break;
       case "SYNC_RECORD":
         this.syncRecords();

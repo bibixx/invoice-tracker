@@ -17,6 +17,7 @@ export default class AddProduct extends React.Component {
     super( props );
     this.handleFileInput = this.handleFileInput.bind( this );
     this.checkValidity = this.checkValidity.bind( this );
+    this.submitRemove = this.submitRemove.bind( this );
     this.submitCreate = this.submitCreate.bind( this );
     this.getSellers = this.getSellers.bind( this );
     this.submit = this.submit.bind( this );
@@ -104,6 +105,14 @@ export default class AddProduct extends React.Component {
 
       browserHistory.push( "/" );
     } );
+  }
+
+  submitRemove() {
+    if ( confirm( "Czy napewno chesz usunąć ten rekord? Ta operacja jest nieodwracalna!" ) ) {
+      RecordsActions.removeRecord( this.props.record.id, () => {
+        browserHistory.push( "/" );
+      } );
+    }
   }
 
   submitEdit( oData ) {
@@ -214,6 +223,12 @@ export default class AddProduct extends React.Component {
       </div> );
     }
 
+    let deleteRecord = null;
+
+    if ( this.props.edit ) {
+      deleteRecord = ( <button type="button" className="btn raised submit remove" onClick={this.submitRemove}>Usuń</button> );
+    }
+
     return (
       <main className="card">
         <form encType="multipart/form-data" name="test">
@@ -247,6 +262,7 @@ export default class AddProduct extends React.Component {
           { attachements }
           <p>* – pola wymagane</p>
           <button type="button" onClick={this.submit} className="btn raised submit">Zapisz</button>
+          {deleteRecord}
         </form>
       </main>
     );

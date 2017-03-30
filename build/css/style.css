@@ -584,7 +584,7 @@ button {
   cursor: pointer; }
   .btn.raised {
     height: 32px;
-    margin-top: 10px;
+    margin: 10px 16px 0 0;
     padding: 0 16px;
     transition: background .2s ease-in-out;
     border: 0;
@@ -622,7 +622,11 @@ button {
     .btn.flat:focus {
       background: rgba(0, 0, 0, 0.1); }
   .btn.submit {
-    margin-top: 16px; }
+    margin-top: 0; }
+    .btn.submit.remove {
+      background: #e53935; }
+      .btn.submit.remove:focus {
+        background: #c62828; }
 
 header nav button {
   width: 48px;
@@ -1292,5 +1296,3 @@ main.standalone-main {
   -webkit-overflow-scrolling: touch; }
   main.standalone-main::-webkit-scrollbar {
     display: none; }
-
-/*# sourceMappingURL=style.css.map */

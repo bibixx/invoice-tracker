@@ -31,6 +31,7 @@
       visibility: visible
 
     .option
+      display: inline-block
       width: 100%
       padding: 0 1em
       border: 0
@@ -39,11 +40,15 @@
       font-size: 1rem
       line-height: 50px
       text-align: left
+      text-decoration: none
       cursor: pointer
       box-sizing: border-box
       appearance: none
 
-      &.checked
+      &.selected
+        background: transparentize($main-color, 0.8)
+
+      &:focus
         background: $select-checked
 
       &:hover

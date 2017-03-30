@@ -87,7 +87,8 @@ class RecordsStore extends EventEmitter {
           console.error( response );
         }
       } catch ( e ) {
-        console.error( oReq.response, e );
+        // console.error( oReq.response, e );
+        console.error( e );
       }
     } );
   }
@@ -119,7 +120,8 @@ class RecordsStore extends EventEmitter {
         callback( oReq );
         this.emit( "change" );
       } catch ( e ) {
-        console.error( oReq.response, e );
+        // console.error( oReq.response, e );
+        console.error( e );
       }
     } );
   }
@@ -156,7 +158,8 @@ class RecordsStore extends EventEmitter {
         callback( oReq );
         this.emit( "change" );
       } catch ( e ) {
-        console.error( oReq.response, e );
+        // console.error( oReq.response, e );
+        console.error( e );
       }
     } );
   }

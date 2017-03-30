@@ -15,11 +15,9 @@ export default class Header extends React.Component {
 
       if ( this.props.button.link ) {
         return (
-          <button id={this.props.button.text}>
-            <Link to={this.props.button.link}>
-              <i className="material-icons">{this.props.button.text}</i>
-            </Link>
-          </button>
+          <Link id={this.props.button.text} to={this.props.button.link}>
+            <i className="material-icons">{this.props.button.text}</i>
+          </Link>
         );
       }
 

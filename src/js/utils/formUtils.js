@@ -56,7 +56,7 @@ export default class Validator {
     if ( name === "Select" ) {
       return {
         required: input.props.required || false,
-        value: input.value(),
+        value: input.getValue().text,
         pattern: false,
         isNIP: input.props.isNIP || false,
         validate: () => { input.isValid( true ); },

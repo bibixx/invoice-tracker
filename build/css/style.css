@@ -876,7 +876,7 @@ header.app-bar {
           user-select: none; }
   header.app-bar i {
     color: #fff; }
-  header.app-bar button {
+  header.app-bar button, header.app-bar a {
     position: relative;
     margin: 0;
     padding: 0;
@@ -885,9 +885,9 @@ header.app-bar {
     -webkit-appearance: none;
        -moz-appearance: none;
             appearance: none; }
-    header.app-bar button:active i.material-icons::before {
+    header.app-bar button:active i.material-icons::before, header.app-bar a:active i.material-icons::before {
       opacity: 1; }
-    header.app-bar button i.material-icons::before {
+    header.app-bar button i.material-icons::before, header.app-bar a i.material-icons::before {
       display: block;
       position: absolute;
       top: 50%;
@@ -901,15 +901,15 @@ header.app-bar {
       background: rgba(255, 255, 255, 0.2);
       content: "";
       opacity: 0; }
-    header.app-bar button#menu i, header.app-bar button#back i {
+    header.app-bar button#menu i, header.app-bar button#back i, header.app-bar a#menu i, header.app-bar a#back i {
       margin: 16px;
       float: left;
       cursor: pointer; }
-    header.app-bar button#filter i, header.app-bar button#edit i {
+    header.app-bar button#filter i, header.app-bar button#edit i, header.app-bar a#filter i, header.app-bar a#edit i {
       margin: 16px 28px 16px 12px;
       float: right;
       cursor: pointer; }
-      header.app-bar button#filter i::before, header.app-bar button#edit i::before {
+      header.app-bar button#filter i::before, header.app-bar button#edit i::before, header.app-bar a#filter i::before, header.app-bar a#edit i::before {
         margin-left: -8px; }
   header.app-bar .title {
     flex: 1;
@@ -939,6 +939,7 @@ header.app-bar {
     background: transparent;
     font-size: 16px;
     line-height: 1.42857143;
+    box-shadow: none;
     resize: none;
     -webkit-appearance: none;
        -moz-appearance: none;
@@ -1122,6 +1123,7 @@ header.app-bar {
       opacity: 1;
       visibility: visible; }
     .select-group .options-container .option {
+      display: inline-block;
       width: 100%;
       padding: 0 1em;
       border: 0;
@@ -1130,12 +1132,15 @@ header.app-bar {
       font-size: 1rem;
       line-height: 50px;
       text-align: left;
+      text-decoration: none;
       cursor: pointer;
       box-sizing: border-box;
       -webkit-appearance: none;
          -moz-appearance: none;
               appearance: none; }
-      .select-group .options-container .option.checked {
+      .select-group .options-container .option.selected {
+        background: rgba(156, 39, 176, 0.2); }
+      .select-group .options-container .option:focus {
         background: rgba(0, 0, 0, 0.25); }
       .select-group .options-container .option:hover {
         background: rgba(0, 0, 0, 0.25); }

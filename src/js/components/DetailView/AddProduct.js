@@ -17,9 +17,9 @@ export default class AddProduct extends React.Component {
     super( props );
     this.handleFileInput = this.handleFileInput.bind( this );
     this.checkValidity = this.checkValidity.bind( this );
-    this.submit = this.submit.bind( this );
     this.submitCreate = this.submitCreate.bind( this );
     this.getSellers = this.getSellers.bind( this );
+    this.submit = this.submit.bind( this );
     this.state = {
       inputFileText: "<i class=\"material-icons\">file_upload</i> Wybierz pliki...",
       sellers: [],
@@ -75,10 +75,10 @@ export default class AddProduct extends React.Component {
     const oData = new FormData();
 
     oData.append( "Product", this.inputs.product.value );
-    oData.append( "Place", this.inputs.place.id() );
-    oData.append( "Seller", this.inputs.seller.id() );
+    oData.append( "Place", this.inputs.place.getValue().id );
+    oData.append( "Seller", this.inputs.seller.getValue().id );
     oData.append( "Date", this.inputs.date.value );
-    oData.append( "Warranty-length", this.inputs.warranty.value() );
+    oData.append( "Warranty-length", this.inputs.warranty.getValue().text );
     oData.append( "Notes", this.inputs.notes.value );
 
     if ( !this.props.edit ) {
@@ -107,9 +107,7 @@ export default class AddProduct extends React.Component {
   }
 
   submitEdit( oData ) {
-    RecordsActions.editRecord( this.props.record.id, oData, ( oReq ) => {
-      console.log( JSON.parse( oReq.response ) );
-
+    RecordsActions.editRecord( this.props.record.id, oData, () => {
       browserHistory.push( "/" );
     } );
   }
@@ -145,20 +143,16 @@ export default class AddProduct extends React.Component {
   }
 
   render() {
-    const places = [];
-
-    this.state.places.forEach( ( v ) => {
-      places.push( { text: v.name, id: v.id, nip: v.nip } );
+    const places = this.state.places.map( ( v ) => {
+      return Object.assign( { text: v.name }, v );
     } );
 
     places.sort( ( a, b ) => {
       return a.text.toLowerCase().localeCompare( b.text.toLowerCase() );
     } );
 
-    const sellers = [];
-
-    this.state.sellers.forEach( ( v ) => {
-      sellers.push( { text: v.name, id: v.id, nip: v.nip } );
+    const sellers = this.state.sellers.map( ( v ) => {
+      return Object.assign( { text: v.name }, v );
     } );
 
     sellers.sort( ( a, b ) => {
@@ -229,15 +223,15 @@ export default class AddProduct extends React.Component {
             <div className="border" />
           </div>
           <div className="form-group">
-            <Select defaultValue={{ id: record.place, text: placeName }} required id="place" onChange={this.checkValidity} link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} search options={places} ref={( input ) => { this.inputs.place = input; }} searchFunction={searchFunction} />
-            <label htmlFor="seller">Miejsce zakupu</label>
+            <Select defaultValue={{ id: record.place, text: placeName }} id="place" link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} onChange={this.checkValidity} options={places} ref={( input ) => { this.inputs.place = input; }} required search searchFunction={searchFunction} />
+            <label htmlFor="place">Miejsce zakupu</label>
           </div>
           <div className="form-group">
-            <Select defaultValue={{ id: record.seller, text: sellerName }} required id="seller" onChange={this.checkValidity} link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} search options={sellers} ref={( input ) => { this.inputs.seller = input; }} searchFunction={searchFunction} />
-            <label htmlFor="place">Dane sprzedawcy</label>
+            <Select defaultValue={{ id: record.seller, text: sellerName }} id="seller" link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} onChange={this.checkValidity} options={sellers} ref={( input ) => { this.inputs.seller = input; }} required search searchFunction={searchFunction} />
+            <label htmlFor="seller">Dane sprzedawcy</label>
           </div>
           <div className="form-group">
-            <input defaultValue={record.date} required onChange={this.checkValidity} ref={( input ) => { this.inputs.date = input; }} type="date" id="date" />
+            <input defaultValue={record.date} required onChange={this.checkValidity} ref={( input ) => { this.inputs.date = input; }} type="date" id="date" pattern="\d{4}-\d{2}-\d{2}" />
             <label htmlFor="date">Data zakupu</label>
             <div className="border" />
           </div>

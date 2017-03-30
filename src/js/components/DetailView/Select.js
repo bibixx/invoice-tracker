@@ -2,245 +2,160 @@ import React from "react";
 
 import { Link } from "react-router";
 
+import OptionButton from "./Select/OptionButton";
+
 export default class Select extends React.Component {
-  constructor( props ) {
-    super( props );
-    this.handleMouseDown = this.handleMouseDown.bind( this );
-    this.selectFocus = this.selectFocus.bind( this );
+  constructor() {
+    super();
+    this.handleOptionKeydown = this.handleOptionKeydown.bind( this );
+    this.handleInputKeydown = this.handleInputKeydown.bind( this );
+    this.handleInputFocus = this.handleInputFocus.bind( this );
+    this.changeInputValue = this.changeInputValue.bind( this );
+    this.handleSearchText = this.handleSearchText.bind( this );
     this.handleBlur = this.handleBlur.bind( this );
-    this.btnClick = this.btnClick.bind( this );
-    this.search = this.search.bind( this );
-    this.value = this.value.bind( this );
-    this.state = {
-      focused: false,
-      checked: -1,
-      options: this.props.options,
-      isValid: true,
-      isTouched: false,
-      value: "",
-    };
-
-    this.searchInput = {
-      blur: () => {},
-    };
-
-    this.rootOnChange = this.props.onChange || function() {};
-
-    this.searchFunction = ( targetValue, searchValue ) => {
+    this.defaultSearchFunction = ( targetValue, searchValue ) => {
       return ( searchValue === "" ) || ( targetValue.text.toLowerCase().indexOf( searchValue.toLowerCase() ) >= 0 );
     };
-
-    if ( this.props.searchFunction ) {
-      this.searchFunction = this.props.searchFunction;
-    }
+    this.state = {
+      focus: false,
+      selectedValue: {
+        text: "",
+        id: "",
+      },
+      searchText: "",
+      isValid: true,
+      isTouched: false,
+    };
   }
 
   componentWillReceiveProps( nextProps ) {
-    this.setState( Object.assign( this.state, {
-      value: nextProps.defaultValue.text,
-    } ) );
-
-    this.select.setAttribute( "option-id", nextProps.defaultValue.id );
+    this.setState( {
+      selectedValue: nextProps.defaultValue,
+    } );
+    console.log( nextProps.defaultValue, this.props.options[0] );
   }
 
-  oneOfParnetsHaveClass( target, className, i = 0 ) {
-    i++; // eslint-disable-line no-param-reassign
-    const html = document.documentElement;
-
-    if ( target.className.indexOf( className ) >= 0 ) {
-      return true;
-    } else if ( ( target !== html ) && ( i < 1000 ) ) {
-      return this.oneOfParnetsHaveClass( target.parentNode, className, i );
-    }
-
-    return false;
+  getValue() {
+    return this.state.selectedValue;
   }
 
-  getCheckedValue( target ) {
-    let checkedMatches = 0;
-    this.props.options.forEach( ( v, i ) => {
-      if ( target.innerHTML || target.id ) {
-        if ( ( v.text === target.innerHTML ) || ( v.id === target.id && v.id ) ) {
-          checkedMatches = i;
+  handleSearchText( e ) {
+    this.setState( {
+      searchText: e.target.value,
+    } );
+  }
 
-          this.setState( Object.assign( this.state, {
-            value: v.text,
-          } ) );
-        }
-      }
+  handleInputFocus() {
+    this.setState( {
+      focus: true,
+      searchText: "",
     } );
 
-    this.setState( Object.assign( this.state, {
-      checked: checkedMatches,
-    } ) );
-
-    return checkedMatches;
+    if ( this.searchInput ) {
+      this.searchInput.value = "";
+    }
   }
 
-  getDefaultCheckedValue() {
-    if ( this.state.checked >= 0 ) {
-      return this.state.checked;
-    }
-
-    let checkedMatches = 0;
-    this.props.options.forEach( ( v, i ) => {
-      if ( this.props.defaultValue.text || this.props.defaultValue.id ) {
-        if ( ( v.text === this.props.defaultValue.text ) || ( v.id === this.props.defaultValue.id && v.id ) ) {
-          checkedMatches = i;
-
-          this.setState( Object.assign( this.state, {
-            value: v.text,
-          } ) );
-        }
+  handleOptionKeydown( e ) {
+    // console.log( e.key );
+    const currentEl = e.target;
+    const prevEl = currentEl.previousElementSibling;
+    const nextEl = currentEl.nextElementSibling;
+    if ( e.key === "ArrowDown" ) {
+      if ( nextEl !== null ) {
+        nextEl.focus();
       }
-    } );
-
-    this.setState( Object.assign( this.state, {
-      checked: checkedMatches,
-    } ) );
-
-    return checkedMatches;
-  }
-
-  show() {
-    this.setState( Object.assign( this.state, {
-      checked: this.getDefaultCheckedValue(),
-      focused: true,
-      options: this.props.options,
-    } ) );
-  }
-
-  hide() {
-    this.setState( Object.assign( this.state, {
-      focused: false,
-    } ) );
-  }
-
-  isValid( valid ) {
-    this.setState( Object.assign( this.state, {
-      isValid: valid,
-    } ) );
-  }
-
-  isTouched( touched ) {
-    this.setState( Object.assign( this.state, {
-      isTouched: touched,
-    } ) );
-  }
-
-  handleMouseDown( e ) {
-    if ( e.code === "ArrowDown" ) {
-      this.setState( Object.assign( this.state, {
-        checked: Math.min( this.state.checked + 1, this.state.options.length - 1 ),
-      } ) );
-    } else if ( e.code === "ArrowUp" ) {
-      this.setState( Object.assign( this.state, {
-        checked: Math.max( this.state.checked - 1, 0 ),
-      } ) );
-    } else if ( e.code === "Escape" ) {
-      this.handleBlur( e );
-    } else if ( e.code === "Enter" || ( e.code === "Space" && e.target !== this.searchInput ) ) {
-      this.change( this.state.options[this.state.checked].text );
-      this.select.setAttribute( "option-id", this.state.options[this.state.checked].id );
-      this.select.blur();
-      this.searchInput.blur();
-
-      this.hide();
+    } else if ( e.key === "ArrowUp" ) {
+      if ( prevEl !== null ) {
+        prevEl.focus();
+      }
+    } else if ( e.key === "Escape" ) {
+      this.blur();
     }
   }
 
-  selectFocus() {
-    this.show();
-
-    this.searchInput.value = "";
-
-    document.addEventListener( "keydown", this.handleMouseDown );
+  handleInputKeydown( e ) {
+    if ( e.key === "ArrowDown" ) {
+      this.selectGroup.querySelector( ".option" ).focus();
+    } else if ( e.key === "Escape" ) {
+      this.blur();
+    }
   }
 
   handleBlur( e ) {
-    if ( !( e.relatedTarget && this.oneOfParnetsHaveClass( e.relatedTarget, "options-container" ) ) ) {
-      this.select.blur();
-      document.removeEventListener( "keydown", this.handleMouseDown );
-      this.hide();
+    const relTarget = e.relatedTarget;
+    if ( ( relTarget === null ) || !(
+        ( relTarget.className === "option" &&
+        relTarget.parentNode.parentNode === this.selectGroup ) ||
+        ( relTarget.className === "additional-link" &&
+        relTarget.parentNode.parentNode === this.selectGroup ) ||
+        ( relTarget.className === "search" &&
+        relTarget.parentNode.parentNode.parentNode === this.selectGroup )
+      )
+    ) {
+      this.blur();
     }
   }
 
-  btnClick( e ) {
-    this.change( e.target.innerHTML );
-    this.select.setAttribute( "option-id", e.target.id );
-
-    this.setState( Object.assign( this.state, {
-      checked: this.getCheckedValue( e.target ),
-    } ) );
-
-    e.target.blur();
-    this.searchInput.blur();
-    this.hide();
-  }
-
-  value() {
-    return this.state.value;
-  }
-
-  id() {
-    return this.select.getAttribute( "option-id" );
-  }
-
-  search( e ) {
-    const options = [];
-    this.props.options.forEach( ( v ) => {
-      if ( this.searchFunction( v, e.target.value ) ) {
-        options.push( v );
-      }
+  changeInputValue( value ) {
+    this.setState( {
+      selectedValue: value,
     } );
 
-    this.setState( Object.assign( this.state, {
-      options,
-      checked: 0,
-    } ) );
+    this.blur();
+    if ( this.props.onChange ) {
+      this.props.onChange( { target: this } );
+    }
   }
 
-  change( val ) {
-    if ( val !== null ) {
-      this.setState( Object.assign( this.state, {
-        value: val,
-      } ) );
-    }
+  blur() {
+    this.setState( {
+      focus: false,
+    } );
+  }
 
-    this.isTouched( true );
-    this.rootOnChange( {
-      target: this,
+  isValid( valid ) {
+    this.setState( {
+      isValid: valid,
+    } );
+  }
+
+  isTouched( touched ) {
+    this.setState( {
+      isTouched: touched,
     } );
   }
 
   render() {
-    const options = [];
-    let serachInput = null;
+    let optionsList = this.props.options.filter( ( v ) => {
+      if ( this.props.searchFunction ) {
+        return this.props.searchFunction( v, this.state.searchText );
+      }
 
-    this.state.options.forEach( ( v, i ) => {
-      const id = v.id || null;
-      options.push(
-        <button
-          id={id}
-          tabIndex="-1"
-          ref={( input ) => { if ( this.state.focused && ( i === this.state.checked ) && ( document.activeElement !== this.searchInput ) ) { return ( input && input.focus() ); } return false; }}
-          onBlur={this.handleBlur}
-          onClick={this.btnClick}
-          type="button"
-          key={i}
-          className={`option${( i === this.state.checked ) ? " checked" : ""}`}
-        >{v.text}</button> );
+      return this.defaultSearchFunction( v, this.state.searchText );
     } );
 
-    if ( this.props.link ) {
-      options.unshift( <Link onBlur={this.handleBlur} key="add" to={this.props.link.url}><button tabIndex="-1" onBlur={this.handleBlur} onClick={this.btnClick} type="button" className="option">{this.props.link.text}</button></Link> );
-    }
+    optionsList = optionsList.map( ( v, i ) => {
+      let isSelected = false;
 
-    if ( this.props.search ) {
-      serachInput = (
-        <div className="search-input">
-          <input onBlur={this.handleBlur} onChange={this.search} ref={( input ) => { this.searchInput = input; }} className="search" type="text" placeholder="Wyszukaj..." />
-        </div>
+      if ( this.state.selectedValue.text === v.text && this.state.selectedValue.id === v.id ) {
+        isSelected = true;
+      }
+
+      return <OptionButton value={v} key={v.id || i} isSelected={isSelected} changeInput={this.changeInputValue} onKeyDown={this.handleOptionKeydown} onBlur={this.handleBlur} />;
+    } );
+
+    const searchInput = (
+      <div className="search-input">
+        <input onBlur={this.handleBlur} onKeyDown={this.handleInputKeydown} onChange={this.handleSearchText} ref={( input ) => { this.searchInput = input; }} className="search" type="text" placeholder="Wyszukaj..." />
+      </div>
+    );
+
+    let additionalLink = null;
+
+    if ( this.props.link ) {
+      additionalLink = (
+        <Link to={this.props.link.url} onKeyDown={this.handleOptionKeydown} onBlur={this.handleBlur} tabIndex="-1" className="option">{this.props.link.text}</Link>
       );
     }
 
@@ -255,11 +170,12 @@ export default class Select extends React.Component {
     }
 
     return (
-      <div className={classNamesRoot.join( " " )}>
-        <input type="text" className="select-input" value={this.state.value} ref={( select ) => { this.select = select; }} onFocus={this.selectFocus} onBlur={this.handleBlur} onChange={() => { this.change( null ); }} id={this.props.id} />
-        <div className={`options-container${( this.state.focused ) ? " focus" : ""}`}>
-          {serachInput}
-          {options}
+      <div className={classNamesRoot.join( " " )} ref={( div ) => { this.selectGroup = div; }}>
+        <input type="text" className="select-input" value={this.state.selectedValue.text} id={this.props.id} data-option-id={this.state.selectedValue.id} onFocus={this.handleInputFocus} onBlur={this.handleBlur} onKeyDown={this.handleInputKeydown} autoComplete="off" ref={( input ) => { this.input = input; }} />
+        <div className={`options-container${( this.state.focus ) ? " focus" : ""}`}>
+          {this.props.search ? searchInput : null}
+          {additionalLink}
+          {optionsList}
         </div>
         <label htmlFor={this.props.id}>
           <div className="material-icons">arrow_drop_down</div>
@@ -270,11 +186,12 @@ export default class Select extends React.Component {
   }
 }
 
+
 Select.propTypes = {
   options: React.PropTypes.array.isRequired,
   id: React.PropTypes.string.isRequired,
   searchFunction: React.PropTypes.func,
-  defaultValue: React.PropTypes.object,
+  defaultValue: React.PropTypes.object, // eslint-disable-line react/no-unused-prop-types
   onChange: React.PropTypes.func,
   search: React.PropTypes.bool,
   link: React.PropTypes.object,

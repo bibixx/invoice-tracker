@@ -2,6 +2,7 @@
   header('Access-Control-Allow-Origin: *');
 
   include "utils.php";
+  include "uploadFile.php";
   require_once("vendor/autoload.php");
 
   $hashids = new Hashids\Hashids("record", 8);

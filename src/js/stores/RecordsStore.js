@@ -120,8 +120,8 @@ class RecordsStore extends EventEmitter {
         callback( oReq );
         this.emit( "change" );
       } catch ( e ) {
-        // console.error( oReq.response, e );
-        console.error( e );
+        console.error( oReq.response, e );
+        // console.error( e );
       }
     } );
   }

@@ -29,9 +29,11 @@ export default class Select extends React.Component {
   }
 
   componentWillReceiveProps( nextProps ) {
-    this.setState( {
-      selectedValue: nextProps.defaultValue,
-    } );
+    if ( nextProps.defaultValue !== null ) {
+      this.setState( {
+        selectedValue: nextProps.defaultValue,
+      } );
+    }
   }
 
   getValue() {

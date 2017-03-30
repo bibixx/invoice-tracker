@@ -65,15 +65,25 @@ export default class Validator {
       };
     }
 
-    return {
+    const objToReturn = {
       required: input.required || false,
       value: input.value,
-      pattern: input.getAttribute( "pattern" ) || false,
-      isNIP: input.getAttribute( "data-isNIP" ) || false,
+      pattern: false,
+      isNIP: false,
       validate: () => { input.classList.remove( "invalid" ); },
       invalidate: () => { input.classList.add( "invalid" ); },
       this: input,
     };
+
+    if ( input.getAttribute( "pattern" ) !== null ) {
+      objToReturn.pattern = input.getAttribute( "pattern" );
+    }
+
+    if ( input.getAttribute( "data-isNIP" ) !== null ) {
+      objToReturn.isNIP = input.getAttribute( "data-isNIP" );
+    }
+
+    return objToReturn;
   }
 
   static isNIP( nipNo ) {

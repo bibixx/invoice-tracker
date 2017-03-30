@@ -229,6 +229,17 @@ export default class AddProduct extends React.Component {
       deleteRecord = ( <button type="button" className="btn raised submit remove" onClick={this.submitRemove}>Usuń</button> );
     }
 
+    let placeDefaultValue = null;
+    let sellerDefaultValue = null;
+
+    if ( typeof record.place !== "undefined" && placeName !== "" ) {
+      placeDefaultValue = { id: record.place, text: placeName };
+    }
+
+    if ( typeof record.seller !== "undefined" && sellerName !== "" ) {
+      sellerDefaultValue = { id: record.seller, text: sellerName };
+    }
+
     return (
       <main className="card">
         <form encType="multipart/form-data" name="test">
@@ -238,11 +249,11 @@ export default class AddProduct extends React.Component {
             <div className="border" />
           </div>
           <div className="form-group">
-            <Select defaultValue={{ id: record.place, text: placeName }} id="place" link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} onChange={this.checkValidity} options={places} ref={( input ) => { this.inputs.place = input; }} required search searchFunction={searchFunction} />
+            <Select defaultValue={placeDefaultValue} id="place" link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} onChange={this.checkValidity} options={places} ref={( input ) => { this.inputs.place = input; }} required search searchFunction={searchFunction} />
             <label htmlFor="place">Miejsce zakupu</label>
           </div>
           <div className="form-group">
-            <Select defaultValue={{ id: record.seller, text: sellerName }} id="seller" link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} onChange={this.checkValidity} options={sellers} ref={( input ) => { this.inputs.seller = input; }} required search searchFunction={searchFunction} />
+            <Select defaultValue={sellerDefaultValue} id="seller" link={{ url: "/add-seller", text: "+ Dodaj sprzedawcę" }} onChange={this.checkValidity} options={sellers} ref={( input ) => { this.inputs.seller = input; }} required search searchFunction={searchFunction} />
             <label htmlFor="seller">Dane sprzedawcy</label>
           </div>
           <div className="form-group">

@@ -32,7 +32,6 @@ export default class Select extends React.Component {
     this.setState( {
       selectedValue: nextProps.defaultValue,
     } );
-    console.log( nextProps.defaultValue, this.props.options[0] );
   }
 
   getValue() {

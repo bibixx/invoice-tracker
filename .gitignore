@@ -56,3 +56,8 @@ $RECYCLE.BIN/
 
 # Npm
 node_modules/
+
+### Composer ###
+composer.phar
+server/vendor/
+composer.lock

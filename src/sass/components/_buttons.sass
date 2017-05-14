@@ -1,13 +1,13 @@
-button
+.material-button
+  display: inline-flex
+  align-items: center
+  outline: 0
   font-family: "Roboto", sans-serif
-
-
-.btn
   cursor: pointer
 
-  &.raised
+  &--raised
     height: 32px
-    margin: 10px 16px 0 0
+    margin: 10px 16px 10px 0
     padding: 0 16px
     transition: background .2s ease-in-out
     border: 0
@@ -24,7 +24,7 @@ button
     &:focus
       background: mix($button-raised-focus-accent, $main-color, 25%)
 
-  &.flat
+  &--flat
     min-width: 88px
     height: 32px
     padding: 0 8px
@@ -47,7 +47,7 @@ button
     &:focus
       background: $button-flat-focus
 
-  &.submit
+  &--submit
     margin-top: 0
 
     &.remove
@@ -55,16 +55,3 @@ button
 
       &:focus
         background: $button-error-focus
-
-header nav
-  button
-    width: 48px
-    height: 100%
-    margin: 0
-    padding: 0
-    float: left
-    border: 0
-    background: none
-    color: $header-button-text
-    cursor: pointer
-    -webkit-tap-highlight-color: transparent

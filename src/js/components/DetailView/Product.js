@@ -1,102 +1,41 @@
 import React from "react";
+import PropTypes from "prop-types";
 import { Link } from "react-router";
 
-import { calculateWarrantyLeft, formatDate } from "../../utils/dateUtils";
-
-import SellersStore from "../../stores/SellersStore";
-import * as SellersActions from "../../actions/SellersActions";
+import { formatDate } from "../../utils/DateUtils";
+import { yearDeclination } from "../../utils/LangUtils";
 
 export default class Product extends React.Component {
-  constructor() {
-    super();
-    this.getSellers = this.getSellers.bind( this );
-    this.state = {
-      seller: {},
-      place: {},
-    };
-  }
-
-  componentWillMount() {
-    SellersStore.on( "change", this.getSellers );
-    SellersActions.syncSellers();
-  }
-
-  componentWillUnmount() {
-    SellersStore.removeListener( "change", this.getSellers );
-  }
-
-  getSellers() {
-    this.setState( {
-      seller: SellersStore.getById( this.props.record.seller ),
-      place: SellersStore.getById( this.props.record.place ),
-    } );
-  }
-
   render() {
-    const warrantyLeft = calculateWarrantyLeft( this.props.record.date, this.props.record.warrantyLength, true );
-    const notes = () => {
-      if ( this.props.record.notes === "" ) {
-        return null;
-      }
-
-      return (
-        <div className="notes">
-          <small className="label">Notatki</small>
-          <p>{this.props.record.notes}</p>
-        </div>
-      );
-    };
-
-    const attachements = () => {
-      if ( !this.props.record.attachements ) {
-        this.props.record.attachements = [];
-      }
-
-      if ( this.props.record.attachements.length > 1 ) {
-        const attArray = [];
-        const attch = this.props.record.attachements;
-        for ( let x = 1; x < attch.length; x++ ) {
-          const v = attch[0] + attch[x];
-          const i = x - 1;
-          attArray.push( <a href={v} alt="Załącznik" rel="noopener noreferrer" target="_blank" className="attachement" key={i}><i className="material-icons">picture_as_pdf</i></a> );
-        }
-
-        return (
-          <div className="attachements">
-            <small className="label">Załączniki</small>
-            {attArray}
-          </div>
-        );
-      }
-
-      return null;
-    };
+    const record = this.props.record;
+    const date = record.warrantyDate;
+    const endingDate = new Date( date.getFullYear() + record.warrantyLength, date.getMonth(), date.getDate() );
+    const difference = ( ( endingDate - new Date() ) / 1000 / 60 / 60 / 24 / 365 ).toFixed( 1 );
+    const warrantyState = ( difference <= 0 ) ? "over" : ( difference > 0.5 ) ? "valid" : "warning";
 
     return (
-      <main className={`card display-more ${warrantyLeft.status}`}>
-        <small className="label">Produkt</small>
-        <p>{this.props.record.name}</p>
+      <div className="detail-view__content">
+        <small className="detail-label">Produkt</small>
+        <p>{ record.name }</p>
 
-        <small className="label">Miejsce zakupu</small>
-        <p><Link to={`/seller/${this.state.place.id}`}>{this.state.place.name}</Link></p>
+        <small className="detail-label">Miejsce zakupu</small>
+        <p><Link to={ `/seller/${this.props.place.id}` }>{ this.props.place.name }</Link></p>
 
-        <small className="label">Dane sprzedawcy</small>
-        <p><Link to={`/seller/${this.state.seller.id}`}>{this.state.seller.name}</Link></p>
+        <small className="detail-label">Dane sprzedawcy</small>
+        <p><Link to={ `/seller/${this.props.seller.id}` }>{ this.props.seller.name }</Link></p>
 
-        <small className="label">Data zakupu</small>
-        <p>{formatDate( this.props.record.date )}</p>
+        <small className="detail-label">Data zakupu</small>
+        <p>{ formatDate( record.warrantyDate ) }</p>
 
-        { notes() }
-
-        <small className="label">Okres gwarancji</small>
-        <p className="date">{warrantyLeft.text}</p>
-
-        { attachements() }
-      </main>
+        <small className="detail-label">Okres gwarancji</small>
+        <p className={ `detail-date detail-date--${warrantyState}` }>{ `${yearDeclination( record.warrantyLength )} (${yearDeclination( Math.abs( difference ) )})` }</p>
+      </div>
     );
   }
 }
 
 Product.propTypes = {
-  record: React.PropTypes.object,
+  record: PropTypes.object,
+  place: PropTypes.object,
+  seller: PropTypes.object,
 };

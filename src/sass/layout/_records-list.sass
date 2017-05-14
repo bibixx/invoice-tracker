@@ -1,0 +1,43 @@
+.records-list
+  margin-top: 56px
+  background: $list-color
+
+.record
+  display: flex
+  flex-direction: column
+  justify-content: center
+  height: 88px
+  padding: 0 16px
+  border-bottom: 1px solid $list-border-color
+  background: $list-color
+  color: $color-muted
+  font-size: 14px
+
+  &, &:hover
+    text-decoration: none
+
+  &__detail
+    margin: 0
+
+    &--name
+      color: $text-color
+
+    &--warranty
+      &--valid
+        color: $valid-color
+
+      &--warning
+        color: $warning-color
+
+      &--over
+        color: $error-color
+
+      & > *
+        display: inline-flex
+        margin-right: 8px
+
+      i.material-icons
+        margin-top: -1px
+        margin-right: 2px
+        font-size: 16px
+        line-height: 16px

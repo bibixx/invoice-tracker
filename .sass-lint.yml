@@ -6,7 +6,7 @@ rules:
   # Extends
   extends-before-mixins: 1
   extends-before-declarations: 1
-  placeholder-in-extend: 1
+  placeholder-in-extend: 0
 
   # Mixins
   mixins-before-declarations: 1
@@ -49,7 +49,10 @@ rules:
   force-pseudo-nesting: 0
 
   # Name Formats
-  class-name-format: 1
+  class-name-format:
+    - 1
+    -
+      convention: hyphenatedbem
   function-name-format: 1
   id-name-format: 0
   mixin-name-format: 1

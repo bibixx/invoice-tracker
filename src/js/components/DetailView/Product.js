@@ -19,10 +19,18 @@ export default class Product extends React.Component {
         <p>{ record.name }</p>
 
         <small className="detail-label">Miejsce zakupu</small>
-        <p><Link to={ `/seller/${this.props.place.id}` }>{ this.props.place.name }</Link></p>
+        <p>
+          <Link to={ `/seller/${this.props.place.id}` }>{ this.props.place.name }</Link>
+          <br />
+          <small>{ `${this.props.place.zip} ${this.props.place.city}, ${this.props.place.street}` }</small>
+        </p>
 
         <small className="detail-label">Dane sprzedawcy</small>
-        <p><Link to={ `/seller/${this.props.seller.id}` }>{ this.props.seller.name }</Link></p>
+        <p>
+          <Link to={ `/seller/${this.props.seller.id}` }>{ this.props.seller.name }</Link>
+          <br />
+          <small>{ `${this.props.seller.zip} ${this.props.seller.city}, ${this.props.seller.street}, NIP: ${this.props.seller.nip}` }</small>
+        </p>
 
         <small className="detail-label">Data zakupu</small>
         <p>{ formatDate( record.warrantyDate ) }</p>

@@ -2,7 +2,7 @@ export default function reducer( state = [], action ) {
   return [
     {
       id: "a",
-      name: "Firma D",
+      name: "Firma A",
       city: "New city",
       street: "New street",
       zip: "00-000",
@@ -22,7 +22,7 @@ export default function reducer( state = [], action ) {
     },
     {
       id: "c",
-      name: "Firma A",
+      name: "Firma C",
       city: "New city",
       street: "New street",
       zip: "00-000",

@@ -5,6 +5,9 @@ import PropTypes from "prop-types";
 
 import { addRecord } from "../../actions/RecordsActions";
 
+import { getById } from "../../utils/RecordUtils";
+import { formatDateForHTML } from "../../utils/DateUtils";
+
 import Validator from "../../Validator";
 import Input from "./Form/Input";
 import Select from "./Form/Select";
@@ -70,15 +73,17 @@ export default class AddProduct extends React.Component {
     const placesArray = this.props.sellers.filter( v => v.isPlace ).map( ( v ) => { return { text: v.name, id: v.id }; } ).sort( ( a, b ) => a.text.localeCompare( b.text ) );
     const sellersArray = this.props.sellers.filter( v => v.isSeller ).map( ( v ) => { return { text: v.name, id: v.id }; } ).sort( ( a, b ) => a.text.localeCompare( b.text ) );
 
+    const record = this.props.record;
+
     return (
       <div className="detail-view__content detail-view__content--edit">
         <form>
-          <Input ref={ this.addElement } id="name" required validator={ this.Validator }>Produkt</Input>
-          <Select ref={ this.addElement } id="place" options={ placesArray } required>Miejsce zakupu</Select>
-          <Select ref={ this.addElement } id="seller" options={ sellersArray } required>Dane sprzedawcy</Select>
-          <Input ref={ this.addElement } id="warrantyDate" type="date" required validator={ this.Validator }>Data zakupu</Input>
-          <Select ref={ this.addElement } id="warrantyLength" options={ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] } required>Okres gwarancji</Select>
-          <Input ref={ this.addElement } id="notes" type="textarea" validator={ this.Validator }>Notatki</Input>
+          <Input ref={ this.addElement } id="name" required validator={ this.Validator } value={ record.name }>Produkt</Input>
+          <Select ref={ this.addElement } id="place" options={ placesArray } value={ this.props.edit ? getById( record.place, this.props.sellers ).name : null } required>Miejsce zakupu</Select>
+          <Select ref={ this.addElement } id="seller" options={ sellersArray } value={ this.props.edit ? getById( record.seller, this.props.sellers ).name : null } required>Dane sprzedawcy</Select>
+          <Input ref={ this.addElement } id="warrantyDate" type="date" required validator={ this.Validator } value={ this.props.edit ? formatDateForHTML( record.warrantyDate ) : null } pattern="\d{4}-\d{2}-\d{2}">Data zakupu</Input>
+          <Select ref={ this.addElement } id="warrantyLength" options={ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] } value={ this.props.edit ? record.warrantyLength : null } required>Okres gwarancji</Select>
+          <Input ref={ this.addElement } id="notes" type="textarea" validator={ this.Validator } value={ this.props.edit ? record.notes : null }>Notatki</Input>
           <Input ref={ this.addElement } id="attachements" type="file" multiple validator={ this.Validator }>Załączniki</Input>
           <p>* – pola wymagane</p>
           <button type="button" onClick={ e => this.Validator.submit( e, this.onSubmit.bind( this ) ) } className="material-button material-button--raised">Zapisz</button>
@@ -91,10 +96,13 @@ export default class AddProduct extends React.Component {
 AddProduct.propTypes = {
   sellers: PropTypes.array,
   dispatch: PropTypes.func,
+  record: PropTypes.object,
+  edit: PropTypes.bool,
 };
 
 AddProduct.defaultProps = {
-  record: [],
+  record: {},
   sellers: [],
   dispatch: () => {},
+  edit: false,
 };

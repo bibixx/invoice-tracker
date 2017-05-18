@@ -13,11 +13,11 @@ export default class Header extends React.Component {
           <i className="material-icons">menu</i>
         </button>
       );
-      rightButton = (
-        <button className="header__button">
-          <i className="material-icons">filter_list</i>
-        </button>
-      );
+      // rightButton = (
+      //   <button className="header__button">
+      //     <i className="material-icons">filter_list</i>
+      //   </button>
+      // );
     } else {
       leftButton = (
         <button className="header__button" onClick={ browserHistory.goBack }>

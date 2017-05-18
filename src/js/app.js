@@ -16,6 +16,8 @@ const routes = (
   <Route path="/" component={ App }>
     <IndexRoute component={ RootPlaceholder } />
     <Route path="product/:id" component={ Product } type="product" />
+    <Route path="product/:id/edit" component={ AddProduct } type="EditProduct" />
+
     <Route path="seller/:id" component={ Seller } type="seller" />
     <Route path="add-product" component={ AddProduct } type="AddProduct" />
     <Route path="add-seller" component={ AddSeller } type="AddSeller" />

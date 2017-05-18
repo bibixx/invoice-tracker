@@ -15,7 +15,7 @@ export default class Input extends React.Component {
 
     for ( const prop in this.props ) {
       if ( this.props.hasOwnProperty( prop ) ) {
-        if ( prop !== "children" && prop !== "validator" && prop !== "testFunction" ) {
+        if ( prop !== "children" && prop !== "validator" && prop !== "testFunction" && prop !== "value" ) {
           props[ prop ] = this.props[ prop ];
         }
       }
@@ -28,6 +28,7 @@ export default class Input extends React.Component {
           className="material-input__input"
           { ...props }
           ref={ ( e ) => { this.input = e; } }
+          defaultValue={ this.props.value }
         /> );
 
       if ( this.props.type === "textarea" ) {
@@ -37,6 +38,7 @@ export default class Input extends React.Component {
             className="material-input__input"
             { ...props }
             ref={ ( e ) => { this.input = e; } }
+            defaultValue={ this.props.value }
           /> );
       }
 
@@ -57,6 +59,7 @@ export default class Input extends React.Component {
         className="material-input__input"
         { ...props }
         ref={ ( e ) => { this.input = e; } }
+        defaultValue={ this.props.value }
       /> );
 
     let buttonText = `Wybrano ${this.state.filesNo} `;
@@ -90,6 +93,7 @@ Input.propTypes = {
   required: PropTypes.bool,
   validator: PropTypes.object,
   testFunction: PropTypes.func,
+  value: PropTypes.string,
 };
 
 Input.defaultProps = {
@@ -99,4 +103,5 @@ Input.defaultProps = {
   required: false,
   validator: {},
   testFunction: () => true,
+  value: null,
 };

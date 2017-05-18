@@ -24,23 +24,32 @@ export default class App extends React.Component {
 
     let content = null;
 
-    if ( segment === "product" ) {
+    const type = this.props.router.routes[ this.props.router.routes.length - 1 ].type;
+
+    if ( type === "product" ) {
       const record = getById( this.props.params.id, this.props.records );
       if ( record ) {
-        content = ( <DetailView title={ record.name }>{ React.cloneElement( this.props.children, { key: segment, record, place: getById( record.seller, this.props.sellers ), seller: getById( record.seller, this.props.sellers ) } ) }</DetailView> );
+        content = ( <DetailView title={ record.name }>{ React.cloneElement( this.props.children, { key: segment, record, place: getById( record.place, this.props.sellers ), seller: getById( record.seller, this.props.sellers ) } ) }</DetailView> );
       } else {
         console.error( "Invalid id!" );
       }
-    } else if ( segment === "seller" ) {
+    } else if ( type === "seller" ) {
       const seller = getById( this.props.params.id, this.props.sellers );
       if ( seller ) {
         content = ( <DetailView title={ seller.name }>{ React.cloneElement( this.props.children, { key: segment, seller } ) }</DetailView> );
       } else {
         console.error( "Invalid id!" );
       }
-    } else if ( segment === "add-product" ) {
+    } else if ( type === "AddProduct" ) {
       content = ( <DetailView title={ "Dodaj rekord" }>{ React.cloneElement( this.props.children, { key: segment, sellers: this.props.sellers } ) }</DetailView> );
-    } else if ( segment === "add-seller" ) {
+    } else if ( type === "EditProduct" ) {
+      const record = getById( this.props.params.id, this.props.records );
+      if ( record ) {
+        content = ( <DetailView title={ "Dodaj rekord" }>{ React.cloneElement( this.props.children, { key: segment, record, sellers: this.props.sellers, edit: true } ) }</DetailView> );
+      } else {
+        console.error( "Invalid id!" );
+      }
+    } else if ( type === "AddSeller" ) {
       content = ( <DetailView title={ "Dodaj sprzedawcę" }>{ React.cloneElement( this.props.children, { key: segment } ) }</DetailView> );
     }
 
@@ -61,10 +70,12 @@ App.propTypes = {
   params: PropTypes.object.isRequired,
   records: PropTypes.array,
   sellers: PropTypes.array,
+  router: PropTypes.object,
 };
 
 App.defaultProps = {
   children: "",
   records: [],
   sellers: [],
+  router: {},
 };

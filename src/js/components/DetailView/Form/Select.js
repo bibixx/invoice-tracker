@@ -17,7 +17,7 @@ export default class Select extends React.Component {
     return (
       <div className="material-input">
         { label }
-        <select ref={ ( e ) => { this.input = e; } } className="material-input__select" id={ this.props.id }>
+        <select defaultValue={ this.props.value } ref={ ( e ) => { this.input = e; } } className="material-input__select" id={ this.props.id }>
           { options }
         </select>
         <div className="material-input__border" />
@@ -31,6 +31,10 @@ Select.propTypes = {
   children: PropTypes.string,
   required: PropTypes.bool,
   options: PropTypes.array.isRequired,
+  value: PropTypes.oneOfType( [
+    PropTypes.string,
+    PropTypes.number,
+  ] ),
 };
 
 Select.defaultProps = {
@@ -38,4 +42,5 @@ Select.defaultProps = {
   id: null,
   children: "",
   required: false,
+  value: null,
 };

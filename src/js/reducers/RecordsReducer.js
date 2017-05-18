@@ -23,7 +23,7 @@ export default function reducer( state = [], action ) {
       name: "Produkt #2",
       place: "c",
       seller: "a",
-      warrantyDate: new Date( 2017, 10, 1 ),
+      warrantyDate: new Date( 2017, 8, 30 ),
       warrantyLength: 2,
     },
   ];

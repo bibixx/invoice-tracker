@@ -164,7 +164,10 @@ function buildScript( toWatch, path ) {
     bundler = watchify( bundler );
   }
 
-  bundler.transform( "babelify", { presets: ["es2015", "react"] } );
+  bundler.transform( "babelify", {
+    presets: ["es2015", "react"],
+    plugins: ["transform-decorators-legacy"],
+  } );
 
   const rebundle = function() {
     const timer = Date.now();

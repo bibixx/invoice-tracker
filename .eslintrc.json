@@ -5,6 +5,7 @@
         "jsx-a11y",
         "import"
     ],
+    "parser": "babel-eslint",
     "env": {
         "browser": true,
         "node": true,
@@ -46,6 +47,9 @@
         "react/jsx-no-bind": 0,
         "react/no-danger": 0,
         "react/prefer-stateless-function": 0,
-        "react/jsx-curly-spacing": [2, "always"]
+        "react/jsx-curly-spacing": [2, "always"],
+        "react/no-array-index-key": 0,
+
+        "jsx-a11y/img-has-alt": 0
     }
 }

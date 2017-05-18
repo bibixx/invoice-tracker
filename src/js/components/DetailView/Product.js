@@ -39,3 +39,9 @@ Product.propTypes = {
   place: PropTypes.object,
   seller: PropTypes.object,
 };
+
+Product.defaultProps = {
+  record: {},
+  place: {},
+  seller: {},
+};

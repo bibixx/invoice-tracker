@@ -18,7 +18,7 @@
   animation: in-btn .4s ease-in-out
   user-select: none
 
-  &.fab-snackbar
+  &--fab-snackbar
     margin-bottom: 48px
     @media(min-width: 600px)
       margin-bottom: 0
@@ -40,7 +40,7 @@
     &:nth-child(2)
       transform: rotate(-45deg) scale(0)
 
-  &.clicked
+  &--clicked, &:active
     & > i
       &:first-child
         transform: rotate(45deg) scale(0)
@@ -59,11 +59,11 @@
       content: ""
       animation: btn-ripple .55s ease-in-out forwards
 
-    .submenu
+    .fab-main__submenu
       transition: visibility 0s 0s
       visibility: visible
 
-      .fab-mini
+      &__fab-mini
         transform: scale(1)
         opacity: 1
 
@@ -73,7 +73,7 @@
         &:nth-child(2)
           transition-delay: 0s
 
-  .submenu
+  &__submenu
     display: flex
     position: absolute
     top: 0
@@ -84,7 +84,7 @@
     transition: visibility 0s 0.4s
     visibility: hidden
 
-    .fab-mini
+    &__fab-mini
       width: 40px
       height: 40px
       margin-bottom: 16px
@@ -97,6 +97,9 @@
       text-decoration: none
       box-shadow: $button-fab-box-shadow
       opacity: 0
+
+      &:hover
+        text-decoration: none
 
       span
         display: flex
@@ -113,7 +116,7 @@
         transition-delay: .2s
 
 
-.fab-main.clicked, .fab-mini:focus
+.fab-main--clicked, .fab-main__submenu__fab-mini:focus
   &::before
     position: absolute
     top: 0
@@ -125,12 +128,9 @@
     content: ""
     animation: btn-ripple .55s ease-in-out forwards
 
-.fab-mini:focus
+.fab-main__submenu__fab-mini:focus
   &::before
     background: $button-fab-sub-blink
-
-
-
 
 @keyframes in-i
   0%

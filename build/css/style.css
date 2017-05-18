@@ -427,7 +427,10 @@ label {
   color: #fff;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26);
   z-index: 1; }
+  .header--app-bar {
+    z-index: 0; }
   .header__button {
+    position: relative;
     margin: 0;
     padding: 0;
     border: 0;
@@ -440,6 +443,22 @@ label {
             appearance: none; }
     .header__button i {
       margin: 16px; }
+      .header__button i:active::before {
+        opacity: 1; }
+      .header__button i::before {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 24px;
+        height: 24px;
+        padding: 8px;
+        transform: translate(-50%, -50%);
+        transition: opacity .2s ease-in-out;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.2);
+        content: "";
+        opacity: 0; }
   .header__title {
     flex: 1;
     line-height: 56px; }
@@ -447,37 +466,49 @@ label {
 .records-list {
   margin-top: 56px;
   background: #fff; }
-
-.record {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 88px;
-  padding: 0 16px;
-  border-bottom: 1px solid #ebebeb;
-  background: #fff;
-  color: #7d7d7d;
-  font-size: 14px; }
-  .record, .record:hover {
-    text-decoration: none; }
-  .record__detail {
-    margin: 0; }
-    .record__detail--name {
-      color: #000; }
-    .record__detail--warranty--valid {
-      color: #4caf50; }
-    .record__detail--warranty--warning {
-      color: #ff9800; }
-    .record__detail--warranty--over {
-      color: #e53935; }
-    .record__detail--warranty > * {
-      display: inline-flex;
-      margin-right: 8px; }
-    .record__detail--warranty i.material-icons {
-      margin-top: -1px;
-      margin-right: 2px;
-      font-size: 16px;
-      line-height: 16px; }
+  .records-list__record-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    border-bottom: 1px solid #ebebeb; }
+  .records-list__record {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 88px;
+    padding: 0 16px;
+    background: #fff;
+    color: #7d7d7d;
+    font-size: 14px;
+    box-sizing: border-box; }
+    @media (min-width: 960px) {
+      .records-list__record {
+        max-width: 700px; } }
+    @media (min-width: 1200px) {
+      .records-list__record {
+        max-width: 1000px; } }
+    .records-list__record, .records-list__record:hover {
+      text-decoration: none; }
+    .records-list__record__detail {
+      margin: 0; }
+      .records-list__record__detail--name {
+        color: #000; }
+      .records-list__record__detail--warranty--valid {
+        color: #4caf50; }
+      .records-list__record__detail--warranty--warning {
+        color: #ff9800; }
+      .records-list__record__detail--warranty--over {
+        color: #e53935; }
+      .records-list__record__detail--warranty > * {
+        display: inline-flex;
+        margin-right: 8px; }
+      .records-list__record__detail--warranty i.material-icons {
+        margin-top: -1px;
+        margin-right: 2px;
+        font-size: 16px;
+        line-height: 16px; }
 
 .detail-view {
   display: flex;
@@ -555,6 +586,37 @@ label {
       .material-button--submit.remove:focus {
         background: #c62828; }
 
+.material-checkbox__label {
+  font-weight: 400;
+  line-height: 20px; }
+
+.material-checkbox__square.material-icons {
+  display: inline-block;
+  position: relative;
+  width: 18px;
+  height: 18px;
+  margin-right: 4px;
+  float: left;
+  color: rgba(0, 0, 0, 0.54);
+  font-size: 18px; }
+  .material-checkbox__square.material-icons::after, .material-checkbox__square.material-icons.material-input__border::before {
+    position: absolute;
+    left: 0;
+    transition: opacity .1s ease-in-out;
+    content: "check_box";
+    opacity: 0; }
+
+.material-checkbox__input {
+  display: block;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  visibility: hidden; }
+  .material-checkbox__input:checked ~ .material-checkbox__square {
+    color: #9c27b0; }
+    .material-checkbox__input:checked ~ .material-checkbox__square::after, .material-checkbox__input:checked ~ .material-checkbox__square.material-input__border::before {
+      opacity: 1; }
+
 .detail-view__content p {
   margin-top: 0;
   font-size: 20px; }
@@ -562,7 +624,7 @@ label {
     margin-bottom: 0; }
 
 .detail-view__content--edit p {
-  margin: 0;
+  margin-top: 10px;
   margin-bottom: 10px;
   font-size: 16px; }
 
@@ -602,10 +664,10 @@ label {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none; }
-  .fab-main.fab-snackbar {
+  .fab-main--fab-snackbar {
     margin-bottom: 48px; }
     @media (min-width: 600px) {
-      .fab-main.fab-snackbar {
+      .fab-main--fab-snackbar {
         margin-bottom: 0; } }
   .fab-main > i {
     position: absolute;
@@ -620,11 +682,11 @@ label {
       animation: in-i .4s ease-in-out; }
     .fab-main > i:nth-child(2) {
       transform: rotate(-45deg) scale(0); }
-  .fab-main.clicked > i:first-child {
+  .fab-main--clicked > i:first-child, .fab-main:active > i:first-child {
     transform: rotate(45deg) scale(0); }
-  .fab-main.clicked > i:nth-child(2) {
+  .fab-main--clicked > i:nth-child(2), .fab-main:active > i:nth-child(2) {
     transform: rotate(0deg) scale(1); }
-  .fab-main.clicked::before {
+  .fab-main--clicked::before, .fab-main:active::before {
     position: absolute;
     top: 0;
     right: 0;
@@ -634,17 +696,17 @@ label {
     background: rgba(255, 255, 255, 0.2);
     content: "";
     animation: btn-ripple .55s ease-in-out forwards; }
-  .fab-main.clicked .submenu {
+  .fab-main--clicked .fab-main__submenu, .fab-main:active .fab-main__submenu {
     transition: visibility 0s 0s;
     visibility: visible; }
-    .fab-main.clicked .submenu .fab-mini {
+    .fab-main--clicked .fab-main__submenu__fab-mini, .fab-main:active .fab-main__submenu__fab-mini {
       transform: scale(1);
       opacity: 1; }
-      .fab-main.clicked .submenu .fab-mini:nth-child(1) {
+      .fab-main--clicked .fab-main__submenu__fab-mini:nth-child(1), .fab-main:active .fab-main__submenu__fab-mini:nth-child(1) {
         transition-delay: .2s; }
-      .fab-main.clicked .submenu .fab-mini:nth-child(2) {
+      .fab-main--clicked .fab-main__submenu__fab-mini:nth-child(2), .fab-main:active .fab-main__submenu__fab-mini:nth-child(2) {
         transition-delay: 0s; }
-  .fab-main .submenu {
+  .fab-main__submenu {
     display: flex;
     position: absolute;
     top: 0;
@@ -654,7 +716,7 @@ label {
     transform: translateY(-100%);
     transition: visibility 0s 0.4s;
     visibility: hidden; }
-    .fab-main .submenu .fab-mini {
+    .fab-main__submenu__fab-mini {
       width: 40px;
       height: 40px;
       margin-bottom: 16px;
@@ -667,19 +729,21 @@ label {
       text-decoration: none;
       box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16), 0 3px 10px rgba(0, 0, 0, 0.23);
       opacity: 0; }
-      .fab-main .submenu .fab-mini span {
+      .fab-main__submenu__fab-mini:hover {
+        text-decoration: none; }
+      .fab-main__submenu__fab-mini span {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
         height: 100%; }
-      .fab-main .submenu .fab-mini i {
+      .fab-main__submenu__fab-mini i {
         flex: 0;
         color: #616161; }
-      .fab-main .submenu .fab-mini:nth-child(2) {
+      .fab-main__submenu__fab-mini:nth-child(2) {
         transition-delay: .2s; }
 
-.fab-main.clicked::before, .fab-mini:focus::before {
+.fab-main--clicked::before, .fab-main__submenu__fab-mini:focus::before {
   position: absolute;
   top: 0;
   right: 0;
@@ -690,7 +754,7 @@ label {
   content: "";
   animation: btn-ripple .55s ease-in-out forwards; }
 
-.fab-mini:focus::before {
+.fab-main__submenu__fab-mini:focus::before {
   background: rgba(0, 0, 0, 0.1); }
 
 @keyframes in-i {
@@ -746,7 +810,14 @@ label {
     min-width: 100%;
     max-width: 100%; }
 
+.material-input .material-input__select {
+  width: 100%;
+  margin: 4px 0;
+  border: 0;
+  background: none; }
+
 .material-input__label {
+  display: block;
   margin: 0;
   transition: color .2s ease-in-out;
   font-size: 80%;

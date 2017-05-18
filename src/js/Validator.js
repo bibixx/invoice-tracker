@@ -1,12 +1,12 @@
-class Validator {
+export default class Validator {
   constructor() {
     this.inputGroups = [];
 
     this.submit = this.submit.bind( this );
   }
 
-  add( input, group ) {
-    this.inputGroups.push( { input, group } );
+  add( input, group, testFunction = () => true ) {
+    this.inputGroups.push( { input, group, testFunction } );
   }
 
   validate( inputGroup, submitting ) {
@@ -29,6 +29,11 @@ class Validator {
     }
 
     if ( input.pattern && !( new RegExp( input.pattern ) ).test( input.value ) ) {
+      inputGroup.group.classList.add( "material-input--invalid" );
+      return false;
+    }
+
+    if ( !inputGroup.testFunction.call( null, input.value ) ) {
       inputGroup.group.classList.add( "material-input--invalid" );
       return false;
     }
@@ -56,7 +61,3 @@ class Validator {
     }
   }
 }
-
-const validator = new Validator();
-
-export default validator;

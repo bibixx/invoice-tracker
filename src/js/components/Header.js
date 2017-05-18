@@ -31,8 +31,12 @@ export default class Header extends React.Component {
       );
     }
 
+    if ( !this.props.appBar && !this.props.isEditable ) {
+      rightButton = null;
+    }
+
     return (
-      <header className="header">
+      <header className={ `header${this.props.appBar ? " header--app-bar" : ""}` }>
         { leftButton }
         <span className="header__title">{ this.props.title }</span>
         { rightButton }
@@ -43,9 +47,12 @@ export default class Header extends React.Component {
 
 Header.propTypes = {
   appBar: PropTypes.bool,
+  isEditable: PropTypes.bool,
   title: PropTypes.string,
 };
 
 Header.defaultProps = {
+  appBar: false,
+  isEditable: false,
   title: "Gwarancje",
 };

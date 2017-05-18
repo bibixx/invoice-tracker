@@ -20,3 +20,8 @@ DetailView.propTypes = {
   children: PropTypes.object,
   title: PropTypes.string,
 };
+
+DetailView.defaultProps = {
+  children: {},
+  title: "",
+};

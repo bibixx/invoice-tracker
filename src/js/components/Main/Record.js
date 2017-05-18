@@ -13,28 +13,30 @@ export default class Record extends React.Component {
     const warrantyState = ( difference <= 0 ) ? "over" : ( difference > 0.5 ) ? "valid" : "warning";
 
     return (
-      <Link to={ `/product/${this.props.id}` } className="record">
-        <p className="record__detail record__detail--name">{ this.props.name }</p>
-        <p className="record__detail record__detail--place">{ this.props.place.name }</p>
-        <p className={ `record__detail record__detail--warranty record__detail--warranty--${warrantyState}` }>
-          <span className="record__detail--warranty__date">
-            <i className="material-icons">event</i>
-            <span>{ formatDate( date ) }</span>
-          </span>
-          <span className="record__detail--warranty__left">
-            <i className="material-icons">hourglass_empty</i>
-            <span>{ `${yearDeclination( this.props.warrantyLength )} (${yearDeclination( Math.abs( difference ) )})` }</span>
-          </span>
-        </p>
-      </Link>
+      <div className="records-list__record-container">
+        <Link to={ `/product/${this.props.id}` } className="records-list__record">
+          <p className="records-list__record__detail records-list__record__detail--name">{ this.props.name }</p>
+          <p className="records-list__record__detail records-list__record__detail--place">{ this.props.place.name }</p>
+          <p className={ `records-list__record__detail records-list__record__detail--warranty records-list__record__detail--warranty--${warrantyState}` }>
+            <span className="records-list__record__detail--warranty__date">
+              <i className="material-icons">event</i>
+              <span>{ formatDate( date ) }</span>
+            </span>
+            <span className="records-list__record__detail--warranty__left">
+              <i className="material-icons">hourglass_empty</i>
+              <span>{ `${yearDeclination( this.props.warrantyLength )} (${yearDeclination( Math.abs( difference ) )})` }</span>
+            </span>
+          </p>
+        </Link>
+      </div>
     );
   }
 }
 
 Record.propTypes = {
-  id: PropTypes.string,
-  name: PropTypes.string,
-  place: PropTypes.object,
-  warrantyDate: PropTypes.object,
-  warrantyLength: PropTypes.number,
+  id: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
+  place: PropTypes.object.isRequired,
+  warrantyDate: PropTypes.object.isRequired,
+  warrantyLength: PropTypes.number.isRequired,
 };

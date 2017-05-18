@@ -2,42 +2,57 @@
   margin-top: 56px
   background: $list-color
 
-.record
-  display: flex
-  flex-direction: column
-  justify-content: center
-  height: 88px
-  padding: 0 16px
-  border-bottom: 1px solid $list-border-color
-  background: $list-color
-  color: $color-muted
-  font-size: 14px
+  &__record-container
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+    border-bottom: 1px solid $list-border-color
 
-  &, &:hover
-    text-decoration: none
+  &__record
+    display: flex
+    flex-direction: column
+    justify-content: center
+    width: 100%
+    height: 88px
+    padding: 0 16px
+    background: $list-color
+    color: $color-muted
+    font-size: 14px
+    box-sizing: border-box
 
-  &__detail
-    margin: 0
+    @media (min-width: 960px)
+      max-width: 700px
 
-    &--name
-      color: $text-color
+    @media (min-width: 1200px)
+      max-width: 1000px
 
-    &--warranty
-      &--valid
-        color: $valid-color
 
-      &--warning
-        color: $warning-color
+    &, &:hover
+      text-decoration: none
 
-      &--over
-        color: $error-color
+    &__detail
+      margin: 0
 
-      & > *
-        display: inline-flex
-        margin-right: 8px
+      &--name
+        color: $text-color
 
-      i.material-icons
-        margin-top: -1px
-        margin-right: 2px
-        font-size: 16px
-        line-height: 16px
+      &--warranty
+        &--valid
+          color: $valid-color
+
+        &--warning
+          color: $warning-color
+
+        &--over
+          color: $error-color
+
+        & > *
+          display: inline-flex
+          margin-right: 8px
+
+        i.material-icons
+          margin-top: -1px
+          margin-right: 2px
+          font-size: 16px
+          line-height: 16px

@@ -30,8 +30,6 @@ export default class AddProduct extends React.Component {
     const inputs = this.inputs;
     const dataToSubmit = {};
 
-    dataToSubmit.id = Math.random().toString( 36 ).substring( 7 );
-
     for ( const prop in inputs ) {
       if ( inputs.hasOwnProperty( prop ) ) {
         const input = inputs[ prop ];

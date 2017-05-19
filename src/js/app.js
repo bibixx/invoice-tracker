@@ -5,7 +5,7 @@ import { Provider } from "react-redux";
 
 import store from "./store";
 
-import App from "./components/Layout";
+import App from "./components/App";
 import Product from "./components/DetailView/Product";
 import Seller from "./components/DetailView/Seller";
 import AddProduct from "./components/DetailView/AddProduct";
@@ -19,6 +19,8 @@ const routes = (
     <Route path="product/:id/edit" component={ AddProduct } type="EditProduct" />
 
     <Route path="seller/:id" component={ Seller } type="seller" />
+    <Route path="seller/:id/edit" component={ AddSeller } type="EditSeller" />
+
     <Route path="add-product" component={ AddProduct } type="AddProduct" />
     <Route path="add-seller" component={ AddSeller } type="AddSeller" />
     <Route path="*" component={ RootPlaceholder } />

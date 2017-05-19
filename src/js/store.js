@@ -6,6 +6,4 @@ import { createLogger } from "redux-logger";
 import reducer from "./reducers";
 
 const middleware = applyMiddleware( thunk, createLogger() );
-export default createStore( reducer, {
-  records: [],
-}, middleware );
+export default createStore( reducer, middleware );

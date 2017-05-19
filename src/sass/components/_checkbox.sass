@@ -25,10 +25,17 @@
     width: 0
     height: 0
     opacity: 0
-    visibility: hidden
+
+    &:focus, &:focus:checked
+      & ~ .material-checkbox__square
+        color: mix($button-raised-focus-accent, $main-color, 25%)
+
 
     &:checked ~ .material-checkbox__square
       color: $main-color
 
       &::after
         opacity: 1
+
+    &:disabled ~ .material-checkbox__square
+      color: $color-muted

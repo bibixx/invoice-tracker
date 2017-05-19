@@ -1,34 +1,29 @@
-export default function reducer( state = [], action ) {
-  return [
-    {
-      id: "a",
-      name: "Firma A",
-      city: "New city",
-      street: "New street",
-      zip: "00-000",
-      nip: "0000000000",
-      isSeller: true,
-      isPlace: true,
-    },
-    {
-      id: "b",
-      name: "Firma B",
-      city: "New city",
-      street: "New street",
-      zip: "00-000",
-      nip: "0000000000",
-      isSeller: true,
-      isPlace: false,
-    },
-    {
-      id: "c",
-      name: "Firma C",
-      city: "New city",
-      street: "New street",
-      zip: "00-000",
-      nip: "0000000000",
-      isSeller: false,
-      isPlace: true,
-    },
-  ];
+export default function reducer(
+  state = {
+    fetched: false,
+    fetching: false,
+    data: [],
+  },
+  action,
+) {
+  const newState = Object.assign( {}, state, { data: state.data.slice() } );
+
+  switch ( action.type ) {
+    case "ADD_SELLER":
+      newState.data.push( Object.assign( { id: Math.random().toString( 36 ).substring( 7 ) }, action.payload ) );
+
+      return newState;
+    case "FETCHED_SELLERS": {
+      const stateFetched = action.payload.map( v => Object.assign( {}, v ) );
+
+      newState.data = stateFetched;
+      newState.fetched = true;
+      newState.fetching = false;
+
+      return newState;
+    }
+    // no default
+  }
+
+  return state;
 }

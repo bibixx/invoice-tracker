@@ -25,13 +25,13 @@ export default class Header extends React.Component {
         </button>
       );
       rightButton = (
-        <button className="header__button">
+        <button className="header__button" onClick={ () => { browserHistory.push( `${this.props.path}/edit` ); } }>
           <i className="material-icons">edit</i>
         </button>
       );
     }
 
-    if ( !this.props.appBar && !this.props.isEditable ) {
+    if ( !this.props.isEditable ) {
       rightButton = null;
     }
 
@@ -49,10 +49,12 @@ Header.propTypes = {
   appBar: PropTypes.bool,
   isEditable: PropTypes.bool,
   title: PropTypes.string,
+  path: PropTypes.string,
 };
 
 Header.defaultProps = {
   appBar: false,
   isEditable: false,
   title: "Gwarancje",
+  path: "",
 };

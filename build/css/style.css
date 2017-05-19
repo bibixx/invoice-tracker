@@ -544,7 +544,7 @@ label {
     height: 32px;
     margin: 10px 16px 10px 0;
     padding: 0 16px;
-    transition: background .2s ease-in-out;
+    transition: background-color .2s ease-in-out;
     border: 0;
     border-radius: 2px;
     background: #9c27b0;
@@ -561,7 +561,7 @@ label {
     min-width: 88px;
     height: 32px;
     padding: 0 8px;
-    transition: background .1s ease-in-out;
+    transition: background-color .1s ease-in-out;
     border: 0;
     border-radius: 2px;
     outline: 0;
@@ -610,12 +610,15 @@ label {
   display: block;
   width: 0;
   height: 0;
-  opacity: 0;
-  visibility: hidden; }
+  opacity: 0; }
+  .material-checkbox__input:focus ~ .material-checkbox__square, .material-checkbox__input:focus:checked ~ .material-checkbox__square {
+    color: #751d84; }
   .material-checkbox__input:checked ~ .material-checkbox__square {
     color: #9c27b0; }
     .material-checkbox__input:checked ~ .material-checkbox__square::after, .material-checkbox__input:checked ~ .material-checkbox__square.material-input__border::before {
       opacity: 1; }
+  .material-checkbox__input:disabled ~ .material-checkbox__square {
+    color: #7d7d7d; }
 
 .detail-view__content p {
   margin-top: 0;
@@ -641,6 +644,9 @@ label {
 
 .detail-date--over {
   color: #e53935; }
+
+.detail-label {
+  font-weight: 700; }
 
 .fab-main {
   display: block;

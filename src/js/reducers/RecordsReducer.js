@@ -1,30 +1,29 @@
-export default function reducer( state = [], action ) {
-  const newState = state.slice();
+export default function reducer(
+  state = {
+    fetched: false,
+    fetching: false,
+    data: [],
+  },
+  action,
+) {
+  const newState = Object.assign( {}, state, { data: state.data.slice() } );
 
   switch ( action.type ) {
     case "ADD_RECORD":
-      newState.push( action.payload );
+      newState.data.push( Object.assign( { id: Math.random().toString( 36 ).substring( 7 ) }, action.payload ) );
 
       return newState;
+    case "FETCHED_RECORDS": {
+      const stateFetched = action.payload.map( v => Object.assign( {}, v, { warrantyDate: new Date( 2017, 3, 4 ) } ) );
+
+      newState.data = stateFetched;
+      newState.fetched = true;
+      newState.fetching = false;
+
+      return newState;
+    }
     // no default
   }
 
-  return [
-    {
-      id: "a",
-      name: "Produkt #1",
-      place: "a",
-      seller: "b",
-      warrantyDate: new Date( 2016, 10, 1 ),
-      warrantyLength: 2,
-    },
-    {
-      id: "b",
-      name: "Produkt #2",
-      place: "c",
-      seller: "a",
-      warrantyDate: new Date( 2017, 8, 30 ),
-      warrantyLength: 2,
-    },
-  ];
+  return state;
 }

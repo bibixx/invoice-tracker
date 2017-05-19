@@ -6,19 +6,26 @@ import { getById } from "../utils/RecordUtils";
 
 export default class Main extends React.Component {
   render() {
-    const sellers = this.props.sellers;
-    const records = this.props.records
-      .sort( ( a, b ) => {
-        const aDate = a.warrantyDate;
-        const bDate = b.warrantyDate;
-        return aDate > bDate ? -1 : aDate < bDate ? 1 : 0;
-      } )
-      .map( record => <Record key={ record.id } id={ record.id } name={ record.name } place={ getById( record.place, sellers ) } warrantyDate={ record.warrantyDate } warrantyLength={ record.warrantyLength } /> );
+    console.log( this.props );
+    if ( this.props.fetched ) {
+      const sellers = this.props.sellers;
+      const records = this.props.records
+        .sort( ( a, b ) => {
+          const aDate = a.warrantyDate;
+          const bDate = b.warrantyDate;
+          return aDate > bDate ? -1 : aDate < bDate ? 1 : 0;
+        } )
+        .map( record => <Record key={ record.id } id={ record.id } name={ record.name } place={ getById( record.place, sellers ) } warrantyDate={ record.warrantyDate } warrantyLength={ record.warrantyLength } /> );
+
+      return (
+        <main className="records-list">
+          { records }
+        </main>
+      );
+    }
 
     return (
-      <main className="records-list">
-        { records }
-      </main>
+      <main className="records-list" />
     );
   }
 }
@@ -27,9 +34,11 @@ export default class Main extends React.Component {
 Main.propTypes = {
   records: PropTypes.array,
   sellers: PropTypes.array,
+  fetched: PropTypes.bool,
 };
 
 Main.defaultProps = {
   records: [],
   sellers: [],
+  fetched: false,
 };

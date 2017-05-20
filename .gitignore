@@ -63,3 +63,4 @@ server/vendor/
 composer.lock
 
 build
+server/uploads/*

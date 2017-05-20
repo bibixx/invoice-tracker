@@ -34,8 +34,22 @@
 .detail-attachements
   margin: 0 -8px
 
+  &__input
+    display: inline-block
+    width: 0
+    height: 0
+    opacity: 0
+
+    &:focus + .detail-attachements__file
+      background-color: $attachement-background-focus
+
+    &:checked + .detail-attachements__file::after
+      background-color: red
+      opacity: 0.3
+
   &__file
     display: inline-flex
+    position: relative
     align-items: center
     justify-content: center
     width: 136px
@@ -44,13 +58,31 @@
     transition: background-color .2s ease-in-out
     border-radius: 2px
     outline: 0
-    background: $attachement-background
+    background-color: $attachement-background
+    background-size: cover
     color: $attachement-color
     font-size: 1.8em
+    text-decoration: none
+    text-indent: -10000%
     box-shadow: $card-box-shadow
+    overflow: hidden
 
-    &, &:hover
+    &::after
+      position: absolute
+      top: 0
+      right: 0
+      bottom: 0
+      left: 0
+      transition: opacity .2s ease-in-out, background-color .2s ease-in-out
+      background-color: #000
+      content: ""
+      opacity: 0
+
+    &:hover
       text-decoration: none
 
+      &::after
+        opacity: 0.3
+
     &:hover, &:focus
-      background: $attachement-background-focus
+      background-color: $attachement-background-focus

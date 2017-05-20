@@ -486,6 +486,8 @@ label {
     color: #7d7d7d;
     font-size: 14px;
     box-sizing: border-box; }
+    .records-list__record--seller {
+      height: 64px; }
     @media (min-width: 960px) {
       .records-list__record {
         max-width: 700px; } }
@@ -656,8 +658,19 @@ label {
 
 .detail-attachements {
   margin: 0 -8px; }
+  .detail-attachements__input {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    opacity: 0; }
+    .detail-attachements__input:focus + .detail-attachements__file {
+      background-color: #b3b3b3; }
+    .detail-attachements__input:checked + .detail-attachements__file::after, .detail-attachements__input:checked + .detail-attachements__file.material-input__border::before {
+      background-color: red;
+      opacity: 0.3; }
   .detail-attachements__file {
     display: inline-flex;
+    position: relative;
     align-items: center;
     justify-content: center;
     width: 136px;
@@ -666,14 +679,30 @@ label {
     transition: background-color .2s ease-in-out;
     border-radius: 2px;
     outline: 0;
-    background: #e0e0e0;
+    background-color: #e0e0e0;
+    background-size: cover;
     color: #616161;
     font-size: 1.8em;
-    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12); }
-    .detail-attachements__file, .detail-attachements__file:hover {
+    text-decoration: none;
+    text-indent: -10000%;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12);
+    overflow: hidden; }
+    .detail-attachements__file::after, .detail-attachements__file.material-input__border::before {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      transition: opacity .2s ease-in-out, background-color .2s ease-in-out;
+      background-color: #000;
+      content: "";
+      opacity: 0; }
+    .detail-attachements__file:hover {
       text-decoration: none; }
+      .detail-attachements__file:hover::after, .detail-attachements__file.material-input__border:hover::before {
+        opacity: 0.3; }
     .detail-attachements__file:hover, .detail-attachements__file:focus {
-      background: #b3b3b3; }
+      background-color: #b3b3b3; }
 
 .fab-main {
   display: block;

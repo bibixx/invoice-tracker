@@ -11,8 +11,8 @@ const fs = require("fs");
 const gulp = require("gulp");
 const gulpif = require("gulp-if");
 const gutil = require("gulp-util");
-const sourcemaps = require("gulp-sourcemaps");
 const historyApiFallback = require('connect-history-api-fallback');
+const sourcemaps = require("gulp-sourcemaps");
 const watch = require("gulp-watch");
 
 // SASS
@@ -41,7 +41,7 @@ const watchify = require("watchify");
 const SOURCE_PATH = "./src";
 const BUILD_PATH = "./build";
 const STATIC_FILES = ["/browserconfig.xml", "/manifest.json", "/img", "/favicon.ico"]; // relative to /src/
-const SCRIPTS_TO_WATCH = [`${SOURCE_PATH}/js/app.js`];
+const SCRIPTS_TO_WATCH = [`${ SOURCE_PATH }/js/app.js`];
 const KEEP_FILES = true;
 const OPEN_TAB = argv.open || argv.o;
 
@@ -74,12 +74,12 @@ function logBuildMode() {
 function logError( err ) {
   console.log( err );
   if ( err.plugin === "gulp-sass" ) {
-    gutil.log( `${gutil.colors.yellow( "SASS error" )}: ${gutil.colors.red( err.messageOriginal.slice( 0, -1 ) )} in ${gutil.colors.cyan( err.relativePath )} on line ${err.line}, column ${err.column}` );
+    gutil.log( `${ gutil.colors.yellow( "SASS error" ) }: ${ gutil.colors.red( err.messageOriginal.slice( 0, -1 ) ) } in ${ gutil.colors.cyan( err.relativePath ) } on line ${ err.line }, column ${ err.column }` );
   } else if ( err.fileName ) {
-    gutil.log( `${gutil.colors.yellow( err.name )}: ${gutil.colors.red( err.fileName.replace( `${__dirname}/src/js/`, "" ) )}: Line ${gutil.colors.magenta( err.lineNumber )} & Column ${gutil.colors.magenta( err.columnNumber || err.column )}: ${gutil.colors.blue( err.description )}` );
+    gutil.log( `${ gutil.colors.yellow( err.name ) }: ${ gutil.colors.red( err.fileName.replace( `${ __dirname }/src/js/`, "" ) ) }: Line ${ gutil.colors.magenta( err.lineNumber ) } & Column ${ gutil.colors.magenta( err.columnNumber || err.column ) }: ${ gutil.colors.blue( err.description ) }` );
   } else {
     // Browserify error..
-    gutil.log( `${gutil.colors.yellow( err.name )}: ${gutil.colors.red( err.message )}` );
+    gutil.log( `${ gutil.colors.yellow( err.name ) }: ${ gutil.colors.red( err.message ) }` );
   }
 }
 
@@ -90,19 +90,19 @@ function copyStatic() {
   STATIC_FILES.forEach( ( v ) => {
     let path;
     let output;
-    if ( fs.existsSync( `${SOURCE_PATH}${v}` ) && fs.lstatSync( `${SOURCE_PATH}${v}` ).isDirectory() ) {
-      path = `${SOURCE_PATH}${v}`;
-      output = `${BUILD_PATH}${v}`;
+    if ( fs.existsSync( `${ SOURCE_PATH }${ v }` ) && fs.lstatSync( `${ SOURCE_PATH }${ v }` ).isDirectory() ) {
+      path = `${ SOURCE_PATH }${ v }`;
+      output = `${ BUILD_PATH }${ v }`;
 
       path += "/*.*";
     } else {
       let file = v;
-      if ( v[0] !== "/" ) {
-        file = `/${file}`;
+      if ( v[ 0 ] !== "/" ) {
+        file = `/${ file }`;
       }
 
-      path = `${SOURCE_PATH}${file}`;
-      output = `${BUILD_PATH}${file}`;
+      path = `${ SOURCE_PATH }${ file }`;
+      output = `${ BUILD_PATH }${ file }`;
 
       output = output.split( "/" );
       output.pop();
@@ -134,14 +134,14 @@ function cleanBuild() {
  */
 function showDuration( t ) {
   if ( t >= 1000 ) {
-    return `${t / 1000} s`;
+    return `${ t / 1000 } s`;
   }
 
   if ( t <= 1 ) {
-    return `${t * 1000} μs`;
+    return `${ t * 1000 } μs`;
   }
 
-  return `${t} ms`;
+  return `${ t } ms`;
 }
 
 /**
@@ -173,7 +173,7 @@ function buildScript( toWatch, path ) {
     const timer = Date.now();
 
     const stream = bundler.bundle().on( "end", () => {
-      gutil.log( `Started '${gutil.colors.cyan( "scripts" )}' ('${gutil.colors.cyan( filename )}')...` );
+      gutil.log( `Started '${ gutil.colors.cyan( "scripts" ) }' ('${ gutil.colors.cyan( filename ) }')...` );
     } );
 
     return stream
@@ -184,11 +184,11 @@ function buildScript( toWatch, path ) {
       .pipe( gulpif( isProduction(), stripDebug() ) )
       .pipe( gulpif( isProduction(), uglify() ) )
       .pipe( gulpif( !isProduction(), sourcemaps.write( "./" ) ) )
-      .pipe( gulp.dest( `${BUILD_PATH}/js` ) )
+      .pipe( gulp.dest( `${ BUILD_PATH }/js` ) )
       .on( "end", () => {
-        const taskName = `'${gutil.colors.cyan( "scripts" )}' ('${gutil.colors.cyan( filename )}')`;
+        const taskName = `'${ gutil.colors.cyan( "scripts" ) }' ('${ gutil.colors.cyan( filename ) }')`;
         const taskTime = gutil.colors.magenta( showDuration( Date.now() - timer ) );
-        gutil.log( `Finished ${taskName} after ${taskTime}` );
+        gutil.log( `Finished ${ taskName } after ${ taskTime }` );
       } )
       .pipe( browserSync.stream() );
   };
@@ -210,12 +210,12 @@ function buildSass() {
     options.style = "compressed";
   }
 
-  return gulp.src( `${SOURCE_PATH}/sass/**/*.sass` )
+  return gulp.src( `${ SOURCE_PATH }/sass/**/*.sass` )
     .pipe( sourcemaps.init() )
     .pipe( sass( options ).on( "error", logError ) )
     .pipe( autoprefixer( "last 1 version", "> 1%", "ie 8", "ie 7" ) )
     .pipe( gulpif( !isProduction(), sourcemaps.write( "./" ) ) )
-    .pipe( gulp.dest( `${BUILD_PATH}/css` ) )
+    .pipe( gulp.dest( `${ BUILD_PATH }/css` ) )
     .pipe( filter( ["**/*.css"] ) )
     .pipe( browserSync.stream() );
 }
@@ -224,7 +224,7 @@ function buildSass() {
  * Generates pug.
  */
 function buildPug() {
-  return gulp.src( `${SOURCE_PATH}/*.pug` )
+  return gulp.src( `${ SOURCE_PATH }/*.pug` )
     .pipe(
       pug( {
         "pretty": isProduction(),
@@ -242,16 +242,16 @@ function buildPug() {
 function watchStatic() {
   STATIC_FILES.forEach( ( v ) => {
     let path;
-    if ( fs.existsSync( `${SOURCE_PATH}${v}` ) && fs.lstatSync( `${SOURCE_PATH}${v}` ).isDirectory() ) {
-      path = `${SOURCE_PATH}${v}`;
+    if ( fs.existsSync( `${ SOURCE_PATH }${ v }` ) && fs.lstatSync( `${ SOURCE_PATH }${ v }` ).isDirectory() ) {
+      path = `${ SOURCE_PATH }${ v }`;
       path += "/*.*";
     } else {
       let file = v;
-      if ( v[0] !== "/" ) {
-        file = `/${file}`;
+      if ( v[ 0 ] !== "/" ) {
+        file = `/${ file }`;
       }
 
-      path = `${SOURCE_PATH}${file}`;
+      path = `${ SOURCE_PATH }${ file }`;
     }
 
     STATIC_FILES_TO_WATCH.push( path );
@@ -278,8 +278,13 @@ function serve() {
       {
         route: "/build",
         dir: "./build"
+      },
+      {
+        route: "/server",
+        dir: "http://localhost:80/server"
       }
     ],
+    server: BUILD_PATH,
     open: OPEN_TAB,
     baseDir: "...",
     middleware: [historyApiFallback()]
@@ -288,17 +293,6 @@ function serve() {
   options.snippetOptions.rule.fn = function() {
     return "<link rel='stylesheet' href='./browser-sync-client-transition/browser-sync-client.min.css' /><script async src='./browser-sync-client-transition/browser-sync-client.min.js'></script>";
   };
-
-  let server = argv.proxy || false;
-  if ( server ) {
-    if ( typeof server === "boolean" ) {
-      server = "localhost";
-    }
-
-    options.proxy = { "target": server };
-  } else {
-    options.server = BUILD_PATH;
-  }
 
   browserSync( options );
 }
@@ -319,11 +313,11 @@ gulp.task( "watchStatic", () => {
 } );
 
 gulp.task( "watch", ["copyStatic", "sass", "pug", "watchStatic", "watchScripts"], () => {
-  watch( `${SOURCE_PATH}/sass/**/*.sass`, () => {
+  watch( `${ SOURCE_PATH }/sass/**/*.sass`, () => {
     gulp.start( "sass" );
   } );
 
-  watch( `${SOURCE_PATH}/*.pug`, () => {
+  watch( `${ SOURCE_PATH }/*.pug`, () => {
     gulp.start( "pug" );
   } );
 

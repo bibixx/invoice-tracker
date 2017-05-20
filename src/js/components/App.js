@@ -8,7 +8,8 @@ import { requestRecords } from "../actions/RecordsActions";
 import { requestSellers } from "../actions/SellersActions";
 
 import Header from "./Header";
-import Main from "./Main";
+import MainRecords from "./MainRecords";
+import MainSellers from "./MainSellers";
 import DetailView from "./DetailView";
 import FloatingAB from "./FloatingAB";
 
@@ -74,7 +75,11 @@ export default class App extends React.Component {
     return (
       <div>
         <Header appBar />
-        <Main records={ this.props.records } sellers={ this.props.sellers } fetched={ fetched } />
+        { ( type !== "AllSellers" ) ?
+          <MainRecords records={ this.props.records } sellers={ this.props.sellers } fetched={ fetched } />
+          :
+          <MainSellers sellers={ this.props.sellers } fetched={ this.props.sellersFetched } />
+        }
         <FloatingAB />
         { fetched ? content : null }
       </div>

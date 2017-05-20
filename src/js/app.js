@@ -18,6 +18,8 @@ const routes = (
     <Route path="product/:id" component={ Product } type="product" />
     <Route path="product/:id/edit" component={ AddProduct } type="EditProduct" />
 
+    <Route path="sellers" component={ RootPlaceholder } type="AllSellers" />
+
     <Route path="seller/:id" component={ Seller } type="seller" />
     <Route path="seller/:id/edit" component={ AddSeller } type="EditSeller" />
 

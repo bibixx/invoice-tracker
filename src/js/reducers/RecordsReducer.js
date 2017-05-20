@@ -17,6 +17,19 @@ export default function reducer(
 
       return newState;
     }
+
+    case "EDIT_RECORD": {
+      newState.data = newState.data.map( ( v ) => {
+        if ( v.id === action.payload.id ) {
+          const dateArr = action.payload.warrantyDate.split( "-" );
+          return Object.assign( {}, action.payload, { warrantyDate: new Date( dateArr[ 0 ], dateArr[ 1 ] - 1, dateArr[ 2 ] ) } );
+        }
+        return v;
+      } );
+
+      return newState;
+    }
+
     case "FETCHED_RECORDS": {
       const stateFetched = action.payload.map( ( v ) => {
         const dateArr = v.warrantyDate.split( "-" );

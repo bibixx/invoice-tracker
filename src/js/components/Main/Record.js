@@ -14,17 +14,17 @@ export default class Record extends React.Component {
 
     return (
       <div className="records-list__record-container">
-        <Link to={ `/product/${this.props.id}` } className="records-list__record">
+        <Link to={ `/product/${ this.props.id }` } className="records-list__record">
           <p className="records-list__record__detail records-list__record__detail--name">{ this.props.name }</p>
           <p className="records-list__record__detail records-list__record__detail--place">{ this.props.place.name }</p>
-          <p className={ `records-list__record__detail records-list__record__detail--warranty records-list__record__detail--warranty--${warrantyState}` }>
+          <p className={ `records-list__record__detail records-list__record__detail--warranty records-list__record__detail--warranty--${ warrantyState }` }>
             <span className="records-list__record__detail--warranty__date">
               <i className="material-icons">event</i>
               <span>{ formatDate( date ) }</span>
             </span>
             <span className="records-list__record__detail--warranty__left">
               <i className="material-icons">hourglass_empty</i>
-              <span>{ `${yearDeclination( this.props.warrantyLength )} (${yearDeclination( Math.abs( difference ) )})` }</span>
+              <span>{ `${ yearDeclination( this.props.warrantyLength ) } (${ yearDeclination( Math.abs( difference ) ) })` }</span>
             </span>
           </p>
         </Link>

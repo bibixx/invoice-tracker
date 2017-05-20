@@ -15,7 +15,7 @@ export default class Product extends React.Component {
     const attachements = [];
 
     for ( let i = 1; i < record.files.length; i++ ) {
-      attachements.push( <a key={ `attachement-${ record.id }-${ i - 1 }` } href={ record.files[ 0 ] + record.files[ i ] } target="_blank" rel="noopener noreferrer" className="detail-attachements__file">{ record.files[ i ].match( /\.(.+)$/ )[ 1 ].toUpperCase() }</a> );
+      attachements.push( <a key={ `attachement-${ record.id }-${ i }` } href={ record.files[ 0 ] + record.files[ i ] } target="_blank" rel="noopener noreferrer" className="detail-attachements__file" style={ { backgroundImage: `url(${ record.files[ 0 ] }${ record.files[ i ] })` } }>Image</a> );
     }
 
     const attachementsContainer = ( <div className="detail-attachements">{ attachements }</div> );

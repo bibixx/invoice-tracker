@@ -1,7 +1,4 @@
 <?php
-  // sleep( 10 );
-  header('Access-Control-Allow-Origin: *');
-
   include "utils.php";
   require_once("vendor/autoload.php");
 

@@ -9,9 +9,14 @@ export default class Header extends React.Component {
 
     if ( this.props.appBar ) {
       leftButton = (
-        <button className="header__button">
-          <i className="material-icons">menu</i>
-        </button>
+        <div>
+          <button className="header__button" onClick={ () => { browserHistory.push( "/" ); } }>
+            <i className="material-icons">person</i>
+          </button>
+          <button className="header__button" onClick={ () => { browserHistory.push( "/sellers" ); } }>
+            <i className="material-icons">receipt</i>
+          </button>
+        </div>
       );
       // rightButton = (
       //   <button className="header__button">
@@ -25,7 +30,7 @@ export default class Header extends React.Component {
         </button>
       );
       rightButton = (
-        <button className="header__button" onClick={ () => { browserHistory.push( `${this.props.path}/edit` ); } }>
+        <button className="header__button" onClick={ () => { browserHistory.push( `${ this.props.path }/edit` ); } }>
           <i className="material-icons">edit</i>
         </button>
       );
@@ -36,7 +41,7 @@ export default class Header extends React.Component {
     }
 
     return (
-      <header className={ `header${this.props.appBar ? " header--app-bar" : ""}` }>
+      <header className={ `header${ this.props.appBar ? " header--app-bar" : "" }` }>
         { leftButton }
         <span className="header__title">{ this.props.title }</span>
         { rightButton }

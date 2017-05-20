@@ -13,6 +13,18 @@ export default function reducer(
       newState.data.push( Object.assign( { id: Math.random().toString( 36 ).substring( 7 ) }, action.payload ) );
 
       return newState;
+
+    case "EDIT_SELLER": {
+      newState.data = newState.data.map( ( v ) => {
+        if ( v.id === action.payload.id ) {
+          return Object.assign( {}, action.payload );
+        }
+        return v;
+      } );
+
+      return newState;
+    }
+
     case "FETCHED_SELLERS": {
       const stateFetched = action.payload.map( v => Object.assign( {}, v ) );
 

@@ -4,9 +4,11 @@
   include "utils.php";
   require_once("vendor/autoload.php");
 
-  $hashids = new Hashids\Hashids("seller", 8);
+  $hashids = new Hashids\Hashids("record", 8);
+  $hashidsSeller = new Hashids\Hashids("seller", 8);
 
   $data = array(
+    "id" => $_POST[ "id" ],
     "name" => $_POST[ "name" ],
     "city" => $_POST[ "city" ],
     "street" => $_POST[ "street" ],
@@ -34,9 +36,10 @@
     die();
   }
 
-  $query = "INSERT INTO `sellers`(`name`, `nip`, `city`, `street`, `zip`, `seller`, `place`) VALUES (:name, :nip, :city, :street, :zip, :seller, :place)";
+  $query = "UPDATE `sellers` SET `name`=:name, `nip`=:nip, `city`=:city, `street`=:street, `zip`=:zip, `seller`=:seller, `place`=:place WHERE `id` = :id";
 
   $returned = execQuery($query, array(
+    ":id" => $hashidsSeller->decode($data["id"])[0],
     ":name" => $data["name"],
     ":nip" => $data["nip"],
     ":city" => $data["city"],
@@ -45,8 +48,6 @@
     ":seller" => ( $data["isSeller"] ) ? 1 : 0,
     ":place" => ( $data["isPlace"] ) ? 1 : 0,
   ), "id");
-
-  $data["id"] = $hashids->encode($returned);
 
   echo json_encode( $data );
 ?>

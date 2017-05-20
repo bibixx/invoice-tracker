@@ -3,7 +3,7 @@ import { browserHistory } from "react-router";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 
-import { addSeller } from "../../actions/SellersActions";
+import { addSeller, editSeller } from "../../actions/SellersActions";
 
 import Validator from "../../Validator";
 import Input from "./Form/Input";
@@ -48,7 +48,12 @@ export default class AddSeller extends React.Component {
       }
     }
 
-    this.props.dispatch( addSeller( formData ) );
+    if ( this.props.edit ) {
+      formData.append( "id", this.props.seller.id );
+      this.props.dispatch( editSeller( formData ) );
+    } else {
+      this.props.dispatch( addSeller( formData ) );
+    }
     this.sent = true;
     browserHistory.push( "/" );
   }
@@ -94,9 +99,11 @@ export default class AddSeller extends React.Component {
 AddSeller.propTypes = {
   dispatch: PropTypes.func,
   seller: PropTypes.object,
+  edit: PropTypes.bool,
 };
 
 AddSeller.defaultProps = {
   dispatch: () => {},
   seller: {},
+  edit: false,
 };

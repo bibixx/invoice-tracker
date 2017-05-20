@@ -51,7 +51,7 @@ export default class AddProduct extends React.Component {
             for ( let i = 0; i < input.files.length; i++ ) {
               const file = input.files[ i ];
 
-              formData.append( "files-" + i, file, file.name );
+              formData.append( `files-${ i }`, file, file.name );
             }
           }
           // no default

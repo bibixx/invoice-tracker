@@ -65,7 +65,7 @@ export default class App extends React.Component {
     } else if ( type === "EditSeller" ) {
       const seller = getById( this.props.params.id, this.props.sellers );
       if ( seller ) {
-        content = ( <DetailView title={ `Edytujesz ${ seller.name }` }>{ React.cloneElement( this.props.children, { key: segment, seller } ) }</DetailView> );
+        content = ( <DetailView title={ `Edytujesz ${ seller.name }` }>{ React.cloneElement( this.props.children, { key: segment, seller, edit: true } ) }</DetailView> );
       } else {
         console.error( "Invalid id!" );
       }

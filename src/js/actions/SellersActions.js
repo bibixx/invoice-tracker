@@ -6,6 +6,14 @@ export function addSeller( data ) {
   };
 }
 
+export function editSeller( data ) {
+  return function( dispatch ) {
+    fetch( "http://localhost/server/editSeller.php", { method: "POST", body: data } )
+      .then( response => response.json() )
+      .then( json => dispatch( { type: "EDIT_SELLER", payload: json } ) );
+  };
+}
+
 export function requestSellers() {
   return function( dispatch ) {
     return fetch( "http://localhost/server/getSellers.php" )

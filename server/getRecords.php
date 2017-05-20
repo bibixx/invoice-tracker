@@ -17,10 +17,8 @@
     $data = array();
     $data["id"] = $hashids->encode($value["id"]);
     $data["name"] = $value["product"];
-    // $data["place"] = $hashidsSeller->encode($value["place"]);
-    // $data["seller"] = $hashidsSeller->encode($value["seller"]);
-    $data["place"] = "a";
-    $data["seller"] = "a";
+    $data["place"] = $hashidsSeller->encode($value["place"]);
+    $data["seller"] = $hashidsSeller->encode($value["seller"]);
     $data["warrantyDate"] = $value["date"];
     $data["warrantyLength"] = (float)$value["warranty"];
     $data["notes"] = $value["notes"];

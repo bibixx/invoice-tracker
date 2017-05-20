@@ -6,7 +6,6 @@ import { getById } from "../utils/RecordUtils";
 
 export default class Main extends React.Component {
   render() {
-    console.log( this.props );
     if ( this.props.fetched ) {
       const sellers = this.props.sellers;
       const records = this.props.records
@@ -15,7 +14,7 @@ export default class Main extends React.Component {
           const bDate = b.warrantyDate;
           return aDate > bDate ? -1 : aDate < bDate ? 1 : 0;
         } )
-        .map( record => <Record key={ record.id } id={ record.id } name={ record.name } place={ getById( record.place, sellers ) } warrantyDate={ record.warrantyDate } warrantyLength={ record.warrantyLength } /> );
+        .map( ( record ) => { return getById( record.place, sellers ) ? <Record key={ record.id } id={ record.id } name={ record.name } place={ getById( record.place, sellers ) } warrantyDate={ record.warrantyDate } warrantyLength={ record.warrantyLength } /> : null; } );
 
       return (
         <main className="records-list">

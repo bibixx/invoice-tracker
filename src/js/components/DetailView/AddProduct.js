@@ -28,7 +28,7 @@ export default class AddProduct extends React.Component {
 
   onSubmit() {
     const inputs = this.inputs;
-    const dataToSubmit = {};
+    const formData = new FormData();
 
     for ( const prop in inputs ) {
       if ( inputs.hasOwnProperty( prop ) ) {
@@ -37,26 +37,35 @@ export default class AddProduct extends React.Component {
         switch ( prop ) {
           case "name":
           case "notes":
-            dataToSubmit[ prop ] = input.value;
+          case "warrantyDate":
+            formData.append( prop, input.value );
             break;
           case "warrantyLength":
-            dataToSubmit[ prop ] = input.options[ input.selectedIndex ].value * 1;
+            formData.append( prop, input.options[ input.selectedIndex ].value * 1 );
             break;
           case "place":
           case "seller":
-            dataToSubmit[ prop ] = input.options[ input.selectedIndex ].id;
+            formData.append( prop, input.options[ input.selectedIndex ].id );
             break;
-          case "warrantyDate": {
-            const dateArr = ( input.value.split( "-" ) );
-            dataToSubmit[ prop ] = new Date( dateArr[ 0 ], dateArr[ 1 ] - 1, dateArr[ 2 ] );
-            break;
+          case "attachements": {
+            for ( let i = 0; i < input.files.length; i++ ) {
+              const file = input.files[ i ];
+
+              formData.append( "files", file, file.name );
+            }
           }
           // no default
         }
       }
     }
 
-    this.props.dispatch( addRecord( dataToSubmit ) );
+    console.group( "FormData details" );
+    for ( const pair of formData.entries() ) {
+      console.log( `${pair[ 0 ]}: ${pair[ 1 ]}` );
+    }
+    console.groupEnd();
+
+    this.props.dispatch( addRecord( formData ) );
     this.sent = true;
     browserHistory.push( "/" );
   }
@@ -80,7 +89,7 @@ export default class AddProduct extends React.Component {
           <Select ref={ this.addElement } id="place" options={ placesArray } value={ this.props.edit ? getById( record.place, this.props.sellers ).name : null } required>Miejsce zakupu</Select>
           <Select ref={ this.addElement } id="seller" options={ sellersArray } value={ this.props.edit ? getById( record.seller, this.props.sellers ).name : null } required>Dane sprzedawcy</Select>
           <Input ref={ this.addElement } id="warrantyDate" type="date" required validator={ this.Validator } value={ this.props.edit ? formatDateForHTML( record.warrantyDate ) : null } pattern="\d{4}-\d{2}-\d{2}">Data zakupu</Input>
-          <Select ref={ this.addElement } id="warrantyLength" options={ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] } value={ this.props.edit ? record.warrantyLength : null } required>Okres gwarancji</Select>
+          <Select ref={ this.addElement } id="warrantyLength" options={ [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] } value={ this.props.edit ? record.warrantyLength : 2 } required>Okres gwarancji</Select>
           <Input ref={ this.addElement } id="notes" type="textarea" validator={ this.Validator } value={ this.props.edit ? record.notes : null }>Notatki</Input>
           <Input ref={ this.addElement } id="attachements" type="file" multiple validator={ this.Validator }>Załączniki</Input>
           <p>* – pola wymagane</p>

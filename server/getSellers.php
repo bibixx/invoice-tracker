@@ -12,12 +12,12 @@
   $query = "SELECT * FROM `sellers` WHERE 1";
   $returned = execQuery($query);
 
-  $a = [ "", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "w", "x", "y", "z", "aa", "ab", "ac", "ad", "af", "ag", "ah", "ai", "aj", "ak", "al", "am", "an", "ao", "ap", "aq" ];
+  // $a = [ "", "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "w", "x", "y", "z", "aa", "ab", "ac", "ad", "af", "ag", "ah", "ai", "aj", "ak", "al", "am", "an", "ao", "ap", "aq" ];
 
   foreach ($returned as $key => $value) {
     $data = array();
     $data["id"] = $hashids->encode( $value[ "id" ] );
-    $data["id"] = $a[ $value[ "id" ] ];
+    // $data["id"] = $a[ $value[ "id" ] ];
     $data["name"] = $value["name"];
     $data["nip"] = $value["nip"];
     $data["city"] = $value["city"];

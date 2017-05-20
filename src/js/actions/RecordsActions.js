@@ -1,7 +1,8 @@
 export function addRecord( data ) {
-  return {
-    type: "ADD_RECORD",
-    payload: data,
+  return function( dispatch ) {
+    fetch( "http://localhost/server/addRecord.php", { method: "POST", body: data } )
+      .then( response => response.json() )
+      .then( json => dispatch( { type: "ADD_RECORD", payload: json } ) );
   };
 }
 

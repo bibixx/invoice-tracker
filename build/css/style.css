@@ -404,6 +404,9 @@ template {
 body {
   background: #f0f0f0; }
 
+#app > div {
+  position: relative; }
+
 * {
   font-family: "Roboto"; }
 
@@ -464,7 +467,7 @@ label {
     line-height: 56px; }
 
 .records-list {
-  margin-top: 56px;
+  padding-top: 56px;
   background: #fff; }
   .records-list__record-container {
     display: flex;

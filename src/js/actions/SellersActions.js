@@ -1,7 +1,8 @@
 export function addSeller( data ) {
-  return {
-    type: "ADD_SELLER",
-    payload: data,
+  return function( dispatch ) {
+    fetch( "http://localhost/server/addSeller.php", { method: "POST", body: data } )
+      .then( response => response.json() )
+      .then( json => dispatch( { type: "ADD_SELLER", payload: json } ) );
   };
 }
 

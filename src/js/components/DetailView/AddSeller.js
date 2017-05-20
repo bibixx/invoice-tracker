@@ -25,7 +25,7 @@ export default class AddSeller extends React.Component {
 
   onSubmit() {
     const inputs = this.inputs;
-    const dataToSubmit = {};
+    const formData = new FormData();
 
     for ( const prop in inputs ) {
       if ( inputs.hasOwnProperty( prop ) ) {
@@ -37,18 +37,18 @@ export default class AddSeller extends React.Component {
           case "city":
           case "street":
           case "nip":
-            dataToSubmit[ prop ] = input.value;
+            formData.append( prop, input.value );
             break;
           case "isSeller":
           case "isPlace":
-            dataToSubmit[ prop ] = input.checked;
+            formData.append( prop, input.checked );
             break;
           // no default
         }
       }
     }
 
-    this.props.dispatch( addSeller( dataToSubmit ) );
+    this.props.dispatch( addSeller( formData ) );
     this.sent = true;
     browserHistory.push( "/" );
   }

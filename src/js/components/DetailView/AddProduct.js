@@ -51,7 +51,7 @@ export default class AddProduct extends React.Component {
             for ( let i = 0; i < input.files.length; i++ ) {
               const file = input.files[ i ];
 
-              formData.append( "files", file, file.name );
+              formData.append( "files-" + i, file, file.name );
             }
           }
           // no default
@@ -61,7 +61,7 @@ export default class AddProduct extends React.Component {
 
     console.group( "FormData details" );
     for ( const pair of formData.entries() ) {
-      console.log( `${pair[ 0 ]}: ${pair[ 1 ]}` );
+      console.log( `${ pair[ 0 ] }: ${ pair[ 1 ] }` );
     }
     console.groupEnd();
 

@@ -30,3 +30,27 @@
 
 .detail-label
   font-weight: 700
+
+.detail-attachements
+  margin: 0 -8px
+
+  &__file
+    display: inline-flex
+    align-items: center
+    justify-content: center
+    width: 136px
+    height: 96px
+    margin: 8px
+    transition: background-color .2s ease-in-out
+    border-radius: 2px
+    outline: 0
+    background: $attachement-background
+    color: $attachement-color
+    font-size: 1.8em
+    box-shadow: $card-box-shadow
+
+    &, &:hover
+      text-decoration: none
+
+    &:hover, &:focus
+      background: $attachement-background-focus

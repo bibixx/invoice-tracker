@@ -622,6 +622,8 @@ label {
       opacity: 1; }
   .material-checkbox__input:disabled ~ .material-checkbox__square {
     color: #7d7d7d; }
+  .material-checkbox__input:disabled ~ .material-checkbox__label {
+    cursor: default; }
 
 .detail-view__content p {
   margin-top: 0;
@@ -650,6 +652,27 @@ label {
 
 .detail-label {
   font-weight: 700; }
+
+.detail-attachements {
+  margin: 0 -8px; }
+  .detail-attachements__file {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 136px;
+    height: 96px;
+    margin: 8px;
+    transition: background-color .2s ease-in-out;
+    border-radius: 2px;
+    outline: 0;
+    background: #e0e0e0;
+    color: #616161;
+    font-size: 1.8em;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 2px 1px -1px rgba(0, 0, 0, 0.12); }
+    .detail-attachements__file, .detail-attachements__file:hover {
+      text-decoration: none; }
+    .detail-attachements__file:hover, .detail-attachements__file:focus {
+      background: #b3b3b3; }
 
 .fab-main {
   display: block;

@@ -5,7 +5,7 @@
   include "utils.php";
   require_once("vendor/autoload.php");
 
-  $domain = (isset($_SERVER["HTTPS"]) ? "https" : "http") . "://$_SERVER[HTTP_HOST]:$_SERVER[SERVER_PORT]/";
+  $domain = (isset($_SERVER["HTTPS"]) ? "https" : "http") . "://$_SERVER[HTTP_HOST]:$_SERVER[SERVER_PORT]/server/";
   $hashids = new Hashids\Hashids("record", 8);
   $hashidsSeller = new Hashids\Hashids("seller", 8);
   $arr = array();

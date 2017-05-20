@@ -18,7 +18,7 @@
   );
 
   $files = array();
-  $domain = (isset($_SERVER["HTTPS"]) ? "https" : "http") . "://$_SERVER[HTTP_HOST]:$_SERVER[SERVER_PORT]/";
+  $domain = (isset($_SERVER["HTTPS"]) ? "https" : "http") . "://$_SERVER[HTTP_HOST]:$_SERVER[SERVER_PORT]/server/";
 
   array_push($files, $domain);
   foreach ($_FILES as $key => $value) {

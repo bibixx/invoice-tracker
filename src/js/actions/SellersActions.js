@@ -16,8 +16,19 @@ export function editSeller( data ) {
 
 export function requestSellers() {
   return function( dispatch ) {
-    return fetch( "http://localhost:80/server/getSellers.php" )
-      .then( response => response.json() )
-      .then( json => dispatch( { type: "FETCHED_SELLERS", payload: json } ) );
+    const json = [{
+      "id": "0",
+      "name": "Dupa sp. z o.o.",
+      "nip": "0000000000",
+      "city": "Dupowo",
+      "street": "ul. Dupna 2",
+      "zip": "69-666",
+      "isSeller": true,
+      "isPlace": true,
+    }];
+    dispatch( { type: "FETCHED_SELLERS", payload: json } );
+    // return fetch( "http://localhost:80/server/getSellers.php" )
+    //   .then( response => response.json() )
+    //   .then( json => dispatch( { type: "FETCHED_SELLERS", payload: json } ) );
   };
 }

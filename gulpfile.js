@@ -264,17 +264,7 @@ function watchStatic() {
  */
 function serve() {
   const options = {
-    snippetOptions: {
-      rule: {
-        match: /<\/body>/i,
-        fn: () => { return "<link rel='stylesheet' href='./browser-sync-client-transition/browser-sync-client.min.css' /><script async src='./browser-sync-client-transition/browser-sync-client.min.js'></script>"; },
-      },
-    },
     serveStatic: [
-      {
-        route: "/browser-sync-client-transition",
-        dir: "./node_modules/browser-sync-client-transition"
-      },
       {
         route: "/build",
         dir: "./build"
@@ -288,10 +278,6 @@ function serve() {
     open: OPEN_TAB,
     baseDir: "...",
     middleware: [historyApiFallback()]
-  };
-
-  options.snippetOptions.rule.fn = function() {
-    return "<link rel='stylesheet' href='./browser-sync-client-transition/browser-sync-client.min.css' /><script async src='./browser-sync-client-transition/browser-sync-client.min.js'></script>";
   };
 
   browserSync( options );

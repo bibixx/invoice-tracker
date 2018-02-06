@@ -16,8 +16,20 @@ export function editRecord( data ) {
 
 export function requestRecords() {
   return function( dispatch ) {
-    return fetch( "http://localhost:80/server/getRecords.php" )
-      .then( response => response.json() )
-      .then( json => dispatch( { type: "FETCHED_RECORDS", payload: json } ) );
+    const json = [{
+      id: "0",
+      name: "Dupa",
+      place: "0",
+      seller: "0",
+      warrantyDate: "2017-01-01",
+      warrantyLength: 2,
+      notes: "",
+      files: ["https://picsum.photos/", "200/200/"],
+    }];
+    dispatch( { type: "FETCHED_RECORDS", payload: json } );
+
+    // return fetch( "http://localhost:80/server/getRecords.php" )
+    //   .then( response => response.json() )
+      // .then( json => dispatch( { type: "FETCHED_RECORDS", payload: json } ) );
   };
 }

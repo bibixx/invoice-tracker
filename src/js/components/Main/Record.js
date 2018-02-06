@@ -2,7 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Link } from "react-router";
 
-import { formatDate } from "../../utils/DateUtils";
+import { formatDate } from "../../utils/dateUtils";
 import { yearDeclination } from "../../utils/LangUtils";
 
 export default class Record extends React.Component {

@@ -6,6 +6,8 @@ const common = require("./common");
 
 const { config, iP } = common;
 
+const path = require("path");
+
 module.exports = {
   entry: {
     ...config.entry,
@@ -18,7 +20,14 @@ module.exports = {
   },
 
   output: config.output,
-  resolve: config.resolve,
+  // resolve: config.resolve,
+
+  resolve: {
+    modules: [
+      path.resolve("./src"),
+      path.resolve("./node_modules"),
+    ],
+  },
 
   devServer: {
     hot: true,

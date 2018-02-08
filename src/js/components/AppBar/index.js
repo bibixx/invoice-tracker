@@ -25,7 +25,8 @@ const styles = {
     marginRight: 20,
   },
   drawerPaper: {
-    width: 240,
+    width: "calc(100% - 80px)",
+    maxWidth: 320,
   },
   avatar: {
     backgroundColor: blue[500],
@@ -56,7 +57,7 @@ class TopBar extends React.Component {
     const { classes } = this.props;
     return (
       <div className={classes.root}>
-        <AppBar position="static">
+        <AppBar>
           <Toolbar>
             <IconButton
               className={classes.menuButton}
@@ -108,7 +109,7 @@ class TopBar extends React.Component {
             tabIndex={0}
             role="button"
           >
-            {MenuItems}
+            {MenuItems(this.toggleDrawer)}
           </div>
         </Drawer>
       </div>

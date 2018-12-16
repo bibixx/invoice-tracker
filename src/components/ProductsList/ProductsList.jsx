@@ -1,31 +1,55 @@
-import React from 'react';
+import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
+import { listProductPropTypes } from 'src/propTypes/productPropTypes';
+
+import { getProducts } from 'src/actions/products';
+
 import { withStyles } from '@material-ui/core/styles';
-import Button from '@material-ui/core/Button';
+import List from '@material-ui/core/List';
+import ListItem from '@material-ui/core/ListItem';
+import ListItemText from '@material-ui/core/ListItemText';
 
-import styles from './styles';
+import Page from 'src/components/shared/Page/Page';
 
-const ProductsList = ({ n, dispatch, classes }) => (
-  <div className={classes.layout}>
-    <span>{n}</span>
-    <Button
-      variant="contained"
-      color="primary"
-      onClick={() => { dispatch({ type: 'INCREMENT_ASYNC' }); }}
-    >
-  TEST
-    </Button>
-  </div>
-);
+import styles from './ProductsList.styles';
 
-ProductsList.propTypes = {
-  n: PropTypes.number.isRequired,
-  dispatch: PropTypes.func.isRequired,
-  classes: PropTypes.shape({}).isRequired,
-};
+class ProductsList extends Component {
+  static propTypes = {
+    dispatch: PropTypes.func.isRequired,
+    classes: PropTypes.shape({}).isRequired,
+    products: PropTypes.arrayOf(listProductPropTypes).isRequired,
+  }
 
-const mapStateToProps = ({ counter }) => ({ n: counter });
+  componentDidMount() {
+    const { dispatch } = this.props;
+
+    dispatch(getProducts(0));
+  }
+
+  render() {
+    const { products, classes } = this.props;
+
+    return (
+      <Page>
+        <List>
+          {products.map(product => (
+            <ListItem button alignItems="flex-start" key={product.id} className={classes.listItem}>
+              <ListItemText
+                primary={product.name}
+                secondary={" — I'll be in your neighborhood doing errands this…"}
+              />
+            </ListItem>
+          ))}
+        </List>
+      </Page>
+    );
+  }
+}
+
+const mapStateToProps = ({
+  products: { products, productsLoaded, numberOfPages },
+}) => ({ products, productsLoaded, numberOfPages });
 
 export default connect(mapStateToProps)(withStyles(styles)(ProductsList));

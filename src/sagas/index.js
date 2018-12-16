@@ -1,7 +1,9 @@
 import { all } from 'redux-saga/effects';
 
-import counterSagas from './counter';
+import productsSaga from './products';
 
 export default function* () {
-  yield all([counterSagas()]);
+  yield all([
+    productsSaga(),
+  ]);
 }

@@ -1,5 +1,5 @@
 export default theme => ({
-  layout: {
+  root: {
     width: 'auto',
     marginLeft: theme.spacing.unit * 3,
     marginRight: theme.spacing.unit * 3,

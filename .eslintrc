@@ -2,7 +2,8 @@
   "env": {
     "browser": true
   },
-  "extends": "airbnb",
+  "parser": "babel-eslint",
+  "extends": ["airbnb"],
   "settings": {
     "import/resolver": {
       "node": {

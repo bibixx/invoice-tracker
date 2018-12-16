@@ -2,5 +2,12 @@
   "env": {
     "browser": true
   },
-  "extends": "airbnb"
+  "extends": "airbnb",
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["."]
+      }
+    }
+  }
 }

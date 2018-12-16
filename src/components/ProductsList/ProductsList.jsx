@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 
 import { listProductPropTypes } from 'src/propTypes/productPropTypes';
 
-import { getProducts } from 'src/actions/products';
+import { getProducts as getProductsAction } from 'src/actions/products';
 
 import { withStyles } from '@material-ui/core/styles';
 import List from '@material-ui/core/List';
@@ -17,15 +17,15 @@ import styles from './ProductsList.styles';
 
 class ProductsList extends Component {
   static propTypes = {
-    dispatch: PropTypes.func.isRequired,
+    getProducts: PropTypes.func.isRequired,
     classes: PropTypes.shape({}).isRequired,
     products: PropTypes.arrayOf(listProductPropTypes).isRequired,
   }
 
   componentDidMount() {
-    const { dispatch } = this.props;
+    const { getProducts } = this.props;
 
-    dispatch(getProducts(0));
+    getProducts(0);
   }
 
   render() {
@@ -52,4 +52,8 @@ const mapStateToProps = ({
   products: { products, productsLoaded, numberOfPages },
 }) => ({ products, productsLoaded, numberOfPages });
 
-export default connect(mapStateToProps)(withStyles(styles)(ProductsList));
+const mapDispatchToProps = dispatch => ({
+  getProducts: page => dispatch(getProductsAction(page)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(ProductsList));

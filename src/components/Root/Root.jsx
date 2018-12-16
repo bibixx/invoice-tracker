@@ -1,22 +1,30 @@
 import React from 'react';
-import { MuiThemeProvider } from '@material-ui/core/styles';
 import { Provider } from 'react-redux';
-import CssBaseline from '@material-ui/core/CssBaseline';
 
+import {
+  BrowserRouter as Router, Switch, Route, Redirect,
+} from 'react-router-dom';
+
+import URLS from 'src/constants/urls';
 import store from 'src/store';
-import theme from 'src/styles/theme';
+
+import Theme from 'src/components/Theme/Theme';
 
 import ProductsList from 'src/components/ProductsList/ProductsList';
+import CompaniesList from 'src/components/CompaniesList/CompaniesList';
 
 const App = () => (
-  <>
-    <CssBaseline />
-    <Provider store={store}>
-      <MuiThemeProvider theme={theme}>
-        <ProductsList />
-      </MuiThemeProvider>
-    </Provider>
-  </>
+  <Provider store={store}>
+    <Theme>
+      <Router>
+        <Switch>
+          <Route exact path={URLS.products()} component={ProductsList} />
+          <Route exact path={URLS.companies()} component={CompaniesList} />
+          <Redirect to={URLS.products()} />
+        </Switch>
+      </Router>
+    </Theme>
+  </Provider>
 );
 
 export default App;

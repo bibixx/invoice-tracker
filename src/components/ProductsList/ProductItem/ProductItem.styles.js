@@ -1,4 +1,13 @@
 export default () => ({
+  card: {
+    height: '100%',
+    transition: '0.2s ease-in-out',
+    transitionProperty: 'box-shadow, transform',
+    transform: 'translateY(0)',
+  },
+  hover: {
+    transform: 'translateY(-2%)',
+  },
   cardContent: {
     '&:last-child': {
       paddingBottom: 16,
@@ -7,6 +16,6 @@ export default () => ({
   cardAction: {
     display: 'block',
     textAlign: 'initial',
-    width: '100%',
+    height: '100%',
   },
 });

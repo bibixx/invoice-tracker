@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Component } from 'react';
+import cn from 'classnames';
 import PropTypes from 'prop-types';
 import { listProductPropTypes } from 'src/propTypes/productPropTypes';
 import { withStyles } from '@material-ui/core/styles';
@@ -17,31 +18,62 @@ import ProductItemChip from './ProductItemChip/ProductItemChip';
 
 import styles from './ProductItem.styles';
 
-const ProductItem = ({ product, classes }) => (
-  <Grid item xs={4}>
-    <Card className={classes.card}>
-      <ButtonBase
-        className={classes.cardAction}
-        component={Link}
-        to={URLS.productById(product.id)}
-      >
-        <CardContent classes={{ root: classes.cardContent }}>
-          <Typography variant="h5" component="h2">
-            {product.name}
-          </Typography>
-          <ProductItemChip product={product} />
-          <Typography color="textSecondary">
-            {product.placeOfPurchase.name}
-          </Typography>
-        </CardContent>
-      </ButtonBase>
-    </Card>
-  </Grid>
-);
+class ProductItem extends Component {
+  static propTypes = {
+    classes: PropTypes.shape({}).isRequired,
+    product: listProductPropTypes.isRequired,
+  }
 
-ProductItem.propTypes = {
-  classes: PropTypes.shape({}).isRequired,
-  product: listProductPropTypes.isRequired,
-};
+  state = {
+    hover: false,
+  }
+
+  onHover = () => {
+    this.setState({
+      hover: true,
+    });
+  }
+
+  onBlur = () => {
+    this.setState({
+      hover: false,
+    });
+  }
+
+  render() {
+    const { product, classes } = this.props;
+    const { onHover, onBlur } = this;
+    const { hover } = this.state;
+
+    return (
+      <Grid item xs={12} sm={4} md={3}>
+        <Card
+          className={cn(classes.card, { [classes.hover]: hover })}
+          elevation={hover ? 15 : 2}
+          onMouseEnter={onHover}
+          onMouseLeave={onBlur}
+          onFocus={onHover}
+          onBlur={onBlur}
+        >
+          <ButtonBase
+            className={classes.cardAction}
+            component={Link}
+            to={URLS.productById(product.id)}
+          >
+            <CardContent classes={{ root: classes.cardContent }}>
+              <Typography variant="h5" component="h2">
+                {product.name}
+              </Typography>
+              <ProductItemChip product={product} />
+              <Typography color="textSecondary">
+                {product.placeOfPurchase.name}
+              </Typography>
+            </CardContent>
+          </ButtonBase>
+        </Card>
+      </Grid>
+    );
+  }
+}
 
 export default withStyles(styles)(ProductItem);

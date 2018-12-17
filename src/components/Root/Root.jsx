@@ -12,6 +12,7 @@ import Theme from 'src/components/Theme/Theme';
 
 import ProductsList from 'src/components/ProductsList/ProductsList';
 import CompaniesList from 'src/components/CompaniesList/CompaniesList';
+import ProductDetails from 'src/components/ProductDetails/ProductDetails';
 
 const App = () => (
   <Provider store={store}>
@@ -19,6 +20,7 @@ const App = () => (
       <Router>
         <Switch>
           <Route exact path={URLS.products()} component={ProductsList} />
+          <Route exact path={URLS.productById(':id')} component={ProductDetails} />
           <Route exact path={URLS.companies()} component={CompaniesList} />
           <Redirect to={URLS.products()} />
         </Switch>

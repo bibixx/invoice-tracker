@@ -2,11 +2,12 @@ export default theme => ({
   root: {
     paddingTop: theme.mixins.toolbar.minHeight + theme.spacing.unit * 2,
     [`${theme.breakpoints.up('xs')} and (orientation: landscape)`]: {
-      paddingTop: theme.mixins.toolbar[`${theme.breakpoints.up('xs')} and (orientation: landscape)`].minHeight + theme.spacing.unit * 2,
+      paddingTop: theme.mixins.toolbar[`${theme.breakpoints.up('xs')} and (orientation: landscape)`].minHeight + theme.spacing.unit * 3,
     },
     [theme.breakpoints.up('sm')]: {
-      paddingTop: theme.mixins.toolbar[theme.breakpoints.up('sm')].minHeight + theme.spacing.unit * 2,
+      paddingTop: theme.mixins.toolbar[theme.breakpoints.up('sm')].minHeight + theme.spacing.unit * 3,
     },
+    paddingBottom: theme.spacing.unit * 5,
   },
   layout: {
     width: 'auto',

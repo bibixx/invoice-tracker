@@ -1,4 +1,4 @@
-import faker from 'faker/locale/pl';
+import faker from 'faker';
 
 const stringToInt = s => parseInt(s.toLowerCase().replace(/[^a-z0-9]/g, '32'), 36);
 
@@ -18,9 +18,9 @@ export const fakeCompanies = new Array(80).fill({}).map(generateFakeCompanies);
 
 const generateFakeProduct = () => ({
   id: faker.random.uuid(),
-  timestamp: (faker.date.past()).getTime(),
+  timestamp: (faker.date.past(5)).getTime(),
   name: faker.commerce.productName(),
-  warrantyLength: faker.random.number({ min: 1, max: 10 }),
+  warrantyLength: faker.random.number({ min: 1, max: 3 }),
   placeOfPurchase: faker.random.arrayElement(
     fakeCompanies
       .filter(({ isPlaceOfPurchase }) => isPlaceOfPurchase),

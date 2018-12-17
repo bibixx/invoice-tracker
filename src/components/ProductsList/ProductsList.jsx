@@ -6,19 +6,15 @@ import { listProductPropTypes } from 'src/propTypes/productPropTypes';
 
 import { getProducts as getProductsAction } from 'src/actions/products';
 
-import { withStyles } from '@material-ui/core/styles';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+import Grid from '@material-ui/core/Grid';
 
 import Page from 'src/components/shared/Page/Page';
 
-import styles from './ProductsList.styles';
+import ProductItem from './ProductItem/ProductItem';
 
 class ProductsList extends Component {
   static propTypes = {
     getProducts: PropTypes.func.isRequired,
-    classes: PropTypes.shape({}).isRequired,
     products: PropTypes.arrayOf(listProductPropTypes).isRequired,
   }
 
@@ -29,20 +25,15 @@ class ProductsList extends Component {
   }
 
   render() {
-    const { products, classes } = this.props;
+    const { products } = this.props;
 
     return (
       <Page>
-        <List>
+        <Grid container spacing={24}>
           {products.map(product => (
-            <ListItem button alignItems="flex-start" key={product.id} className={classes.listItem}>
-              <ListItemText
-                primary={product.name}
-                secondary={" — I'll be in your neighborhood doing errands this…"}
-              />
-            </ListItem>
+            <ProductItem product={product} key={product.id} />
           ))}
-        </List>
+        </Grid>
       </Page>
     );
   }
@@ -56,4 +47,4 @@ const mapDispatchToProps = dispatch => ({
   getProducts: page => dispatch(getProductsAction(page)),
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(withStyles(styles)(ProductsList));
+export default connect(mapStateToProps, mapDispatchToProps)(ProductsList);

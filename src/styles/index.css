@@ -2,7 +2,3 @@ html, body {
   height: 100%;
   width: 100%;
 }
-
-body, body * {
-  transition: all .2s ease-in-out;
-}

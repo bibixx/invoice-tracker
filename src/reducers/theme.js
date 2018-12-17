@@ -1,4 +1,5 @@
-const defaultState = 'light';
+// const defaultState = 'light';
+const defaultState = 'dark';
 
 const theme = (state = defaultState, action) => {
   switch (action.type) {

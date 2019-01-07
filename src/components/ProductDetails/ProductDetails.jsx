@@ -16,12 +16,11 @@ import Typography from '@material-ui/core/Typography';
 
 import { getProductById as getProductByIdAction } from 'src/actions/products';
 
-import addYears from 'date-fns/add_years';
-import distanceInWordsStrict from 'date-fns/distance_in_words_strict';
 import format from 'date-fns/format';
 
 import CompanyPreview from './CompanyPreview/CompanyPreview';
 import Attachment from './Attachment/Attachment';
+import Warranty from './Warranty/Warranty';
 
 import styles from './ProductDetails.styles';
 
@@ -73,15 +72,7 @@ class ProductDetails extends Component {
             <Typography variant="h5" gutterBottom>
               Warranty
             </Typography>
-            <Typography variant="body1" gutterBottom>
-              {distanceInWordsStrict(
-                new Date(),
-                addYears(new Date(product.timestamp), product.warrantyLength),
-                { addSuffix: true },
-              )}
-              {' '}
-              {`(${distanceInWordsStrict(new Date(), addYears(new Date(), product.warrantyLength))})`}
-            </Typography>
+            <Warranty product={product} />
           </section>
 
           <section className={classes.section}>

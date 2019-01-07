@@ -1,27 +1,29 @@
 import React, { Component } from 'react';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
-import { listProductPropTypes } from 'src/propTypes/productPropTypes';
+import { fullCompanyPropTypes } from 'src/propTypes/companyPropTypes';
 import { withStyles } from '@material-ui/core/styles';
 
 import { Link } from 'react-router-dom';
 
 import Card from '@material-ui/core/Card';
 import Grid from '@material-ui/core/Grid';
+import Tooltip from '@material-ui/core/Tooltip';
 import CardContent from '@material-ui/core/CardContent';
 import Typography from '@material-ui/core/Typography';
 import ButtonBase from '@material-ui/core/ButtonBase';
+import Avatar from '@material-ui/core/Avatar';
+import AttachMoney from '@material-ui/icons/AttachMoney';
+import AccountBalance from '@material-ui/icons/AccountBalance';
 
 import URLS from 'src/constants/urls';
 
-import ProductItemChip from './ProductItemChip/ProductItemChip';
+import styles from './CompanyItem.styles';
 
-import styles from './ProductItem.styles';
-
-class ProductItem extends Component {
+class CompanyItem extends Component {
   static propTypes = {
     classes: PropTypes.shape({}).isRequired,
-    product: listProductPropTypes.isRequired,
+    company: fullCompanyPropTypes.isRequired,
   }
 
   state = {
@@ -41,7 +43,7 @@ class ProductItem extends Component {
   }
 
   render() {
-    const { product, classes } = this.props;
+    const { company, classes } = this.props;
     const { onHover, onBlur } = this;
     const { hover } = this.state;
 
@@ -58,15 +60,30 @@ class ProductItem extends Component {
           <ButtonBase
             className={classes.cardAction}
             component={Link}
-            to={URLS.productById(product.id)}
+            to={URLS.companyById(company.id)}
           >
             <CardContent classes={{ root: classes.cardContent }}>
               <Typography variant="h5" component="h2" className={classes.text}>
-                {product.name}
+                {company.name}
               </Typography>
-              <ProductItemChip product={product} />
+
+              {company.isPlaceOfPurchase && (
+                <Tooltip title="Place of purchase">
+                  <Avatar className={cn(classes.avatar)}>
+                    <AccountBalance className={classes.avatarIcon} />
+                  </Avatar>
+                </Tooltip>
+              )}
+              {company.isSeller && (
+                <Tooltip title="Seller">
+                  <Avatar className={cn(classes.avatar)}>
+                    <AttachMoney className={classes.avatarIcon} />
+                  </Avatar>
+                </Tooltip>
+              )}
+
               <Typography color="textSecondary" className={classes.text}>
-                {product.placeOfPurchase.name}
+                {`${company.streetAddress}, ${company.city}`}
               </Typography>
             </CardContent>
           </ButtonBase>
@@ -76,4 +93,4 @@ class ProductItem extends Component {
   }
 }
 
-export default withStyles(styles)(ProductItem);
+export default withStyles(styles)(CompanyItem);

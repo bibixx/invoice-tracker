@@ -1,24 +1,19 @@
 export default theme => ({
   cardContent: {
     '&:last-child': {
-      paddingBottom: 16,
+      paddingBottom: theme.spacing.unit * 2,
     },
   },
-  chip: {
-    height: 24,
-    borderRadius: 12,
-    margin: [[8, 0]],
-  },
   avatar: {
-    height: 24,
-    width: 24,
+    height: theme.spacing.unit * 3,
+    width: theme.spacing.unit * 3,
   },
   avatarIcon: {
-    height: 14,
-    width: 14,
+    height: theme.spacing.unit * 1.75,
+    width: theme.spacing.unit * 1.75,
   },
   pos: {
-    marginBottom: 8,
+    marginBottom: theme.spacing.unit,
   },
   listItem: {
     background: theme.palette.background.paper,

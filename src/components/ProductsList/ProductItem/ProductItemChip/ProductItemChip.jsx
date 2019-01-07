@@ -9,9 +9,10 @@ import addYears from 'date-fns/add_years';
 import differenceInMonths from 'date-fns/difference_in_months';
 
 import Avatar from '@material-ui/core/Avatar';
-import Chip from '@material-ui/core/Chip';
 import EventAvailable from '@material-ui/icons/EventAvailable';
 import EventBusy from '@material-ui/icons/EventBusy';
+
+import ShortChip from 'src/components/shared/ShortChip/ShortChip';
 
 import styles from './ProductItemChip.styles';
 
@@ -24,10 +25,7 @@ const ProductItemChip = ({ product, classes }) => {
   const isOverdue = dateDiff < 0;
 
   return (
-    <Chip
-      classes={{
-        root: classes.chip,
-      }}
+    <ShortChip
       avatar={(
         <Avatar className={cn(classes.avatar, {
           [classes.overdueIcon]: isOverdue,
@@ -41,7 +39,7 @@ const ProductItemChip = ({ product, classes }) => {
             <EventAvailable className={classes.avatarIcon} />
           )}
         </Avatar>
-            )}
+      )}
       label={distanceInWordsStrict(
         new Date(),
         addYears(new Date(product.timestamp), product.warrantyLength),

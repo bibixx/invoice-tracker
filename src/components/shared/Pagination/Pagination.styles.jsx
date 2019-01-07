@@ -7,6 +7,6 @@ export default theme => ({
     marginTop: theme.spacing.unit * 3,
   },
   pageIndicator: {
-    margin: [[0, 16]],
+    margin: [[0, theme.spacing.unit * 2]],
   },
 });

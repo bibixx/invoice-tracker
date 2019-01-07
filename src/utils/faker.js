@@ -34,6 +34,13 @@ const generateFakeProduct = () => ({
     fakeCompanies
       .filter(({ isSeller }) => isSeller),
   ),
+  attachments: new Array(2).fill(null).map(() => {
+    const id = faker.random.uuid();
+    return {
+      id,
+      url: `/uploads/${id}.pdf`,
+    };
+  }),
 });
 
 export const fakeProducts = new Array(101).fill({}).map(generateFakeProduct);

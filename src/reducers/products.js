@@ -12,10 +12,19 @@ const products = (state = defaultState, action) => {
   };
 
   switch (action.type) {
-    case 'PRODUCTS/GET/START': {
+    case 'PRODUCTS/GET/START':
+    case 'PRODUCTS/GET_BY_ID/START': {
       return {
         ...newState,
         productsLoaded: false,
+      };
+    }
+
+    case 'PRODUCTS/GET_BY_ID/SUCCESS': {
+      return {
+        ...newState,
+        productsLoaded: true,
+        products: [action.payload.product],
       };
     }
 

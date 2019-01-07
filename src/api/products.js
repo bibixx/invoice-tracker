@@ -7,5 +7,5 @@ export const getProducts = page => Promise.resolve({
 });
 
 export const getProductById = id => Promise.resolve(
-  fakeProducts.find(({ id: productId }) => id === productId),
+  { product: fakeProducts.find(({ id: productId }) => id === productId) },
 );

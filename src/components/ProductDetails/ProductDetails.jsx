@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import ReactRouterPropTypes from 'react-router-prop-types';
+import { fullProductPropTypes } from 'src/propTypes/productPropTypes';
+
 import { connect } from 'react-redux';
 
-import { withRouter, Link } from 'react-router-dom';
-import URLS from 'src/constants/urls';
+import { withRouter } from 'react-router-dom';
 
 import { withStyles } from '@material-ui/core/styles';
 
@@ -11,20 +14,36 @@ import Paper from '@material-ui/core/Paper';
 import Page from 'src/components/shared/Page/Page';
 import Typography from '@material-ui/core/Typography';
 
-import PictureAsPdf from '@material-ui/icons/PictureAsPdf';
-
-import { getProductById } from 'src/actions/products';
+import { getProductById as getProductByIdAction } from 'src/actions/products';
 
 import addYears from 'date-fns/add_years';
 import distanceInWordsStrict from 'date-fns/distance_in_words_strict';
 import format from 'date-fns/format';
 
+import CompanyPreview from './CompanyPreview/CompanyPreview';
+import Attachment from './Attachment/Attachment';
+
 import styles from './ProductDetails.styles';
 
 class ProductDetails extends Component {
+  static propTypes = {
+    getProductById: PropTypes.func.isRequired,
+    classes: PropTypes.shape({}).isRequired,
+    match: ReactRouterPropTypes.match.isRequired,
+    product: fullProductPropTypes,
+  }
+
+  static defaultProps = {
+    product: null,
+  }
+
   componentDidMount() {
-    const id = this.props.match.params.id;
-    this.props.getProductById(id);
+    const {
+      getProductById,
+      match: { params: { id } },
+    } = this.props;
+
+    getProductById(id);
   }
 
   render() {
@@ -40,44 +59,61 @@ class ProductDetails extends Component {
           <Typography variant="h3" gutterBottom>
             {product.name}
           </Typography>
-          <Typography variant="body1" gutterBottom>
-            Bought at
-            {' '}
-            {format(new Date(product.timestamp), 'DD.MM.YYYY')}
-          </Typography>
-          <Typography variant="body1" gutterBottom>
-            Warranty length:
-            {' '}
-            {distanceInWordsStrict(new Date(), addYears(new Date(), product.warrantyLength))}
-          </Typography>
-          <Typography variant="body1" gutterBottom>
-            Place of purchase:
-            {' '}
-            <Link to={URLS.companyById(product.placeOfPurchase.id)}>
-              {product.placeOfPurchase.name}
-            </Link>
-          </Typography>
-          <Typography variant="body1" gutterBottom>
-            Seller:
-            {' '}
-            <Link to={URLS.companyById(product.seller.id)}>
-              {product.seller.name}
-            </Link>
-          </Typography>
-          <Typography variant="h5" gutterBottom gutterTop>
-            Attachments
-          </Typography>
-          <Grid container spacing={24}>
-            {product.attachments.map(({ id, url }) => (
-              <Grid item xs={12} sm={6} md={2} key={id}>
-                <a href={url} target="_blank" rel="noopener noreferrer">
-                  <Paper elevation={2} className={classes.attachment}>
-                    <PictureAsPdf className={classes.attachmentIcon} />
-                  </Paper>
-                </a>
-              </Grid>
-            ))}
-          </Grid>
+
+          <section className={classes.section}>
+            <Typography variant="h5" gutterBottom>
+              Bought at
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              {format(new Date(product.timestamp), 'DD.MM.YYYY')}
+            </Typography>
+          </section>
+
+          <section className={classes.section}>
+            <Typography variant="h5" gutterBottom>
+              Warranty
+            </Typography>
+            <Typography variant="body1" gutterBottom>
+              {distanceInWordsStrict(
+                new Date(),
+                addYears(new Date(product.timestamp), product.warrantyLength),
+                { addSuffix: true },
+              )}
+              {' '}
+              {`(${distanceInWordsStrict(new Date(), addYears(new Date(), product.warrantyLength))})`}
+            </Typography>
+          </section>
+
+          <section className={classes.section}>
+            <Typography variant="h5" gutterBottom>
+              Place of purchase
+            </Typography>
+
+            <Grid container spacing={24}>
+              <CompanyPreview company={product.placeOfPurchase} />
+            </Grid>
+          </section>
+
+          <section className={classes.section}>
+            <Typography variant="h5" gutterBottom>
+              Seller
+            </Typography>
+
+            <Grid container spacing={24}>
+              <CompanyPreview company={product.seller} isSeller />
+            </Grid>
+          </section>
+
+          <section className={classes.section}>
+            <Typography variant="h5" gutterBottom>
+              Attachments
+            </Typography>
+            <Grid container spacing={24}>
+              {product.attachments.map(image => (
+                <Attachment image={image} key={image.id} />
+              ))}
+            </Grid>
+          </section>
         </Paper>
       </Page>
     );
@@ -89,7 +125,7 @@ const mapStateToProps = ({ products: { products } }, { match: { params: { id } }
 });
 
 const mapDispatchToProps = dispatch => ({
-  getProductById: id => dispatch(getProductById(id)),
+  getProductById: id => dispatch(getProductByIdAction(id)),
 });
 
 export default withStyles(styles)(

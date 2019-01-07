@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import { withStyles } from '@material-ui/core/styles';
@@ -18,26 +18,40 @@ import { fullCompanyPropTypes } from 'src/propTypes/companyPropTypes';
 
 import styles from './CompanyPreview.styles';
 
-const CompanyPreview = ({ classes, company, isSeller }) => (
-  <Grid item xs={12} md={6}>
-    <Link to={URLS.companyById(company.id)} className={classes.link}>
-      <Card className={classes.card}>
-        <CardHeader
-          avatar={(
-            <Avatar aria-label="Recipe" className={classes.avatar}>
-              {isSeller
-                ? (<AttachMoney className={classes.icon} />)
-                : (<AccountBalance className={classes.icon} />)
+const CompanyPreview = ({ classes, company, isSeller }) => {
+  const [hover, setHover] = useState(false);
+
+  return (
+    <Grid item xs={12} md={6}>
+      <Link
+        to={URLS.companyById(company.id)}
+        className={classes.link}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        onFocus={() => setHover(true)}
+        onBlur={() => setHover(false)}
+      >
+        <Card
+          className={classes.card}
+          elevation={hover ? 8 : 2}
+        >
+          <CardHeader
+            avatar={(
+              <Avatar aria-label="Recipe" className={classes.avatar}>
+                {isSeller
+                  ? (<AttachMoney className={classes.icon} />)
+                  : (<AccountBalance className={classes.icon} />)
               }
-            </Avatar>
+              </Avatar>
           )}
-          title={company.name}
-          subheader={`${company.streetAddress}, ${company.city}`}
-        />
-      </Card>
-    </Link>
-  </Grid>
-);
+            title={company.name}
+            subheader={`${company.streetAddress}, ${company.city}`}
+          />
+        </Card>
+      </Link>
+    </Grid>
+  );
+};
 
 CompanyPreview.propTypes = {
   classes: PropTypes.shape({}).isRequired,

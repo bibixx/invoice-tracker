@@ -64,7 +64,7 @@ class ProductDetails extends Component {
               Bought at
             </Typography>
             <Typography variant="body1" gutterBottom>
-              {format(new Date(product.timestamp), 'DD.MM.YYYY')}
+              {format(new Date(product.timestamp), 'DD MMM YYYY')}
             </Typography>
           </section>
 
@@ -103,6 +103,7 @@ class ProductDetails extends Component {
               {product.attachments.map(image => (
                 <Attachment image={image} key={image.id} />
               ))}
+              <Attachment createNew />
             </Grid>
           </section>
         </Paper>

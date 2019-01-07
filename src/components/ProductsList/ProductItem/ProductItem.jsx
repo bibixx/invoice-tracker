@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
 import { listProductPropTypes } from 'src/propTypes/productPropTypes';
@@ -18,62 +18,42 @@ import ProductItemChip from './ProductItemChip/ProductItemChip';
 
 import styles from './ProductItem.styles';
 
-class ProductItem extends Component {
-  static propTypes = {
-    classes: PropTypes.shape({}).isRequired,
-    product: listProductPropTypes.isRequired,
-  }
+const ProductItem = ({ product, classes }) => {
+  const [hover, setHover] = useState(false);
 
-  state = {
-    hover: false,
-  }
-
-  onHover = () => {
-    this.setState({
-      hover: true,
-    });
-  }
-
-  onBlur = () => {
-    this.setState({
-      hover: false,
-    });
-  }
-
-  render() {
-    const { product, classes } = this.props;
-    const { onHover, onBlur } = this;
-    const { hover } = this.state;
-
-    return (
-      <Grid item xs={12} sm={4} md={3}>
-        <Card
-          className={cn(classes.card, { [classes.hover]: hover })}
-          elevation={hover ? 15 : 2}
-          onMouseEnter={onHover}
-          onMouseLeave={onBlur}
-          onFocus={onHover}
-          onBlur={onBlur}
+  return (
+    <Grid item xs={12} sm={4} md={3}>
+      <Card
+        className={cn(classes.card, { [classes.hover]: hover })}
+        elevation={hover ? 10 : 2}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        onFocus={() => setHover(true)}
+        onBlur={() => setHover(false)}
+      >
+        <ButtonBase
+          className={classes.cardAction}
+          component={Link}
+          to={URLS.productById(product.id)}
         >
-          <ButtonBase
-            className={classes.cardAction}
-            component={Link}
-            to={URLS.productById(product.id)}
-          >
-            <CardContent classes={{ root: classes.cardContent }}>
-              <Typography variant="h5" component="h2" className={classes.text}>
-                {product.name}
-              </Typography>
-              <ProductItemChip product={product} />
-              <Typography color="textSecondary" className={classes.text}>
-                {product.placeOfPurchase.name}
-              </Typography>
-            </CardContent>
-          </ButtonBase>
-        </Card>
-      </Grid>
-    );
-  }
-}
+          <CardContent classes={{ root: classes.cardContent }}>
+            <Typography variant="h5" component="h2" className={classes.text}>
+              {product.name}
+            </Typography>
+            <ProductItemChip product={product} />
+            <Typography color="textSecondary" className={classes.text}>
+              {product.placeOfPurchase.name}
+            </Typography>
+          </CardContent>
+        </ButtonBase>
+      </Card>
+    </Grid>
+  );
+};
+
+ProductItem.propTypes = {
+  classes: PropTypes.shape({}).isRequired,
+  product: listProductPropTypes.isRequired,
+};
 
 export default withStyles(styles)(ProductItem);

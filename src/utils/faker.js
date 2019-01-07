@@ -39,7 +39,6 @@ const generateFakeProduct = () => ({
     return {
       id,
       url: faker.image.imageUrl(100, 141, undefined, true),
-      ext: faker.random.arrayElement(['pdf', 'jpg', 'png']),
     };
   }),
 });

@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 import ReactRouterPropTypes from 'react-router-prop-types';
 import { fullProductPropTypes } from 'src/propTypes/productPropTypes';
@@ -24,93 +24,89 @@ import Warranty from './Warranty/Warranty';
 
 import styles from './ProductDetails.styles';
 
-class ProductDetails extends Component {
-  static propTypes = {
-    getProductById: PropTypes.func.isRequired,
-    classes: PropTypes.shape({}).isRequired,
-    match: ReactRouterPropTypes.match.isRequired,
-    product: fullProductPropTypes,
-  }
-
-  static defaultProps = {
-    product: null,
-  }
-
-  componentDidMount() {
-    const {
-      getProductById,
-      match: { params: { id } },
-    } = this.props;
-
+const ProductDetails = ({
+  classes,
+  product,
+  getProductById,
+  match: { params: { id } },
+}) => {
+  useEffect(() => {
     getProductById(id);
+  }, []);
+
+  if (!product) {
+    return null;
   }
 
-  render() {
-    const { classes, product } = this.props;
+  return (
+    <Page>
+      <Paper className={classes.root} elevation={1}>
+        <Typography variant="h3" gutterBottom>
+          {product.name}
+        </Typography>
 
-    if (!product) {
-      return null;
-    }
+        <section className={classes.section}>
+          <Typography variant="h5" gutterBottom>
+            Bought at
+          </Typography>
+          <Typography variant="body1" gutterBottom>
+            {format(new Date(product.timestamp), 'DD MMM YYYY')}
+          </Typography>
+        </section>
 
-    return (
-      <Page>
-        <Paper className={classes.root} elevation={1}>
-          <Typography variant="h3" gutterBottom>
-            {product.name}
+        <section className={classes.section}>
+          <Typography variant="h5" gutterBottom>
+            Warranty
+          </Typography>
+          <Warranty product={product} />
+        </section>
+
+        <section className={classes.section}>
+          <Typography variant="h5" gutterBottom>
+            Place of purchase
           </Typography>
 
-          <section className={classes.section}>
-            <Typography variant="h5" gutterBottom>
-              Bought at
-            </Typography>
-            <Typography variant="body1" gutterBottom>
-              {format(new Date(product.timestamp), 'DD MMM YYYY')}
-            </Typography>
-          </section>
+          <Grid container spacing={24}>
+            <CompanyPreview company={product.placeOfPurchase} />
+          </Grid>
+        </section>
 
-          <section className={classes.section}>
-            <Typography variant="h5" gutterBottom>
-              Warranty
-            </Typography>
-            <Warranty product={product} />
-          </section>
+        <section className={classes.section}>
+          <Typography variant="h5" gutterBottom>
+            Seller
+          </Typography>
 
-          <section className={classes.section}>
-            <Typography variant="h5" gutterBottom>
-              Place of purchase
-            </Typography>
+          <Grid container spacing={24}>
+            <CompanyPreview company={product.seller} isSeller />
+          </Grid>
+        </section>
 
-            <Grid container spacing={24}>
-              <CompanyPreview company={product.placeOfPurchase} />
-            </Grid>
-          </section>
+        <section className={classes.section}>
+          <Typography variant="h5" gutterBottom>
+            Attachments
+          </Typography>
+          <Grid container spacing={24}>
+            {product.attachments.map(image => (
+              <Attachment image={image} key={image.id} />
+            ))}
+            <Attachment createNew />
+          </Grid>
+        </section>
+      </Paper>
+    </Page>
+  );
+};
 
-          <section className={classes.section}>
-            <Typography variant="h5" gutterBottom>
-              Seller
-            </Typography>
+ProductDetails.propTypes = {
+  getProductById: PropTypes.func.isRequired,
+  classes: PropTypes.shape({}).isRequired,
+  match: ReactRouterPropTypes.match.isRequired,
+  product: fullProductPropTypes,
+};
 
-            <Grid container spacing={24}>
-              <CompanyPreview company={product.seller} isSeller />
-            </Grid>
-          </section>
-
-          <section className={classes.section}>
-            <Typography variant="h5" gutterBottom>
-              Attachments
-            </Typography>
-            <Grid container spacing={24}>
-              {product.attachments.map(image => (
-                <Attachment image={image} key={image.id} />
-              ))}
-              <Attachment createNew />
-            </Grid>
-          </section>
-        </Paper>
-      </Page>
-    );
-  }
-}
+ProductDetails.defaultProps = {
+  product: null,
+};
 
 const mapStateToProps = ({ products: { products } }, { match: { params: { id } } }) => ({
   product: products.find(product => product.id === id),

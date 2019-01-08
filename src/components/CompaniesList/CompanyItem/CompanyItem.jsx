@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import cn from 'classnames';
 import PropTypes from 'prop-types';
 import { fullCompanyPropTypes } from 'src/propTypes/companyPropTypes';
@@ -20,77 +20,57 @@ import URLS from 'src/constants/urls';
 
 import styles from './CompanyItem.styles';
 
-class CompanyItem extends Component {
-  static propTypes = {
-    classes: PropTypes.shape({}).isRequired,
-    company: fullCompanyPropTypes.isRequired,
-  }
+const CompanyItem = ({ company, classes }) => {
+  const [hover, setHover] = useState(false);
 
-  state = {
-    hover: false,
-  }
-
-  onHover = () => {
-    this.setState({
-      hover: true,
-    });
-  }
-
-  onBlur = () => {
-    this.setState({
-      hover: false,
-    });
-  }
-
-  render() {
-    const { company, classes } = this.props;
-    const { onHover, onBlur } = this;
-    const { hover } = this.state;
-
-    return (
-      <Grid item xs={12} sm={4} md={3}>
-        <Card
-          className={cn(classes.card, { [classes.hover]: hover })}
-          elevation={hover ? 15 : 2}
-          onMouseEnter={onHover}
-          onMouseLeave={onBlur}
-          onFocus={onHover}
-          onBlur={onBlur}
+  return (
+    <Grid item xs={12} sm={4} md={3}>
+      <Card
+        className={cn(classes.card, { [classes.hover]: hover })}
+        elevation={hover ? 10 : 2}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+        onFocus={() => setHover(true)}
+        onBlur={() => setHover(false)}
+      >
+        <ButtonBase
+          className={classes.cardAction}
+          component={Link}
+          to={URLS.companyById(company.id)}
         >
-          <ButtonBase
-            className={classes.cardAction}
-            component={Link}
-            to={URLS.companyById(company.id)}
-          >
-            <CardContent classes={{ root: classes.cardContent }}>
-              <Typography variant="h5" component="h2" className={classes.text}>
-                {company.name}
-              </Typography>
+          <CardContent classes={{ root: classes.cardContent }}>
+            <Typography variant="h5" component="h2" className={classes.text}>
+              {company.name}
+            </Typography>
 
-              {company.isPlaceOfPurchase && (
-                <Tooltip title="Place of purchase">
-                  <Avatar className={cn(classes.avatar)}>
-                    <AccountBalance className={classes.avatarIcon} />
-                  </Avatar>
-                </Tooltip>
-              )}
-              {company.isSeller && (
-                <Tooltip title="Seller">
-                  <Avatar className={cn(classes.avatar)}>
-                    <AttachMoney className={classes.avatarIcon} />
-                  </Avatar>
-                </Tooltip>
-              )}
+            {company.isPlaceOfPurchase && (
+              <Tooltip title="Place of purchase">
+                <Avatar className={cn(classes.avatar)}>
+                  <AccountBalance className={classes.avatarIcon} />
+                </Avatar>
+              </Tooltip>
+            )}
+            {company.isSeller && (
+              <Tooltip title="Seller">
+                <Avatar className={cn(classes.avatar)}>
+                  <AttachMoney className={classes.avatarIcon} />
+                </Avatar>
+              </Tooltip>
+            )}
 
-              <Typography color="textSecondary" className={classes.text}>
-                {`${company.streetAddress}, ${company.city}`}
-              </Typography>
-            </CardContent>
-          </ButtonBase>
-        </Card>
-      </Grid>
-    );
-  }
-}
+            <Typography color="textSecondary" className={classes.text}>
+              {`${company.streetAddress}, ${company.city}`}
+            </Typography>
+          </CardContent>
+        </ButtonBase>
+      </Card>
+    </Grid>
+  );
+};
+
+CompanyItem.propTypes = {
+  classes: PropTypes.shape({}).isRequired,
+  company: fullCompanyPropTypes.isRequired,
+};
 
 export default withStyles(styles)(CompanyItem);
